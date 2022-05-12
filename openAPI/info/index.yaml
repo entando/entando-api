@@ -1,0 +1,8 @@
+title: ''
+description: ''
+termsOfService: https://
+contact:
+  $ref: ./contact.yaml
+license:
+  $ref: ./license.yaml
+version: ''

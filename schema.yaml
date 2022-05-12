@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: ''
+  description: ''
+  termsOfService: 'https://'
+  contact:
+    name: ''
+    url: 'https://'
+    email: name@domain.glob
+  license:
+    name: ''
+    url: 'https://'
+  version: ''
+servers:
+  - url: ''
+paths: {}
+components:
+  schemas: {}
+  responses: {}
+  parameters: {}
+  examples: {}
+  requestBodies: {}
+  headers: {}
+  securitySchemes: {}
+  links: {}
+  callbacks: {}
+security:
+  - {}
+tags:
+  - name: ''
+externalDocs:
+  description: ''
+  url: 'https://'
