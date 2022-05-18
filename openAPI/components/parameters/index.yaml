@@ -1,8 +1,22 @@
+allowedValues:
+  $ref: ./query/common/filters/allowedValues.yaml
+attribute:
+  $ref: ./query/common/filters/attribute.yaml
 direction:
   $ref: ./query/common/pagination/direction.yaml
+entityAttr:
+  $ref: ./query/common/filters/entityAttr.yaml
+operator:
+  $ref: ./query/common/filters/operator.yaml
+order:
+  $ref: ./query/common/filters/order.yaml
 page:
   $ref: ./query/common/pagination/page.yaml
 pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
 sort:
   $ref: ./query/common/pagination/sort.yaml
+type:
+  $ref: ./query/common/filters/type.yaml
+value:
+  $ref: ./query/common/filters/value.yaml

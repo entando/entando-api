@@ -131,8 +131,42 @@ components:
                 type: string
   responses: {}
   parameters:
+    allowedValues:
+      name: 'filters[0].allowedValues'
+      in: query
+      description: ''
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
+          type: string
+    attribute:
+      name: 'filters[0].attribute'
+      in: query
+      description: ''
+      schema:
+        type: string
     direction:
       name: direction
+      in: query
+      description: ''
+      schema:
+        type: string
+    entityAttr:
+      name: 'filters[0].entityAttr'
+      in: query
+      description: ''
+      schema:
+        type: string
+    operator:
+      name: 'filters[0].operator'
+      in: query
+      description: ''
+      schema:
+        type: string
+    order:
+      name: 'filters[0].order'
       in: query
       description: ''
       schema:
@@ -153,6 +187,18 @@ components:
         format: int32
     sort:
       name: sort
+      in: query
+      description: ''
+      schema:
+        type: string
+    type:
+      name: 'filters[0].type'
+      in: query
+      description: ''
+      schema:
+        type: string
+    value:
+      name: 'filters[0].value'
       in: query
       description: ''
       schema:

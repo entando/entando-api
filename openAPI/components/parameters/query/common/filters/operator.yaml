@@ -1,0 +1,5 @@
+name: filters[0].operator
+in: query
+description: ''
+schema:
+  type: string
