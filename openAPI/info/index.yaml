@@ -1,8 +1,8 @@
-title: ''
-description: ''
+title: Entando Core APIs
+description: Entando Core APIs
 termsOfService: https://
 contact:
   $ref: ./contact.yaml
 license:
   $ref: ./license.yaml
-version: ''
+version: 7.0.0

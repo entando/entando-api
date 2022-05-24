@@ -1,16 +1,16 @@
 openapi: 3.0.0
 info:
-  title: ''
-  description: ''
+  title: Entando Core APIs
+  description: Entando Core APIs
   termsOfService: 'https://'
   contact:
-    name: ''
+    name: Walter Caffiero
     url: 'https://'
-    email: name@domain.glob
+    email: w.caffiero@entando.com
   license:
-    name: ''
-    url: 'https://'
-  version: ''
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+  version: 7.0.0
 servers:
   - url: ''
 paths: {}
