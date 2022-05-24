@@ -1,0 +1,5 @@
+name: direction
+in: query
+description: ''
+schema:
+  type: string

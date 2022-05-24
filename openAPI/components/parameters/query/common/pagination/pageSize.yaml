@@ -1,0 +1,6 @@
+name: pageSize
+in: query
+description: ''
+schema:
+  type: integer
+  format: int32

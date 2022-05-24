@@ -1,0 +1,6 @@
+name: page
+in: query
+description: ''
+schema:
+  type: integer
+  format: int32

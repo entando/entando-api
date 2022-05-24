@@ -130,7 +130,33 @@ components:
               additionalProperties:
                 type: string
   responses: {}
-  parameters: {}
+  parameters:
+    direction:
+      name: direction
+      in: query
+      description: ''
+      schema:
+        type: string
+    page:
+      name: page
+      in: query
+      description: ''
+      schema:
+        type: integer
+        format: int32
+    pageSize:
+      name: pageSize
+      in: query
+      description: ''
+      schema:
+        type: integer
+        format: int32
+    sort:
+      name: sort
+      in: query
+      description: ''
+      schema:
+        type: string
   examples: {}
   requestBodies: {}
   headers: {}

@@ -1,1 +1,8 @@
-{ }
+direction:
+  $ref: ./query/common/pagination/direction.yaml
+page:
+  $ref: ./query/common/pagination/page.yaml
+pageSize:
+  $ref: ./query/common/pagination/pageSize.yaml
+sort:
+  $ref: ./query/common/pagination/sort.yaml
