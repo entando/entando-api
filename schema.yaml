@@ -16,7 +16,27 @@ servers:
     description: Entando 7.0 API base path
 paths: {}
 components:
-  schemas: {}
+  schemas:
+    restError:
+      title: REST error
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+    restResponse:
+      title: REST response
+      type: object
+      properties:
+        payload:
+          type: object
+        metadata:
+          type: object
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/restError'
   responses: {}
   parameters: {}
   examples: {}

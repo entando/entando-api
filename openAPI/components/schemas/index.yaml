@@ -1,1 +1,4 @@
-{ }
+restError:
+  $ref: ./restResponse/restError.yaml
+restResponse:
+  $ref: ./restResponse/restResponse.yaml

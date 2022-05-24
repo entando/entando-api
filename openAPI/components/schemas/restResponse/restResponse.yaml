@@ -1,0 +1,11 @@
+title: REST response
+type: object
+properties:
+  payload:
+    type: object
+  metadata:
+    type: object
+  errors:
+    type: array
+    items:
+      $ref: ./restError.yaml
