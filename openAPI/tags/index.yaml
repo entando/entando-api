@@ -1,1 +1,1 @@
-- name: ''
+- $ref: ./activity-stream-controller.yaml

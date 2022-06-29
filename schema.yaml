@@ -219,7 +219,8 @@ components:
 security:
   - entando: []
 tags:
-  - name: ''
+  - name: activity-stream-controller
+    description: Activity stream operations
 externalDocs:
   description: ''
   url: 'https://'
