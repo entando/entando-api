@@ -1,1 +1,2 @@
-{ }
+/activityStream:
+  $ref: ./activityStream/index.yaml

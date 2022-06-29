@@ -14,7 +14,10 @@ info:
 servers:
   - url: /entando-de-app/api
     description: Entando 7.0 API base path
-paths: {}
+paths:
+  /activityStream:
+    summary: Activity stream operations
+    description: End-point to access and manipulate the activity stream
 components:
   schemas:
     filter:
