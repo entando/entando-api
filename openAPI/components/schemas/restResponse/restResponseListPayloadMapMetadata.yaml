@@ -1,0 +1,5 @@
+title: REST response list payload map metadata
+type: object
+allOf:
+  - $ref: ./restResponseMapMetadata.yaml
+  - $ref: ./restResponseListPayload.yaml

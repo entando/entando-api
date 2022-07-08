@@ -4,6 +4,8 @@ restResponse:
   $ref: ./restResponse/restResponse.yaml
 restResponseListPayload:
   $ref: ./restResponse/restResponseListPayload.yaml
+restResponseListPayloadMapMetadata:
+  $ref: ./restResponse/restResponseListPayloadMapMetadata.yaml
 restResponseMapMetadata:
   $ref: ./restResponse/restResponseMapMetadata.yaml
 restResponseMapPayload:

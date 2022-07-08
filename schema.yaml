@@ -47,6 +47,12 @@ components:
               type: array
               items:
                 type: object
+    restResponseListPayloadMapMetadata:
+      title: REST response list payload map metadata
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/restResponseMapMetadata'
+        - $ref: '#/components/schemas/restResponseListPayload'
     restResponseMapMetadata:
       title: REST response map metadata
       type: object
