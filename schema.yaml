@@ -17,6 +17,62 @@ servers:
 paths: {}
 components:
   schemas:
+    filter:
+      title: Filter
+      type: object
+      properties:
+        attribute:
+          type: string
+        entityAttr:
+          type: string
+        operator:
+          type: string
+        order:
+          type: string
+        type:
+          type: string
+        value:
+          type: string
+        allowedValues:
+          type: array
+          items:
+            type: string
+    pagedRestResponse:
+      title: Paged REST response
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/restResponseListPayload'
+        - properties:
+            metadata:
+              $ref: '#/components/schemas/paginationMetadata'
+    paginationMetadata:
+      title: Pagination metadata
+      type: object
+      properties:
+        page:
+          type: integer
+          format: int32
+        pageSize:
+          type: integer
+          format: int32
+        lastPage:
+          type: integer
+          format: int32
+        totalItems:
+          type: integer
+          format: int32
+        sort:
+          type: string
+        direction:
+          type: string
+        filters:
+          type: array
+          items:
+            $ref: '#/components/schemas/filter'
+        additionalParams:
+          type: object
+          additionalProperties:
+            type: string
     restError:
       title: REST error
       type: object

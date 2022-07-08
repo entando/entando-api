@@ -1,0 +1,27 @@
+title: Pagination metadata
+type: object
+properties:
+  page:
+    type: integer
+    format: int32
+  pageSize:
+    type: integer
+    format: int32
+  lastPage:
+    type: integer
+    format: int32
+  totalItems:
+    type: integer
+    format: int32
+  sort:
+    type: string
+  direction:
+    type: string
+  filters:
+    type: array
+    items:
+      $ref: ./filter.yaml
+  additionalParams:
+    type: object
+    additionalProperties:
+      type: string

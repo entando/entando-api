@@ -1,3 +1,9 @@
+filter:
+  $ref: ./restResponse/pagedRestResponse/filter.yaml
+pagedRestResponse:
+  $ref: ./restResponse/pagedRestResponse/pagedRestResponse.yaml
+paginationMetadata:
+  $ref: ./restResponse/pagedRestResponse/paginationMetadata.yaml
 restError:
   $ref: ./restResponse/restError.yaml
 restResponse:

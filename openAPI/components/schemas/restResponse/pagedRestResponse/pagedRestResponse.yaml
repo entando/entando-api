@@ -1,0 +1,7 @@
+title: Paged REST response
+type: object
+allOf:
+  - $ref: ../restResponseListPayload.yaml
+  - properties:
+      metadata:
+        $ref: ./paginationMetadata.yaml

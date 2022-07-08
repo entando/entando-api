@@ -1,0 +1,19 @@
+title: Filter
+type: object
+properties:
+  attribute:
+    type: string
+  entityAttr:
+    type: string
+  operator:
+    type: string
+  order:
+    type: string
+  type:
+    type: string
+  value:
+    type: string
+  allowedValues:
+    type: array
+    items:
+      type: string
