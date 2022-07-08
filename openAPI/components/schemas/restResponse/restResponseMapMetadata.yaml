@@ -1,0 +1,9 @@
+title: REST response map metadata
+type: object
+allOf:
+  - $ref: ./restResponse.yaml
+  - properties:
+      metadata:
+        type: object
+        additionalProperties:
+          type: string
