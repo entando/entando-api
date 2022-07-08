@@ -1,0 +1,9 @@
+title: REST response list payload
+type: object
+allOf:
+  - $ref: ./restResponse.yaml
+  - properties:
+      payload:
+        type: array
+        items:
+          type: object

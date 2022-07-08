@@ -2,6 +2,8 @@ restError:
   $ref: ./restResponse/restError.yaml
 restResponse:
   $ref: ./restResponse/restResponse.yaml
+restResponseListPayload:
+  $ref: ./restResponse/restResponseListPayload.yaml
 restResponseMapMetadata:
   $ref: ./restResponse/restResponseMapMetadata.yaml
 restResponseMapPayload:
