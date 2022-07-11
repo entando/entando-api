@@ -12,7 +12,8 @@ info:
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 7.0.0
 servers:
-  - url: ''
+  - url: /entando-de-app/api
+    description: Entando 7.0 API base path
 paths: {}
 components:
   schemas: {}
