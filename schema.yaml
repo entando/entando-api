@@ -33,7 +33,7 @@ components:
   links: {}
   callbacks: {}
 security:
-  - {}
+  - entando: []
 tags:
   - name: ''
 externalDocs:
