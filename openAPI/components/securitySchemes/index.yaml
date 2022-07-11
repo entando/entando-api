@@ -1,1 +1,2 @@
-{ }
+entando:
+  $ref: ./oauth2.yaml

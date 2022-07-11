@@ -22,7 +22,14 @@ components:
   examples: {}
   requestBodies: {}
   headers: {}
-  securitySchemes: {}
+  securitySchemes:
+    entando:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: /auth/realms/entando/protocol/openid-connect/auth
+          tokenUrl: /auth/realms/entando/protocol/openid-connect/token
+          scopes: {}
   links: {}
   callbacks: {}
 security:
