@@ -37,6 +37,16 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/restError'
+    restResponseMapPayload:
+      title: REST response map payload
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/restResponse'
+        - properties:
+            payload:
+              type: object
+              additionalProperties:
+                type: string
   responses: {}
   parameters: {}
   examples: {}

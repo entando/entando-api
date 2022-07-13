@@ -2,3 +2,5 @@ restError:
   $ref: ./restResponse/restError.yaml
 restResponse:
   $ref: ./restResponse/restResponse.yaml
+restResponseMapPayload:
+  $ref: ./restResponse/restResponseMapPayload.yaml
