@@ -237,6 +237,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/categories/{categoryId}':
+    summary: Category operations
+    description: API to access and manipulate a category
+    parameters:
+      - $ref: '#/components/parameters/categoryId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -809,6 +814,13 @@ components:
       schema:
         type: string
         default: home
+    categoryId:
+      name: categoryId
+      in: path
+      description: Category code
+      required: true
+      schema:
+        type: string
     complete:
       name: complete
       in: query

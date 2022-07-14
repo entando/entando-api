@@ -12,5 +12,7 @@
   $ref: ./analysis/components/diff/index.yaml
 /categories:
   $ref: ./categories/index.yaml
+/categories/{categoryId}:
+  $ref: ./categories/categoryId/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml

@@ -1,0 +1,6 @@
+name: categoryId
+in: path
+description: Category code
+required: true
+schema:
+  type: string

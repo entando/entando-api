@@ -8,6 +8,8 @@ attribute:
   $ref: ./query/common/filters/attribute.yaml
 categoriesParentCode:
   $ref: ./query/categories/parentCode.yaml
+categoryId:
+  $ref: ./path/categories/categoryId.yaml
 complete:
   $ref: ./query/authorizations/complete.yaml
 direction:
