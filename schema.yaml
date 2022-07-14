@@ -857,6 +857,11 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/cms/contentmodels/{modelId}/pagereferences':
+    summary: Content model references operations
+    description: API to access and manipulate a content model references
+    parameters:
+      - $ref: '#/components/parameters/modelId'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents

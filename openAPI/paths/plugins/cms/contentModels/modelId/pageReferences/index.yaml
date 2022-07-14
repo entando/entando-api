@@ -1,0 +1,4 @@
+summary: Content model references operations
+description: API to access and manipulate a content model references
+parameters:
+  - $ref: ../../../../../../components/parameters/path/contentModels/modelId.yaml

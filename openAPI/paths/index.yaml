@@ -32,6 +32,8 @@
   $ref: ./plugins/cms/contentModels/dictionary/index.yaml
 /plugins/cms/contentmodels/{modelId}:
   $ref: ./plugins/cms/contentModels/modelId/index.yaml
+/plugins/cms/contentmodels/{modelId}/pagereferences:
+  $ref: ./plugins/cms/contentModels/modelId/pageReferences/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:
