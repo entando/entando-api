@@ -3,3 +3,4 @@
 - $ref: ./analysis-controller-cms.yaml
 - $ref: ./authorization-endpoint.yaml
 - $ref: ./category-controller.yaml
+- $ref: ./check-token-endpoint.yaml

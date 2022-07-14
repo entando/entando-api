@@ -1125,6 +1125,8 @@ tags:
     description: Authorization operations
   - name: category-controller
     description: Categories operations
+  - name: check-token-endpoint
+    description: Check token operations
 externalDocs:
   description: ''
   url: 'https://'
