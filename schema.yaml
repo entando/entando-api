@@ -192,6 +192,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /oauth/authorize:
+    summary: Authorization operations
+    description: API to handle authorizations
 components:
   schemas:
     activityStreamRecord:

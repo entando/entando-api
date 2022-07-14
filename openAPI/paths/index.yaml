@@ -10,3 +10,5 @@
   $ref: ./analysis/cms/components/diff/index.yaml
 /analysis/components/diff:
   $ref: ./analysis/components/diff/index.yaml
+/oauth/authorize:
+  $ref: ./oauth/authorize/index.yaml
