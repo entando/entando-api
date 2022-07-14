@@ -747,6 +747,9 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  /plugins/cms/contentmodels/dictionary:
+    summary: Content models dictionary operations
+    description: API to access and manipulate the dictionary of content models
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents

@@ -28,6 +28,8 @@
   $ref: ./oauth/check_token/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
+/plugins/cms/contentmodels/dictionary:
+  $ref: ./plugins/cms/contentModels/dictionary/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:
