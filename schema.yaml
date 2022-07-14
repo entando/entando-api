@@ -145,6 +145,28 @@ paths:
   /analysis/cms/components/diff:
     summary: CMS components analysis operations
     description: API to perform analysis on CMS components
+    post:
+      tags:
+        - analysis-controller-cms
+      summary: Run the CMS component existence analysis
+      description: Perform the analysis on the existnce of the CMS components
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: runCMSComponentExistenceAnalysis
+      requestBody:
+        $ref: '#/components/requestBodies/idCodesByObjectType'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /analysis/components/diff:
     summary: Components analysis operations
     description: API to perform analysis on components

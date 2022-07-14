@@ -1,2 +1,4 @@
 summary: CMS components analysis operations
 description: API to perform analysis on CMS components
+post:
+  $ref: ./runCMSComponentExistenceAnalysis.yaml
