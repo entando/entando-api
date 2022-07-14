@@ -1,0 +1,23 @@
+tags:
+  - content-model-controller
+summary: Retrieve a content model
+description: Retrieve the content model specified in the path from the content models collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: getContentModel
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/contentModels/contentModel.yaml
+  '400':
+    $ref: ../../../../../components/responses/badRequest/common/empty.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml
+  '409':
+    $ref: ../../../../../components/responses/conflict/common/empty.yaml
+  '500':
+    $ref: ../../../../../components/responses/serverError/common/empty.yaml

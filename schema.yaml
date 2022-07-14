@@ -781,6 +781,30 @@ paths:
     description: API to access and manipulate a content model
     parameters:
       - $ref: '#/components/parameters/modelId'
+    get:
+      tags:
+        - content-model-controller
+      summary: Retrieve a content model
+      description: Retrieve the content model specified in the path from the content models collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentModel
+      responses:
+        '200':
+          $ref: '#/components/responses/contentModel'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents

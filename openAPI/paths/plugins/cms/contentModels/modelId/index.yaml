@@ -2,3 +2,5 @@ summary: Content model operations
 description: API to access and manipulate a content model
 parameters:
   - $ref: ../../../../../components/parameters/path/contentModels/modelId.yaml
+get:
+  $ref: ./getContentModel.yaml
