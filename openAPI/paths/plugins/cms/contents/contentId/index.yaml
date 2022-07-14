@@ -1,0 +1,4 @@
+summary: Content operations
+description: API to access and manipulate a content
+parameters:
+  - $ref: ../../../../../components/parameters/path/contents/contentId.yaml

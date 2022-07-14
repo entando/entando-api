@@ -18,6 +18,8 @@ complete:
   $ref: ./query/authorizations/complete.yaml
 consumerId:
   $ref: ./path/consumers/consumerId.yaml
+contentId:
+  $ref: ./path/contents/contentId.yaml
 contentLang:
   $ref: ./query/contents/lang.yaml
 contentModel:

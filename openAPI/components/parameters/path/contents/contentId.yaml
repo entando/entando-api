@@ -1,0 +1,6 @@
+name: contentId
+in: path
+description: Content code
+required: true
+schema:
+  type: string

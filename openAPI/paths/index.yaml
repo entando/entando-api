@@ -30,3 +30,5 @@
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:
   $ref: ./plugins/cms/contents/status/index.yaml
+/plugins/cms/contents/{contentId}:
+  $ref: ./plugins/cms/contents/contentId/index.yaml
