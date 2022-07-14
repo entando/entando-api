@@ -1953,6 +1953,8 @@ tags:
     description: Consumers operations
   - name: content-controller
     description: Contents operations
+  - name: content-model-controller
+    description: Content models operations
 externalDocs:
   description: ''
   url: 'https://'

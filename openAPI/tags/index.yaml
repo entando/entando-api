@@ -6,3 +6,4 @@
 - $ref: ./check-token-endpoint.yaml
 - $ref: ./consumers.yaml
 - $ref: ./content-controller.yaml
+- $ref: ./content-model-controller.yaml
