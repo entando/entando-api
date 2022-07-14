@@ -536,6 +536,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /oauth/check_token:
+    summary: Check token operations
+    description: API to handle token checks
 components:
   schemas:
     activityStreamRecord:

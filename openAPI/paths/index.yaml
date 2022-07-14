@@ -20,3 +20,5 @@
   $ref: ./categories/categoryId/usage/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
+/oauth/check_token:
+  $ref: ./oauth/check_token/index.yaml
