@@ -2,3 +2,5 @@ summary: Category operations
 description: API to access and manipulate a category
 parameters:
   - $ref: ../../../components/parameters/path/categories/categoryId.yaml
+get:
+  $ref: ./getCategory.yaml

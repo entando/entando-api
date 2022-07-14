@@ -1,0 +1,17 @@
+tags:
+  - category-controller
+summary: Retrieve a category
+description: Retrieve the category specified in the path from the categories collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: getCategory
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/categories/category.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
