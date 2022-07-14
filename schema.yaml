@@ -300,6 +300,12 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/categories/{categoryId}/references/{categoryReferenceHolder}':
+    summary: Category references operations
+    description: API to access and manipulate the category references
+    parameters:
+      - $ref: '#/components/parameters/categoryId'
+      - $ref: '#/components/parameters/categoryReferenceHolder'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -888,6 +894,13 @@ components:
       name: categoryId
       in: path
       description: Category code
+      required: true
+      schema:
+        type: string
+    categoryReferenceHolder:
+      name: categoryReferenceHolder
+      in: path
+      description: Category references holder
       required: true
       schema:
         type: string

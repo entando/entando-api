@@ -10,6 +10,8 @@ categoriesParentCode:
   $ref: ./query/categories/parentCode.yaml
 categoryId:
   $ref: ./path/categories/categoryId.yaml
+categoryReferenceHolder:
+  $ref: ./path/categories/categoryReferenceHolder.yaml
 complete:
   $ref: ./query/authorizations/complete.yaml
 direction:

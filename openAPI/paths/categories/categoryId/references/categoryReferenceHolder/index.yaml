@@ -1,0 +1,5 @@
+summary: Category references operations
+description: API to access and manipulate the category references
+parameters:
+  - $ref: ../../../../../components/parameters/path/categories/categoryId.yaml
+  - $ref: ../../../../../components/parameters/path/categories/categoryReferenceHolder.yaml

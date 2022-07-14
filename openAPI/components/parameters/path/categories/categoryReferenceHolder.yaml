@@ -1,0 +1,6 @@
+name: categoryReferenceHolder
+in: path
+description: Category references holder
+required: true
+schema:
+  type: string

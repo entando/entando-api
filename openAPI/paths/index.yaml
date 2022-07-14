@@ -14,5 +14,7 @@
   $ref: ./categories/index.yaml
 /categories/{categoryId}:
   $ref: ./categories/categoryId/index.yaml
+/categories/{categoryId}/references/{categoryReferenceHolder}:
+  $ref: ./categories/categoryId/references/categoryReferenceHolder/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
