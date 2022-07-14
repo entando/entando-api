@@ -2,3 +2,5 @@ summary: Content clone operation
 description: API to clone a content
 parameters:
   - $ref: ../../../../../../components/parameters/path/contents/contentId.yaml
+post:
+  $ref: ./cloneContent.yaml

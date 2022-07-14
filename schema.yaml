@@ -901,6 +901,26 @@ paths:
     description: API to clone a content
     parameters:
       - $ref: '#/components/parameters/contentId'
+    post:
+      tags:
+        - content-controller
+      summary: Clone a content
+      description: Clone the content specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: cloneContent
+      responses:
+        '200':
+          $ref: '#/components/responses/content'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
