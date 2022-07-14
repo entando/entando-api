@@ -903,6 +903,30 @@ paths:
     description: API to access and manipulate a content model usage
     parameters:
       - $ref: '#/components/parameters/modelId'
+    get:
+      tags:
+        - content-model-controller
+      summary: Retrieve a content model usage
+      description: Retrieve the usage count for the content model specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentModelUsage
+      responses:
+        '200':
+          $ref: '#/components/responses/componentUsage'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
