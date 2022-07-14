@@ -1340,6 +1340,8 @@ tags:
     description: Check token operations
   - name: consumers
     description: Consumers operations
+  - name: content-controller
+    description: Contents operations
 externalDocs:
   description: ''
   url: 'https://'

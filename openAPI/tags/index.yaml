@@ -5,3 +5,4 @@
 - $ref: ./category-controller.yaml
 - $ref: ./check-token-endpoint.yaml
 - $ref: ./consumers.yaml
+- $ref: ./content-controller.yaml
