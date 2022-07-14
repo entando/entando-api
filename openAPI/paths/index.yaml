@@ -28,3 +28,5 @@
   $ref: ./oauth/check_token/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
+/plugins/cms/contents/status:
+  $ref: ./plugins/cms/contents/status/index.yaml

@@ -787,6 +787,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /plugins/cms/contents/status:
+    summary: Contents status
+    description: API to access and manipulate the collection of contents status
 components:
   schemas:
     activityStreamRecord:
