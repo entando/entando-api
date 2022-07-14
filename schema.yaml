@@ -837,6 +837,8 @@ tags:
     description: CMS analysis operations
   - name: authorization-endpoint
     description: Authorization operations
+  - name: category-controller
+    description: Categories operations
 externalDocs:
   description: ''
   url: 'https://'

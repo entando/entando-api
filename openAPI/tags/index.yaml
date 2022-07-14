@@ -2,3 +2,4 @@
 - $ref: ./analysis-controller.yaml
 - $ref: ./analysis-controller-cms.yaml
 - $ref: ./authorization-endpoint.yaml
+- $ref: ./category-controller.yaml
