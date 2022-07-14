@@ -24,6 +24,8 @@ contentLang:
   $ref: ./query/contents/lang.yaml
 contentModel:
   $ref: ./query/contents/model.yaml
+contentModelId:
+  $ref: ./path/contents/modelId.yaml
 contentStatus:
   $ref: ./query/contents/status.yaml
 direction:

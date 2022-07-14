@@ -1,0 +1,6 @@
+name: modelId
+in: path
+description: Content model id
+required: true
+schema:
+  type: string

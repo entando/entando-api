@@ -34,3 +34,5 @@
   $ref: ./plugins/cms/contents/contentId/index.yaml
 /plugins/cms/contents/{contentId}/clone:
   $ref: ./plugins/cms/contents/contentId/clone/index.yaml
+/plugins/cms/contents/{contentId}/model/{modelId}:
+  $ref: ./plugins/cms/contents/contentId/model/modelId/index.yaml

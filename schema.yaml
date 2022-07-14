@@ -921,6 +921,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/plugins/cms/contents/{contentId}/model/{modelId}':
+    summary: Content clone operation
+    description: API to clone a content
+    parameters:
+      - $ref: '#/components/parameters/contentId'
+      - $ref: '#/components/parameters/contentModelId'
 components:
   schemas:
     activityStreamRecord:
@@ -1614,6 +1620,13 @@ components:
       name: model
       in: query
       description: ''
+      schema:
+        type: string
+    contentModelId:
+      name: modelId
+      in: path
+      description: Content model id
+      required: true
       schema:
         type: string
     contentStatus:
