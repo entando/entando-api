@@ -36,6 +36,8 @@
   $ref: ./plugins/cms/contentModels/modelId/pageReferences/index.yaml
 /plugins/cms/contentmodels/{modelId}/usage:
   $ref: ./plugins/cms/contentModels/modelId/usage/index.yaml
+/plugins/cms/contentmodels/{modelId}/usage/details:
+  $ref: ./plugins/cms/contentModels/modelId/usage/details/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:
