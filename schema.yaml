@@ -533,6 +533,8 @@ tags:
     description: Analysis operations
   - name: analysis-controller-cms
     description: CMS analysis operations
+  - name: authorization-endpoint
+    description: Authorization operations
 externalDocs:
   description: ''
   url: 'https://'
