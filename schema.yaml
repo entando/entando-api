@@ -336,6 +336,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/categories/{categoryId}/usage':
+    summary: Category usage operations
+    description: API to access and manipulate a category usage
+    parameters:
+      - $ref: '#/components/parameters/categoryId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

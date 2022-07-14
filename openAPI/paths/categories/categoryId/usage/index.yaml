@@ -1,0 +1,4 @@
+summary: Category usage operations
+description: API to access and manipulate a category usage
+parameters:
+  - $ref: ../../../../components/parameters/path/categories/categoryId.yaml
