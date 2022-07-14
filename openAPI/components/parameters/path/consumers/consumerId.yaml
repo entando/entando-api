@@ -1,0 +1,6 @@
+name: consumerId
+in: path
+description: Consumer key
+required: true
+schema:
+  type: string

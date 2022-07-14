@@ -1,0 +1,4 @@
+summary: Consumer operations
+description: API to access and manipulate a consumer
+parameters:
+  - $ref: ../../../components/parameters/path/consumers/consumerId.yaml

@@ -416,6 +416,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/consumers/{consumerId}':
+    summary: Consumer operations
+    description: API to access and manipulate a consumer
+    parameters:
+      - $ref: '#/components/parameters/consumerId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -1113,6 +1118,13 @@ components:
       description: ''
       schema:
         type: boolean
+    consumerId:
+      name: consumerId
+      in: path
+      description: Consumer key
+      required: true
+      schema:
+        type: string
     direction:
       name: direction
       in: query
