@@ -1,0 +1,6 @@
+name: resolveLinks
+in: query
+description: ''
+schema:
+  type: boolean
+  default: false

@@ -927,6 +927,28 @@ paths:
     parameters:
       - $ref: '#/components/parameters/contentId'
       - $ref: '#/components/parameters/contentModelId'
+    get:
+      tags:
+        - content-controller
+      summary: Retrieve a content
+      description: Retrieve the content specified in the path from the contents collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getModelOfTheContent
+      parameters:
+        - $ref: '#/components/parameters/contentLang'
+        - $ref: '#/components/parameters/resolveLinks'
+        - $ref: '#/components/parameters/status'
+      responses:
+        '200':
+          $ref: '#/components/responses/content'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -1732,6 +1754,13 @@ components:
       description: ''
       schema:
         type: boolean
+    resolveLinks:
+      name: resolveLinks
+      in: query
+      description: ''
+      schema:
+        type: boolean
+        default: false
     sort:
       name: sort
       in: query

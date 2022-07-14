@@ -1,0 +1,21 @@
+tags:
+  - content-controller
+summary: Retrieve a content
+description: Retrieve the content specified in the path from the contents collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: getModelOfTheContent
+parameters:
+  - $ref: ../../../../../../../components/parameters/query/contents/lang.yaml
+  - $ref: ../../../../../../../components/parameters/query/contents/resolveLinks.yaml
+  - $ref: ../../../../../../../components/parameters/query/common/status.yaml
+responses:
+  '200':
+    $ref: ../../../../../../../components/responses/ok/contents/content.yaml
+  '401':
+    $ref: ../../../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../../../components/responses/notFound/common/empty.yaml

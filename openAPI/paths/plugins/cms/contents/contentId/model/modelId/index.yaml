@@ -3,3 +3,5 @@ description: API to clone a content
 parameters:
   - $ref: ../../../../../../../components/parameters/path/contents/contentId.yaml
   - $ref: ../../../../../../../components/parameters/path/contents/modelId.yaml
+get:
+  $ref: ./getModelOfTheContent.yaml
