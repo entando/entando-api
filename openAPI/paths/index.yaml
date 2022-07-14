@@ -40,6 +40,8 @@
   $ref: ./plugins/cms/contentModels/modelId/usage/details/index.yaml
 /plugins/cms/contentSettings:
   $ref: ./plugins/cms/contentSettings/index.yaml
+/plugins/cms/contentSettings/cropRatios:
+  $ref: ./plugins/cms/contentSettings/cropRatios/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:

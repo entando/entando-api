@@ -989,6 +989,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /plugins/cms/contentSettings/cropRatios:
+    summary: Content settings crop ratios operations
+    description: API to access and manipulate the collection of content settings crop ratios
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
