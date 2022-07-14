@@ -6,3 +6,5 @@
   $ref: ./activityStream/recordId/comments/commentId/index.yaml
 /activityStream/{recordId}/like:
   $ref: ./activityStream/recordId/like/index.yaml
+/analysis/components/diff:
+  $ref: ./analysis/components/diff/index.yaml
