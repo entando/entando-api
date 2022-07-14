@@ -1166,6 +1166,8 @@ tags:
     description: Categories operations
   - name: check-token-endpoint
     description: Check token operations
+  - name: consumers
+    description: Consumers operations
 externalDocs:
   description: ''
   url: 'https://'
