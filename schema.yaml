@@ -506,6 +506,8 @@ tags:
     description: Activity stream operations
   - name: analysis-controller
     description: Analysis operations
+  - name: analysis-controller-cms
+    description: CMS analysis operations
 externalDocs:
   description: ''
   url: 'https://'

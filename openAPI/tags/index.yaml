@@ -1,2 +1,3 @@
 - $ref: ./activity-stream-controller.yaml
 - $ref: ./analysis-controller.yaml
+- $ref: ./analysis-controller-cms.yaml
