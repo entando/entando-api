@@ -1,3 +1,9 @@
+activityStreamRecord:
+  $ref: ./activityStream/record.yaml
+activityStreamCommentInfo:
+  $ref: ./activityStream/commentInfo.yaml
+activityStreamLikeInfo:
+  $ref: ./activityStream/likeInfo.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 pagedRestResponse:

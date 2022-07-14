@@ -1,0 +1,7 @@
+title: Activity stream record like info
+type: object
+properties:
+  displayName:
+    type: string
+  username:
+    type: string

@@ -18,8 +18,93 @@ paths:
   /activityStream:
     summary: Activity stream operations
     description: End-point to access and manipulate the activity stream
+    get:
+      tags:
+        - activity-stream-controller
+      summary: Retrieve the activity stream
+      description: Retrieve the activity stream's records filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getActivityStream
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/activityStream'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
+    activityStreamRecord:
+      title: Activity stream record
+      type: object
+      properties:
+        actionName:
+          type: string
+        comments:
+          type: array
+          items:
+            $ref: '#/components/schemas/activityStreamCommentInfo'
+        createdAt:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int32
+        likes:
+          type: array
+          items:
+            $ref: '#/components/schemas/activityStreamLikeInfo'
+        namespace:
+          type: string
+        parameters:
+          type: object
+          additionalProperties:
+            type: string
+        updatedAt:
+          type: string
+          format: date-time
+        username:
+          type: string
+    activityStreamCommentInfo:
+      title: Activity stream record comment info
+      type: object
+      properties:
+        commentDate:
+          type: string
+          format: date-time
+        commentText:
+          type: string
+        displayName:
+          type: string
+        id:
+          type: integer
+          format: int32
+        username:
+          type: string
+    activityStreamLikeInfo:
+      title: Activity stream record like info
+      type: object
+      properties:
+        displayName:
+          type: string
+        username:
+          type: string
     filter:
       title: Filter
       type: object
@@ -132,7 +217,25 @@ components:
               type: object
               additionalProperties:
                 type: string
-  responses: {}
+  responses:
+    activityStream:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/activityStreamRecord'
+    forbidden:
+      description: Forbidden
+    notFound:
+      description: Not found
+    unauthorized:
+      description: Unauthorized
   parameters:
     allowedValues:
       name: 'filters[0].allowedValues'

@@ -1,0 +1,30 @@
+title: Activity stream record
+type: object
+properties:
+  actionName:
+    type: string
+  comments:
+    type: array
+    items:
+      $ref: ./commentInfo.yaml
+  createdAt:
+    type: string
+    format: date-time
+  id:
+    type: integer
+    format: int32
+  likes:
+    type: array
+    items:
+      $ref: ./likeInfo.yaml
+  namespace:
+    type: string
+  parameters:
+    type: object
+    additionalProperties:
+      type: string
+  updatedAt:
+    type: string
+    format: date-time
+  username:
+    type: string

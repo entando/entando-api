@@ -1,1 +1,8 @@
-{ }
+activityStream:
+  $ref: ./ok/activityStream/activityStream.yaml
+forbidden:
+  $ref: ./forbidden/common/empty.yaml
+notFound:
+  $ref: ./notFound/common/empty.yaml
+unauthorized:
+  $ref: ./unauthorized/common/empty.yaml

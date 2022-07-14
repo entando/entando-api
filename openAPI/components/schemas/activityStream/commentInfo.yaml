@@ -1,0 +1,15 @@
+title: Activity stream record comment info
+type: object
+properties:
+  commentDate:
+    type: string
+    format: date-time
+  commentText:
+    type: string
+  displayName:
+    type: string
+  id:
+    type: integer
+    format: int32
+  username:
+    type: string
