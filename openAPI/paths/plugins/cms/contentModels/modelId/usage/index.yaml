@@ -1,0 +1,4 @@
+summary: Content model usage operations
+description: API to access and manipulate a content model usage
+parameters:
+  - $ref: ../../../../../../components/parameters/path/contentModels/modelId.yaml
