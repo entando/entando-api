@@ -1,0 +1,4 @@
+summary: Content status operations
+description: API to access and manipulate a content status
+parameters:
+  - $ref: ../../../../../../components/parameters/path/contents/contentId.yaml
