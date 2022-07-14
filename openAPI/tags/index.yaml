@@ -7,3 +7,4 @@
 - $ref: ./consumers.yaml
 - $ref: ./content-controller.yaml
 - $ref: ./content-model-controller.yaml
+- $ref: ./content-settings-controller.yaml

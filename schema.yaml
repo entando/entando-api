@@ -2377,6 +2377,8 @@ tags:
     description: Contents operations
   - name: content-model-controller
     description: Content models operations
+  - name: content-settings-controller
+    description: Content settings operations
 externalDocs:
   description: ''
   url: 'https://'
