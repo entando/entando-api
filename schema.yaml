@@ -464,6 +464,8 @@ security:
 tags:
   - name: activity-stream-controller
     description: Activity stream operations
+  - name: analysis-controller
+    description: Analysis operations
 externalDocs:
   description: ''
   url: 'https://'
