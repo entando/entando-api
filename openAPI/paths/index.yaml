@@ -32,3 +32,5 @@
   $ref: ./plugins/cms/contents/status/index.yaml
 /plugins/cms/contents/{contentId}:
   $ref: ./plugins/cms/contents/contentId/index.yaml
+/plugins/cms/contents/{contentId}/clone:
+  $ref: ./plugins/cms/contents/contentId/clone/index.yaml

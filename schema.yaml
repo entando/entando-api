@@ -896,6 +896,11 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/plugins/cms/contents/{contentId}/clone':
+    summary: Content clone operation
+    description: API to clone a content
+    parameters:
+      - $ref: '#/components/parameters/contentId'
 components:
   schemas:
     activityStreamRecord:
