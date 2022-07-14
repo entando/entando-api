@@ -18,6 +18,8 @@
   $ref: ./categories/categoryId/references/categoryReferenceHolder/index.yaml
 /categories/{categoryId}/usage:
   $ref: ./categories/categoryId/usage/index.yaml
+/consumers:
+  $ref: ./consumers/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:

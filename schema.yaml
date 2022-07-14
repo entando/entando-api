@@ -361,6 +361,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /consumers:
+    summary: Consumers operations
+    description: API to access and manipulate the collection of consumers
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
