@@ -40,6 +40,8 @@ mode:
   $ref: ./query/contents/mode.yaml
 model:
   $ref: ./query/authorizations/model.yaml
+modelId:
+  $ref: ./path/contentModels/modelId.yaml
 name:
   $ref: ./query/authorizations/name.yaml
 operator:

@@ -1,0 +1,7 @@
+name: modelId
+in: path
+description: ''
+required: true
+schema:
+  type: integer
+  format: int64

@@ -776,6 +776,11 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/cms/contentmodels/{modelId}':
+    summary: Content model operations
+    description: API to access and manipulate a content model
+    parameters:
+      - $ref: '#/components/parameters/modelId'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1899,6 +1904,14 @@ components:
       description: ''
       schema:
         type: object
+    modelId:
+      name: modelId
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: integer
+        format: int64
     name:
       name: name
       in: query
