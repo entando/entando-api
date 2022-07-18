@@ -1111,6 +1111,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/plugins/cms/contentSettings/metadata/{key}':
+    summary: Content settings metadata operations
+    description: API to access and manipulate a content settings metadata
+    parameters:
+      - $ref: '#/components/parameters/key'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2403,6 +2408,13 @@ components:
       name: forLinkingWithOwnerGroup
       in: query
       description: ''
+      schema:
+        type: string
+    key:
+      name: key
+      in: path
+      description: ''
+      required: true
       schema:
         type: string
     mode:

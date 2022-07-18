@@ -36,6 +36,8 @@ forLinkingWithExtraGroups:
   $ref: ./query/common/forLinkingWithExtraGroups.yaml
 forLinkingWithOwnerGroup:
   $ref: ./query/common/forLinkingWithOwnerGroup.yaml
+key:
+  $ref: ./path/contentSettings/key.yaml
 mode:
   $ref: ./query/contents/mode.yaml
 model:

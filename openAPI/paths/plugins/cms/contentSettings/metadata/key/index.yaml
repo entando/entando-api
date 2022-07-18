@@ -1,0 +1,4 @@
+summary: Content settings metadata operations
+description: API to access and manipulate a content settings metadata
+parameters:
+  - $ref: ../../../../../../components/parameters/path/contentSettings/key.yaml
