@@ -1086,6 +1086,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /plugins/cms/contentSettings/metadata:
+    summary: Content settings metadata operations
+    description: API to access and manipulate the collection of content settings metadata
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
