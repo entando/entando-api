@@ -16,6 +16,8 @@ contentSettingsEditor:
   $ref: ./contentSettings/contentSettingsEditor.yaml
 contentSettingsMetadata:
   $ref: ./contentSettings/contentSettingsMetadata.yaml
+contentSettingsMetadataForUpdate:
+  $ref: ./contentSettings/contentSettingsMetadataForUpdate.yaml
 contentStatus:
   $ref: ./contents/contentStatus.yaml
 contentsCodes:

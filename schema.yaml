@@ -1116,6 +1116,28 @@ paths:
     description: API to access and manipulate a content settings metadata
     parameters:
       - $ref: '#/components/parameters/key'
+    put:
+      tags:
+        - content-settings-controller
+      summary: Update a content settings metadata
+      description: Update the content settings metadata specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: editMetadata
+      requestBody:
+        $ref: '#/components/requestBodies/contentSettingsMetadataForUpdate'
+      responses:
+        '200':
+          $ref: '#/components/responses/wildCardType_generic'
+        '201':
+          $ref: '#/components/responses/wildCardType_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2642,6 +2664,16 @@ components:
             properties:
               key:
                 type: string
+              mapping:
+                type: string
+    contentSettingsMetadataForUpdate:
+      description: Content settings metadata for update
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
               mapping:
                 type: string
     contentStatus:

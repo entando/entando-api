@@ -1,0 +1,9 @@
+description: Content settings metadata for update
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        mapping:
+          type: string
