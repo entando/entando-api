@@ -1061,6 +1061,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /plugins/cms/contentSettings/editor:
+    summary: Content settings editors operations
+    description: API to access and manipulate the collection of content settings editors
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents

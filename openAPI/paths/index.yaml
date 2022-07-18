@@ -44,6 +44,8 @@
   $ref: ./plugins/cms/contentSettings/cropRatios/index.yaml
 /plugins/cms/contentSettings/cropRatios/{ratio}:
   $ref: ./plugins/cms/contentSettings/cropRatios/ratio/index.yaml
+/plugins/cms/contentSettings/editor:
+  $ref: ./plugins/cms/contentSettings/editor/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:
