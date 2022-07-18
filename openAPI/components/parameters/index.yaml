@@ -56,6 +56,8 @@ pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
 parameters:
   $ref: ./query/authorizations/parameters.yaml
+ratio:
+  $ref: ./path/contentSettings/ratio.yaml
 resolveLink:
   $ref: ./query/contents/resolveLink.yaml
 resolveLinks:

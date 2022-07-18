@@ -1,0 +1,4 @@
+summary: Content settings crop ratio operations
+description: API to access and manipulate a content settings crop ratio
+parameters:
+  - $ref: ../../../../../../components/parameters/path/contentSettings/ratio.yaml

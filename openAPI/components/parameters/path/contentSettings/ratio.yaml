@@ -1,0 +1,6 @@
+name: ratio
+in: path
+description: ''
+required: true
+schema:
+  type: string
