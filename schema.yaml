@@ -1019,6 +1019,28 @@ paths:
     description: API to access and manipulate a content settings crop ratio
     parameters:
       - $ref: '#/components/parameters/ratio'
+    put:
+      tags:
+        - content-settings-controller
+      summary: Update a content settings crop ratio
+      description: Update the content settings crop ratio specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: editCropRatio
+      requestBody:
+        $ref: '#/components/requestBodies/contentSettingsCropRatio'
+      responses:
+        '200':
+          $ref: '#/components/responses/stringsList_generic'
+        '201':
+          $ref: '#/components/responses/stringsList_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
