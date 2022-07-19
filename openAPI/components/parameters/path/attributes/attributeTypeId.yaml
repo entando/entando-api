@@ -1,0 +1,6 @@
+name: attributeTypeId
+in: path
+description: Attribute type code
+required: true
+schema:
+  type: string
