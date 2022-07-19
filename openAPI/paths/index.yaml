@@ -52,6 +52,8 @@
   $ref: ./plugins/cms/contentSettings/metadata/key/index.yaml
 /plugins/cms/contentSettings/reloadIndexes:
   $ref: ./plugins/cms/contentSettings/reloadIndexes/index.yaml
+/plugins/cms/contentSettings/reloadReferences:
+  $ref: ./plugins/cms/contentSettings/reloadReferences/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:

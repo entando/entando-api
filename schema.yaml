@@ -1181,6 +1181,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /plugins/cms/contentSettings/reloadReferences:
+    summary: Content settings reload references operations
+    description: API to perform a reload of the content settings references
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
