@@ -50,6 +50,8 @@
   $ref: ./plugins/cms/contentSettings/metadata/index.yaml
 /plugins/cms/contentSettings/metadata/{key}:
   $ref: ./plugins/cms/contentSettings/metadata/key/index.yaml
+/plugins/cms/contentSettings/reloadIndexes:
+  $ref: ./plugins/cms/contentSettings/reloadIndexes/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:

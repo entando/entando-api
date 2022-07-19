@@ -1158,6 +1158,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /plugins/cms/contentSettings/reloadIndexes:
+    summary: Content settings reload indexes operations
+    description: API to perform a reload of the content settings indexes
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
