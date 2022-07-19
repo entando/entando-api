@@ -8,3 +8,4 @@
 - $ref: ./content-controller.yaml
 - $ref: ./content-model-controller.yaml
 - $ref: ./content-settings-controller.yaml
+- $ref: ./content-type-resource-controller.yaml
