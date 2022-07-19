@@ -1,2 +1,4 @@
 summary: Content settings reload references operations
 description: API to perform a reload of the content settings references
+post:
+  $ref: ./reloadContentSettingsReferences.yaml

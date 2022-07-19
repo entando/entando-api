@@ -1184,6 +1184,26 @@ paths:
   /plugins/cms/contentSettings/reloadReferences:
     summary: Content settings reload references operations
     description: API to perform a reload of the content settings references
+    post:
+      tags:
+        - content-settings-controller
+      summary: Reload the content settings references
+      description: Reload the content settings references
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: reloadContentSettingsReferences
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse_generic'
+        '201':
+          $ref: '#/components/responses/restResponse_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
