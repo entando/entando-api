@@ -1204,6 +1204,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /plugins/cms/contentTypeAttributes:
+    summary: Content type attributes operations
+    description: API to access and manipulate the collection of content type attributes
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
