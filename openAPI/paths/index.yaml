@@ -60,6 +60,8 @@
   $ref: ./plugins/cms/contentTypeAttributes/attributeTypeId/index.yaml
 /plugins/cms/contentTypeAttributes/{contentTypeId}/attribute/{attributeTypeId}:
   $ref: ./plugins/cms/contentTypeAttributes/contentTypeId/attribute/attributeTypeId/index.yaml
+/plugins/cms/contentTypes:
+  $ref: ./plugins/cms/contentTypes/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:
