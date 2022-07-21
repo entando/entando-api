@@ -9,3 +9,4 @@
 - $ref: ./content-model-controller.yaml
 - $ref: ./content-settings-controller.yaml
 - $ref: ./content-type-resource-controller.yaml
+- $ref: ./content-versioning-controller.yaml

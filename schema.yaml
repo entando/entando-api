@@ -3664,6 +3664,8 @@ tags:
     description: Content settings operations
   - name: content-type-resource-controller
     description: Content type resource operations
+  - name: content-versioning-controller
+    description: Content versioning operations
 externalDocs:
   description: ''
   url: 'https://'
