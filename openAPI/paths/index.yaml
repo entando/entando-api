@@ -68,6 +68,8 @@
   $ref: ./plugins/cms/contentTypes/contentTypeId/index.yaml
 /plugins/cms/contentTypes/{contentTypeId}/attributes:
   $ref: ./plugins/cms/contentTypes/contentTypeId/attributes/index.yaml
+/plugins/cms/contentTypes/{contentTypeId}/attributes/{attributeId}:
+  $ref: ./plugins/cms/contentTypes/contentTypeId/attributes/attributeId/index.yaml
 /plugins/cms/contentTypes/{contentTypeId}/usage:
   $ref: ./plugins/cms/contentTypes/contentTypeId/usage/index.yaml
 /plugins/cms/contentTypes/{contentTypeId}/usage/details:

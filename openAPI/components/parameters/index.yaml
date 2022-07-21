@@ -6,6 +6,8 @@ allowedValues:
   $ref: ./query/common/filters/allowedValues.yaml
 attribute:
   $ref: ./query/common/filters/attribute.yaml
+attributeId:
+  $ref: ./path/attributes/attributeId.yaml
 attributeTypeId:
   $ref: ./path/attributes/attributeTypeId.yaml
 categories:
