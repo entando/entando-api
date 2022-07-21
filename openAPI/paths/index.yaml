@@ -72,6 +72,8 @@
   $ref: ./plugins/cms/contentTypes/contentTypeId/attributes/attributeId/index.yaml
 /plugins/cms/contentTypes/{contentTypeId}/attributes/{attributeId}/moveDown:
   $ref: ./plugins/cms/contentTypes/contentTypeId/attributes/attributeId/moveDown/index.yaml
+/plugins/cms/contentTypes/{contentTypeId}/attributes/{attributeId}/moveUp:
+  $ref: ./plugins/cms/contentTypes/contentTypeId/attributes/attributeId/moveUp/index.yaml
 /plugins/cms/contentTypes/{contentTypeId}/usage:
   $ref: ./plugins/cms/contentTypes/contentTypeId/usage/index.yaml
 /plugins/cms/contentTypes/{contentTypeId}/usage/details:

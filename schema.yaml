@@ -1564,6 +1564,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/plugins/cms/contentTypes/{contentTypeId}/attributes/{attributeId}/moveUp':
+    summary: Content type attribute move up operations
+    description: API to perform a content type attribute move up
+    parameters:
+      - $ref: '#/components/parameters/contentTypeId'
+      - $ref: '#/components/parameters/attributeId'
   '/plugins/cms/contentTypes/{contentTypeId}/usage':
     summary: Content type usage operations
     description: API to access and manipulate a content type usage

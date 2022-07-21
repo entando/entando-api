@@ -1,0 +1,5 @@
+summary: Content type attribute move up operations
+description: API to perform a content type attribute move up
+parameters:
+  - $ref: ../../../../../../../../components/parameters/path/contentTypes/contentTypeId.yaml
+  - $ref: ../../../../../../../../components/parameters/path/attributes/attributeId.yaml
