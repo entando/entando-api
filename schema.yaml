@@ -1987,6 +1987,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /plugins/versioning/contents:
+    summary: Contents versioning operations
+    description: API to access contents versioning
 components:
   schemas:
     activityStreamRecord:
