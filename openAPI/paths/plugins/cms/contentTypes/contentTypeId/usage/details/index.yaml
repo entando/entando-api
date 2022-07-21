@@ -2,3 +2,5 @@ summary: Content type usage details operations
 description: API to access and manipulate a content type usage details
 parameters:
   - $ref: ../../../../../../../components/parameters/path/contentTypes/contentTypeId.yaml
+get:
+  $ref: ./getContentTypeUsageDetails.yaml
