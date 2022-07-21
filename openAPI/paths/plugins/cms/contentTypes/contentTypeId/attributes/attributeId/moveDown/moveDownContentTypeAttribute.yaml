@@ -1,0 +1,19 @@
+tags:
+  - content-type-resource-controller
+summary: Move down a content type attribute
+description: Move down the content type attribute specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: moveDownContentTypeAttribute
+responses:
+  '200':
+    $ref: ../../../../../../../../components/responses/ok/restResponse/restResponse.yaml
+  '201':
+    $ref: ../../../../../../../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../../../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../../../../components/responses/notFound/common/empty.yaml

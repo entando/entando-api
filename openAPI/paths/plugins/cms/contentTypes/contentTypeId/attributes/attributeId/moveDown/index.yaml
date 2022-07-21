@@ -3,3 +3,5 @@ description: API to perform a content type attribute move down
 parameters:
   - $ref: ../../../../../../../../components/parameters/path/contentTypes/contentTypeId.yaml
   - $ref: ../../../../../../../../components/parameters/path/attributes/attributeId.yaml
+put:
+  $ref: ./moveDownContentTypeAttribute.yaml

@@ -1544,6 +1544,26 @@ paths:
     parameters:
       - $ref: '#/components/parameters/contentTypeId'
       - $ref: '#/components/parameters/attributeId'
+    put:
+      tags:
+        - content-type-resource-controller
+      summary: Move down a content type attribute
+      description: Move down the content type attribute specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: moveDownContentTypeAttribute
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/plugins/cms/contentTypes/{contentTypeId}/usage':
     summary: Content type usage operations
     description: API to access and manipulate a content type usage
