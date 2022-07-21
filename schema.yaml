@@ -1366,6 +1366,26 @@ paths:
     description: API to perform a refresh of the content types references
     parameters:
       - $ref: '#/components/parameters/contentTypeId'
+    post:
+      tags:
+        - content-type-resource-controller
+      summary: Reload a content type references
+      description: Reload a content type references
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: reloadContentTypeReferences
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
