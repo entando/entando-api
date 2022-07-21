@@ -1361,6 +1361,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/plugins/cms/contentTypes/refresh/{contentTypeId}':
+    summary: Content typess refresh references operations
+    description: API to perform a refresh of the content types references
+    parameters:
+      - $ref: '#/components/parameters/contentTypeId'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents

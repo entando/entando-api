@@ -1,0 +1,4 @@
+summary: Content typess refresh references operations
+description: API to perform a refresh of the content types references
+parameters:
+  - $ref: ../../../../../../components/parameters/path/contentTypes/contentTypeId.yaml
