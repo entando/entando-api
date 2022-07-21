@@ -66,6 +66,8 @@
   $ref: ./plugins/cms/contentTypes/refresh/contentTypeId/index.yaml
 /plugins/cms/contentTypes/{contentTypeId}:
   $ref: ./plugins/cms/contentTypes/contentTypeId/index.yaml
+/plugins/cms/contentTypes/{contentTypeId}/usage:
+  $ref: ./plugins/cms/contentTypes/contentTypeId/usage/index.yaml
 /plugins/cms/contents:
   $ref: ./plugins/cms/contents/index.yaml
 /plugins/cms/contents/status:
