@@ -1391,6 +1391,24 @@ paths:
     description: API to access and manipulate a content type
     parameters:
       - $ref: '#/components/parameters/contentTypeId'
+    get:
+      tags:
+        - content-type-resource-controller
+      summary: Retrieve a content type
+      description: Retrieve the content type specified in the path from the content types collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentType
+      responses:
+        '200':
+          $ref: '#/components/responses/contentTypeObject_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
