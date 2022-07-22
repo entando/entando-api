@@ -2129,6 +2129,12 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/versioning/contents/{contentId}/versions/{versionId}/recover':
+    summary: Content version recover operation
+    description: API to recover a content version
+    parameters:
+      - $ref: '#/components/parameters/contentId'
+      - $ref: '#/components/parameters/versionId'
 components:
   schemas:
     activityStreamRecord:

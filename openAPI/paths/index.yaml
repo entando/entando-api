@@ -98,3 +98,5 @@
   $ref: ./plugins/versioning/contents/contentId/index.yaml
 /plugins/versioning/contents/{contentId}/versions/{versionId}:
   $ref: ./plugins/versioning/contents/contentId/versions/versionId/index.yaml
+/plugins/versioning/contents/{contentId}/versions/{versionId}/recover:
+  $ref: ./plugins/versioning/contents/contentId/versions/versionId/recover/index.yaml

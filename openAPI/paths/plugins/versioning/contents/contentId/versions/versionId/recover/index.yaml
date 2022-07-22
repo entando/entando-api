@@ -1,0 +1,5 @@
+summary: Content version recover operation
+description: API to recover a content version
+parameters:
+  - $ref: ../../../../../../../../components/parameters/path/contents/contentId.yaml
+  - $ref: ../../../../../../../../components/parameters/path/versioning/versionId.yaml
