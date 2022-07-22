@@ -2033,6 +2033,44 @@ paths:
     description: API to access content versioning
     parameters:
       - $ref: '#/components/parameters/contentId'
+    get:
+      tags:
+        - content-versioning-controller
+      summary: Retrieve the content versioning
+      description: Retrieve the content versioning filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentVersioning
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentVersions'
+        '201':
+          $ref: '#/components/responses/contentVersions-created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
 components:
   schemas:
     activityStreamRecord:
