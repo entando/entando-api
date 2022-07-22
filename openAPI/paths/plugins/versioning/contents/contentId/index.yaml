@@ -1,0 +1,4 @@
+summary: Content versioning operations
+description: API to access content versioning
+parameters:
+  - $ref: ../../../../../components/parameters/path/contents/contentId.yaml

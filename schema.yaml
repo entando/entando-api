@@ -2028,6 +2028,11 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/versioning/contents/{contentId}':
+    summary: Content versioning operations
+    description: API to access content versioning
+    parameters:
+      - $ref: '#/components/parameters/contentId'
 components:
   schemas:
     activityStreamRecord:

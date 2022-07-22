@@ -94,3 +94,5 @@
   $ref: ./plugins/cms/contents/contentId/status/index.yaml
 /plugins/versioning/contents:
   $ref: ./plugins/versioning/contents/index.yaml
+/plugins/versioning/contents/{contentId}:
+  $ref: ./plugins/versioning/contents/contentId/index.yaml
