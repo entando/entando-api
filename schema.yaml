@@ -2071,6 +2071,12 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/versioning/contents/{contentId}/versions/{versionId}':
+    summary: Content version operations
+    description: API to access and manipulate a content version
+    parameters:
+      - $ref: '#/components/parameters/contentId'
+      - $ref: '#/components/parameters/versionId'
 components:
   schemas:
     activityStreamRecord:
@@ -3592,6 +3598,14 @@ components:
       description: ''
       schema:
         type: string
+    versionId:
+      name: versionId
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: integer
+        format: int64
   examples: {}
   requestBodies:
     activityStreamRecordComment:

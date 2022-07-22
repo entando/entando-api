@@ -96,3 +96,5 @@
   $ref: ./plugins/versioning/contents/index.yaml
 /plugins/versioning/contents/{contentId}:
   $ref: ./plugins/versioning/contents/contentId/index.yaml
+/plugins/versioning/contents/{contentId}/versions/{versionId}:
+  $ref: ./plugins/versioning/contents/contentId/versions/versionId/index.yaml

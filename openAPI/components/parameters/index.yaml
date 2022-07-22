@@ -84,3 +84,5 @@ typeCode:
   $ref: ./query/contentModels/typeCode.yaml
 value:
   $ref: ./query/common/filters/value.yaml
+versionId:
+  $ref: ./path/versioning/versionId.yaml
