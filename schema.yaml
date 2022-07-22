@@ -482,6 +482,24 @@ paths:
   /dashboard/integration:
     summary: Dashboard integration operations
     description: API to access the dashboard integration
+    get:
+      tags:
+        - dashboard-controller
+      summary: Retrieve the dashboard integration info
+      description: Retrieve the dashboard integration info
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getDashboardIntegration
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
