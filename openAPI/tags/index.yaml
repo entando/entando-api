@@ -11,3 +11,4 @@
 - $ref: ./content-type-resource-controller.yaml
 - $ref: ./content-versioning-controller.yaml
 - $ref: ./dashboard-controller.yaml
+- $ref: ./database-controller.yaml

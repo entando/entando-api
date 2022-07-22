@@ -3980,6 +3980,8 @@ tags:
     description: Content versioning operations
   - name: dashboard-controller
     description: Dashboard operations
+  - name: database-controller
+    description: Database operations
 externalDocs:
   description: ''
   url: 'https://'
