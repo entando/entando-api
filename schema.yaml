@@ -479,6 +479,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /dashboard/integration:
+    summary: Dashboard integration operations
+    description: API to access the dashboard integration
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

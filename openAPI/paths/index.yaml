@@ -22,6 +22,8 @@
   $ref: ./consumers/index.yaml
 /consumers/{consumerId}:
   $ref: ./consumers/consumerId/index.yaml
+/dashboard/integration:
+  $ref: ./dashboard/integration/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
