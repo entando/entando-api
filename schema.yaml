@@ -500,6 +500,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /dashboard/pageStatus:
+    summary: Dashboard page status operations
+    description: API to access the dashboard page status
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
