@@ -2135,6 +2135,32 @@ paths:
     parameters:
       - $ref: '#/components/parameters/contentId'
       - $ref: '#/components/parameters/versionId'
+    post:
+      tags:
+        - content-versioning-controller
+      summary: Recover a content version
+      description: Recover the content version specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: recoverContentVersion
+      responses:
+        '200':
+          $ref: '#/components/responses/contentObject'
+        '201':
+          $ref: '#/components/responses/contentObject-created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
 components:
   schemas:
     activityStreamRecord:
