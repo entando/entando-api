@@ -3911,6 +3911,8 @@ tags:
     description: Content type resource operations
   - name: content-versioning-controller
     description: Content versioning operations
+  - name: dashboard-controller
+    description: Dashboard operations
 externalDocs:
   description: ''
   url: 'https://'

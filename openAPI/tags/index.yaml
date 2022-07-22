@@ -10,3 +10,4 @@
 - $ref: ./content-settings-controller.yaml
 - $ref: ./content-type-resource-controller.yaml
 - $ref: ./content-versioning-controller.yaml
+- $ref: ./dashboard-controller.yaml
