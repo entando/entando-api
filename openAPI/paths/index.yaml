@@ -26,6 +26,8 @@
   $ref: ./dashboard/integration/index.yaml
 /dashboard/pageStatus:
   $ref: ./dashboard/pageStatus/index.yaml
+/database:
+  $ref: ./database/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
