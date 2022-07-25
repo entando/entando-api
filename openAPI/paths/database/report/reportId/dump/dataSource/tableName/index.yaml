@@ -1,0 +1,6 @@
+summary: Database report data table operations
+description: API to access and manipulate a database report data table
+parameters:
+  - $ref: ../../../../../../../components/parameters/path/database/reportId.yaml
+  - $ref: ../../../../../../../components/parameters/path/database/dataSource.yaml
+  - $ref: ../../../../../../../components/parameters/path/database/tableName.yaml

@@ -34,6 +34,8 @@ contentStatus:
   $ref: ./query/contents/status.yaml
 contentTypeId:
   $ref: ./path/contentTypes/contentTypeId.yaml
+dataSource:
+  $ref: ./path/database/dataSource.yaml
 direction:
   $ref: ./query/common/pagination/direction.yaml
 entityAttr:
@@ -76,6 +78,8 @@ sort:
   $ref: ./query/common/pagination/sort.yaml
 status:
   $ref: ./query/common/status.yaml
+tableName:
+  $ref: ./path/database/tableName.yaml
 text:
   $ref: ./query/contents/text.yaml
 token:

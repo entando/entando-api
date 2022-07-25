@@ -616,6 +616,13 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/database/report/{reportId}/dump/{dataSource}/{tableName}':
+    summary: Database report data table operations
+    description: API to access and manipulate a database report data table
+    parameters:
+      - $ref: '#/components/parameters/reportId'
+      - $ref: '#/components/parameters/dataSource'
+      - $ref: '#/components/parameters/tableName'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -3798,6 +3805,13 @@ components:
       required: true
       schema:
         type: string
+    dataSource:
+      name: dataSource
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: string
     direction:
       name: direction
       in: query
@@ -3944,6 +3958,13 @@ components:
       schema:
         type: string
         default: draft
+    tableName:
+      name: tableName
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: string
     text:
       name: text
       in: query
