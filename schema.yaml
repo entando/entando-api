@@ -646,6 +646,26 @@ paths:
     description: API to perform a backup restore
     parameters:
       - $ref: '#/components/parameters/reportId'
+    put:
+      tags:
+        - database-controller
+      summary: Restore a database backup
+      description: Restore the database backup specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: restoreBackup
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
