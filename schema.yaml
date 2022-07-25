@@ -641,6 +641,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/database/restoreBackup/{reportId}':
+    summary: Database restore backup operations
+    description: API to perform a backup restore
+    parameters:
+      - $ref: '#/components/parameters/reportId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

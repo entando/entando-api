@@ -1,0 +1,4 @@
+summary: Database restore backup operations
+description: API to perform a backup restore
+parameters:
+  - $ref: ../../../../components/parameters/path/database/reportId.yaml
