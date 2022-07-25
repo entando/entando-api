@@ -28,6 +28,8 @@
   $ref: ./dashboard/pageStatus/index.yaml
 /database:
   $ref: ./database/index.yaml
+/database/initBackup:
+  $ref: ./database/initBackup/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:

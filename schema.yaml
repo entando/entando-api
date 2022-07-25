@@ -554,6 +554,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /database/initBackup:
+    summary: Database backup operations
+    description: API to access and manipulate the database backup
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
