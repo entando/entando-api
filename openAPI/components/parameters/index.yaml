@@ -66,6 +66,8 @@ parameters:
   $ref: ./query/authorizations/parameters.yaml
 ratio:
   $ref: ./path/contentSettings/ratio.yaml
+reportId:
+  $ref: ./path/database/reportId.yaml
 resolveLink:
   $ref: ./query/contents/resolveLink.yaml
 resolveLinks:

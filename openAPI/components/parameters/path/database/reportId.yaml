@@ -1,0 +1,6 @@
+name: reportId
+in: path
+description: Report code
+required: true
+schema:
+  type: string

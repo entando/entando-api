@@ -575,6 +575,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/database/report/{reportId}':
+    summary: Database report operations
+    description: API to access and manipulate a database report
+    parameters:
+      - $ref: '#/components/parameters/reportId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -3808,6 +3813,13 @@ components:
       name: ratio
       in: path
       description: ''
+      required: true
+      schema:
+        type: string
+    reportId:
+      name: reportId
+      in: path
+      description: Report code
       required: true
       schema:
         type: string

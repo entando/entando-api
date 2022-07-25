@@ -30,6 +30,8 @@
   $ref: ./database/index.yaml
 /database/initBackup:
   $ref: ./database/initBackup/index.yaml
+/database/report/{reportId}:
+  $ref: ./database/report/reportId/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
