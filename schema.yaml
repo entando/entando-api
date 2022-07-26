@@ -669,6 +669,26 @@ paths:
   /database/startBackup:
     summary: Database backup operations
     description: API to access and manipulate the database backup
+    post:
+      tags:
+        - database-controller
+      summary: Start a backup
+      description: Start a backup
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: startBackup
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
