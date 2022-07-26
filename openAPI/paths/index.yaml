@@ -110,6 +110,8 @@
   $ref: ./plugins/cms/contents/contentId/model/modelId/index.yaml
 /plugins/cms/contents/{contentId}/status:
   $ref: ./plugins/cms/contents/contentId/status/index.yaml
+/plugins/emailSettings/senders:
+  $ref: ./plugins/emailSettings/senders/index.yaml
 /plugins/versioning/contents:
   $ref: ./plugins/versioning/contents/index.yaml
 /plugins/versioning/contents/{contentId}:
