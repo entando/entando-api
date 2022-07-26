@@ -2273,6 +2273,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/plugins/emailSettings/senders/{senderId}':
+    summary: E-mail sender operations
+    description: API to access and manipulate an e-mail senders
+    parameters:
+      - $ref: '#/components/parameters/senderId'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
@@ -4123,6 +4128,13 @@ components:
       schema:
         type: boolean
         default: false
+    senderId:
+      name: senderId
+      in: path
+      description: Sender code
+      required: true
+      schema:
+        type: string
     sort:
       name: sort
       in: query

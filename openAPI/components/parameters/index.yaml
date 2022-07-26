@@ -74,6 +74,8 @@ resolveLink:
   $ref: ./query/contents/resolveLink.yaml
 resolveLinks:
   $ref: ./query/contents/resolveLinks.yaml
+senderId:
+  $ref: ./path/emailSenders/senderId.yaml
 sort:
   $ref: ./query/common/pagination/sort.yaml
 status:

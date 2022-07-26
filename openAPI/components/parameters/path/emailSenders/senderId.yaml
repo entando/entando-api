@@ -1,0 +1,6 @@
+name: senderId
+in: path
+description: Sender code
+required: true
+schema:
+  type: string
