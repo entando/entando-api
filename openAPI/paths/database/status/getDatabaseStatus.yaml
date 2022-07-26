@@ -1,0 +1,17 @@
+tags:
+  - database-controller
+summary: Retrieve the database status
+description: Retrieve the database status
+externalDocs:
+  description: ''
+  url: https://
+operationId: getDatabaseStatus
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/restResponse/restResponse.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

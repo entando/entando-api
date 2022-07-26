@@ -1,2 +1,4 @@
 summary: Database status operations
 description: API to access and manipulate the database status
+get:
+  $ref: ./getDatabaseStatus.yaml

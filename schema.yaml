@@ -692,6 +692,24 @@ paths:
   /database/status:
     summary: Database status operations
     description: API to access and manipulate the database status
+    get:
+      tags:
+        - database-controller
+      summary: Retrieve the database status
+      description: Retrieve the database status
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getDatabaseStatus
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
