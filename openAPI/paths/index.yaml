@@ -38,6 +38,8 @@
   $ref: ./database/restoreBackup/reportId/index.yaml
 /database/startBackup:
   $ref: ./database/startBackup/index.yaml
+/database/status:
+  $ref: ./database/status/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
