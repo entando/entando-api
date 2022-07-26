@@ -4310,6 +4310,8 @@ tags:
     description: Dashboard operations
   - name: database-controller
     description: Database operations
+  - name: email-sender-controller
+    description: Email sender operations
 externalDocs:
   description: ''
   url: 'https://'

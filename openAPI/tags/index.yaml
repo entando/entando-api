@@ -12,3 +12,4 @@
 - $ref: ./content-versioning-controller.yaml
 - $ref: ./dashboard-controller.yaml
 - $ref: ./database-controller.yaml
+- $ref: ./email-sender-controller.yaml
