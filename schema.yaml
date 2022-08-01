@@ -2278,6 +2278,24 @@ paths:
     description: API to access and manipulate an e-mail senders
     parameters:
       - $ref: '#/components/parameters/senderId'
+    get:
+      tags:
+        - email-sender-controller
+      summary: Retrieve an e-mail sender
+      description: Retrieve the e-mail sender specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getEmailSender
+      responses:
+        '200':
+          $ref: '#/components/responses/emailSender'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning

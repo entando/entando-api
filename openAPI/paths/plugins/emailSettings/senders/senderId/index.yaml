@@ -2,3 +2,5 @@ summary: E-mail sender operations
 description: API to access and manipulate an e-mail senders
 parameters:
   - $ref: ../../../../../components/parameters/path/emailSenders/senderId.yaml
+get:
+  $ref: ./getEmailSender.yaml
