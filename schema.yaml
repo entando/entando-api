@@ -4587,6 +4587,8 @@ tags:
     description: Email sender operations
   - name: entity-manager-controller
     description: Entity manager operations
+  - name: file-browser-controller
+    description: File browser operations
 externalDocs:
   description: ''
   url: 'https://'
