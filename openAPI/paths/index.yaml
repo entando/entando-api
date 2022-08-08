@@ -44,6 +44,8 @@
   $ref: ./entityManagers/index.yaml
 /entityManagers/{entityManagerId}:
   $ref: ./entityManagers/entityManagerId/index.yaml
+/fileBrowser:
+  $ref: ./fileBrowser/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
