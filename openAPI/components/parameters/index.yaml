@@ -40,6 +40,8 @@ direction:
   $ref: ./query/common/pagination/direction.yaml
 entityAttr:
   $ref: ./query/common/filters/entityAttr.yaml
+entityManagerId:
+  $ref: ./path/entityManagers/entityManagerId.yaml
 forLinkingWithExtraGroups:
   $ref: ./query/common/forLinkingWithExtraGroups.yaml
 forLinkingWithOwnerGroup:

@@ -743,6 +743,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/entityManagers/{entityManagerId}':
+    summary: Entity managers operations
+    description: API to access and manipulate the entity managers
+    parameters:
+      - $ref: '#/components/parameters/entityManagerId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -4110,6 +4115,13 @@ components:
       name: 'filters[0].entityAttr'
       in: query
       description: ''
+      schema:
+        type: string
+    entityManagerId:
+      name: entityManagerId
+      in: path
+      description: Entity manager code
+      required: true
       schema:
         type: string
     forLinkingWithExtraGroups:

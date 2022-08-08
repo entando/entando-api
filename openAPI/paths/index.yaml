@@ -42,6 +42,8 @@
   $ref: ./database/status/index.yaml
 /entityManagers:
   $ref: ./entityManagers/index.yaml
+/entityManagers/{entityManagerId}:
+  $ref: ./entityManagers/entityManagerId/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:

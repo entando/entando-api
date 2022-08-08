@@ -1,0 +1,6 @@
+name: entityManagerId
+in: path
+description: Entity manager code
+required: true
+schema:
+  type: string
