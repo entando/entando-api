@@ -1,2 +1,4 @@
 summary: Entity managers operations
 description: API to access and manipulate the entity managers
+get:
+  $ref: ./getEntityManagers.yaml

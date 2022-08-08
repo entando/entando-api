@@ -86,6 +86,8 @@ shortDumpReports:
   $ref: ./ok/database/shortDumpReports.yaml
 string_generic:
   $ref: ./ok/common/string_generic.yaml
+strings:
+  $ref: ./ok/common/strings.yaml
 strings_generic:
   $ref: ./ok/common/strings_generic.yaml
 stringsList_generic:
