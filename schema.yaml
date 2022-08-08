@@ -710,6 +710,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /entityManagers:
+    summary: Entity managers operations
+    description: API to access and manipulate the entity managers
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
