@@ -4476,6 +4476,8 @@ tags:
     description: Database operations
   - name: email-sender-controller
     description: Email sender operations
+  - name: entity-manager-controller
+    description: Entity manager operations
 externalDocs:
   description: ''
   url: 'https://'

@@ -13,3 +13,4 @@
 - $ref: ./dashboard-controller.yaml
 - $ref: ./database-controller.yaml
 - $ref: ./email-sender-controller.yaml
+- $ref: ./entity-manager-controller.yaml
