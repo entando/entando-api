@@ -1,0 +1,13 @@
+title: Entity type
+type: object
+properties:
+  attributes:
+    type: array
+    items:
+      $ref: ../common/entityTypeAttribute.yaml
+  code:
+    type: string
+  name:
+    type: string
+  status:
+    type: string

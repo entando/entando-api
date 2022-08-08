@@ -1,0 +1,9 @@
+title: Entity manager
+type: object
+properties:
+  code:
+    type: string
+  entityTypes:
+    type: array
+    items:
+      $ref: ./entityType.yaml

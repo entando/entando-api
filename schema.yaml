@@ -748,6 +748,24 @@ paths:
     description: API to access and manipulate the entity managers
     parameters:
       - $ref: '#/components/parameters/entityManagerId'
+    get:
+      tags:
+        - entity-manager-controller
+      summary: Retrieve an entity manager
+      description: Retrieve the entity manager specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getEntityManager
+      responses:
+        '200':
+          $ref: '#/components/responses/entityManager'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -3001,6 +3019,30 @@ components:
         values:
           type: object
           properties: {}
+    entityManager:
+      title: Entity manager
+      type: object
+      properties:
+        code:
+          type: string
+        entityTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/entityType'
+    entityType:
+      title: Entity type
+      type: object
+      properties:
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/entityTypeAttribute'
+        code:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
     entityTypeAttribute:
       title: Entity type attribute
       type: object
@@ -3708,6 +3750,16 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/emailSender'
+    entityManager:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/entityManager'
     entityTypeAttributeFullList:
       description: OK
       content:

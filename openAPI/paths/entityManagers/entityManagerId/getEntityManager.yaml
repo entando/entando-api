@@ -1,0 +1,17 @@
+tags:
+  - entity-manager-controller
+summary: Retrieve an entity manager
+description: Retrieve the entity manager specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getEntityManager
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/entityManagers/entityManager.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
