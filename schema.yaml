@@ -793,6 +793,28 @@ paths:
   /fileBrowser/directory:
     summary: File browser directories operations
     description: API to access and manipulate the file browser directories
+    post:
+      tags:
+        - file-browser-controller
+      summary: Add a directory to the file browser
+      description: Create a new directory as specified in the request body and add it to the file browser
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addDirectory
+      requestBody:
+        $ref: '#/components/requestBodies/directory'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -4584,6 +4606,17 @@ components:
             type: array
             items:
               $ref: '#/components/schemas/content'
+    directory:
+      description: Directory
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              path:
+                type: string
+              protectedFolder:
+                type: boolean
     emailSender:
       description: E-mail sender
       required: true

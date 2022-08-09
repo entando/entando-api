@@ -1,0 +1,10 @@
+description: Directory
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        path:
+          type: string
+        protectedFolder:
+          type: boolean

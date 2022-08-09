@@ -28,6 +28,8 @@ contentsCodes:
   $ref: ./contents/contentsCodes.yaml
 contentsList:
   $ref: ./contents/contentsList.yaml
+directory:
+  $ref: ./fileBrowser/directory.yaml
 emailSender:
   $ref: ./emailSenders/emailSender.yaml
 entityTypeAttribute:
