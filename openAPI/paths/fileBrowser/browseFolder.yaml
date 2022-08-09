@@ -1,0 +1,20 @@
+tags:
+  - file-browser-controller
+summary: Retrieve the content of a folder
+description: Retrieve the content of the folder specified in the query parameters
+externalDocs:
+  description: ''
+  url: https://
+operationId: browseFolder
+parameters:
+  - $ref: ../../components/parameters/query/fileBrowser/currentPath.yaml
+  - $ref: ../../components/parameters/query/fileBrowser/protectedFolder.yaml
+responses:
+  '200':
+    $ref: ../../components/responses/ok/fileBrowser/basicFileAttributeViewList.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml

@@ -1,0 +1,5 @@
+name: currentPath
+in: query
+description: ''
+schema:
+  type: string

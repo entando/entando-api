@@ -1,0 +1,5 @@
+name: protectedFolder
+in: query
+description: ''
+schema:
+  type: boolean

@@ -8,6 +8,8 @@ attributeProperty:
   $ref: ./common/attributeProperty.yaml
 attributeType:
   $ref: ./common/attributeType.yaml
+basicFileAttributeView:
+  $ref: ./fileBrowser/basicFileAttributeView.yaml
 category:
   $ref: ./categories/category.yaml
 component:

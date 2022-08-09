@@ -1,0 +1,16 @@
+title: Basic file attribute view
+type: object
+properties:
+  directory:
+    type: boolean
+  lastModifiedTime:
+    type: string
+  name:
+    type: string
+  path:
+    type: string
+  protectedFolder:
+    type: boolean
+  size:
+    type: integer
+    format: int64

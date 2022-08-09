@@ -769,6 +769,27 @@ paths:
   /fileBrowser:
     summary: File browser operations
     description: API to access and manipulate the file browser
+    get:
+      tags:
+        - file-browser-controller
+      summary: Retrieve the content of a folder
+      description: Retrieve the content of the folder specified in the query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: browseFolder
+      parameters:
+        - $ref: '#/components/parameters/currentPath'
+        - $ref: '#/components/parameters/protectedFolder'
+      responses:
+        '200':
+          $ref: '#/components/responses/basicFileAttributeViewList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -2684,6 +2705,23 @@ components:
           type: boolean
         textFilterSupported:
           type: boolean
+    basicFileAttributeView:
+      title: Basic file attribute view
+      type: object
+      properties:
+        directory:
+          type: boolean
+        lastModifiedTime:
+          type: string
+        name:
+          type: string
+        path:
+          type: string
+        protectedFolder:
+          type: boolean
+        size:
+          type: integer
+          format: int64
     category:
       title: Category
       type: object
@@ -3495,6 +3533,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/attributeType'
+    basicFileAttributeViewList:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/basicFileAttributeView'
     categoriesListMapMetadata:
       description: OK
       content:
@@ -4153,6 +4201,12 @@ components:
       required: true
       schema:
         type: string
+    currentPath:
+      name: currentPath
+      in: query
+      description: ''
+      schema:
+        type: string
     dataSource:
       name: dataSource
       in: path
@@ -4273,6 +4327,12 @@ components:
       description: ''
       required: true
       schema: {}
+    protectedFolder:
+      name: protectedFolder
+      in: query
+      description: ''
+      schema:
+        type: boolean
     ratio:
       name: ratio
       in: path

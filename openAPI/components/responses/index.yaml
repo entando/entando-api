@@ -4,6 +4,8 @@ activityStreamRecord:
   $ref: ./ok/activityStream/activityStreamRecord.yaml
 attributeType_generic:
   $ref: ./ok/common/attributeType_generic.yaml
+basicFileAttributeViewList:
+  $ref: ./ok/fileBrowser/basicFileAttributeViewList.yaml
 categoriesListMapMetadata:
   $ref: ./ok/categories/categoriesListMapMetadata.yaml
 category:

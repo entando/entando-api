@@ -34,6 +34,8 @@ contentStatus:
   $ref: ./query/contents/status.yaml
 contentTypeId:
   $ref: ./path/contentTypes/contentTypeId.yaml
+currentPath:
+  $ref: ./query/fileBrowser/currentPath.yaml
 dataSource:
   $ref: ./path/database/dataSource.yaml
 direction:
@@ -68,6 +70,8 @@ pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
 parameters:
   $ref: ./query/authorizations/parameters.yaml
+protectedFolder:
+  $ref: ./query/fileBrowser/protectedFolder.yaml
 ratio:
   $ref: ./path/contentSettings/ratio.yaml
 reportId:

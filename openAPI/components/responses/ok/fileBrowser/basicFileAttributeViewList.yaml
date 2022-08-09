@@ -1,0 +1,9 @@
+description: OK
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/restResponseListPayload.yaml
+        - properties:
+            payload:
+              $ref: ../../../schemas/fileBrowser/basicFileAttributeView.yaml
