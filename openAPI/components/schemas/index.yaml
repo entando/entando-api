@@ -58,6 +58,8 @@ entityTypesStatus:
   $ref: ./common/entityTypesStatus.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
+group:
+  $ref: ./groups/group.yaml
 iEntityModelDictionary:
   $ref: ./contentModels/iEntityModelDictionary.yaml
 lastReloadInfo:

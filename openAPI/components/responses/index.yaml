@@ -66,6 +66,8 @@ entityTypeAttributeFullList_generic:
   $ref: ./ok/common/entityTypeAttributeFullList_generic.yaml
 entityTypesStatus_generic:
   $ref: ./ok/common/entityTypesStatus_generic.yaml
+groups:
+  $ref: ./ok/groups/groups.yaml
 iEntityModelDictionary:
   $ref: ./ok/contentModels/iEntityModelDictionary.yaml
 modelAndViewObject_generic:
