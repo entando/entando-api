@@ -50,6 +50,8 @@
   $ref: ./fileBrowser/directory/index.yaml
 /fileBrowser/file:
   $ref: ./fileBrowser/file/index.yaml
+/groups:
+  $ref: ./groups/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:

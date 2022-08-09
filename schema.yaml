@@ -925,6 +925,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /groups:
+    summary: Groups operations
+    description: API to access and manipulate groups
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
