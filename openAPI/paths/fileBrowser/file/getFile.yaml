@@ -1,0 +1,20 @@
+tags:
+  - file-browser-controller
+summary: Retrieve a file
+description: Retrieve the file specified in the query parameters
+externalDocs:
+  description: ''
+  url: https://
+operationId: getFile
+parameters:
+  - $ref: ../../../components/parameters/query/fileBrowser/currentPath.yaml
+  - $ref: ../../../components/parameters/query/fileBrowser/protectedFolder.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/restResponse/restResponse.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

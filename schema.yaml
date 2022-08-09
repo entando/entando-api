@@ -839,6 +839,27 @@ paths:
   /fileBrowser/file:
     summary: File browser files operations
     description: API to access and manipulate the file browser files
+    get:
+      tags:
+        - file-browser-controller
+      summary: Retrieve a file
+      description: Retrieve the file specified in the query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getFile
+      parameters:
+        - $ref: '#/components/parameters/currentPath'
+        - $ref: '#/components/parameters/protectedFolder'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
