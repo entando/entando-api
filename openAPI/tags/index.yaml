@@ -15,3 +15,4 @@
 - $ref: ./email-sender-controller.yaml
 - $ref: ./entity-manager-controller.yaml
 - $ref: ./file-browser-controller.yaml
+- $ref: ./group-controller.yaml

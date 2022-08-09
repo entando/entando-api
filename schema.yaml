@@ -4815,6 +4815,8 @@ tags:
     description: Entity manager operations
   - name: file-browser-controller
     description: File browser operations
+  - name: group-controller
+    description: Group operations
 externalDocs:
   description: ''
   url: 'https://'
