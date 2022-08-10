@@ -52,6 +52,8 @@
   $ref: ./fileBrowser/file/index.yaml
 /groups:
   $ref: ./groups/index.yaml
+/groups/{groupId}:
+  $ref: ./groups/groupId/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:

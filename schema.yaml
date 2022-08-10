@@ -980,6 +980,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/groups/{groupId}':
+    summary: Group operations
+    description: API to access and manipulate a group
+    parameters:
+      - $ref: '#/components/parameters/groupId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -4471,6 +4476,13 @@ components:
       name: forLinkingWithOwnerGroup
       in: query
       description: ''
+      schema:
+        type: string
+    groupId:
+      name: groupId
+      in: path
+      description: Group code
+      required: true
       schema:
         type: string
     key:

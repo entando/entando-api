@@ -48,6 +48,8 @@ forLinkingWithExtraGroups:
   $ref: ./query/common/forLinkingWithExtraGroups.yaml
 forLinkingWithOwnerGroup:
   $ref: ./query/common/forLinkingWithOwnerGroup.yaml
+groupId:
+  $ref: ./path/groups/groupId.yaml
 key:
   $ref: ./path/contentSettings/key.yaml
 mode:
