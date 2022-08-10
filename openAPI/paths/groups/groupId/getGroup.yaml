@@ -1,0 +1,17 @@
+tags:
+  - group-controller
+summary: Retrieve a group
+description: Retrieve the group specified in the path from the groups collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: getGroup
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/groups/group.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

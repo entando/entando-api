@@ -985,6 +985,24 @@ paths:
     description: API to access and manipulate a group
     parameters:
       - $ref: '#/components/parameters/groupId'
+    get:
+      tags:
+        - group-controller
+      summary: Retrieve a group
+      description: Retrieve the group specified in the path from the groups collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getGroup
+      responses:
+        '200':
+          $ref: '#/components/responses/group'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

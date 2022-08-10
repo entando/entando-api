@@ -2,3 +2,5 @@ summary: Group operations
 description: API to access and manipulate a group
 parameters:
   - $ref: ../../../components/parameters/path/groups/groupId.yaml
+get:
+  $ref: ./getGroup.yaml
