@@ -983,6 +983,24 @@ paths:
   /fragments/info/plugins:
     summary: Fragments info plugins operations
     description: API to access and manipulate fragments info plugins
+    get:
+      tags:
+        - gui-fragment-controller
+      summary: Retrieve the collection of plugin codes
+      description: Retrieve the collection of plugin codes
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPluginCodes
+      responses:
+        '200':
+          $ref: '#/components/responses/stringsList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
@@ -4443,6 +4461,18 @@ components:
           schema:
             allOf:
               - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      type: string
+    stringsList:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
               - properties:
                   payload:
                     type: array

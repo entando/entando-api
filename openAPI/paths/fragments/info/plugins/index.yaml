@@ -1,2 +1,4 @@
 summary: Fragments info plugins operations
 description: API to access and manipulate fragments info plugins
+get:
+  $ref: ./getPluginCodes.yaml

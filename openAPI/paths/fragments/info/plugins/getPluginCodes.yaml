@@ -1,0 +1,17 @@
+tags:
+  - gui-fragment-controller
+summary: Retrieve the collection of plugin codes
+description: Retrieve the collection of plugin codes
+externalDocs:
+  description: ''
+  url: https://
+operationId: getPluginCodes
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/common/stringsList.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml
