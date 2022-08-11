@@ -1089,6 +1089,24 @@ paths:
     description: API to access and manipulate a group
     parameters:
       - $ref: '#/components/parameters/groupName'
+    delete:
+      tags:
+        - group-controller
+      summary: Delete a group
+      description: Delete the group specified in the path from the groups collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteGroup
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

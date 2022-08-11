@@ -1,0 +1,17 @@
+tags:
+  - group-controller
+summary: Delete a group
+description: Delete the group specified in the path from the groups collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: deleteGroup
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/restResponse/restResponse.yaml
+  '204':
+    $ref: ../../../components/responses/noContent/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
