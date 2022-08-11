@@ -3,3 +3,5 @@ description: API to access and manipulate the group references
 parameters:
   - $ref: ../../../../../components/parameters/path/groups/groupId.yaml
   - $ref: ../../../../../components/parameters/path/groups/groupReferenceHolder.yaml
+get:
+  $ref: ./getGroupReferences.yaml
