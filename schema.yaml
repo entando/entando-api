@@ -1084,6 +1084,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/groups/{groupName}':
+    summary: Group operations
+    description: API to access and manipulate a group
+    parameters:
+      - $ref: '#/components/parameters/groupName'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -4581,6 +4586,13 @@ components:
       name: groupId
       in: path
       description: Group code
+      required: true
+      schema:
+        type: string
+    groupName:
+      name: groupName
+      in: path
+      description: ''
       required: true
       schema:
         type: string

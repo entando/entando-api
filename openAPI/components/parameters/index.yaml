@@ -50,6 +50,8 @@ forLinkingWithOwnerGroup:
   $ref: ./query/common/forLinkingWithOwnerGroup.yaml
 groupId:
   $ref: ./path/groups/groupId.yaml
+groupName:
+  $ref: ./path/groups/groupName.yaml
 groupReferenceHolder:
   $ref: ./path/groups/groupReferenceHolder.yaml
 key:
