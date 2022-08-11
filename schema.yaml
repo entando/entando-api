@@ -1061,6 +1061,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/groups/{groupId}/usage':
+    summary: Group usage operations
+    description: API to access and manipulate a group usage
+    parameters:
+      - $ref: '#/components/parameters/groupId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
