@@ -5065,6 +5065,8 @@ tags:
     description: File browser operations
   - name: group-controller
     description: Group operations
+  - name: gui-fragment-controller
+    description: GUI fragments operations
 externalDocs:
   description: ''
   url: 'https://'

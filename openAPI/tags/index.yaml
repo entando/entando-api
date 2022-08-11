@@ -16,3 +16,4 @@
 - $ref: ./entity-manager-controller.yaml
 - $ref: ./file-browser-controller.yaml
 - $ref: ./group-controller.yaml
+- $ref: ./gui-fragment-controller.yaml
