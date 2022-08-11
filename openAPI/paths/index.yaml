@@ -50,6 +50,8 @@
   $ref: ./fileBrowser/directory/index.yaml
 /fileBrowser/file:
   $ref: ./fileBrowser/file/index.yaml
+/fragments:
+  $ref: ./fragments/index.yaml
 /groups:
   $ref: ./groups/index.yaml
 /groups/{groupId}:
