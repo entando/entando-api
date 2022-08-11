@@ -1,0 +1,13 @@
+title: Fragment small
+type: object
+properties:
+  code:
+    type: string
+  locked:
+    type: boolean
+  pluginCode:
+    type: string
+  widgetType:
+    $ref: ./widgetTypeRef.yaml
+  widgetTypeCode:
+    type: string

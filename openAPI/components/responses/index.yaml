@@ -66,6 +66,8 @@ entityTypeAttributeFullList_generic:
   $ref: ./ok/common/entityTypeAttributeFullList_generic.yaml
 entityTypesStatus_generic:
   $ref: ./ok/common/entityTypesStatus_generic.yaml
+fragmentsSmall:
+  $ref: ./ok/fragments/fragmentsSmall.yaml
 group:
   $ref: ./ok/groups/group.yaml
 groups:

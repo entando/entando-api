@@ -58,6 +58,8 @@ entityTypesStatus:
   $ref: ./common/entityTypesStatus.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
+fragmentSmall:
+  $ref: ./fragments/fragmentSmall.yaml
 group:
   $ref: ./groups/group.yaml
 iEntityModelDictionary:
@@ -92,5 +94,7 @@ type:
   $ref: ./common/type.yaml
 view:
   $ref: ./authorizations/view.yaml
+widgetTypeRef:
+  $ref: ./fragments/widgetTypeRef.yaml
 wildCardType:
   $ref: ./common/wildCardType.yaml
