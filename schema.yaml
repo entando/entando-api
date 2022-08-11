@@ -1025,6 +1025,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/groups/{groupId}/references/{groupReferenceHolder}':
+    summary: Group references operations
+    description: API to access and manipulate the group references
+    parameters:
+      - $ref: '#/components/parameters/groupId'
+      - $ref: '#/components/parameters/groupReferenceHolder'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -4522,6 +4528,13 @@ components:
       name: groupId
       in: path
       description: Group code
+      required: true
+      schema:
+        type: string
+    groupReferenceHolder:
+      name: groupReferenceHolder
+      in: path
+      description: Group references holder
       required: true
       schema:
         type: string

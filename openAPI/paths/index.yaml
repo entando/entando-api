@@ -54,6 +54,8 @@
   $ref: ./groups/index.yaml
 /groups/{groupId}:
   $ref: ./groups/groupId/index.yaml
+/groups/{groupId}/references/{groupReferenceHolder}:
+  $ref: ./groups/groupId/references/groupReferenceHolder/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:

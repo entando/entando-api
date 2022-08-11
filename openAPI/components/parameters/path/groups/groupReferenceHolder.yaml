@@ -1,0 +1,6 @@
+name: groupReferenceHolder
+in: path
+description: Group references holder
+required: true
+schema:
+  type: string
