@@ -980,6 +980,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /fragments/info/plugins:
+    summary: Fragments info plugins operations
+    description: API to access and manipulate fragments info plugins
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups

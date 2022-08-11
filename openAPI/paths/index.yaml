@@ -52,6 +52,8 @@
   $ref: ./fileBrowser/file/index.yaml
 /fragments:
   $ref: ./fragments/index.yaml
+/fragments/info/plugins:
+  $ref: ./fragments/info/plugins/index.yaml
 /groups:
   $ref: ./groups/index.yaml
 /groups/{groupId}:
