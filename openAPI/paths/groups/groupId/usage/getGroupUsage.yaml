@@ -1,0 +1,17 @@
+tags:
+  - group-controller
+summary: Retrieve the group usage
+description: Retrieve the usage of the group specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getGroupUsage
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/common/componentUsage.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml

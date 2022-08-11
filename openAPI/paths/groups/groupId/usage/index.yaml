@@ -2,3 +2,5 @@ summary: Group usage operations
 description: API to access and manipulate a group usage
 parameters:
   - $ref: ../../../../components/parameters/path/groups/groupId.yaml
+get:
+  $ref: ./getGroupUsage.yaml
