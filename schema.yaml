@@ -1001,6 +1001,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/fragments/{fragmentId}':
+    summary: Fragment operations
+    description: API to access and manipulate a fragment
+    parameters:
+      - $ref: '#/components/parameters/fragmentId'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
@@ -4770,6 +4775,13 @@ components:
       name: forLinkingWithOwnerGroup
       in: query
       description: ''
+      schema:
+        type: string
+    fragmentId:
+      name: fragmentId
+      in: path
+      description: Fragment code
+      required: true
       schema:
         type: string
     groupId:

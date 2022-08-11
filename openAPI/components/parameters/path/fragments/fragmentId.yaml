@@ -1,0 +1,6 @@
+name: fragmentId
+in: path
+description: Fragment code
+required: true
+schema:
+  type: string

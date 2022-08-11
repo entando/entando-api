@@ -54,6 +54,8 @@
   $ref: ./fragments/index.yaml
 /fragments/info/plugins:
   $ref: ./fragments/info/plugins/index.yaml
+/fragments/{fragmentId}:
+  $ref: ./fragments/fragmentId/index.yaml
 /groups:
   $ref: ./groups/index.yaml
 /groups/{groupId}:

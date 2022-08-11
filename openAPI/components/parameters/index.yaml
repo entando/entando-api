@@ -48,6 +48,8 @@ forLinkingWithExtraGroups:
   $ref: ./query/common/forLinkingWithExtraGroups.yaml
 forLinkingWithOwnerGroup:
   $ref: ./query/common/forLinkingWithOwnerGroup.yaml
+fragmentId:
+  $ref: ./path/fragments/fragmentId.yaml
 groupId:
   $ref: ./path/groups/groupId.yaml
 groupName:

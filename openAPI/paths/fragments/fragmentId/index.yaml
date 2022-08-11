@@ -1,0 +1,4 @@
+summary: Fragment operations
+description: API to access and manipulate a fragment
+parameters:
+  - $ref: ../../../components/parameters/path/fragments/fragmentId.yaml
