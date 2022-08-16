@@ -1064,6 +1064,11 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/fragments/{fragmentId}/usage':
+    summary: GUI fragment usage operations
+    description: API to access and manipulate a GUI fragment usage
+    parameters:
+      - $ref: '#/components/parameters/fragmentId'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
