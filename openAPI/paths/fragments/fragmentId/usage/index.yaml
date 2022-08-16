@@ -2,3 +2,5 @@ summary: GUI fragment usage operations
 description: API to access and manipulate a GUI fragment usage
 parameters:
   - $ref: ../../../../components/parameters/path/fragments/fragmentId.yaml
+get:
+  $ref: ./getFragmentUsage.yaml

@@ -1069,6 +1069,24 @@ paths:
     description: API to access and manipulate a GUI fragment usage
     parameters:
       - $ref: '#/components/parameters/fragmentId'
+    get:
+      tags:
+        - gui-fragment-controller
+      summary: Retrieve the fragment usage
+      description: Retrieve the usage of the fragment specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getFragmentUsage
+      responses:
+        '200':
+          $ref: '#/components/responses/componentUsage'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
