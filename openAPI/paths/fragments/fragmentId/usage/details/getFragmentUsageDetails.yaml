@@ -1,0 +1,31 @@
+tags:
+  - gui-fragment-controller
+summary: Retrieve a fragment usage details
+description: Retrieve the usage details for the fragment specified in the path filtered by query parameters
+externalDocs:
+  description: ''
+  url: https://
+operationId: getFragmentUsageDetails
+parameters:
+  - $ref: ../../../../../components/parameters/query/common/filters/allowedValues.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/attribute.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/entityAttr.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/operator.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/order.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/type.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/value.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/direction.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/page.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/pageSize.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/sort.yaml
+  - $ref: ../../../../../components/parameters/query/common/pageCodeToken.yaml
+  - $ref: ../../../../../components/parameters/query/common/title.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/common/componentUsageEntities.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

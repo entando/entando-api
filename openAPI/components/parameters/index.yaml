@@ -74,6 +74,8 @@ order:
   $ref: ./query/common/filters/order.yaml
 page:
   $ref: ./query/common/pagination/page.yaml
+pageCodeToken:
+  $ref: ./query/common/pageCodeToken.yaml
 pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
 parameters:
@@ -98,6 +100,8 @@ tableName:
   $ref: ./path/database/tableName.yaml
 text:
   $ref: ./query/contents/text.yaml
+title:
+  $ref: ./query/common/title.yaml
 token:
   $ref: ./query/checkToken/token.yaml
 type:

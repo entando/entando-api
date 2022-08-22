@@ -1,0 +1,5 @@
+name: pageCodeToken
+in: query
+description: ''
+schema:
+  type: string
