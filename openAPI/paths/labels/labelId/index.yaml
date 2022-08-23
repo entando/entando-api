@@ -2,3 +2,5 @@ summary: Label operations
 description: API to access and manipulate a label
 parameters:
   - $ref: ../../../components/parameters/path/labels/labelId.yaml
+get:
+  $ref: ./getLabel.yaml

@@ -1428,6 +1428,24 @@ paths:
     description: API to access and manipulate a label
     parameters:
       - $ref: '#/components/parameters/labelId'
+    get:
+      tags:
+        - label-controller
+      summary: Retrieve a label
+      description: Retrieve the label specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getLabel
+      responses:
+        '200':
+          $ref: '#/components/responses/label'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

@@ -1,0 +1,17 @@
+tags:
+  - label-controller
+summary: Retrieve a label
+description: Retrieve the label specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getLabel
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/labels/label.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
