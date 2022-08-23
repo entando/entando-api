@@ -5487,6 +5487,8 @@ tags:
     description: GUI fragments settings operations
   - name: health-controller
     description: Health operations
+  - name: label-controller
+    description: Labels operations
 externalDocs:
   description: ''
   url: 'https://'
