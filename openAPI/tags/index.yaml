@@ -18,3 +18,4 @@
 - $ref: ./group-controller.yaml
 - $ref: ./gui-fragment-controller.yaml
 - $ref: ./gui-fragment-settings-controller.yaml
+- $ref: ./health-controller.yaml

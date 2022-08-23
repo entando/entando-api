@@ -5464,6 +5464,8 @@ tags:
     description: GUI fragments operations
   - name: gui-fragment-settings-controller
     description: GUI fragments settings operations
+  - name: health-controller
+    description: Health operations
 externalDocs:
   description: ''
   url: 'https://'
