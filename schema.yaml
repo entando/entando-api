@@ -1350,6 +1350,24 @@ paths:
   /health:
     summary: Health operations
     description: API to access and manipulate health
+    get:
+      tags:
+        - health-controller
+      summary: Retrieve the health
+      description: Retrieve the health
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getHealth
+      responses:
+        '200':
+          $ref: '#/components/responses/ok'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

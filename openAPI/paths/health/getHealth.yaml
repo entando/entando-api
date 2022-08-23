@@ -1,0 +1,17 @@
+tags:
+  - health-controller
+summary: Retrieve the health
+description: Retrieve the health
+externalDocs:
+  description: ''
+  url: https://
+operationId: getHealth
+responses:
+  '200':
+    $ref: ../../components/responses/ok/common/empty.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml

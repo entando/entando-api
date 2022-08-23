@@ -1,2 +1,4 @@
 summary: Health operations
 description: API to access and manipulate health
+get:
+  $ref: ./getHealth.yaml
