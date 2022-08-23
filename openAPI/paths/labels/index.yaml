@@ -1,2 +1,4 @@
 summary: Labels operations
 description: API to access and manipulate labels
+get:
+  $ref: ./getLabels.yaml

@@ -1,0 +1,9 @@
+title: Label
+type: object
+properties:
+  key:
+    type: string
+  titles:
+    type: object
+    additionalProperties:
+      type: string

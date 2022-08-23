@@ -68,6 +68,8 @@ group:
   $ref: ./groups/group.yaml
 iEntityModelDictionary:
   $ref: ./contentModels/iEntityModelDictionary.yaml
+label:
+  $ref: ./labels/label.yaml
 lastReloadInfo:
   $ref: ./contentSettings/lastReloadInfo.yaml
 modelAndView:
