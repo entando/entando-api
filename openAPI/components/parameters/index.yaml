@@ -58,6 +58,8 @@ groupReferenceHolder:
   $ref: ./path/groups/groupReferenceHolder.yaml
 key:
   $ref: ./path/contentSettings/key.yaml
+labelId:
+  $ref: ./path/labels/labelId.yaml
 mode:
   $ref: ./query/contents/mode.yaml
 model:

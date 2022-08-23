@@ -1,0 +1,6 @@
+name: labelId
+in: path
+description: Label code
+required: true
+schema:
+  type: string

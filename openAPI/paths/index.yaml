@@ -76,6 +76,8 @@
   $ref: ./health/index.yaml
 /labels:
   $ref: ./labels/index.yaml
+/labels/{labelId}:
+  $ref: ./labels/labelId/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:

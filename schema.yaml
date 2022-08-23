@@ -1423,6 +1423,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/labels/{labelId}':
+    summary: Label operations
+    description: API to access and manipulate a label
+    parameters:
+      - $ref: '#/components/parameters/labelId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -5087,6 +5092,13 @@ components:
       name: key
       in: path
       description: ''
+      required: true
+      schema:
+        type: string
+    labelId:
+      name: labelId
+      in: path
+      description: Label code
       required: true
       schema:
         type: string
