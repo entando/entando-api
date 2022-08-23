@@ -1347,6 +1347,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /health:
+    summary: Health operations
+    description: API to access and manipulate health
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

@@ -72,6 +72,8 @@
   $ref: ./groups/groupId/usage/index.yaml
 /groups/{groupName}:
   $ref: ./groups/groupName/index.yaml
+/health:
+  $ref: ./health/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
