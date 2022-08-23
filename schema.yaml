@@ -5401,6 +5401,8 @@ tags:
     description: Group operations
   - name: gui-fragment-controller
     description: GUI fragments operations
+  - name: gui-fragment-settings-controller
+    description: GUI fragments settings operations
 externalDocs:
   description: ''
   url: 'https://'
