@@ -1124,6 +1124,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /fragmentsSettings:
+    summary: Fragments settings operations
+    description: API to access and manipulate fragments settings
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
