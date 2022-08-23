@@ -1,0 +1,17 @@
+tags:
+  - gui-fragment-settings-controller
+summary: Retrieve the fragments settings
+description: Retrieve the fragments settings
+externalDocs:
+  description: ''
+  url: https://
+operationId: getFragmentsSettings
+responses:
+  '200':
+    $ref: ../../components/responses/ok/restResponse/restResponse.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml

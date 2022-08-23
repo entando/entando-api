@@ -1127,6 +1127,24 @@ paths:
   /fragmentsSettings:
     summary: Fragments settings operations
     description: API to access and manipulate fragments settings
+    get:
+      tags:
+        - gui-fragment-settings-controller
+      summary: Retrieve the fragments settings
+      description: Retrieve the fragments settings
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getFragmentsSettings
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
