@@ -88,6 +88,8 @@
   $ref: ./oauth/check_token/index.yaml
 /pages/{pageId}/configuration:
   $ref: ./pages/pageId/configuration/index.yaml
+/pages/{pageId}/configuration/defaultWidgets:
+  $ref: ./pages/pageId/configuration/defaultWidgets/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:

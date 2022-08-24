@@ -1790,6 +1790,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/pages/{pageId}/configuration/defaultWidgets':
+    summary: Page default widgets configuration operations
+    description: API to access and manipulate page default widgets configuration
+    parameters:
+      - $ref: '#/components/parameters/pageId'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models

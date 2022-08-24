@@ -1,0 +1,4 @@
+summary: Page default widgets configuration operations
+description: API to access and manipulate page default widgets configuration
+parameters:
+  - $ref: ../../../../../components/parameters/path/pages/pageId.yaml
