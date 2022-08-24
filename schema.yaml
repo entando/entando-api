@@ -1795,6 +1795,26 @@ paths:
     description: API to access and manipulate page default widgets configuration
     parameters:
       - $ref: '#/components/parameters/pageId'
+    put:
+      tags:
+        - page-configuration-controller
+      summary: Apply a page default widget configuration
+      description: Apply the default widgets configuration to the page specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: applyDefaultWidgetsPageConfiguration
+      responses:
+        '200':
+          $ref: '#/components/responses/pageConfiguration'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
