@@ -20,3 +20,4 @@
 - $ref: ./gui-fragment-settings-controller.yaml
 - $ref: ./health-controller.yaml
 - $ref: ./label-controller.yaml
+- $ref: ./language-controller.yaml

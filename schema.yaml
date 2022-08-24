@@ -5653,6 +5653,8 @@ tags:
     description: Health operations
   - name: label-controller
     description: Labels operations
+  - name: language-controller
+    description: Languages operations
 externalDocs:
   description: ''
   url: 'https://'
