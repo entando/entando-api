@@ -1,2 +1,4 @@
 summary: Widget navigator nav spec operations
 description: API to access and manipulate widget navigator nav spec
+post:
+  $ref: ./getWidgetNavigatorNavSpec.yaml

@@ -3394,6 +3394,28 @@ paths:
   /widget/navigator/navspec:
     summary: Widget navigator nav spec operations
     description: API to access and manipulate widget navigator nav spec
+    post:
+      tags:
+        - navigator-widget-config-controller
+      summary: Retrieve the widget navigator nav spec
+      description: Retrieve the widget navigator nav spec by expressions
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getWidgetNavigatorNavSpec
+      requestBody:
+        $ref: '#/components/requestBodies/navigatorConfig'
+      responses:
+        '200':
+          $ref: '#/components/responses/navigatorConfig'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
