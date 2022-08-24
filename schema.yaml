@@ -5783,6 +5783,8 @@ tags:
     description: Labels operations
   - name: language-controller
     description: Languages operations
+  - name: navigator-widget-config-controller
+    description: Widget navigator config operations
 externalDocs:
   description: ''
   url: 'https://'

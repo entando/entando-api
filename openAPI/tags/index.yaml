@@ -21,3 +21,4 @@
 - $ref: ./health-controller.yaml
 - $ref: ./label-controller.yaml
 - $ref: ./language-controller.yaml
+- $ref: ./navigator-widget-config-controller.yaml
