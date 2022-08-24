@@ -1,0 +1,11 @@
+title: Language
+type: object
+properties:
+  code:
+    type: string
+  description:
+    type: string
+  isActive:
+    type: boolean
+  isDefault:
+    type: boolean

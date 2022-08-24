@@ -1,2 +1,4 @@
 summary: Languages operations
 description: API to access and manipulate languages
+get:
+  $ref: ./getLanguages.yaml
