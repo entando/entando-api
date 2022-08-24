@@ -78,6 +78,8 @@ order:
   $ref: ./query/common/filters/order.yaml
 page:
   $ref: ./query/common/pagination/page.yaml
+pageId:
+  $ref: ./path/pages/pageId.yaml
 pageCodeToken:
   $ref: ./query/common/pageCodeToken.yaml
 pageSize:

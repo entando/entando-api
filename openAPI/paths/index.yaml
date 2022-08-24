@@ -86,6 +86,8 @@
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
   $ref: ./oauth/check_token/index.yaml
+/pages/{pageId}/configuration:
+  $ref: ./pages/pageId/configuration/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:
