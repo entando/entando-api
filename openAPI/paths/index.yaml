@@ -78,6 +78,8 @@
   $ref: ./labels/index.yaml
 /labels/{labelId}:
   $ref: ./labels/labelId/index.yaml
+/languages:
+  $ref: ./languages/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
