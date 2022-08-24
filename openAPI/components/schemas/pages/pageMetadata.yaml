@@ -1,0 +1,25 @@
+title: Page metadata
+type: object
+properties:
+  charset:
+    type: string
+  extraGroups:
+    type: array
+    items:
+      type: string
+  mimeType:
+    type: string
+  model:
+    type: string
+  showable:
+    type: boolean
+  titles:
+    type: object
+    additionalProperties:
+      type: object
+      properties: {}
+  updatedAt:
+    type: string
+    format: date-time
+  useExtraTitles:
+    type: boolean

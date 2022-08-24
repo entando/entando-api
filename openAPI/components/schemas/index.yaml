@@ -80,6 +80,10 @@ navigatorConfig:
   $ref: ./widgets/navigatorConfig.yaml
 navigatorExpression:
   $ref: ./widgets/navigatorExpression.yaml
+pageConfiguration:
+  $ref: ./pages/pageConfiguration.yaml
+pageMetadata:
+  $ref: ./pages/pageMetadata.yaml
 pageModelRef:
   $ref: ./pageModels/pageModelRef.yaml
 pageStatus:
@@ -108,6 +112,8 @@ type:
   $ref: ./common/type.yaml
 view:
   $ref: ./authorizations/view.yaml
+widgetConfiguration:
+  $ref: ./pages/widgetConfiguration.yaml
 widgetTypeRef:
   $ref: ./fragments/widgetTypeRef.yaml
 wildCardType:

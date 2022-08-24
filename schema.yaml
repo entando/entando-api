@@ -1770,6 +1770,26 @@ paths:
     description: API to access and manipulate page configuration
     parameters:
       - $ref: '#/components/parameters/pageId'
+    get:
+      tags:
+        - page-configuration-controller
+      summary: Retrieve a page configuration
+      description: Retrieve the configuration of the page specified in the path filtered by status query parameter
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageConfiguration
+      parameters:
+        - $ref: '#/components/parameters/status'
+      responses:
+        '200':
+          $ref: '#/components/responses/pageConfiguration'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -4282,6 +4302,59 @@ components:
           format: int32
         targetCode:
           type: string
+    pageConfiguration:
+      title: Page configuration
+      type: object
+      properties:
+        changed:
+          type: boolean
+        code:
+          type: string
+        metadata:
+          $ref: '#/components/schemas/pageMetadata'
+        online:
+          type: boolean
+        ownerGroup:
+          type: string
+        parentCode:
+          type: string
+        position:
+          type: integer
+          format: int32
+        root:
+          type: boolean
+        status:
+          type: string
+        widgets:
+          type: array
+          items:
+            $ref: '#/components/schemas/widgetConfiguration'
+    pageMetadata:
+      title: Page metadata
+      type: object
+      properties:
+        charset:
+          type: string
+        extraGroups:
+          type: array
+          items:
+            type: string
+        mimeType:
+          type: string
+        model:
+          type: string
+        showable:
+          type: boolean
+        titles:
+          type: object
+          additionalProperties:
+            type: object
+            properties: {}
+        updatedAt:
+          type: string
+          format: date-time
+        useExtraTitles:
+          type: boolean
     pageModelRef:
       title: Page model reference
       type: object
@@ -4432,6 +4505,17 @@ components:
       properties:
         contentType:
           type: string
+    widgetConfiguration:
+      title: Widget configuration
+      type: object
+      properties:
+        code:
+          type: string
+        config:
+          type: object
+          additionalProperties:
+            type: object
+            properties: {}
     widgetTypeRef:
       title: Widget type reference
       type: object
@@ -4938,6 +5022,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/pagedRestResponse'
+    pageConfiguration:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/pageConfiguration'
     pageStatus:
       description: OK
       content:

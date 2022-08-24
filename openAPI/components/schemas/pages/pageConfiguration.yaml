@@ -1,0 +1,26 @@
+title: Page configuration
+type: object
+properties:
+  changed:
+    type: boolean
+  code:
+    type: string
+  metadata:
+    $ref: ./pageMetadata.yaml
+  online:
+    type: boolean
+  ownerGroup:
+    type: string
+  parentCode:
+    type: string
+  position:
+    type: integer
+    format: int32
+  root:
+    type: boolean
+  status:
+    type: string
+  widgets:
+    type: array
+    items:
+      $ref: ./widgetConfiguration.yaml

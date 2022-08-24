@@ -1,0 +1,10 @@
+title: Widget configuration
+type: object
+properties:
+  code:
+    type: string
+  config:
+    type: object
+    additionalProperties:
+      type: object
+      properties: {}

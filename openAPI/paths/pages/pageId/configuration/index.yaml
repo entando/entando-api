@@ -2,3 +2,5 @@ summary: Page configuration operations
 description: API to access and manipulate page configuration
 parameters:
   - $ref: ../../../../components/parameters/path/pages/pageId.yaml
+get:
+  $ref: ./getPageConfiguration.yaml

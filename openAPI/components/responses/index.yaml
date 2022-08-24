@@ -96,6 +96,8 @@ ok:
   $ref: ./ok/common/empty.yaml
 pagedRestResponse:
   $ref: ./ok/restResponse/pagedRestResponse.yaml
+pageConfiguration:
+  $ref: ./ok/pages/pageConfiguration.yaml
 pageStatus:
   $ref: ./ok/dashboard/pageStatus.yaml
 restResponse:

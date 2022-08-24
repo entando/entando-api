@@ -1,0 +1,19 @@
+tags:
+  - page-configuration-controller
+summary: Retrieve a page configuration
+description: Retrieve the configuration of the page specified in the path filtered by status query parameter
+externalDocs:
+  description: ''
+  url: https://
+operationId: getPageConfiguration
+parameters:
+  - $ref: ../../../../components/parameters/query/common/status.yaml
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/pages/pageConfiguration.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml
