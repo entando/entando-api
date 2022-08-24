@@ -82,6 +82,8 @@ label:
   $ref: ./ok/labels/label.yaml
 labels:
   $ref: ./ok/labels/labels.yaml
+language:
+  $ref: ./ok/languages/language.yaml
 languages:
   $ref: ./ok/languages/languages.yaml
 modelAndViewObject_generic:
