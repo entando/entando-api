@@ -5881,6 +5881,8 @@ tags:
     description: Languages operations
   - name: navigator-widget-config-controller
     description: Widget navigator config operations
+  - name: page-configuration-controller
+    description: Page configuration operations
 externalDocs:
   description: ''
   url: 'https://'
