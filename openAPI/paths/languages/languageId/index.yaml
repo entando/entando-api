@@ -1,0 +1,4 @@
+summary: Language operations
+description: API to access and manipulate a language
+parameters:
+  - $ref: ../../../components/parameters/path/languages/languageId.yaml

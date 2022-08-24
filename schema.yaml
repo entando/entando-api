@@ -1519,6 +1519,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/languages/{languageId}':
+    summary: Language operations
+    description: API to access and manipulate a language
+    parameters:
+      - $ref: '#/components/parameters/languageId'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -5214,6 +5219,13 @@ components:
       name: labelId
       in: path
       description: Label code
+      required: true
+      schema:
+        type: string
+    languageId:
+      name: languageId
+      in: path
+      description: Language code
       required: true
       schema:
         type: string

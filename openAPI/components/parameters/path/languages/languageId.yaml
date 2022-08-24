@@ -1,0 +1,6 @@
+name: languageId
+in: path
+description: Language code
+required: true
+schema:
+  type: string
