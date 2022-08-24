@@ -3369,6 +3369,28 @@ paths:
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions
+    post:
+      tags:
+        - navigator-widget-config-controller
+      summary: Retrieve the widget navigator expressions
+      description: Retrieve the widget navigator expressions by nav spec
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getWidgetNavigatorExpressions
+      requestBody:
+        $ref: '#/components/requestBodies/navigatorConfig'
+      responses:
+        '200':
+          $ref: '#/components/responses/navigatorConfig'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -4201,6 +4223,35 @@ components:
           $ref: '#/components/schemas/view'
         viewName:
           type: string
+    navigatorConfig:
+      title: Navigator config
+      type: object
+      properties:
+        expressions:
+          type: array
+          items:
+            $ref: '#/components/schemas/navigatorExpression'
+        navSpec:
+          type: string
+    navigatorExpression:
+      title: Navigator expression
+      type: object
+      properties:
+        operator:
+          type: string
+        operatorSubtreeLevel:
+          type: integer
+          format: int32
+        spec:
+          type: string
+        specAbsLevel:
+          type: integer
+          format: int32
+        specSuperLevel:
+          type: integer
+          format: int32
+        targetCode:
+          type: string
     pageModelRef:
       title: Page model reference
       type: object
@@ -4833,6 +4884,16 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/modelAndView'
+    navigatorConfig:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/navigatorConfig'
     objectObject_generic:
       description: OK
       content:
@@ -5726,6 +5787,13 @@ components:
             properties:
               isActive:
                 type: boolean
+    navigatorConfig:
+      description: Navigator config
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/navigatorConfig'
   headers: {}
   securitySchemes:
     entando:

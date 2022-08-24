@@ -1,0 +1,9 @@
+title: Navigator config
+type: object
+properties:
+  expressions:
+    type: array
+    items:
+      $ref: ./navigatorExpression.yaml
+  navSpec:
+    type: string

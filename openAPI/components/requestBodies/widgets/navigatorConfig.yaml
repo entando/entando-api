@@ -1,0 +1,6 @@
+description: Navigator config
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/widgets/navigatorConfig.yaml

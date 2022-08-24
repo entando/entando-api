@@ -76,6 +76,10 @@ lastReloadInfo:
   $ref: ./contentSettings/lastReloadInfo.yaml
 modelAndView:
   $ref: ./authorizations/modelAndView.yaml
+navigatorConfig:
+  $ref: ./widgets/navigatorConfig.yaml
+navigatorExpression:
+  $ref: ./widgets/navigatorExpression.yaml
 pageModelRef:
   $ref: ./pageModels/pageModelRef.yaml
 pageStatus:

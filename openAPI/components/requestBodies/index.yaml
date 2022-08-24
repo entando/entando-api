@@ -50,3 +50,5 @@ label:
   $ref: ./labels/label.yaml
 language:
   $ref: ./languages/language.yaml
+navigatorConfig:
+  $ref: ./widgets/navigatorConfig.yaml

@@ -88,6 +88,8 @@ languages:
   $ref: ./ok/languages/languages.yaml
 modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
+navigatorConfig:
+  $ref: ./ok/widgets/navigatorConfig.yaml
 objectObject_generic:
   $ref: ./ok/common/objectObject_generic.yaml
 ok:
