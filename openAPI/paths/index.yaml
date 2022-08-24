@@ -166,3 +166,5 @@
   $ref: ./plugins/versioning/contents/contentId/versions/versionId/recover/index.yaml
 /widget/navigator/expressions:
   $ref: ./widget/navigator/expressions/index.yaml
+/widget/navigator/navspec:
+  $ref: ./widget/navigator/navspec/index.yaml

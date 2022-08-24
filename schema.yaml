@@ -3391,6 +3391,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /widget/navigator/navspec:
+    summary: Widget navigator nav spec operations
+    description: API to access and manipulate widget navigator nav spec
 components:
   schemas:
     activityStreamRecord:
