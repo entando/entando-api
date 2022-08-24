@@ -1,0 +1,4 @@
+summary: Page configuration restore operations
+description: API to access and manipulate page configuration restore
+parameters:
+  - $ref: ../../../../../components/parameters/path/pages/pageId.yaml

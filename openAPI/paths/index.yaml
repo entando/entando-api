@@ -90,6 +90,8 @@
   $ref: ./pages/pageId/configuration/index.yaml
 /pages/{pageId}/configuration/defaultWidgets:
   $ref: ./pages/pageId/configuration/defaultWidgets/index.yaml
+/pages/{pageId}/configuration/restore:
+  $ref: ./pages/pageId/configuration/restore/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:
