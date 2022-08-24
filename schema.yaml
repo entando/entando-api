@@ -1820,6 +1820,26 @@ paths:
     description: API to access and manipulate page configuration restore
     parameters:
       - $ref: '#/components/parameters/pageId'
+    put:
+      tags:
+        - page-configuration-controller
+      summary: Update a page configuration
+      description: Update the configuration of the page specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updatePageConfiguration
+      responses:
+        '200':
+          $ref: '#/components/responses/pageConfiguration'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
