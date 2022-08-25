@@ -1,0 +1,21 @@
+tags:
+  - page-configuration-controller
+summary: Get a page widget
+description: Get the page widget specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getPageWidget
+parameters:
+  - $ref: ../../../../../components/parameters/query/common/status.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/pages/widgetConfiguration.yaml
+  '201':
+    $ref: ../../../../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

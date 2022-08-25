@@ -3,3 +3,5 @@ description: API to access and manipulate page frame widget
 parameters:
   - $ref: ../../../../../components/parameters/path/pages/pageId.yaml
   - $ref: ../../../../../components/parameters/path/pages/frameId.yaml
+get:
+  $ref: ./getPageWidget.yaml

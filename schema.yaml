@@ -1871,6 +1871,28 @@ paths:
     parameters:
       - $ref: '#/components/parameters/pageId'
       - $ref: '#/components/parameters/frameId'
+    get:
+      tags:
+        - page-configuration-controller
+      summary: Get a page widget
+      description: Get the page widget specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageWidget
+      parameters:
+        - $ref: '#/components/parameters/status'
+      responses:
+        '200':
+          $ref: '#/components/responses/widgetConfiguration'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -5217,6 +5239,16 @@ components:
                     type: array
                     items:
                       type: string
+    widgetConfiguration:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/widgetConfiguration'
     widgetConfigurationList:
       description: OK
       content:
