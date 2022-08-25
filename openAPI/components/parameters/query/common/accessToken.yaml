@@ -1,0 +1,5 @@
+name: accessToken
+in: query
+description: ''
+schema:
+  type: string

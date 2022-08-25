@@ -94,6 +94,8 @@ objectObject_generic:
   $ref: ./ok/common/objectObject_generic.yaml
 ok:
   $ref: ./ok/common/empty.yaml
+pagesListMapMetadata:
+  $ref: ./ok/pages/pagesListMapMetadata.yaml
 pagedRestResponse:
   $ref: ./ok/restResponse/pagedRestResponse.yaml
 pageConfiguration:

@@ -80,6 +80,8 @@ navigatorConfig:
   $ref: ./widgets/navigatorConfig.yaml
 navigatorExpression:
   $ref: ./widgets/navigatorExpression.yaml
+page:
+  $ref: ./pages/page.yaml
 pageConfiguration:
   $ref: ./pages/pageConfiguration.yaml
 pageMetadata:

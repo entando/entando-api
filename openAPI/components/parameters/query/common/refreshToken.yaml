@@ -1,0 +1,5 @@
+name: refreshToken
+in: query
+description: ''
+schema:
+  type: string

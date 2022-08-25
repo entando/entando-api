@@ -1,0 +1,55 @@
+title: Page
+type: object
+properties:
+  charset:
+    type: string
+  children:
+    type: array
+    items:
+      type: string
+  code:
+    type: string
+  contentType:
+    type: string
+  displayedInMenu:
+    type: boolean
+  fullPath:
+    type: string
+  fullTitles:
+    type: object
+    additionalProperties:
+      type: string
+  joinGroups:
+    type: array
+    items:
+      type: string
+  lastModified:
+    type: string
+  numWidget:
+    type: integer
+    format: int32
+  onlineInstance:
+    type: boolean
+  ownerGroup:
+    type: string
+  pageModel:
+    type: string
+  parentCode:
+    type: string
+  position:
+    type: integer
+    format: int32
+  references:
+    type: object
+    additionalProperties:
+      type: boolean
+  seo:
+    type: boolean
+  status:
+    type: string
+  titles:
+    type: object
+    additionalProperties:
+      type: string
+  token:
+    type: string

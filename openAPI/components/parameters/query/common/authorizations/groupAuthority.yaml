@@ -1,0 +1,5 @@
+name: authorizations[0].group.authority
+in: query
+description: ''
+schema:
+  type: string

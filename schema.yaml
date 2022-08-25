@@ -1768,6 +1768,49 @@ paths:
   /pages:
     summary: Pages operations
     description: API to access and manipulate pages
+    get:
+      tags:
+        - page-controller
+      summary: Retrieve the collection of pages
+      description: Retrieve the collection of pages filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPages
+      parameters:
+        - $ref: '#/components/parameters/pagesParentCode'
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+        - $ref: '#/components/parameters/forLinkingToExtraGroups'
+        - $ref: '#/components/parameters/forLinkingToOwnerGroup'
+      responses:
+        '200':
+          $ref: '#/components/responses/pagesListMapMetadata'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/pages/{pageId}/configuration':
     summary: Page configuration operations
     description: API to access and manipulate page configuration
@@ -4448,6 +4491,62 @@ components:
           format: int32
         targetCode:
           type: string
+    page:
+      title: Page
+      type: object
+      properties:
+        charset:
+          type: string
+        children:
+          type: array
+          items:
+            type: string
+        code:
+          type: string
+        contentType:
+          type: string
+        displayedInMenu:
+          type: boolean
+        fullPath:
+          type: string
+        fullTitles:
+          type: object
+          additionalProperties:
+            type: string
+        joinGroups:
+          type: array
+          items:
+            type: string
+        lastModified:
+          type: string
+        numWidget:
+          type: integer
+          format: int32
+        onlineInstance:
+          type: boolean
+        ownerGroup:
+          type: string
+        pageModel:
+          type: string
+        parentCode:
+          type: string
+        position:
+          type: integer
+          format: int32
+        references:
+          type: object
+          additionalProperties:
+            type: boolean
+        seo:
+          type: boolean
+        status:
+          type: string
+        titles:
+          type: object
+          additionalProperties:
+            type: string
+        token:
+          type: string
     pageConfiguration:
       title: Page configuration
       type: object
@@ -5162,6 +5261,18 @@ components:
             type: object
     ok:
       description: OK
+    pagesListMapMetadata:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayloadMapMetadata'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/page'
     pagedRestResponse:
       description: OK
       content:
@@ -5409,6 +5520,18 @@ components:
     unauthorized:
       description: Unauthorized
   parameters:
+    accessToken:
+      name: accessToken
+      in: query
+      description: ''
+      schema:
+        type: string
+    accountNotExpired:
+      name: accountNotExpired
+      in: query
+      description: ''
+      schema:
+        type: boolean
     activityStreamRecordId:
       name: recordId
       in: path
@@ -5455,6 +5578,76 @@ components:
       required: true
       schema:
         type: string
+    authorizationAuthority:
+      name: 'authorizations[0].authority'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationGroupAuthority:
+      name: 'authorizations[0].group.authority'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationGroupDescr:
+      name: 'authorizations[0].group.descr'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationGroupDescription:
+      name: 'authorizations[0].group.description'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationGroupEntandoGroup:
+      name: 'authorizations[0].group.entandoGroup'
+      in: query
+      description: ''
+      schema:
+        type: boolean
+    authorizationGroupJapsGroup:
+      name: 'authorizations[0].group.japsGroup'
+      in: query
+      description: ''
+      schema:
+        type: boolean
+    authorizationGroupName:
+      name: 'authorizations[0].group.name'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationRoleAuthority:
+      name: 'authorizations[0].role.authority'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationRoleDescription:
+      name: 'authorizations[0].role.description'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationRoleName:
+      name: 'authorizations[0].role.name'
+      in: query
+      description: ''
+      schema:
+        type: string
+    authorizationRolePermissions:
+      name: 'authorizations[0].role.permissions'
+      in: query
+      description: ''
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
+          type: string
     categories:
       name: categories
       in: query
@@ -5544,6 +5737,12 @@ components:
       description: ''
       schema:
         type: string
+    credentialsNotExpired:
+      name: credentialsNotExpired
+      in: query
+      description: ''
+      schema:
+        type: boolean
     dataSource:
       name: dataSource
       in: path
@@ -5557,6 +5756,18 @@ components:
       description: ''
       schema:
         type: string
+    disabled:
+      name: disabled
+      in: query
+      description: ''
+      schema:
+        type: boolean
+    entandoUser:
+      name: entandoUser
+      in: query
+      description: ''
+      schema:
+        type: boolean
     entityAttr:
       name: 'filters[0].entityAttr'
       in: query
@@ -5568,6 +5779,18 @@ components:
       in: path
       description: Entity manager code
       required: true
+      schema:
+        type: string
+    forLinkingToExtraGroups:
+      name: forLinkingToExtraGroups
+      in: query
+      description: ''
+      schema:
+        type: string
+    forLinkingToOwnerGroup:
+      name: forLinkingToOwnerGroup
+      in: query
+      description: ''
       schema:
         type: string
     forLinkingWithExtraGroups:
@@ -5621,6 +5844,12 @@ components:
       required: true
       schema:
         type: string
+    japsUser:
+      name: japsUser
+      in: query
+      description: ''
+      schema:
+        type: boolean
     key:
       name: key
       in: path
@@ -5720,12 +5949,31 @@ components:
       schema:
         type: integer
         format: int32
+    pagesParentCode:
+      name: parentCode
+      in: query
+      description: ''
+      schema:
+        type: string
+        default: homepage
     parameters:
       name: parameters
       in: query
       description: ''
       required: true
       schema: {}
+    password:
+      name: password
+      in: query
+      description: ''
+      schema:
+        type: string
+    profile:
+      name: profile
+      in: query
+      description: ''
+      schema:
+        type: object
     protectedFolder:
       name: protectedFolder
       in: query
@@ -5737,6 +5985,12 @@ components:
       in: path
       description: ''
       required: true
+      schema:
+        type: string
+    refreshToken:
+      name: refreshToken
+      in: query
+      description: ''
       schema:
         type: string
     reportId:
@@ -5813,6 +6067,12 @@ components:
         type: string
     typeCode:
       name: typeCode
+      in: query
+      description: ''
+      schema:
+        type: string
+    username:
+      name: username
       in: query
       description: ''
       schema:

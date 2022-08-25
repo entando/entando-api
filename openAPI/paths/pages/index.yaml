@@ -1,2 +1,4 @@
 summary: Pages operations
 description: API to access and manipulate pages
+get:
+  $ref: ./getPages.yaml

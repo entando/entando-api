@@ -1,0 +1,5 @@
+name: authorizations[0].role.description
+in: query
+description: ''
+schema:
+  type: string

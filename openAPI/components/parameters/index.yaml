@@ -1,3 +1,7 @@
+accessToken:
+  $ref: ./query/common/accessToken.yaml
+accountNotExpired:
+  $ref: ./query/common/accountNotExpired.yaml
 activityStreamRecordId:
   $ref: ./path/activityStream/recordId.yaml
 activityStreamRecordCommentId:
@@ -10,6 +14,28 @@ attributeId:
   $ref: ./path/attributes/attributeId.yaml
 attributeTypeId:
   $ref: ./path/attributes/attributeTypeId.yaml
+authorizationAuthority:
+  $ref: ./query/common/authorizations/authority.yaml
+authorizationGroupAuthority:
+  $ref: ./query/common/authorizations/groupAuthority.yaml
+authorizationGroupDescr:
+  $ref: ./query/common/authorizations/groupDescr.yaml
+authorizationGroupDescription:
+  $ref: ./query/common/authorizations/groupDescription.yaml
+authorizationGroupEntandoGroup:
+  $ref: ./query/common/authorizations/groupEntandoGroup.yaml
+authorizationGroupJapsGroup:
+  $ref: ./query/common/authorizations/groupJapsGroup.yaml
+authorizationGroupName:
+  $ref: ./query/common/authorizations/groupName.yaml
+authorizationRoleAuthority:
+  $ref: ./query/common/authorizations/roleAuthority.yaml
+authorizationRoleDescription:
+  $ref: ./query/common/authorizations/roleDescription.yaml
+authorizationRoleName:
+  $ref: ./query/common/authorizations/roleName.yaml
+authorizationRolePermissions:
+  $ref: ./query/common/authorizations/rolePermissions.yaml
 categories:
   $ref: ./query/contents/categories.yaml
 categoriesParentCode:
@@ -36,14 +62,24 @@ contentTypeId:
   $ref: ./path/contentTypes/contentTypeId.yaml
 currentPath:
   $ref: ./query/fileBrowser/currentPath.yaml
+credentialsNotExpired:
+  $ref: ./query/common/credentialsNotExpired.yaml
 dataSource:
   $ref: ./path/database/dataSource.yaml
 direction:
   $ref: ./query/common/pagination/direction.yaml
+disabled:
+  $ref: ./query/common/disabled.yaml
+entandoUser:
+  $ref: ./query/common/entandoUser.yaml
 entityAttr:
   $ref: ./query/common/filters/entityAttr.yaml
 entityManagerId:
   $ref: ./path/entityManagers/entityManagerId.yaml
+forLinkingToExtraGroups:
+  $ref: ./query/common/forLinkingToExtraGroups.yaml
+forLinkingToOwnerGroup:
+  $ref: ./query/common/forLinkingToOwnerGroup.yaml
 forLinkingWithExtraGroups:
   $ref: ./query/common/forLinkingWithExtraGroups.yaml
 forLinkingWithOwnerGroup:
@@ -58,6 +94,8 @@ groupName:
   $ref: ./path/groups/groupName.yaml
 groupReferenceHolder:
   $ref: ./path/groups/groupReferenceHolder.yaml
+japsUser:
+  $ref: ./query/common/japsUser.yaml
 key:
   $ref: ./path/contentSettings/key.yaml
 labelId:
@@ -86,12 +124,20 @@ pageCodeToken:
   $ref: ./query/common/pageCodeToken.yaml
 pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
+pagesParentCode:
+  $ref: ./query/pages/parentCode.yaml
 parameters:
   $ref: ./query/authorizations/parameters.yaml
+password:
+  $ref: ./query/common/password.yaml
+profile:
+  $ref: ./query/common/profile.yaml
 protectedFolder:
   $ref: ./query/fileBrowser/protectedFolder.yaml
 ratio:
   $ref: ./path/contentSettings/ratio.yaml
+refreshToken:
+  $ref: ./query/common/refreshToken.yaml
 reportId:
   $ref: ./path/database/reportId.yaml
 resolveLink:
@@ -116,6 +162,8 @@ type:
   $ref: ./query/common/filters/type.yaml
 typeCode:
   $ref: ./query/contentModels/typeCode.yaml
+username:
+  $ref: ./query/common/username.yaml
 value:
   $ref: ./query/common/filters/value.yaml
 versionId:

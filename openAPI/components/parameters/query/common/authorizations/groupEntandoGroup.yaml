@@ -1,0 +1,5 @@
+name: authorizations[0].group.entandoGroup
+in: query
+description: ''
+schema:
+  type: boolean

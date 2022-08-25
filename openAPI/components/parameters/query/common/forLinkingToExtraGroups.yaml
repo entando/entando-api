@@ -1,0 +1,5 @@
+name: forLinkingToExtraGroups
+in: query
+description: ''
+schema:
+  type: string

@@ -1,0 +1,5 @@
+name: japsUser
+in: query
+description: ''
+schema:
+  type: boolean
