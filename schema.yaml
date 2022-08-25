@@ -1865,6 +1865,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/pages/{pageId}/widgets/{frameId}':
+    summary: Page frame widget operations
+    description: API to access and manipulate page frame widget
+    parameters:
+      - $ref: '#/components/parameters/pageId'
+      - $ref: '#/components/parameters/frameId'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -5509,6 +5515,13 @@ components:
       name: fragmentId
       in: path
       description: Fragment code
+      required: true
+      schema:
+        type: string
+    frameId:
+      name: frameId
+      in: path
+      description: ''
       required: true
       schema:
         type: string

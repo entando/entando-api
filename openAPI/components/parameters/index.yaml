@@ -50,6 +50,8 @@ forLinkingWithOwnerGroup:
   $ref: ./query/common/forLinkingWithOwnerGroup.yaml
 fragmentId:
   $ref: ./path/fragments/fragmentId.yaml
+frameId:
+  $ref: ./path/pages/frameId.yaml
 groupId:
   $ref: ./path/groups/groupId.yaml
 groupName:
