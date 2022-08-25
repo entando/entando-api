@@ -6173,6 +6173,8 @@ tags:
     description: Widget navigator config operations
   - name: page-configuration-controller
     description: Page configuration operations
+  - name: page-controller
+    description: Page operations
 externalDocs:
   description: ''
   url: 'https://'
