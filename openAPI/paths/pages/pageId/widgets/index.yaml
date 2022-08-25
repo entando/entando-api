@@ -1,0 +1,4 @@
+summary: Page widgets operations
+description: API to access and manipulate page widgets
+parameters:
+  - $ref: ../../../../components/parameters/path/pages/pageId.yaml
