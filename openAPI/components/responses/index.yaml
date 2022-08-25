@@ -120,6 +120,8 @@ stringsList:
   $ref: ./ok/common/stringsList.yaml
 stringsList_generic:
   $ref: ./ok/common/stringsList_generic.yaml
+widgetConfigurationList:
+  $ref: ./ok/pages/widgetConfigurationList.yaml
 wildCardType_generic:
   $ref: ./ok/common/wildCardType_generic.yaml
 badRequest:

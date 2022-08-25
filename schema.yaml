@@ -1845,6 +1845,26 @@ paths:
     description: API to access and manipulate page widgets
     parameters:
       - $ref: '#/components/parameters/pageId'
+    get:
+      tags:
+        - page-configuration-controller
+      summary: Retrieve a page widgets
+      description: Retrieve the widgets of the page specified in the path filtered by status query parameter
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageWidgets
+      parameters:
+        - $ref: '#/components/parameters/status'
+      responses:
+        '200':
+          $ref: '#/components/responses/widgetConfigurationList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -5191,6 +5211,18 @@ components:
                     type: array
                     items:
                       type: string
+    widgetConfigurationList:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/widgetConfiguration'
     wildCardType_generic:
       description: OK
       content:
