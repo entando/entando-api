@@ -88,6 +88,8 @@
   $ref: ./oauth/check_token/index.yaml
 /pages:
   $ref: ./pages/index.yaml
+/pages/search:
+  $ref: ./pages/search/index.yaml
 /pages/{pageId}/configuration:
   $ref: ./pages/pageId/configuration/index.yaml
 /pages/{pageId}/configuration/defaultWidgets:
