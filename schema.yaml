@@ -1968,6 +1968,24 @@ paths:
   /pages/viewpages:
     summary: Pages view operations
     description: API to access and manipulate pages view
+    get:
+      tags:
+        - page-controller
+      summary: Retrieve the collection of pages view
+      description: Retrieve the collection of pages view
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: viewPages
+      responses:
+        '200':
+          $ref: '#/components/responses/pagesList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/pages/{pageId}/configuration':
     summary: Page configuration operations
     description: API to access and manipulate page configuration
@@ -5435,6 +5453,18 @@ components:
           schema:
             allOf:
               - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/page'
+    pagesList:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
               - properties:
                   payload:
                     type: array

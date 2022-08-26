@@ -1,2 +1,4 @@
 summary: Pages view operations
 description: API to access and manipulate pages view
+get:
+  $ref: ./viewPages.yaml

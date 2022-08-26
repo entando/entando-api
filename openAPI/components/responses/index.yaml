@@ -98,6 +98,8 @@ page:
   $ref: ./ok/pages/page.yaml
 pages:
   $ref: ./ok/pages/pages.yaml
+pagesList:
+  $ref: ./ok/pages/pagesList.yaml
 pagesListMapMetadata:
   $ref: ./ok/pages/pagesListMapMetadata.yaml
 pagedRestResponse:

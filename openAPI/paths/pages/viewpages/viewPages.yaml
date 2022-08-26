@@ -1,0 +1,17 @@
+tags:
+  - page-controller
+summary: Retrieve the collection of pages view
+description: Retrieve the collection of pages view
+externalDocs:
+  description: ''
+  url: https://
+operationId: viewPages
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/pages/pagesList.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
