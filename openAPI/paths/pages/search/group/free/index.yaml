@@ -1,2 +1,4 @@
 summary: Free pages search operations
 description: API to access and manipulate free pages search
+get:
+  $ref: ./searchFreePages.yaml
