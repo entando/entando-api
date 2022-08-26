@@ -96,6 +96,8 @@ ok:
   $ref: ./ok/common/empty.yaml
 page:
   $ref: ./ok/pages/page.yaml
+pages:
+  $ref: ./ok/pages/pages.yaml
 pagesListMapMetadata:
   $ref: ./ok/pages/pagesListMapMetadata.yaml
 pagedRestResponse:
