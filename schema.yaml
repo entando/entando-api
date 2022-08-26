@@ -1986,6 +1986,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/pages/{pageId}':
+    summary: Page operations
+    description: API to access and manipulate page
+    parameters:
+      - $ref: '#/components/parameters/pageId'
   '/pages/{pageId}/configuration':
     summary: Page configuration operations
     description: API to access and manipulate page configuration

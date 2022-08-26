@@ -1,0 +1,4 @@
+summary: Page operations
+description: API to access and manipulate page
+parameters:
+  - $ref: ../../../components/parameters/path/pages/pageId.yaml
