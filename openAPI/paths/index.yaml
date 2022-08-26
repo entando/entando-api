@@ -90,6 +90,8 @@
   $ref: ./pages/index.yaml
 /pages/search:
   $ref: ./pages/search/index.yaml
+/pages/search/group/free:
+  $ref: ./pages/search/group/free/index.yaml
 /pages/{pageId}/configuration:
   $ref: ./pages/pageId/configuration/index.yaml
 /pages/{pageId}/configuration/defaultWidgets:
