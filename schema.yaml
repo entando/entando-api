@@ -2282,6 +2282,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/pages/{pageId}/position':
+    summary: Page position operations
+    description: API to access and manipulate page position
+    parameters:
+      - $ref: '#/components/parameters/pageId'
   '/pages/{pageId}/widgets':
     summary: Page widgets operations
     description: API to access and manipulate page widgets

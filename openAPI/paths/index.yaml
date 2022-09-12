@@ -104,6 +104,8 @@
   $ref: ./pages/pageId/configuration/defaultWidgets/index.yaml
 /pages/{pageId}/configuration/restore:
   $ref: ./pages/pageId/configuration/restore/index.yaml
+/pages/{pageId}/position:
+  $ref: ./pages/pageId/position/index.yaml
 /pages/{pageId}/widgets:
   $ref: ./pages/pageId/widgets/index.yaml
 /pages/{pageId}/widgets/{frameId}:
