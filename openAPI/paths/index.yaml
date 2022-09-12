@@ -112,6 +112,8 @@
   $ref: ./pages/pageId/status/index.yaml
 /pages/{pageId}/usage:
   $ref: ./pages/pageId/usage/index.yaml
+/pages/{pageId}/usage/details:
+  $ref: ./pages/pageId/usage/details/index.yaml
 /pages/{pageId}/widgets:
   $ref: ./pages/pageId/widgets/index.yaml
 /pages/{pageId}/widgets/{frameId}:
