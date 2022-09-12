@@ -1,0 +1,8 @@
+description: Page status
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        status:
+          type: string

@@ -60,5 +60,7 @@ pageClone:
   $ref: ./pages/clone.yaml
 pagePosition:
   $ref: ./pages/position.yaml
+pageStatus:
+  $ref: ./pages/status.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml

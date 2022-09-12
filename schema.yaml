@@ -2372,6 +2372,50 @@ paths:
     description: API to access and manipulate page status
     parameters:
       - $ref: '#/components/parameters/pageId'
+    put:
+      tags:
+        - page-controller
+      summary: Update a page status
+      description: Update the status of the page specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updatePageStatus
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      requestBody:
+        $ref: '#/components/requestBodies/pageStatus'
+      responses:
+        '200':
+          $ref: '#/components/responses/pageMapMetadata'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/pages/{pageId}/widgets':
     summary: Page widgets operations
     description: API to access and manipulate page widgets
@@ -6966,6 +7010,15 @@ components:
               position:
                 type: integer
                 format: int32
+    pageStatus:
+      description: Page status
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              status:
+                type: string
     widgetConfiguration:
       description: Widget config
       required: true

@@ -2,3 +2,5 @@ summary: Page status operations
 description: API to access and manipulate page status
 parameters:
   - $ref: ../../../../components/parameters/path/pages/pageId.yaml
+put:
+  $ref: ./updatePageStatus.yaml
