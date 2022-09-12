@@ -2592,6 +2592,9 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  /pageModels:
+    summary: Page models operations
+    description: API to access and manipulate page models
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
