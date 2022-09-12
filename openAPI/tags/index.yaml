@@ -24,3 +24,4 @@
 - $ref: ./navigator-widget-config-controller.yaml
 - $ref: ./page-configuration-controller.yaml
 - $ref: ./page-controller.yaml
+- $ref: ./page-models.yaml

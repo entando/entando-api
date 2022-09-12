@@ -7180,6 +7180,8 @@ tags:
     description: Page configuration operations
   - name: page-controller
     description: Page operations
+  - name: page-models
+    description: Page models operations
 externalDocs:
   description: ''
   url: 'https://'
