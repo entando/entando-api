@@ -1,0 +1,29 @@
+tags:
+  - page-controller
+summary: Get a page references
+description: Get the page references manager specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getPageReferences
+parameters:
+  - $ref: ../../../../../components/parameters/query/common/filters/allowedValues.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/attribute.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/entityAttr.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/operator.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/order.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/type.yaml
+  - $ref: ../../../../../components/parameters/query/common/filters/value.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/direction.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/page.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/pageSize.yaml
+  - $ref: ../../../../../components/parameters/query/common/pagination/sort.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/restResponse/pagedRestResponse.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

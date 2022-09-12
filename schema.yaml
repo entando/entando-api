@@ -2337,6 +2337,36 @@ paths:
     parameters:
       - $ref: '#/components/parameters/pageId'
       - $ref: '#/components/parameters/pageReferencesManager'
+    get:
+      tags:
+        - page-controller
+      summary: Get a page references
+      description: Get the page references manager specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageReferences
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/pagedRestResponse'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/pages/{pageId}/widgets':
     summary: Page widgets operations
     description: API to access and manipulate page widgets
