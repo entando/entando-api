@@ -2,3 +2,5 @@ summary: Page usage details operations
 description: API to access and manipulate page usage details
 parameters:
   - $ref: ../../../../../components/parameters/path/pages/pageId.yaml
+get:
+  $ref: ./getPageUsageDetails.yaml
