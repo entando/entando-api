@@ -2158,6 +2158,11 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/pages/{pageId}/clone':
+    summary: Page clone operations
+    description: API to access and manipulate page clone
+    parameters:
+      - $ref: '#/components/parameters/pageId'
   '/pages/{pageId}/configuration':
     summary: Page configuration operations
     description: API to access and manipulate page configuration
