@@ -2416,6 +2416,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/pages/{pageId}/usage':
+    summary: Page usage operations
+    description: API to access and manipulate page usage
+    parameters:
+      - $ref: '#/components/parameters/pageId'
   '/pages/{pageId}/widgets':
     summary: Page widgets operations
     description: API to access and manipulate page widgets
