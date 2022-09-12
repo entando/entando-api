@@ -142,6 +142,8 @@ refreshToken:
   $ref: ./query/common/refreshToken.yaml
 reportId:
   $ref: ./path/database/reportId.yaml
+requestParams:
+  $ref: ./query/pageModels/requestParams.yaml
 resolveLink:
   $ref: ./query/contents/resolveLink.yaml
 resolveLinks:

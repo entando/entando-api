@@ -1,0 +1,7 @@
+title: Page model configuration
+type: object
+properties:
+  frames:
+    type: array
+    items:
+      $ref: ./frame.yaml

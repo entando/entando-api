@@ -1,2 +1,4 @@
 summary: Page models operations
 description: API to access and manipulate page models
+get:
+  $ref: ./getPageModels.yaml

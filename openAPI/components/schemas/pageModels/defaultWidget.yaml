@@ -1,0 +1,10 @@
+title: Default widget
+type: object
+properties:
+  code:
+    type: string
+  properties:
+    type: object
+    additionalProperties:
+      type: object
+      properties: {}

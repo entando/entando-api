@@ -1,0 +1,20 @@
+title: Page model
+type: object
+properties:
+  code:
+    type: string
+  configuration:
+    $ref: ./pageModelConfiguration.yaml
+  descr:
+    type: string
+  mainFrame:
+    type: integer
+    format: int32
+  pluginCode:
+    type: string
+  references:
+    type: object
+    additionalProperties:
+      type: boolean
+  template:
+    type: string

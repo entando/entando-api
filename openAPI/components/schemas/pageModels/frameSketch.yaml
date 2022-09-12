@@ -1,0 +1,35 @@
+title: Frame sketch
+type: object
+properties:
+  x1:
+    type: integer
+    format: int32
+    xml:
+      name: x1
+      attribute: false
+      wrapped: false
+  x2:
+    type: integer
+    format: int32
+    xml:
+      name: x2
+      attribute: false
+      wrapped: false
+  y1:
+    type: integer
+    format: int32
+    xml:
+      name: y1
+      attribute: false
+      wrapped: false
+  y2:
+    type: integer
+    format: int32
+    xml:
+      name: y2
+      attribute: false
+      wrapped: false
+xml:
+  name: sketch
+  attribute: false
+  wrapped: false

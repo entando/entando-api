@@ -1,0 +1,5 @@
+name: requestParams
+in: query
+description: ''
+required: true
+schema: {}

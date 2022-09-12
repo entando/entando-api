@@ -34,6 +34,8 @@ contentType:
   $ref: ./contentTypes/contentType.yaml
 contentVersion:
   $ref: ./versioning/contentVersion.yaml
+defaultWidget:
+  $ref: ./pageModels/defaultWidget.yaml
 dumpReport:
   $ref: ./database/dumpReport.yaml
 contentsStatus:
@@ -64,6 +66,10 @@ fragmentRef:
   $ref: ./fragments/fragmentRef.yaml
 fragmentSmall:
   $ref: ./fragments/fragmentSmall.yaml
+frame:
+  $ref: ./pageModels/frame.yaml
+frameSketch:
+  $ref: ./pageModels/frameSketch.yaml
 group:
   $ref: ./groups/group.yaml
 iEntityModelDictionary:
@@ -86,6 +92,10 @@ pageConfiguration:
   $ref: ./pages/pageConfiguration.yaml
 pageMetadata:
   $ref: ./pages/pageMetadata.yaml
+pageModel:
+  $ref: ./pageModels/pageModel.yaml
+pageModelConfiguration:
+  $ref: ./pageModels/pageModelConfiguration.yaml
 pageModelRef:
   $ref: ./pageModels/pageModelRef.yaml
 pageStatus:

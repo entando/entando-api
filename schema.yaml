@@ -2595,6 +2595,39 @@ paths:
   /pageModels:
     summary: Page models operations
     description: API to access and manipulate page models
+    get:
+      tags:
+        - page-models
+      summary: Retrieve the collection of page models
+      description: Retrieve the collection of page models filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageModels
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/requestParams'
+      responses:
+        '200':
+          $ref: '#/components/responses/pageModels'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -4640,6 +4673,17 @@ components:
         versionDate:
           type: string
           format: date-time
+    defaultWidget:
+      title: Default widget
+      type: object
+      properties:
+        code:
+          type: string
+        properties:
+          type: object
+          additionalProperties:
+            type: object
+            properties: {}
     dumpReport:
       title: Dump report
       type: object
@@ -4937,6 +4981,57 @@ components:
           $ref: '#/components/schemas/widgetTypeRef'
         widgetTypeCode:
           type: string
+    frame:
+      title: Frame
+      type: object
+      properties:
+        defaultWidget:
+          $ref: '#/components/schemas/defaultWidget'
+        descr:
+          type: string
+        mainFrame:
+          type: boolean
+        pos:
+          type: integer
+          format: int32
+        sketch:
+          $ref: '#/components/schemas/frameSketch'
+    frameSketch:
+      title: Frame sketch
+      type: object
+      properties:
+        x1:
+          type: integer
+          format: int32
+          xml:
+            name: x1
+            attribute: false
+            wrapped: false
+        x2:
+          type: integer
+          format: int32
+          xml:
+            name: x2
+            attribute: false
+            wrapped: false
+        y1:
+          type: integer
+          format: int32
+          xml:
+            name: y1
+            attribute: false
+            wrapped: false
+        y2:
+          type: integer
+          format: int32
+          xml:
+            name: y2
+            attribute: false
+            wrapped: false
+      xml:
+        name: sketch
+        attribute: false
+        wrapped: false
     group:
       title: Group
       type: object
@@ -5216,6 +5311,35 @@ components:
           format: date-time
         useExtraTitles:
           type: boolean
+    pageModel:
+      title: Page model
+      type: object
+      properties:
+        code:
+          type: string
+        configuration:
+          $ref: '#/components/schemas/pageModelConfiguration'
+        descr:
+          type: string
+        mainFrame:
+          type: integer
+          format: int32
+        pluginCode:
+          type: string
+        references:
+          type: object
+          additionalProperties:
+            type: boolean
+        template:
+          type: string
+    pageModelConfiguration:
+      title: Page model configuration
+      type: object
+      properties:
+        frames:
+          type: array
+          items:
+            $ref: '#/components/schemas/frame'
     pageModelRef:
       title: Page model reference
       type: object
@@ -5949,6 +6073,18 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/pageConfiguration'
+    pageModels:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/pageModel'
     pageStatus:
       description: OK
       content:
@@ -6667,6 +6803,12 @@ components:
       required: true
       schema:
         type: string
+    requestParams:
+      name: requestParams
+      in: query
+      description: ''
+      required: true
+      schema: {}
     resolveLink:
       name: resolveLink
       in: query

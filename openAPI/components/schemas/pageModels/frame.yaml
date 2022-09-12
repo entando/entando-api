@@ -1,0 +1,14 @@
+title: Frame
+type: object
+properties:
+  defaultWidget:
+    $ref: ./defaultWidget.yaml
+  descr:
+    type: string
+  mainFrame:
+    type: boolean
+  pos:
+    type: integer
+    format: int32
+  sketch:
+    $ref: ./frameSketch.yaml
