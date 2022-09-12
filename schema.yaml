@@ -2421,6 +2421,26 @@ paths:
     description: API to access and manipulate page usage
     parameters:
       - $ref: '#/components/parameters/pageId'
+    get:
+      tags:
+        - page-controller
+      summary: Retrieve a page usage
+      description: Retrieve the usage count for the page specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageUsage
+      responses:
+        '200':
+          $ref: '#/components/responses/componentUsage'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/pages/{pageId}/widgets':
     summary: Page widgets operations
     description: API to access and manipulate page widgets
