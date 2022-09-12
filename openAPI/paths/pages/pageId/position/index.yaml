@@ -2,3 +2,5 @@ summary: Page position operations
 description: API to access and manipulate page position
 parameters:
   - $ref: ../../../../components/parameters/path/pages/pageId.yaml
+put:
+  $ref: ./movePage.yaml

@@ -1,0 +1,13 @@
+description: Page position
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        code:
+          type: string
+        parentCode:
+          type: string
+        position:
+          type: integer
+          format: int32
