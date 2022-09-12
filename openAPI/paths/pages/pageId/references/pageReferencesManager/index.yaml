@@ -1,0 +1,5 @@
+summary: Page references manager operations
+description: API to access and manipulate page references manager
+parameters:
+  - $ref: ../../../../../components/parameters/path/pages/pageId.yaml
+  - $ref: ../../../../../components/parameters/path/pages/manager.yaml

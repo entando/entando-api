@@ -126,6 +126,8 @@ pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
 pagesParentCode:
   $ref: ./query/pages/parentCode.yaml
+pageReferencesManager:
+  $ref: ./path/pages/manager.yaml
 parameters:
   $ref: ./query/authorizations/parameters.yaml
 password:

@@ -1,0 +1,6 @@
+name: pageReferencesManager
+in: path
+description: Manager
+required: true
+schema:
+  type: string

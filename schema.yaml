@@ -2331,6 +2331,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/pages/{pageId}/references/{pageReferencesManager}':
+    summary: Page references manager operations
+    description: API to access and manipulate page references manager
+    parameters:
+      - $ref: '#/components/parameters/pageId'
+      - $ref: '#/components/parameters/pageReferencesManager'
   '/pages/{pageId}/widgets':
     summary: Page widgets operations
     description: API to access and manipulate page widgets
@@ -6445,6 +6451,13 @@ components:
       schema:
         type: string
         default: homepage
+    pageReferencesManager:
+      name: pageReferencesManager
+      in: path
+      description: Manager
+      required: true
+      schema:
+        type: string
     parameters:
       name: parameters
       in: query
