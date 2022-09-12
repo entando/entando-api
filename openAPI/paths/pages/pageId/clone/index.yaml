@@ -2,3 +2,5 @@ summary: Page clone operations
 description: API to access and manipulate page clone
 parameters:
   - $ref: ../../../../components/parameters/path/pages/pageId.yaml
+post:
+  $ref: ./clonePage.yaml

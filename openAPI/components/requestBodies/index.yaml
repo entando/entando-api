@@ -56,5 +56,7 @@ navigatorConfig:
   $ref: ./widgets/navigatorConfig.yaml
 page:
   $ref: ./pages/page.yaml
+pageClone:
+  $ref: ./pages/clone.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml

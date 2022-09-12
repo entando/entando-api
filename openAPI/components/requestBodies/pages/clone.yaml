@@ -1,0 +1,14 @@
+description: Page clone
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        newPageCode:
+          type: string
+        parentCode:
+          type: string
+        titles:
+          type: object
+          additionalProperties:
+            type: string

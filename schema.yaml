@@ -2163,6 +2163,50 @@ paths:
     description: API to access and manipulate page clone
     parameters:
       - $ref: '#/components/parameters/pageId'
+    post:
+      tags:
+        - page-controller
+      summary: Clone a page
+      description: Clone the page specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: clonePage
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      requestBody:
+        $ref: '#/components/requestBodies/pageClone'
+      responses:
+        '200':
+          $ref: '#/components/responses/page'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/pages/{pageId}/configuration':
     summary: Page configuration operations
     description: API to access and manipulate page configuration
@@ -6791,6 +6835,21 @@ components:
               seo:
                 type: boolean
               status:
+                type: string
+              titles:
+                type: object
+                additionalProperties:
+                  type: string
+    pageClone:
+      description: Page clone
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              newPageCode:
+                type: string
+              parentCode:
                 type: string
               titles:
                 type: object
