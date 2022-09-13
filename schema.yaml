@@ -2654,6 +2654,11 @@ paths:
           $ref: '#/components/responses/notFound'
         '409':
           $ref: '#/components/responses/conflict'
+  '/pageModels/{pageModelId}':
+    summary: Page model operations
+    description: API to access and manipulate a page model
+    parameters:
+      - $ref: '#/components/parameters/pageModelId'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -6772,6 +6777,13 @@ components:
       name: pageCodeToken
       in: query
       description: ''
+      schema:
+        type: string
+    pageModelId:
+      name: pageModelId
+      in: path
+      description: Code
+      required: true
       schema:
         type: string
     pageSize:

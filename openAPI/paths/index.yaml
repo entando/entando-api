@@ -120,6 +120,8 @@
   $ref: ./pages/pageId/widgets/frameId/index.yaml
 /pageModels:
   $ref: ./pageModels/index.yaml
+/pageModels/{pageModelId}:
+  $ref: ./pageModels/pageModelId/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:
