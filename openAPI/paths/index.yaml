@@ -128,6 +128,8 @@
   $ref: ./pageModels/pageModelId/usage/index.yaml
 /pageModels/{pageModelId}/usage/details:
   $ref: ./pageModels/pageModelId/usage/details/index.yaml
+/pageSettings:
+  $ref: ./pageSettings/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:

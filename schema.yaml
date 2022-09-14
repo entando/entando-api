@@ -2817,6 +2817,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /pageSettings:
+    summary: Page settings operations
+    description: API to access and manipulate page settings
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
