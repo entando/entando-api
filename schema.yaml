@@ -7666,6 +7666,8 @@ tags:
     description: Page settings operations
   - name: permission-controller
     description: Permissions operations
+  - name: profile-controller
+    description: Profile operations
 externalDocs:
   description: ''
   url: 'https://'
