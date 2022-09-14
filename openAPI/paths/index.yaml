@@ -122,6 +122,8 @@
   $ref: ./pageModels/index.yaml
 /pageModels/{pageModelId}:
   $ref: ./pageModels/pageModelId/index.yaml
+/pageModels/{pageModelId}/references/{pageModelReferencesManager}:
+  $ref: ./pageModels/pageModelId/references/pageModelReferencesManager/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:

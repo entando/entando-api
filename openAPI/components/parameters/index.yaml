@@ -124,6 +124,8 @@ pageCodeToken:
   $ref: ./query/common/pageCodeToken.yaml
 pageModelId:
   $ref: ./path/pageModels/pageModelId.yaml
+pageModelReferencesManager:
+  $ref: ./path/pageModels/manager.yaml
 pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
 pagesParentCode:

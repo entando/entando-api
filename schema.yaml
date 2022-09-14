@@ -2719,6 +2719,12 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/pageModels/{pageModelId}/references/{pageModelReferencesManager}':
+    summary: Page model references manager operations
+    description: API to access and manipulate page model references manager
+    parameters:
+      - $ref: '#/components/parameters/pageModelId'
+      - $ref: '#/components/parameters/pageModelReferencesManager'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -6843,6 +6849,13 @@ components:
       name: pageModelId
       in: path
       description: Code
+      required: true
+      schema:
+        type: string
+    pageModelReferencesManager:
+      name: pageModelReferencesManager
+      in: path
+      description: Manager
       required: true
       schema:
         type: string

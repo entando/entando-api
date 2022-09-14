@@ -1,0 +1,5 @@
+summary: Page model references manager operations
+description: API to access and manipulate page model references manager
+parameters:
+  - $ref: ../../../../../components/parameters/path/pageModels/pageModelId.yaml
+  - $ref: ../../../../../components/parameters/path/pageModels/manager.yaml

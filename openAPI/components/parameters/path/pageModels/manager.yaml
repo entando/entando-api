@@ -1,0 +1,6 @@
+name: pageModelReferencesManager
+in: path
+description: Manager
+required: true
+schema:
+  type: string
