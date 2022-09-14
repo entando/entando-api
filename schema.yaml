@@ -2659,6 +2659,24 @@ paths:
     description: API to access and manipulate a page model
     parameters:
       - $ref: '#/components/parameters/pageModelId'
+    get:
+      tags:
+        - page-models
+      summary: Retrieve a page model
+      description: Retrieve the page model specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageModel
+      responses:
+        '200':
+          $ref: '#/components/responses/pageModel'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models

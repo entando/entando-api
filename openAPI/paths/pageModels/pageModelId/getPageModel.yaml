@@ -1,0 +1,17 @@
+tags:
+  - page-models
+summary: Retrieve a page model
+description: Retrieve the page model specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getPageModel
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/pageModels/pageModel.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

@@ -2,3 +2,5 @@ summary: Page model operations
 description: API to access and manipulate a page model
 parameters:
   - $ref: ../../../components/parameters/path/pageModels/pageModelId.yaml
+get:
+  $ref: ./getPageModel.yaml
