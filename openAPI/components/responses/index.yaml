@@ -60,6 +60,8 @@ emailSender:
   $ref: ./ok/emailSenders/emailSender.yaml
 emailSenders:
   $ref: ./ok/emailSenders/emailSenders.yaml
+entity:
+  $ref: ./ok/myUserProfile/entity.yaml
 entityManager:
   $ref: ./ok/entityManagers/entityManager.yaml
 entityTypeAttributeFullList:

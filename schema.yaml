@@ -1567,6 +1567,46 @@ paths:
   /myUserProfile:
     summary: My user profile operations
     description: API to access and manipulate my user profile
+    get:
+      tags:
+        - profile-controller
+      summary: Retrieve the my user profile
+      description: Retrieve the my user profile filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getMyUserProfile
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      responses:
+        '200':
+          $ref: '#/components/responses/entity'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -5000,6 +5040,28 @@ components:
           type: string
         email:
           type: string
+    entity:
+      title: Entity
+      type: object
+      properties:
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/entityAttribute'
+        description:
+          type: string
+        groups:
+          type: array
+          items:
+            type: string
+        id:
+          type: string
+        mainGroup:
+          type: string
+        typeCode:
+          type: string
+        typeDescription:
+          type: string
     entityAttribute:
       title: Entity attribute
       type: object
@@ -6111,6 +6173,16 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/emailSender'
+    entity:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/entity'
     entityManager:
       description: OK
       content:

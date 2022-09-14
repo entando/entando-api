@@ -1,0 +1,21 @@
+title: Entity
+type: object
+properties:
+  attributes:
+    type: array
+    items:
+      $ref: ../common/entityAttribute.yaml
+  description:
+    type: string
+  groups:
+    type: array
+    items:
+      type: string
+  id:
+    type: string
+  mainGroup:
+    type: string
+  typeCode:
+    type: string
+  typeDescription:
+    type: string

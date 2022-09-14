@@ -42,6 +42,8 @@ contentsStatus:
   $ref: ./contents/contentsStatus.yaml
 emailSender:
   $ref: ./emailSenders/emailSender.yaml
+entity:
+  $ref: ./myUserProfile/entity.yaml
 entityAttribute:
   $ref: ./common/entityAttribute.yaml
 entityManager:
