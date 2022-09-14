@@ -2778,6 +2778,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/pageModels/{pageModelId}/usage/details':
+    summary: Page model usage details operations
+    description: API to access and manipulate page model usage details
+    parameters:
+      - $ref: '#/components/parameters/pageModelId'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models

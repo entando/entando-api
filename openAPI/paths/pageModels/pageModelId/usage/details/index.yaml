@@ -1,0 +1,4 @@
+summary: Page model usage details operations
+description: API to access and manipulate page model usage details
+parameters:
+  - $ref: ../../../../../components/parameters/path/pageModels/pageModelId.yaml
