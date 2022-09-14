@@ -26,3 +26,4 @@
 - $ref: ./page-controller.yaml
 - $ref: ./page-models.yaml
 - $ref: ./page-settings-controller.yaml
+- $ref: ./permission-controller.yaml

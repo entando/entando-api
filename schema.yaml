@@ -7611,6 +7611,8 @@ tags:
     description: Page models operations
   - name: page-settings-controller
     description: Page settings operations
+  - name: permission-controller
+    description: Permissions operations
 externalDocs:
   description: ''
   url: 'https://'
