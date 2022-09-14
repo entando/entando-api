@@ -1,0 +1,17 @@
+tags:
+  - page-models
+summary: Retrieve a page model usage
+description: Retrieve the usage count for the page model specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getPageModelUsage
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/common/componentUsage.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml
