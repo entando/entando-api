@@ -82,6 +82,8 @@
   $ref: ./languages/index.yaml
 /languages/{languageId}:
   $ref: ./languages/languageId/index.yaml
+/myUserProfile:
+  $ref: ./myUserProfile/index.yaml
 /oauth/authorize:
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
