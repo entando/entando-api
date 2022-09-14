@@ -2820,6 +2820,24 @@ paths:
   /pageSettings:
     summary: Page settings operations
     description: API to access and manipulate page settings
+    get:
+      tags:
+        - page-settings-controller
+      summary: Retrieve the page settings
+      description: Retrieve the page settings
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getPageSettings
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models

@@ -1,2 +1,4 @@
 summary: Page settings operations
 description: API to access and manipulate page settings
+get:
+  $ref: ./getPageSettings.yaml
