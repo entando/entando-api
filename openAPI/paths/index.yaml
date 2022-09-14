@@ -130,6 +130,8 @@
   $ref: ./pageModels/pageModelId/usage/details/index.yaml
 /pageSettings:
   $ref: ./pageSettings/index.yaml
+/permissions:
+  $ref: ./permissions/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:

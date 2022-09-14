@@ -2860,6 +2860,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /permissions:
+    summary: Permissions operations
+    description: API to access and manipulate permissions
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
