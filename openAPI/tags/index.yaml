@@ -25,3 +25,4 @@
 - $ref: ./page-configuration-controller.yaml
 - $ref: ./page-controller.yaml
 - $ref: ./page-models.yaml
+- $ref: ./page-settings-controller.yaml

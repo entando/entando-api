@@ -7557,6 +7557,8 @@ tags:
     description: Page operations
   - name: page-models
     description: Page models operations
+  - name: page-settings-controller
+    description: Page settings operations
 externalDocs:
   description: ''
   url: 'https://'
