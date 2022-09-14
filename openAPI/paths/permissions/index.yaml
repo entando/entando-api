@@ -1,2 +1,4 @@
 summary: Permissions operations
 description: API to access and manipulate permissions
+get:
+  $ref: ./getPermissions.yaml

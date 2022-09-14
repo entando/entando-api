@@ -114,6 +114,8 @@ pageModels:
   $ref: ./ok/pageModels/pageModels.yaml
 pageStatus:
   $ref: ./ok/dashboard/pageStatus.yaml
+permissions:
+  $ref: ./ok/permissions/permissions.yaml
 restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 restResponse_generic:
