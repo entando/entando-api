@@ -4584,6 +4584,28 @@ paths:
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
+    post:
+      tags:
+        - profile-controller
+      summary: Add a user profile to the user profiles collection
+      description: Create a new user profile as specified in the request body and add it to the user profiles collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addUserProfile
+      requestBody:
+        $ref: '#/components/requestBodies/entity'
+      responses:
+        '200':
+          $ref: '#/components/responses/entity'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions

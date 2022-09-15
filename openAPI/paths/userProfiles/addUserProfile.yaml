@@ -1,0 +1,21 @@
+tags:
+  - profile-controller
+summary: Add a user profile to the user profiles collection
+description: Create a new user profile as specified in the request body and add it to the user profiles collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: addUserProfile
+requestBody:
+  $ref: ../../components/requestBodies/myUserProfile/entity.yaml
+responses:
+  '200':
+    $ref: ../../components/responses/ok/myUserProfile/entity.yaml
+  '201':
+    $ref: ../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml
