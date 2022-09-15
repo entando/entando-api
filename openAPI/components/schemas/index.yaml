@@ -126,6 +126,8 @@ tableDumpReport:
   $ref: ./database/tableDumpReport.yaml
 type:
   $ref: ./common/type.yaml
+userProfileType:
+  $ref: ./profileTypes/userProfileType.yaml
 view:
   $ref: ./authorizations/view.yaml
 widgetConfiguration:

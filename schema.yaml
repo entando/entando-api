@@ -1567,6 +1567,46 @@ paths:
   /myProfileType:
     summary: My profile type operations
     description: API to access and manipulate my profile type
+    get:
+      tags:
+        - profile-type-controller
+      summary: Retrieve my profile type
+      description: Retrieve the my profile type filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getMyProfileType
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      responses:
+        '200':
+          $ref: '#/components/responses/userProfileType'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /myUserProfile:
     summary: My user profile operations
     description: API to access and manipulate my user profile
@@ -5939,6 +5979,20 @@ components:
       properties:
         typeName:
           type: string
+    userProfileType:
+      title: User profile type
+      type: object
+      properties:
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/entityTypeAttribute'
+        code:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
     view:
       title: View
       type: object
@@ -6676,6 +6730,16 @@ components:
                     type: array
                     items:
                       type: string
+    userProfileType:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/userProfileType'
     widgetConfiguration:
       description: OK
       content:

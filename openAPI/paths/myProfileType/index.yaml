@@ -1,2 +1,4 @@
 summary: My profile type operations
 description: API to access and manipulate my profile type
+get:
+  $ref: ./getMyProfileType.yaml

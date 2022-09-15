@@ -138,6 +138,8 @@ stringsList:
   $ref: ./ok/common/stringsList.yaml
 stringsList_generic:
   $ref: ./ok/common/stringsList_generic.yaml
+userProfileType:
+  $ref: ./ok/profileTypes/userProfileType.yaml
 widgetConfiguration:
   $ref: ./ok/pages/widgetConfiguration.yaml
 widgetConfigurationList:
