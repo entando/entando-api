@@ -4657,6 +4657,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/profileTypeAttributes/{attributeTypeId}':
+    summary: Profile type attribute operations
+    description: API to access and manipulate profile type attribute
+    parameters:
+      - $ref: '#/components/parameters/attributeTypeId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles

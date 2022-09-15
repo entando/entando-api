@@ -216,6 +216,8 @@
   $ref: ./plugins/versioning/contents/contentId/versions/versionId/recover/index.yaml
 /profileTypeAttributes:
   $ref: ./profileTypeAttributes/index.yaml
+/profileTypeAttributes/{attributeTypeId}:
+  $ref: ./profileTypeAttributes/attributeTypeId/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
