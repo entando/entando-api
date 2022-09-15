@@ -1,0 +1,4 @@
+summary: User profile operations
+description: API to access and manipulate a user profile
+parameters:
+  - $ref: ../../../components/parameters/path/users/userId.yaml

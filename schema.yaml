@@ -4606,6 +4606,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/userProfiles/{userId}':
+    summary: User profile operations
+    description: API to access and manipulate a user profile
+    parameters:
+      - $ref: '#/components/parameters/userId'
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions
@@ -7337,6 +7342,13 @@ components:
       name: username
       in: query
       description: ''
+      schema:
+        type: string
+    userId:
+      name: userId
+      in: path
+      description: Username
+      required: true
       schema:
         type: string
     value:

@@ -172,6 +172,8 @@ typeCode:
   $ref: ./query/contentModels/typeCode.yaml
 username:
   $ref: ./query/common/username.yaml
+userId:
+  $ref: ./path/users/userId.yaml
 value:
   $ref: ./query/common/filters/value.yaml
 versionId:
