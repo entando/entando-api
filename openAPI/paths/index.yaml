@@ -212,6 +212,8 @@
   $ref: ./plugins/versioning/contents/contentId/versions/versionId/index.yaml
 /plugins/versioning/contents/{contentId}/versions/{versionId}/recover:
   $ref: ./plugins/versioning/contents/contentId/versions/versionId/recover/index.yaml
+/userProfiles:
+  $ref: ./userProfiles/index.yaml
 /widget/navigator/expressions:
   $ref: ./widget/navigator/expressions/index.yaml
 /widget/navigator/navspec:
