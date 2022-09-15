@@ -7871,6 +7871,8 @@ tags:
     description: Permissions operations
   - name: profile-controller
     description: Profile operations
+  - name: profile-type-controller
+    description: Profile type operations
 externalDocs:
   description: ''
   url: 'https://'

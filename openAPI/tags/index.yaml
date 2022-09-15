@@ -28,3 +28,4 @@
 - $ref: ./page-settings-controller.yaml
 - $ref: ./permission-controller.yaml
 - $ref: ./profile-controller.yaml
+- $ref: ./profile-type-controller.yaml
