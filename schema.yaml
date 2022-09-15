@@ -4611,6 +4611,24 @@ paths:
     description: API to access and manipulate a user profile
     parameters:
       - $ref: '#/components/parameters/userId'
+    get:
+      tags:
+        - profile-controller
+      summary: Retrieve a user profile
+      description: Retrieve the user profile specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getUserProfile
+      responses:
+        '200':
+          $ref: '#/components/responses/entity'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions
