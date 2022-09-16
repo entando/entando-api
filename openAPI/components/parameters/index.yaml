@@ -138,6 +138,8 @@ password:
   $ref: ./query/common/password.yaml
 profile:
   $ref: ./query/common/profile.yaml
+profileTypeId:
+  $ref: ./path/profileTypes/profileTypeId.yaml
 protectedFolder:
   $ref: ./query/fileBrowser/protectedFolder.yaml
 ratio:

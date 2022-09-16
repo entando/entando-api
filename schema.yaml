@@ -4680,6 +4680,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/profileTypeAttributes/{profileTypeId}/attribute/{attributeTypeId}':
+    summary: Profile type attributes profile attribute operations
+    description: API to access and manipulate a profile type attributes profile attribute
+    parameters:
+      - $ref: '#/components/parameters/profileTypeId'
+      - $ref: '#/components/parameters/attributeTypeId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -7408,6 +7414,13 @@ components:
       description: ''
       schema:
         type: object
+    profileTypeId:
+      name: profileTypeId
+      in: path
+      description: Profile type code
+      required: true
+      schema:
+        type: string
     protectedFolder:
       name: protectedFolder
       in: query

@@ -1,0 +1,5 @@
+summary: Profile type attributes profile attribute operations
+description: API to access and manipulate a profile type attributes profile attribute
+parameters:
+  - $ref: ../../../../../components/parameters/path/profileTypes/profileTypeId.yaml
+  - $ref: ../../../../../components/parameters/path/attributes/attributeTypeId.yaml

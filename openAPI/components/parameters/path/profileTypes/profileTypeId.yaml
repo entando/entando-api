@@ -1,0 +1,6 @@
+name: profileTypeId
+in: path
+description: Profile type code
+required: true
+schema:
+  type: string
