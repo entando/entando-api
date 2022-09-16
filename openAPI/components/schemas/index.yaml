@@ -58,6 +58,8 @@ entityTypeAttributeOGNLValidation:
   $ref: ./common/entityTypeAttributeOGNLValidation.yaml
 entityTypeAttributeValidation:
   $ref: ./common/entityTypeAttributeValidation.yaml
+entityTypeShort:
+  $ref: ./profileTypes/entityTypeShort.yaml
 entityTypesStatus:
   $ref: ./common/entityTypesStatus.yaml
 filter:

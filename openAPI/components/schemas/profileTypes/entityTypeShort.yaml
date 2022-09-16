@@ -1,0 +1,9 @@
+title: Entity type short
+type: object
+properties:
+  code:
+    type: string
+  name:
+    type: string
+  status:
+    type: string

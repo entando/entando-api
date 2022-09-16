@@ -70,6 +70,8 @@ entityTypeAttributeFullList:
   $ref: ./ok/common/entityTypeAttributeFullList.yaml
 entityTypeAttributeFullList_generic:
   $ref: ./ok/common/entityTypeAttributeFullList_generic.yaml
+entityTypesShort:
+  $ref: ./ok/profileTypes/entityTypesShort.yaml
 entityTypesStatus_generic:
   $ref: ./ok/common/entityTypesStatus_generic.yaml
 fragment:
