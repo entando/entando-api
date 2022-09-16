@@ -4662,6 +4662,24 @@ paths:
     description: API to access and manipulate profile type attribute
     parameters:
       - $ref: '#/components/parameters/attributeTypeId'
+    get:
+      tags:
+        - profile-type-controller
+      summary: Retrieve profile type attributes type
+      description: Retrieve the profile type attributes type specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getProfileTypeAttributesType
+      responses:
+        '200':
+          $ref: '#/components/responses/attributeType'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -6093,6 +6111,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/activityStreamRecord'
+    attributeType:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/attributeType'
     attributeType_generic:
       description: OK
       content:

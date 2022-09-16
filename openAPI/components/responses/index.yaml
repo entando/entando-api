@@ -2,6 +2,8 @@ activityStream:
   $ref: ./ok/activityStream/activityStream.yaml
 activityStreamRecord:
   $ref: ./ok/activityStream/activityStreamRecord.yaml
+attributeType:
+  $ref: ./ok/common/attributeType.yaml
 attributeType_generic:
   $ref: ./ok/common/attributeType_generic.yaml
 basicFileAttributeViewList:
