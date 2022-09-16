@@ -1,0 +1,5 @@
+summary: Content type attributes content attribute operations
+description: API to access and manipulate a content type attributes content attribute
+parameters:
+  - $ref: ../../../../../../../components/parameters/path/contentTypes/contentTypeId.yaml
+  - $ref: ../../../../../../../components/parameters/path/attributes/attributeTypeId.yaml

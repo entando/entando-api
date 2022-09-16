@@ -30,6 +30,8 @@ contentModelId:
   $ref: ./path/contents/modelId.yaml
 contentStatus:
   $ref: ./query/contents/status.yaml
+contentTypeId:
+  $ref: ./path/contentTypes/contentTypeId.yaml
 direction:
   $ref: ./query/common/pagination/direction.yaml
 entityAttr:

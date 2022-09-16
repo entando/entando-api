@@ -1260,6 +1260,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/plugins/cms/contentTypeAttributes/{contentTypeId}/attribute/{attributeTypeId}':
+    summary: Content type attributes content attribute operations
+    description: API to access and manipulate a content type attributes content attribute
+    parameters:
+      - $ref: '#/components/parameters/contentTypeId'
+      - $ref: '#/components/parameters/attributeTypeId'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2621,6 +2627,13 @@ components:
       name: status
       in: query
       description: ''
+      schema:
+        type: string
+    contentTypeId:
+      name: contentTypeId
+      in: path
+      description: Content type code
+      required: true
       schema:
         type: string
     direction:
