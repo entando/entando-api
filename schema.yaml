@@ -1266,6 +1266,24 @@ paths:
     parameters:
       - $ref: '#/components/parameters/contentTypeId'
       - $ref: '#/components/parameters/attributeTypeId'
+    get:
+      tags:
+        - content-type-resource-controller
+      summary: Retrieve a content type attributes content attribute
+      description: Retrieve a content type attributes content attribute
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentTypeAttributesContentAttribute
+      responses:
+        '200':
+          $ref: '#/components/responses/attributeType_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
