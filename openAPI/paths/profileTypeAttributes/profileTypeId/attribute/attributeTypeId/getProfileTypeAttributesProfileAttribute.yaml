@@ -1,0 +1,17 @@
+tags:
+  - profile-type-controller
+summary: Retrieve profile type attributes profile attribute
+description: Retrieve the profile type attributes profile attribute specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getProfileTypeAttributesProfileAttribute
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/common/attributeType.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

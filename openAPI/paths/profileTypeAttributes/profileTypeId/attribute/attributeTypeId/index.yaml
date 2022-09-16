@@ -3,3 +3,5 @@ description: API to access and manipulate a profile type attributes profile attr
 parameters:
   - $ref: ../../../../../components/parameters/path/profileTypes/profileTypeId.yaml
   - $ref: ../../../../../components/parameters/path/attributes/attributeTypeId.yaml
+get:
+  $ref: ./getProfileTypeAttributesProfileAttribute.yaml
