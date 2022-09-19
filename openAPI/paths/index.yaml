@@ -222,6 +222,8 @@
   $ref: ./profileTypeAttributes/profileTypeId/attribute/attributeTypeId/index.yaml
 /profileTypes:
   $ref: ./profileTypes/index.yaml
+/profileTypes/refresh/{profileTypeId}:
+  $ref: ./profileTypes/refresh/profileTypeId/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:

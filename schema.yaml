@@ -4759,6 +4759,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/profileTypes/refresh/{profileTypeId}':
+    summary: Profile type refresh operations
+    description: API to access and manipulate a profile type refresh
+    parameters:
+      - $ref: '#/components/parameters/profileTypeId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
