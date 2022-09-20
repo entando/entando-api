@@ -228,6 +228,8 @@
   $ref: ./profileTypes/profileTypeId/index.yaml
 /profileTypes/{profileTypeId}/attribute:
   $ref: ./profileTypes/profileTypeId/attribute/index.yaml
+/profileTypes/{profileTypeId}/attribute/{attributeId}:
+  $ref: ./profileTypes/profileTypeId/attribute/attributeId/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
