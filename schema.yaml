@@ -4880,6 +4880,24 @@ paths:
     parameters:
       - $ref: '#/components/parameters/profileTypeId'
       - $ref: '#/components/parameters/attributeId'
+    get:
+      tags:
+        - profile-type-controller
+      summary: Retrieve a profile type attribute
+      description: Retrieve the profile type attribute specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getProfileTypeAttribute
+      responses:
+        '200':
+          $ref: '#/components/responses/entityTypeAttributeFull'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
