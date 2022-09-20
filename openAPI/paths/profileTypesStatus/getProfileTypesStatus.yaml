@@ -1,0 +1,17 @@
+tags:
+  - profile-type-controller
+summary: Retrieve the profile types status
+description: Retrieve the profile types status
+externalDocs:
+  description: ''
+  url: https://
+operationId: getProfileTypesStatus
+responses:
+  '200':
+    $ref: ../../components/responses/ok/common/entityTypesStatus.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml

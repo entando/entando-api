@@ -1,0 +1,9 @@
+description: OK
+content:
+  'application/json':
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/restResponse.yaml
+        - properties:
+            payload:
+              $ref: ../../../schemas/common/entityTypesStatus.yaml

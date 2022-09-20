@@ -4993,6 +4993,24 @@ paths:
   /profileTypesStatus:
     summary: Profile types status operations
     description: API to access and manipulate profile types status
+    get:
+      tags:
+        - profile-type-controller
+      summary: Retrieve the profile types status
+      description: Retrieve the profile types status
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getProfileTypesStatus
+      responses:
+        '200':
+          $ref: '#/components/responses/entityTypesStatus'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -6799,6 +6817,16 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/entityTypeShort'
+    entityTypesStatus:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/entityTypesStatus'
     entityTypesStatus_generic:
       description: OK
       content:
