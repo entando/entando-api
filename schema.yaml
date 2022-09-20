@@ -4970,6 +4970,26 @@ paths:
     parameters:
       - $ref: '#/components/parameters/profileTypeId'
       - $ref: '#/components/parameters/attributeId'
+    put:
+      tags:
+        - profile-type-controller
+      summary: Move up a profile type attribute
+      description: Move up the profile type attribute specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: moveupProfileTypeAttribute
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
