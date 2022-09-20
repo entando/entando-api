@@ -3,3 +3,5 @@ description: API to perform a profile type attribute move down
 parameters:
   - $ref: ../../../../../../components/parameters/path/profileTypes/profileTypeId.yaml
   - $ref: ../../../../../../components/parameters/path/attributes/attributeId.yaml
+put:
+  $ref: ./moveDownProfileTypeAttribute.yaml
