@@ -4938,6 +4938,12 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/profileTypes/{profileTypeId}/attribute/{attributeId}/moveDown':
+    summary: Profile type attribute move down operations
+    description: API to perform a profile type attribute move down
+    parameters:
+      - $ref: '#/components/parameters/profileTypeId'
+      - $ref: '#/components/parameters/attributeId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
