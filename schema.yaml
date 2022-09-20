@@ -4847,6 +4847,11 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/profileTypes/{profileTypeId}/attribute':
+    summary: Profile type attributes operations
+    description: API to access and manipulate a profile type attrributes
+    parameters:
+      - $ref: '#/components/parameters/profileTypeId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
