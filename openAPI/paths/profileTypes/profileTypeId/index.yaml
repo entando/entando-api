@@ -1,0 +1,4 @@
+summary: Profile type operations
+description: API to access and manipulate a profile type
+parameters:
+  - $ref: ../../../components/parameters/path/profileTypes/profileTypeId.yaml

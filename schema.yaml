@@ -4784,6 +4784,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/profileTypes/{profileTypeId}':
+    summary: Profile type operations
+    description: API to access and manipulate a profile type
+    parameters:
+      - $ref: '#/components/parameters/profileTypeId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
