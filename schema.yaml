@@ -4764,6 +4764,26 @@ paths:
     description: API to access and manipulate a profile type refresh
     parameters:
       - $ref: '#/components/parameters/profileTypeId'
+    post:
+      tags:
+        - profile-type-controller
+      summary: Refresh a profile type
+      description: Reload a profile type references
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: refreshProfileType
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles

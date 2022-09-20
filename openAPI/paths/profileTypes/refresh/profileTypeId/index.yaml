@@ -2,3 +2,5 @@ summary: Profile type refresh operations
 description: API to access and manipulate a profile type refresh
 parameters:
   - $ref: ../../../../components/parameters/path/profileTypes/profileTypeId.yaml
+post:
+  $ref: ./refreshProfileType.yaml
