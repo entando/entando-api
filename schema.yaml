@@ -4964,6 +4964,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/profileTypes/{profileTypeId}/attribute/{attributeId}/moveUp':
+    summary: Profile type attribute move up operations
+    description: API to perform a profile type attribute move up
+    parameters:
+      - $ref: '#/components/parameters/profileTypeId'
+      - $ref: '#/components/parameters/attributeId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles

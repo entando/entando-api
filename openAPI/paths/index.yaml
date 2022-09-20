@@ -232,6 +232,8 @@
   $ref: ./profileTypes/profileTypeId/attribute/attributeId/index.yaml
 /profileTypes/{profileTypeId}/attribute/{attributeId}/moveDown:
   $ref: ./profileTypes/profileTypeId/attribute/attributeId/moveDown/index.yaml
+/profileTypes/{profileTypeId}/attribute/{attributeId}/moveUp:
+  $ref: ./profileTypes/profileTypeId/attribute/attributeId/moveUp/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:

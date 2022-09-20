@@ -1,0 +1,5 @@
+summary: Profile type attribute move up operations
+description: API to perform a profile type attribute move up
+parameters:
+  - $ref: ../../../../../../components/parameters/path/profileTypes/profileTypeId.yaml
+  - $ref: ../../../../../../components/parameters/path/attributes/attributeId.yaml
