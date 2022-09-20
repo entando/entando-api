@@ -66,6 +66,8 @@ entity:
   $ref: ./ok/myUserProfile/entity.yaml
 entityManager:
   $ref: ./ok/entityManagers/entityManager.yaml
+entityTypeAttributeFull:
+  $ref: ./ok/common/entityTypeAttributeFull.yaml
 entityTypeAttributeFullList:
   $ref: ./ok/common/entityTypeAttributeFullList.yaml
 entityTypeAttributeFullList_generic:

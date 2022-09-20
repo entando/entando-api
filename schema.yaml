@@ -4852,6 +4852,28 @@ paths:
     description: API to access and manipulate a profile type attrributes
     parameters:
       - $ref: '#/components/parameters/profileTypeId'
+    post:
+      tags:
+        - profile-type-controller
+      summary: Add a profile type attribute
+      description: Add an attribute to the profile type specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addProfileTypeAttribute.yaml
+      requestBody:
+        $ref: '#/components/requestBodies/entityTypeAttribute'
+      responses:
+        '200':
+          $ref: '#/components/responses/entityTypeAttributeFull'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -6612,6 +6634,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/entityManager'
+    entityTypeAttributeFull:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/entityTypeAttributeFull'
     entityTypeAttributeFullList:
       description: OK
       content:

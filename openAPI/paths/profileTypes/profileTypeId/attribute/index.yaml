@@ -2,3 +2,5 @@ summary: Profile type attributes operations
 description: API to access and manipulate a profile type attrributes
 parameters:
   - $ref: ../../../../components/parameters/path/profileTypes/profileTypeId.yaml
+post:
+  $ref: ./addProfileTypeAttribute.yaml
