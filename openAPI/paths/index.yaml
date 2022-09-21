@@ -140,6 +140,8 @@
   $ref: ./plugins/cms/assets/index.yaml
 /plugins/cms/assets/folder:
   $ref: ./plugins/cms/assets/folder/index.yaml
+/plugins/cms/assets/{resourceId}:
+  $ref: ./plugins/cms/assets/resourceId/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:
