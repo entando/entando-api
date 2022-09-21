@@ -3162,6 +3162,26 @@ paths:
     description: API to access and manipulate an asset clone
     parameters:
       - $ref: '#/components/parameters/resourceId'
+    post:
+      tags:
+        - resources-controller
+      summary: Clone an asset
+      description: Clone the asset specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: cloneAsset
+      responses:
+        '200':
+          $ref: '#/components/responses/asset_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
