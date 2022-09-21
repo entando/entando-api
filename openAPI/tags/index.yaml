@@ -32,3 +32,4 @@
 - $ref: ./reload-configuration-controller.yaml
 - $ref: ./resource-versioning-controller.yaml
 - $ref: ./resources-controller.yaml
+- $ref: ./role-controller.yaml

@@ -9083,6 +9083,8 @@ tags:
     description: Resource versioning operations
   - name: resources-controller
     description: Resources operations
+  - name: role-controller
+    description: Role operations
 externalDocs:
   description: ''
   url: 'https://'
