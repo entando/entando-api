@@ -254,6 +254,8 @@
   $ref: ./profileTypesStatus/index.yaml
 /reloadConfiguration:
   $ref: ./reloadConfiguration/index.yaml
+/roles:
+  $ref: ./roles/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
