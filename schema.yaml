@@ -3085,6 +3085,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /plugins/cms/assets/folder:
+    summary: Assets folder operations
+    description: API to access and manipulate assets folder
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models

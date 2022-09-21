@@ -138,6 +138,8 @@
   $ref: ./permissions/index.yaml
 /plugins/cms/assets:
   $ref: ./plugins/cms/assets/index.yaml
+/plugins/cms/assets/folder:
+  $ref: ./plugins/cms/assets/folder/index.yaml
 /plugins/cms/contentmodels:
   $ref: ./plugins/cms/contentModels/index.yaml
 /plugins/cms/contentmodels/dictionary:
