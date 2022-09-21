@@ -8778,6 +8778,8 @@ tags:
     description: Reload configuration operations
   - name: resource-versioning-controller
     description: Resource versioning operations
+  - name: resources-controller
+    description: Resources operations
 externalDocs:
   description: ''
   url: 'https://'

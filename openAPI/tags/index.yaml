@@ -31,3 +31,4 @@
 - $ref: ./profile-type-controller.yaml
 - $ref: ./reload-configuration-controller.yaml
 - $ref: ./resource-versioning-controller.yaml
+- $ref: ./resources-controller.yaml
