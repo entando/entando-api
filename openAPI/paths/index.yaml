@@ -220,6 +220,8 @@
   $ref: ./plugins/versioning/resources/resourceId/index.yaml
 /plugins/versioning/resources/{resourceId}/recover:
   $ref: ./plugins/versioning/resources/resourceId/recover/index.yaml
+/plugins/versioning/resources/{resourceId}/{size}:
+  $ref: ./plugins/versioning/resources/resourceId/size/index.yaml
 /profileTypeAttributes:
   $ref: ./profileTypeAttributes/index.yaml
 /profileTypeAttributes/{attributeTypeId}:

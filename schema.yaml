@@ -4728,6 +4728,12 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/versioning/resources/{resourceId}/{size}':
+    summary: Resource versioning size operations
+    description: API to access and manipulate resource versioning size
+    parameters:
+      - $ref: '#/components/parameters/resourceId'
+      - $ref: '#/components/parameters/size'
   /profileTypeAttributes:
     summary: Profile type attributes operations
     description: API to access and manipulate profile type attributes
@@ -8067,6 +8073,14 @@ components:
       required: true
       schema:
         type: string
+    size:
+      name: size
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: integer
+        format: int32
     sort:
       name: sort
       in: query

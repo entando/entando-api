@@ -1,0 +1,5 @@
+summary: Resource versioning size operations
+description: API to access and manipulate resource versioning size
+parameters:
+  - $ref: ../../../../../../components/parameters/path/resources/resourceId.yaml
+  - $ref: ../../../../../../components/parameters/path/resources/size.yaml

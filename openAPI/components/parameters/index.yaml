@@ -160,6 +160,8 @@ resourcesTypeCode:
   $ref: ./query/resources/resourceTypeCode.yaml
 senderId:
   $ref: ./path/emailSenders/senderId.yaml
+size:
+  $ref: ./path/resources/size.yaml
 sort:
   $ref: ./query/common/pagination/sort.yaml
 status:
