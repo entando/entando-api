@@ -5036,6 +5036,26 @@ paths:
   /reloadConfiguration:
     summary: Reload configuration operations
     description: API to perform a reload of the configuration
+    post:
+      tags:
+        - reload-configuration-controller
+      summary: Reload the configuration
+      description: Reload the configuration
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: reloadConfiguration
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
