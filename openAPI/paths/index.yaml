@@ -256,6 +256,8 @@
   $ref: ./reloadConfiguration/index.yaml
 /roles:
   $ref: ./roles/index.yaml
+/roles/{roleId}:
+  $ref: ./roles/roleId/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:

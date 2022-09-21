@@ -1,0 +1,6 @@
+name: roleId
+in: path
+description: Role code
+required: true
+schema:
+  type: string

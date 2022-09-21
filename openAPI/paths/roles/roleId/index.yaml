@@ -1,0 +1,4 @@
+summary: Role operations
+description: API to access and manipulate role
+parameters:
+  - $ref: ../../../components/parameters/path/roles/roleId.yaml

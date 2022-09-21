@@ -5406,6 +5406,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/roles/{roleId}':
+    summary: Role operations
+    description: API to access and manipulate role
+    parameters:
+      - $ref: '#/components/parameters/roleId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -8545,6 +8550,13 @@ components:
       name: resourceTypeCode
       in: query
       description: ''
+      required: true
+      schema:
+        type: string
+    roleId:
+      name: roleId
+      in: path
+      description: Role code
       required: true
       schema:
         type: string

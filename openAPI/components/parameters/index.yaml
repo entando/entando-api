@@ -164,6 +164,8 @@ resourceId:
   $ref: ./path/resources/resourceId.yaml
 resourcesTypeCode:
   $ref: ./query/resources/resourceTypeCode.yaml
+roleId:
+  $ref: ./path/roles/roleId.yaml
 senderId:
   $ref: ./path/emailSenders/senderId.yaml
 size:
