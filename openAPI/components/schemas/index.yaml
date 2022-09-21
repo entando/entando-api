@@ -126,6 +126,8 @@ restResponseMapMetadata:
   $ref: ./restResponse/restResponseMapMetadata.yaml
 restResponseMapPayload:
   $ref: ./restResponse/restResponseMapPayload.yaml
+role:
+  $ref: ./roles/role.yaml
 shortDumpReport:
   $ref: ./database/shortDumpReport.yaml
 tableDumpReport:

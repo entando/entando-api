@@ -5354,6 +5354,36 @@ paths:
   /roles:
     summary: Roles operations
     description: API to access and manipulate roles
+    get:
+      tags:
+        - role-controller
+      summary: Retrieve the collection of roles
+      description: Retrieve the collection of roles filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getRoles
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/roles'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -6803,6 +6833,18 @@ components:
               type: object
               additionalProperties:
                 type: string
+    role:
+      title: Role
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        permissions:
+          type: object
+          additionalProperties:
+            type: boolean
     shortDumpReport:
       title: Short dump report
       type: object
@@ -7629,6 +7671,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/restResponseMapPayload'
+    roles:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/role'
     shortDumpReports:
       description: OK
       content:

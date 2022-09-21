@@ -1,0 +1,11 @@
+title: Role
+type: object
+properties:
+  code:
+    type: string
+  name:
+    type: string
+  permissions:
+    type: object
+    additionalProperties:
+      type: boolean
