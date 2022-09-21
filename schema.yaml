@@ -4697,6 +4697,11 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/versioning/resources/{resourceId}/recover':
+    summary: Resource versioning recover operations
+    description: API to access and manipulate resource versioning recover
+    parameters:
+      - $ref: '#/components/parameters/resourceId'
   /profileTypeAttributes:
     summary: Profile type attributes operations
     description: API to access and manipulate profile type attributes
