@@ -8461,6 +8461,8 @@ tags:
     description: Profile type operations
   - name: reload-configuration-controller
     description: Reload configuration operations
+  - name: resource-versioning-controller
+    description: Resource versioning operations
 externalDocs:
   description: ''
   url: 'https://'
