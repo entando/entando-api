@@ -2,3 +2,5 @@ summary: Role userreferences operations
 description: API to access and manipulate role userreferences
 parameters:
   - $ref: ../../../../components/parameters/path/roles/roleId.yaml
+get:
+  $ref: ./getRoleUserPreferences.yaml

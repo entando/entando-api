@@ -1,0 +1,28 @@
+title: User
+type: object
+properties:
+  accountNotExpired:
+    type: boolean
+  credentialsNotExpired:
+    type: boolean
+  lastLogin:
+    type: string
+  lastPasswordChange:
+    type: string
+  maxMonthsSinceLastAccess:
+    type: integer
+    format: int32
+  maxMonthsSinceLastPasswordChange:
+    type: integer
+    format: int32
+  profileAttributes:
+    type: object
+    properties: {}
+  profileType:
+    $ref: ./profileType.yaml
+  registration:
+    type: string
+  status:
+    type: string
+  username:
+    type: string

@@ -112,6 +112,8 @@ paginationMetadata:
   $ref: ./restResponse/pagedRestResponse/paginationMetadata.yaml
 permission:
   $ref: ./permissions/permission.yaml
+profileType:
+  $ref: ./users/profileType.yaml
 responseEntity:
   $ref: ./resources/responseEntity.yaml
 restError:
@@ -136,6 +138,8 @@ trashedResource:
   $ref: ./resources/trashedResource.yaml
 type:
   $ref: ./common/type.yaml
+user:
+  $ref: ./users/user.yaml
 userProfileType:
   $ref: ./profileTypes/userProfileType.yaml
 view:
