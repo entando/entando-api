@@ -3088,6 +3088,28 @@ paths:
   /plugins/cms/assets/folder:
     summary: Assets folder operations
     description: API to access and manipulate assets folder
+    get:
+      tags:
+        - resources-controller
+      summary: Retrieve assets folder
+      description: Retrieve assets folder filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getAssetsFolder
+      parameters:
+        - $ref: '#/components/parameters/assetsFolderPath'
+      responses:
+        '200':
+          $ref: '#/components/responses/assetsList_generic'
+        '201':
+          $ref: '#/components/responses/assetsList_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -6861,6 +6883,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/asset'
+    assetsList_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/asset'
     attributeType:
       description: OK
       content:
@@ -7662,6 +7696,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/asset'
+    assetsList_generic-created:
+      description: Created
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/asset'
     contentObject-created:
       description: Created
       content:
@@ -7813,6 +7859,12 @@ components:
         type: array
         items:
           type: string
+    assetsFolderPath:
+      name: folderPath
+      in: query
+      description: ''
+      schema:
+        type: string
     assetMetadata:
       name: metadata
       in: query

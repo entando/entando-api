@@ -1,0 +1,5 @@
+name: folderPath
+in: query
+description: ''
+schema:
+  type: string

@@ -6,6 +6,8 @@ asset_generic:
   $ref: ./ok/assets/asset_generic.yaml
 assets_generic:
   $ref: ./ok/assets/assets_generic.yaml
+assetsList_generic:
+  $ref: ./ok/assets/assetsList_generic.yaml
 attributeType:
   $ref: ./ok/common/attributeType.yaml
 attributeType_generic:
@@ -170,6 +172,8 @@ conflict:
   $ref: ./conflict/common/empty.yaml
 assets_generic-created:
   $ref: ./created/assets/assets_generic.yaml
+assetsList_generic-created:
+  $ref: ./created/assets/assetsList_generic.yaml
 contentObject-created:
   $ref: ./created/contents/contentObject.yaml
 contentTypeObject_generic-created:

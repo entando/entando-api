@@ -1,0 +1,21 @@
+tags:
+  - resources-controller
+summary: Retrieve assets folder
+description: Retrieve assets folder filtered by query parameters
+externalDocs:
+  description: ''
+  url: https://
+operationId: getAssetsFolder
+parameters:
+  - $ref: ../../../../../components/parameters/query/assets/folderPath.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/assets/assetsList_generic.yaml
+  '201':
+    $ref: ../../../../../components/responses/created/assets/assetsList_generic.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml
