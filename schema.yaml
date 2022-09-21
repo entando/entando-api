@@ -3157,6 +3157,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/plugins/cms/assets/{resourceId}/clone':
+    summary: Asset clone operations
+    description: API to access and manipulate an asset clone
+    parameters:
+      - $ref: '#/components/parameters/resourceId'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models

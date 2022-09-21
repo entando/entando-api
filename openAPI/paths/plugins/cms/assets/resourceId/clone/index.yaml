@@ -1,0 +1,4 @@
+summary: Asset clone operations
+description: API to access and manipulate an asset clone
+parameters:
+  - $ref: ../../../../../../components/parameters/path/resources/resourceId.yaml
