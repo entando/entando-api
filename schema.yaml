@@ -4671,6 +4671,32 @@ paths:
     description: API to access and manipulate resource versioning
     parameters:
       - $ref: '#/components/parameters/resourceId'
+    delete:
+      tags:
+        - resource-versioning-controller
+      summary: Delete a resource versioning
+      description: Delete the resource versioning specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteResourceVersioning
+      responses:
+        '200':
+          $ref: '#/components/responses/trashedResourceObject_generic'
+        '201':
+          $ref: '#/components/responses/trashedResourceObject_generic-created'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /profileTypeAttributes:
     summary: Profile type attributes operations
     description: API to access and manipulate profile type attributes
@@ -7301,6 +7327,12 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/trashedResource'
+    trashedResourceObject_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/trashedResource'
     userProfileType:
       description: OK
       content:
@@ -7421,6 +7453,12 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/trashedResource'
+    trashedResourceObject_generic-created:
+      description: Created
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/trashedResource'
     wildCardType_generic-created:
       description: Created
       content:

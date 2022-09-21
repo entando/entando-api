@@ -148,6 +148,8 @@ stringsList_generic:
   $ref: ./ok/common/stringsList_generic.yaml
 trashedResources_generic:
   $ref: ./ok/resources/trashedResources_generic.yaml
+trashedResourceObject_generic:
+  $ref: ./ok/resources/trashedResourceObject_generic.yaml
 userProfileType:
   $ref: ./ok/profileTypes/userProfileType.yaml
 widgetConfiguration:
@@ -178,6 +180,8 @@ stringsList_generic-created:
   $ref: ./created/common/stringsList_generic.yaml
 trashedResources_generic-created:
   $ref: ./created/resources/trashedResources_generic.yaml
+trashedResourceObject_generic-created:
+  $ref: ./created/resources/trashedResourceObject_generic.yaml
 wildCardType_generic-created:
   $ref: ./created/common/wildCardType_generic.yaml
 forbidden:
