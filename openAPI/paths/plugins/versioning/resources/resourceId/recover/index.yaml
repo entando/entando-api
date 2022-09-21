@@ -2,3 +2,5 @@ summary: Resource versioning recover operations
 description: API to access and manipulate resource versioning recover
 parameters:
   - $ref: ../../../../../../components/parameters/path/resources/resourceId.yaml
+post:
+  $ref: ./recoverResourceVersioning.yaml

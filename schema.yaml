@@ -4702,6 +4702,32 @@ paths:
     description: API to access and manipulate resource versioning recover
     parameters:
       - $ref: '#/components/parameters/resourceId'
+    post:
+      tags:
+        - resource-versioning-controller
+      summary: Recover a resource versioning
+      description: Recover the resource versioning specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: recoverResourceVersioning
+      responses:
+        '200':
+          $ref: '#/components/responses/trashedResourceObject_generic'
+        '201':
+          $ref: '#/components/responses/trashedResourceObject_generic-created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /profileTypeAttributes:
     summary: Profile type attributes operations
     description: API to access and manipulate profile type attributes
