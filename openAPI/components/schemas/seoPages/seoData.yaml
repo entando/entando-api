@@ -1,0 +1,11 @@
+title: SEO data
+type: object
+properties:
+  seoDataByLang:
+    type: object
+    additionalProperties:
+      $ref: ./seoDataByLang.yaml
+  useExtraDescriptions:
+    type: boolean
+  useExtraTitles:
+    type: boolean

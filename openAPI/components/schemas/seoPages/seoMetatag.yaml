@@ -1,0 +1,11 @@
+title: SEO metatag
+type: object
+properties:
+  key:
+    type: string
+  type:
+    type: string
+  useDefaultLang:
+    type: boolean
+  value:
+    type: string

@@ -4612,6 +4612,56 @@ paths:
   /plugins/seo/pages:
     summary: SEO pages operations
     description: API to access contents and manipulate SEO pages
+    post:
+      tags:
+        - seo-page-controller
+      summary: Add a SEO page
+      description: Create a new SEO page as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addSeoPage
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      requestBody:
+        $ref: '#/components/requestBodies/seoPage'
+      responses:
+        '200':
+          $ref: '#/components/responses/seoPageFull'
+        '201':
+          $ref: '#/components/responses/created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
@@ -6996,6 +7046,114 @@ components:
           type: object
           additionalProperties:
             type: boolean
+    seoData:
+      title: SEO data
+      type: object
+      properties:
+        seoDataByLang:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/seoDataByLang'
+        useExtraDescriptions:
+          type: boolean
+        useExtraTitles:
+          type: boolean
+    seoDataByLang:
+      title: SEO data by lang
+      type: object
+      properties:
+        description:
+          type: string
+        friendlyCode:
+          type: string
+        inheritDescriptionFromDefaultLang:
+          type: boolean
+        inheritFriendlyCodeFromDefaultLang:
+          type: boolean
+        inheritKeywordsFromDefaultLang:
+          type: boolean
+        keywords:
+          type: string
+        metaTags:
+          type: array
+          items:
+            $ref: '#/components/schemas/seoMetatag'
+    seoMetatag:
+      title: SEO metatag
+      type: object
+      properties:
+        key:
+          type: string
+        type:
+          type: string
+        useDefaultLang:
+          type: boolean
+        value:
+          type: string
+    seoPage:
+      title: SEO page
+      type: object
+      properties:
+        charset:
+          type: string
+        code:
+          type: string
+        contentType:
+          type: string
+        displayedInMenu:
+          type: boolean
+        joinGroups:
+          type: array
+          items:
+            type: string
+        ownerGroup:
+          type: string
+        pageModel:
+          type: string
+        parentCode:
+          type: string
+        seo:
+          type: boolean
+        seoData:
+          $ref: '#/components/schemas/seoData'
+        status:
+          type: string
+        titles:
+          type: object
+          additionalProperties:
+            type: string
+    seoPageFull:
+      title: SEO page full
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/seoPage'
+        - properties:
+            children:
+              type: array
+              items:
+                type: string
+            fullPath:
+              type: string
+            fullTitles:
+              type: object
+              additionalProperties:
+                type: string
+            lastModified:
+              type: string
+            numWidget:
+              type: integer
+              format: int32
+            onlineInstance:
+              type: boolean
+            position:
+              type: integer
+              format: int32
+            references:
+              type: object
+              additionalProperties:
+                type: boolean
+            token:
+              type: string
     shortDumpReport:
       title: Short dump report
       type: object
@@ -7873,6 +8031,16 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/role'
+    seoPageFull:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/seoPageFull'
     shortDumpReports:
       description: OK
       content:
@@ -9262,6 +9430,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/role'
+    seoPage:
+      description: SEO page
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seoPage'
     widgetConfiguration:
       description: Widget config
       required: true

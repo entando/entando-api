@@ -1,0 +1,31 @@
+title: SEO page full
+type: object
+allOf:
+  - $ref: ./seoPage.yaml
+  - properties:
+      children:
+        type: array
+        items:
+          type: string
+      fullPath:
+        type: string
+      fullTitles:
+        type: object
+        additionalProperties:
+          type: string
+      lastModified:
+        type: string
+      numWidget:
+        type: integer
+        format: int32
+      onlineInstance:
+        type: boolean
+      position:
+        type: integer
+        format: int32
+      references:
+        type: object
+        additionalProperties:
+          type: boolean
+      token:
+        type: string

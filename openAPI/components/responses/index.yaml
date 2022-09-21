@@ -148,6 +148,8 @@ role:
   $ref: ./ok/roles/role.yaml
 roles:
   $ref: ./ok/roles/roles.yaml
+seoPageFull:
+  $ref: ./ok/seoPages/seoPageFull.yaml
 shortDumpReports:
   $ref: ./ok/database/shortDumpReports.yaml
 string_generic:

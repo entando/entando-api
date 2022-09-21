@@ -1,0 +1,31 @@
+title: SEO page
+type: object
+properties:
+  charset:
+    type: string
+  code:
+    type: string
+  contentType:
+    type: string
+  displayedInMenu:
+    type: boolean
+  joinGroups:
+    type: array
+    items:
+      type: string
+  ownerGroup:
+    type: string
+  pageModel:
+    type: string
+  parentCode:
+    type: string
+  seo:
+    type: boolean
+  seoData:
+    $ref: ./seoData.yaml
+  status:
+    type: string
+  titles:
+    type: object
+    additionalProperties:
+      type: string

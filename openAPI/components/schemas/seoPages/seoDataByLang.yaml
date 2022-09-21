@@ -1,0 +1,19 @@
+title: SEO data by lang
+type: object
+properties:
+  description:
+    type: string
+  friendlyCode:
+    type: string
+  inheritDescriptionFromDefaultLang:
+    type: boolean
+  inheritFriendlyCodeFromDefaultLang:
+    type: boolean
+  inheritKeywordsFromDefaultLang:
+    type: boolean
+  keywords:
+    type: string
+  metaTags:
+    type: array
+    items:
+      $ref: ./seoMetatag.yaml

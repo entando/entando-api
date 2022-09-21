@@ -130,6 +130,16 @@ restResponseMapPayload:
   $ref: ./restResponse/restResponseMapPayload.yaml
 role:
   $ref: ./roles/role.yaml
+seoData:
+  $ref: ./seoPages/seoData.yaml
+seoDataByLang:
+  $ref: ./seoPages/seoDataByLang.yaml
+seoMetatag:
+  $ref: ./seoPages/seoMetatag.yaml
+seoPage:
+  $ref: ./seoPages/seoPage.yaml
+seoPageFull:
+  $ref: ./seoPages/seoPageFull.yaml
 shortDumpReport:
   $ref: ./database/shortDumpReport.yaml
 tableDumpReport:
