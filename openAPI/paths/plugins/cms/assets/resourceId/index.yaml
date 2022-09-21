@@ -2,3 +2,5 @@ summary: Asset operations
 description: API to access and manipulate an asset
 parameters:
   - $ref: ../../../../../components/parameters/path/resources/resourceId.yaml
+post:
+  $ref: ./updateAsset.yaml

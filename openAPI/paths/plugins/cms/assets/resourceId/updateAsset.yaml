@@ -1,0 +1,21 @@
+tags:
+  - resources-controller
+summary: Update an asset
+description: Update the asset specified in the path as described in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: updateAsset
+requestBody:
+  $ref: ../../../../../components/requestBodies/assets/assetWithMetadata.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/assets/asset_generic.yaml
+  '201':
+    $ref: ../../../../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

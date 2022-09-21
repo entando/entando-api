@@ -3115,6 +3115,28 @@ paths:
     description: API to access and manipulate an asset
     parameters:
       - $ref: '#/components/parameters/resourceId'
+    post:
+      tags:
+        - resources-controller
+      summary: Update an asset
+      description: Update the asset specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateAsset
+      requestBody:
+        $ref: '#/components/requestBodies/assetWithMetadata'
+      responses:
+        '200':
+          $ref: '#/components/responses/asset_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -8507,6 +8529,22 @@ components:
                 type: string
                 description: file
                 format: binary
+    assetWithMetadata:
+      description: Asset with metadata
+      required: true
+      content:
+        multipart/form-data:
+          schema:
+            required:
+              - metadata
+            properties:
+              file:
+                type: string
+                description: file
+                format: binary
+              metadata:
+                type: string
+                description: metadata
     batchContentStatus:
       description: Batch content status
       required: true

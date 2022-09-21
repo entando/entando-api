@@ -1,0 +1,15 @@
+description: Asset with metadata
+required: true
+content:
+  multipart/form-data:
+    schema:
+      required:
+        - metadata
+      properties:
+        file:
+          type: string
+          description: file
+          format: binary
+        metadata:
+          type: string
+          description: metadata
