@@ -33,3 +33,4 @@
 - $ref: ./resource-versioning-controller.yaml
 - $ref: ./resources-controller.yaml
 - $ref: ./role-controller.yaml
+- $ref: ./seo-page-controller.yaml

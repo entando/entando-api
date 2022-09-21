@@ -9355,6 +9355,8 @@ tags:
     description: Resources operations
   - name: role-controller
     description: Role operations
+  - name: seo-page-controller
+    description: SEO pages operations
 externalDocs:
   description: ''
   url: 'https://'
