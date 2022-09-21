@@ -5411,6 +5411,24 @@ paths:
     description: API to access and manipulate role
     parameters:
       - $ref: '#/components/parameters/roleId'
+    get:
+      tags:
+        - role-controller
+      summary: Retrieve a role
+      description: Retrieve the role specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getRole
+      responses:
+        '200':
+          $ref: '#/components/responses/role'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
