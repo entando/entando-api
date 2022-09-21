@@ -1,0 +1,27 @@
+title: Trashed resource
+type: object
+properties:
+  categories:
+    type: array
+    items:
+      type: string
+  createdAt:
+    type: string
+    format: date-time
+  description:
+    type: string
+  folderPath:
+    type: string
+  group:
+    type: string
+  id:
+    type: string
+  name:
+    type: string
+  owner:
+    type: string
+  type:
+    type: string
+  updatedAt:
+    type: string
+    format: date-time

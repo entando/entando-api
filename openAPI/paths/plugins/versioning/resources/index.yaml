@@ -1,2 +1,4 @@
 summary: Resources versioning operations
 description: API to access and manipulate resources versioning
+get:
+  $ref: ./getResourcesVersioning.yaml

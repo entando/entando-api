@@ -126,6 +126,8 @@ shortDumpReport:
   $ref: ./database/shortDumpReport.yaml
 tableDumpReport:
   $ref: ./database/tableDumpReport.yaml
+trashedResource:
+  $ref: ./resources/trashedResource.yaml
 type:
   $ref: ./common/type.yaml
 userProfileType:

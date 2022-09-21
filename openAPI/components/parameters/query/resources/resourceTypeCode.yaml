@@ -1,0 +1,6 @@
+name: resourceTypeCode
+in: query
+description: ''
+required: true
+schema:
+  type: string
