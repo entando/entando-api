@@ -216,6 +216,8 @@
   $ref: ./plugins/emailSettings/senders/senderId/index.yaml
 /plugins/seo/pages:
   $ref: ./plugins/seo/pages/index.yaml
+/plugins/seo/pages/{seoPageId}:
+  $ref: ./plugins/seo/pages/seoPageId/index.yaml
 /plugins/versioning/contents:
   $ref: ./plugins/versioning/contents/index.yaml
 /plugins/versioning/contents/{contentId}:

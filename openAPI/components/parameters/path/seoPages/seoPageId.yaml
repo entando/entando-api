@@ -1,0 +1,6 @@
+name: seoPageId
+in: path
+description: Page code
+required: true
+schema:
+  type: string

@@ -1,0 +1,4 @@
+summary: SEO page operations
+description: API to access contents and manipulate a SEO page
+parameters:
+  - $ref: ../../../../../components/parameters/path/seoPages/seoPageId.yaml

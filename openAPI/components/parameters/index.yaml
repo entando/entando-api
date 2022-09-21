@@ -168,6 +168,8 @@ roleId:
   $ref: ./path/roles/roleId.yaml
 senderId:
   $ref: ./path/emailSenders/senderId.yaml
+seoPageId:
+  $ref: ./path/seoPages/seoPageId.yaml
 size:
   $ref: ./path/resources/size.yaml
 sort:

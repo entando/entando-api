@@ -4662,6 +4662,11 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/seo/pages/{seoPageId}':
+    summary: SEO page operations
+    description: API to access contents and manipulate a SEO page
+    parameters:
+      - $ref: '#/components/parameters/seoPageId'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
@@ -8897,6 +8902,13 @@ components:
       name: senderId
       in: path
       description: Sender code
+      required: true
+      schema:
+        type: string
+    seoPageId:
+      name: seoPageId
+      in: path
+      description: Page code
       required: true
       schema:
         type: string
