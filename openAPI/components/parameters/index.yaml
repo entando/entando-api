@@ -154,6 +154,8 @@ resolveLink:
   $ref: ./query/contents/resolveLink.yaml
 resolveLinks:
   $ref: ./query/contents/resolveLinks.yaml
+resourceId:
+  $ref: ./path/resources/resourceId.yaml
 resourcesTypeCode:
   $ref: ./query/resources/resourceTypeCode.yaml
 senderId:

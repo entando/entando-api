@@ -1,0 +1,4 @@
+summary: Resource versioning operations
+description: API to access and manipulate resource versioning
+parameters:
+  - $ref: ../../../../../components/parameters/path/resources/resourceId.yaml

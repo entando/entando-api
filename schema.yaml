@@ -4666,6 +4666,11 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  '/plugins/versioning/resources/{resourceId}':
+    summary: Resource versioning operations
+    description: API to access and manipulate resource versioning
+    parameters:
+      - $ref: '#/components/parameters/resourceId'
   /profileTypeAttributes:
     summary: Profile type attributes operations
     description: API to access and manipulate profile type attributes
@@ -7972,6 +7977,13 @@ components:
       schema:
         type: boolean
         default: false
+    resourceId:
+      name: resourceId
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: string
     resourcesTypeCode:
       name: resourceTypeCode
       in: query
