@@ -8,6 +8,8 @@ activityStreamRecordCommentId:
   $ref: ./path/activityStream/commentId.yaml
 allowedValues:
   $ref: ./query/common/filters/allowedValues.yaml
+assetType:
+  $ref: ./query/assets/type.yaml
 attribute:
   $ref: ./query/common/filters/attribute.yaml
 attributeId:

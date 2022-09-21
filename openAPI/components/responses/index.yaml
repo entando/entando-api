@@ -2,6 +2,8 @@ activityStream:
   $ref: ./ok/activityStream/activityStream.yaml
 activityStreamRecord:
   $ref: ./ok/activityStream/activityStreamRecord.yaml
+assets_generic:
+  $ref: ./ok/assets/assets_generic.yaml
 attributeType:
   $ref: ./ok/common/attributeType.yaml
 attributeType_generic:
@@ -164,6 +166,8 @@ badRequest:
   $ref: ./badRequest/common/empty.yaml
 conflict:
   $ref: ./conflict/common/empty.yaml
+assets_generic-created:
+  $ref: ./created/assets/assets_generic.yaml
 contentObject-created:
   $ref: ./created/contents/contentObject.yaml
 contentTypeObject_generic-created:
