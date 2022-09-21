@@ -5489,6 +5489,11 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/roles/{roleId}/userreferences':
+    summary: Role userreferences operations
+    description: API to access and manipulate role userreferences
+    parameters:
+      - $ref: '#/components/parameters/roleId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
