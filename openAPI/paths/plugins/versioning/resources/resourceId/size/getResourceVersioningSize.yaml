@@ -1,0 +1,25 @@
+tags:
+  - resource-versioning-controller
+summary: Retrieve a resource versioning size
+description: Retrieve the resource versioning size specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getResourceVersioningSize
+responses:
+  '200':
+    $ref: ../../../../../../components/responses/ok/resources/responseEntityObject_octet.yaml
+  '201':
+    $ref: ../../../../../../components/responses/created/resources/responseEntityObject_octet.yaml
+  '400':
+    $ref: ../../../../../../components/responses/badRequest/common/empty.yaml
+  '401':
+    $ref: ../../../../../../components/responses/badRequest/common/empty.yaml
+  '403':
+    $ref: ../../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../../components/responses/notFound/common/empty.yaml
+  '409':
+    $ref: ../../../../../../components/responses/conflict/common/empty.yaml
+  '500':
+    $ref: ../../../../../../components/responses/serverError/common/empty.yaml

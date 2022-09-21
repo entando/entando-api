@@ -126,6 +126,8 @@ pageStatus:
   $ref: ./ok/dashboard/pageStatus.yaml
 permissions:
   $ref: ./ok/permissions/permissions.yaml
+responseEntityObject_octet:
+  $ref: ./ok/resources/responseEntityObject_octet.yaml
 restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 restResponse_generic:
@@ -170,6 +172,8 @@ contentVersions-created:
   $ref: ./created/versioning/contentVersions.yaml
 created:
   $ref: ./created/common/empty.yaml
+responseEntityObject_octet-created:
+  $ref: ./created/resources/responseEntityObject_octet.yaml
 restResponse-created:
   $ref: ./created/restResponse/restResponse.yaml
 restResponse_generic-created:

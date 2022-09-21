@@ -110,6 +110,8 @@ paginationMetadata:
   $ref: ./restResponse/pagedRestResponse/paginationMetadata.yaml
 permission:
   $ref: ./permissions/permission.yaml
+responseEntity:
+  $ref: ./resources/responseEntity.yaml
 restError:
   $ref: ./restResponse/restError.yaml
 restResponse:

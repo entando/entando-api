@@ -1,0 +1,5 @@
+description: OK
+content:
+  application/octet-stream:
+    schema:
+      $ref: ../../../schemas/resources/responseEntity.yaml
