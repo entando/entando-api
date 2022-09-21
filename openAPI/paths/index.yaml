@@ -214,6 +214,8 @@
   $ref: ./plugins/versioning/contents/contentId/versions/versionId/index.yaml
 /plugins/versioning/contents/{contentId}/versions/{versionId}/recover:
   $ref: ./plugins/versioning/contents/contentId/versions/versionId/recover/index.yaml
+/plugins/versioning/resources:
+  $ref: ./plugins/versioning/resources/index.yaml
 /profileTypeAttributes:
   $ref: ./profileTypeAttributes/index.yaml
 /profileTypeAttributes/{attributeTypeId}:
