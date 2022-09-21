@@ -8436,6 +8436,8 @@ tags:
     description: Profile operations
   - name: profile-type-controller
     description: Profile type operations
+  - name: reload-configuration-controller
+    description: Reload configuration operations
 externalDocs:
   description: ''
   url: 'https://'

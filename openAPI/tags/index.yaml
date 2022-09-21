@@ -29,3 +29,4 @@
 - $ref: ./permission-controller.yaml
 - $ref: ./profile-controller.yaml
 - $ref: ./profile-type-controller.yaml
+- $ref: ./reload-configuration-controller.yaml
