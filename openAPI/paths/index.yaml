@@ -236,6 +236,8 @@
   $ref: ./profileTypes/profileTypeId/attribute/attributeId/moveUp/index.yaml
 /profileTypesStatus:
   $ref: ./profileTypesStatus/index.yaml
+/reloadConfiguration:
+  $ref: ./reloadConfiguration/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
