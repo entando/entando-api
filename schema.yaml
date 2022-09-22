@@ -10905,6 +10905,8 @@ tags:
     description: Versioning configuration operations
   - name: whitelabel-approval-endpoint
     description: Whitelabel approval operations
+  - name: whitelabel-error-endpoint
+    description: Whitelabel error operations
 externalDocs:
   description: ''
   url: 'https://'
