@@ -10579,6 +10579,8 @@ tags:
     description: User operations
   - name: user-preferences-controller
     description: User preferences operations
+  - name: user-settings-controller
+    description: User settings operations
 externalDocs:
   description: ''
   url: 'https://'
