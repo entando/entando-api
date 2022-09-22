@@ -1,0 +1,6 @@
+name: withProfile
+in: query
+description: ''
+required: true
+schema:
+  type: string

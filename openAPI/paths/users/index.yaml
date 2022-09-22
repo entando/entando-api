@@ -1,2 +1,4 @@
 summary: User operations
 description: API to access and manipulate users
+get:
+  $ref: ./getUsers.yaml
