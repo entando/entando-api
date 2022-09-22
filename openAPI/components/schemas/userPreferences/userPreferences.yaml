@@ -1,0 +1,27 @@
+title: User preferences
+type: object
+properties:
+  defaultContentJoinGroups:
+    type: array
+    items:
+      type: string
+  defaultContentOwnerGroup:
+    type: string
+  defaultPageJoinGroups:
+    type: array
+    items:
+      type: string
+  defaultPageOwnerGroup:
+    type: string
+  defaultWidgetJoinGroups:
+    type: array
+    items:
+      type: string
+  defaultWidgetOwnerGroup:
+    type: string
+  loadOnPageSelect:
+    type: boolean
+  translationWarning:
+    type: boolean
+  wizard:
+    type: boolean

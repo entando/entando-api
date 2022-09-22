@@ -6277,6 +6277,46 @@ paths:
     description: API to access and manipulate a user preferences
     parameters:
       - $ref: '#/components/parameters/userId'
+    get:
+      tags:
+        - user-preferences-controller
+      summary: Retrieve a user preferences
+      description: Retrieve the preferences of the user specified in the path filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getUserPreferences
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      responses:
+        '200':
+          $ref: '#/components/responses/userPreferences'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -8007,6 +8047,34 @@ components:
           type: string
         username:
           type: string
+    userPreferences:
+      title: User preferences
+      type: object
+      properties:
+        defaultContentJoinGroups:
+          type: array
+          items:
+            type: string
+        defaultContentOwnerGroup:
+          type: string
+        defaultPageJoinGroups:
+          type: array
+          items:
+            type: string
+        defaultPageOwnerGroup:
+          type: string
+        defaultWidgetJoinGroups:
+          type: array
+          items:
+            type: string
+        defaultWidgetOwnerGroup:
+          type: string
+        loadOnPageSelect:
+          type: boolean
+        translationWarning:
+          type: boolean
+        wizard:
+          type: boolean
     userProfileType:
       title: User profile type
       type: object
@@ -8996,6 +9064,16 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/user'
+    userPreferences:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/userPreferences'
     widgetConfiguration:
       description: OK
       content:

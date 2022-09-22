@@ -186,6 +186,8 @@ user:
   $ref: ./ok/users/user.yaml
 users:
   $ref: ./ok/users/users.yaml
+userPreferences:
+  $ref: ./ok/userPreferences/userPreferences.yaml
 widgetConfiguration:
   $ref: ./ok/pages/widgetConfiguration.yaml
 widgetConfigurationList:

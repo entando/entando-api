@@ -158,6 +158,8 @@ type:
   $ref: ./common/type.yaml
 user:
   $ref: ./users/user.yaml
+userPreferences:
+  $ref: ./userPreferences/userPreferences.yaml
 userProfileType:
   $ref: ./profileTypes/userProfileType.yaml
 view:
