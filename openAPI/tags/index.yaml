@@ -38,3 +38,4 @@
 - $ref: ./system-controller.yaml
 - $ref: ./token-endpoint.yaml
 - $ref: ./user-controller.yaml
+- $ref: ./user-preferences-controller.yaml

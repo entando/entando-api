@@ -10443,6 +10443,8 @@ tags:
     description: Token operations
   - name: user-controller
     description: User operations
+  - name: user-preferences-controller
+    description: User preferences operations
 externalDocs:
   description: ''
   url: 'https://'
