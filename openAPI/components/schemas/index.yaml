@@ -92,6 +92,8 @@ navigatorConfig:
   $ref: ./widgets/navigatorConfig.yaml
 navigatorExpression:
   $ref: ./widgets/navigatorExpression.yaml
+oAuthAccessToken:
+  $ref: ./tokens/oAuthAccessToken.yaml
 page:
   $ref: ./pages/page.yaml
 pageConfiguration:

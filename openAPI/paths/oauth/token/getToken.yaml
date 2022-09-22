@@ -1,0 +1,21 @@
+tags:
+  - token-endpoint
+summary: Get token
+description: Get token
+externalDocs:
+  description: ''
+  url: https://
+operationId: getToken
+deprecated: true
+parameters:
+  - $ref: ../../../components/parameters/query/authorizations/name.yaml
+  - $ref: ../../../components/parameters/query/authorizations/parameters.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/tokens/oAuthAccessTokenObject_generic.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

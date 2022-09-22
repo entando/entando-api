@@ -1,0 +1,24 @@
+title: OAuth access token
+type: object
+properties:
+  additionalInformation:
+    type: object
+    properties: { }
+  expiration:
+    type: string
+    format: date-time
+  expired:
+    type: boolean
+  expiresIn:
+    type: integer
+    format: int32
+  refreshToken:
+    type: object
+  scope:
+    type: array
+    items:
+      type: string
+  tokenType:
+    type: string
+  value:
+    type: string

@@ -1898,6 +1898,28 @@ paths:
   /oauth/token:
     summary: Token operations
     description: API to handle tokens
+    get:
+      tags:
+        - token-endpoint
+      summary: Get token
+      description: Get token
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getToken
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/name'
+        - $ref: '#/components/parameters/parameters'
+      responses:
+        '200':
+          $ref: '#/components/responses/oAuthAccessTokenObject_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /pages:
     summary: Pages operations
     description: API to access and manipulate pages
@@ -6929,6 +6951,31 @@ components:
           format: int32
         targetCode:
           type: string
+    oAuthAccessToken:
+      title: OAuth access token
+      type: object
+      properties:
+        additionalInformation:
+          type: object
+          properties: {}
+        expiration:
+          type: string
+          format: date-time
+        expired:
+          type: boolean
+        expiresIn:
+          type: integer
+          format: int32
+        refreshToken:
+          type: object
+        scope:
+          type: array
+          items:
+            type: string
+        tokenType:
+          type: string
+        value:
+          type: string
     page:
       title: Page
       type: object
@@ -8118,6 +8165,12 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/navigatorConfig'
+    oAuthAccessTokenObject_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/oAuthAccessToken'
     objectObject_generic:
       description: OK
       content:

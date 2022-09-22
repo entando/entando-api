@@ -106,6 +106,8 @@ modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
 navigatorConfig:
   $ref: ./ok/widgets/navigatorConfig.yaml
+oAuthAccessTokenObject_generic:
+  $ref: ./ok/tokens/oAuthAccessTokenObject_generic.yaml
 objectObject_generic:
   $ref: ./ok/common/objectObject_generic.yaml
 ok:
