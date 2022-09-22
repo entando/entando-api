@@ -304,3 +304,5 @@
   $ref: ./widget/navigator/expressions/index.yaml
 /widget/navigator/navspec:
   $ref: ./widget/navigator/navspec/index.yaml
+/widgets:
+  $ref: ./widgets/index.yaml

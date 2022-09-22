@@ -6889,6 +6889,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /widgets:
+    summary: Widgets operations
+    description: API to access and manipulate widgets
 components:
   schemas:
     activityStreamRecord:
