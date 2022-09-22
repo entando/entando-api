@@ -142,6 +142,8 @@ seoPageFull:
   $ref: ./seoPages/seoPageFull.yaml
 shortDumpReport:
   $ref: ./database/shortDumpReport.yaml
+smtpServer:
+  $ref: ./smtpServer/smtpServer.yaml
 tableDumpReport:
   $ref: ./database/tableDumpReport.yaml
 trashedResource:

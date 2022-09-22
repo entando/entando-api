@@ -154,6 +154,8 @@ seoPageFull:
   $ref: ./ok/seoPages/seoPageFull.yaml
 shortDumpReports:
   $ref: ./ok/database/shortDumpReports.yaml
+smtpServer:
+  $ref: ./ok/smtpServer/smtpServer.yaml
 string_generic:
   $ref: ./ok/common/string_generic.yaml
 strings:

@@ -1,0 +1,23 @@
+title: SMTP server
+type: object
+properties:
+  active:
+    type: boolean
+  checkServerIdentity:
+    type: boolean
+  debugMode:
+    type: boolean
+  host:
+    type: string
+  password:
+    type: string
+  port:
+    type: integer
+    format: int32
+  protocol:
+    type: string
+  timeout:
+    type: integer
+    format: int32
+  username:
+    type: string

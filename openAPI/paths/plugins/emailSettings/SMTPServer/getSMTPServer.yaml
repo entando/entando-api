@@ -1,0 +1,17 @@
+tags:
+  - smtp-server-configuration-controller
+summary: Retrieve the SMTP server
+description: Retrieve the SMTP server
+externalDocs:
+  description: ''
+  url: https://
+operationId: getSMTPServer
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/smtpServer/smtpServer.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml
