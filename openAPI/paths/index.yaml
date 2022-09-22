@@ -292,6 +292,8 @@
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
   $ref: ./userProfiles/userId/index.yaml
+/userSettings:
+  $ref: ./userSettings/index.yaml
 /widget/navigator/expressions:
   $ref: ./widget/navigator/expressions/index.yaml
 /widget/navigator/navspec:

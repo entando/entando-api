@@ -6431,6 +6431,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /userSettings:
+    summary: User settings operations
+    description: API to access and manipulate user settings
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions
