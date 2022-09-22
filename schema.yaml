@@ -11061,6 +11061,8 @@ tags:
     description: Whitelabel approval operations
   - name: whitelabel-error-endpoint
     description: Whitelabel error operations
+  - name: widget-controller
+    description: Widget operations
 externalDocs:
   description: ''
   url: 'https://'
