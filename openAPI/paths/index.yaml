@@ -276,6 +276,8 @@
   $ref: ./system/report/index.yaml
 /users:
   $ref: ./users/index.yaml
+/users/myGroupPermissions:
+  $ref: ./users/myGroupPermissions/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
