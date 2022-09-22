@@ -284,6 +284,8 @@
   $ref: ./users/userId/index.yaml
 /users/{userId}/authorities:
   $ref: ./users/userId/authorities/index.yaml
+/users/{userId}/password:
+  $ref: ./users/userId/password/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
