@@ -2,3 +2,5 @@ summary: User password operations
 description: API to access and manipulate a user password
 parameters:
   - $ref: ../../../../components/parameters/path/users/userId.yaml
+post:
+  $ref: ./updateUserPassword.yaml

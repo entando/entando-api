@@ -6250,6 +6250,28 @@ paths:
     description: API to access and manipulate a user password
     parameters:
       - $ref: '#/components/parameters/userId'
+    post:
+      tags:
+        - user-controller
+      summary: Update a user password
+      description: Update the password for the user specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateUserPassword
+      requestBody:
+        $ref: '#/components/requestBodies/password'
+      responses:
+        '200':
+          $ref: '#/components/responses/user'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -10233,6 +10255,19 @@ components:
           schema:
             properties:
               status:
+                type: string
+    password:
+      description: Password
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              newPassword:
+                type: string
+              oldPassword:
+                type: string
+              username:
                 type: string
     profileType:
       description: Profile type

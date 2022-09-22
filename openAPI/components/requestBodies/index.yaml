@@ -74,6 +74,8 @@ pagePosition:
   $ref: ./pages/position.yaml
 pageStatus:
   $ref: ./pages/status.yaml
+password:
+  $ref: ./users/password.yaml
 profileType:
   $ref: ./profileTypes/profileType.yaml
 profileTypeRefreshStatus:
