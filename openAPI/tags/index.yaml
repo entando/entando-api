@@ -37,3 +37,4 @@
 - $ref: ./smtp-server-configuration-controller.yaml
 - $ref: ./system-controller.yaml
 - $ref: ./token-endpoint.yaml
+- $ref: ./user-controller.yaml

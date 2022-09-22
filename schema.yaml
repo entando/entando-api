@@ -9921,6 +9921,8 @@ tags:
     description: System operations
   - name: token-endpoint
     description: Token operations
+  - name: user-controller
+    description: User operations
 externalDocs:
   description: ''
   url: 'https://'
