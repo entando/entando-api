@@ -9839,6 +9839,8 @@ tags:
     description: SMTP server configuration operations
   - name: system-controller
     description: System operations
+  - name: token-endpoint
+    description: Token operations
 externalDocs:
   description: ''
   url: 'https://'
