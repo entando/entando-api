@@ -40,3 +40,4 @@
 - $ref: ./user-controller.yaml
 - $ref: ./user-preferences-controller.yaml
 - $ref: ./user-settings-controller.yaml
+- $ref: ./versioning-configuration-controller.yaml

@@ -10657,6 +10657,8 @@ tags:
     description: User preferences operations
   - name: user-settings-controller
     description: User settings operations
+  - name: versioning-configuration-controller
+    description: Versioning configuration operations
 externalDocs:
   description: ''
   url: 'https://'
