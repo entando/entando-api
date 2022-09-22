@@ -1,0 +1,20 @@
+tags:
+  - whitelabel-approval-endpoint
+summary: Confirm access
+description: Confirm access via GET
+externalDocs:
+  description: ''
+  url: https://
+operationId: confirmAccessGET
+deprecated: true
+parameters:
+  - $ref: ../../../components/parameters/query/authorizations/model.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/authorizations/modelAndViewObject_generic.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
