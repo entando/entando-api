@@ -90,6 +90,8 @@
   $ref: ./oauth/authorize/index.yaml
 /oauth/check_token:
   $ref: ./oauth/check_token/index.yaml
+/oauth/token:
+  $ref: ./oauth/token/index.yaml
 /pages:
   $ref: ./pages/index.yaml
 /pages/search:

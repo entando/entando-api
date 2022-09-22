@@ -1895,6 +1895,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /oauth/token:
+    summary: Token operations
+    description: API to handle tokens
   /pages:
     summary: Pages operations
     description: API to access and manipulate pages
