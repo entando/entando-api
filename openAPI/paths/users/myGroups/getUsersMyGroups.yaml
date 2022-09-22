@@ -1,0 +1,17 @@
+tags:
+  - user-controller
+summary: Retrieve the users my groups
+description: Retrieve the users my groups
+externalDocs:
+  description: ''
+  url: https://
+operationId: getUsersMyGroups
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/groups/groupsList_generic.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

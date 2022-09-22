@@ -5926,6 +5926,24 @@ paths:
   /users/myGroups:
     summary: Users my groups operations
     description: API to access and manipulate users my groups
+    get:
+      tags:
+        - user-controller
+      summary: Retrieve the users my groups
+      description: Retrieve the users my groups
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getUsersMyGroups
+      responses:
+        '200':
+          $ref: '#/components/responses/groupsList_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /users/myGroupPermissions:
     summary: Users my group permissions operations
     description: API to access and manipulate users my group permissions
@@ -8203,6 +8221,18 @@ components:
           schema:
             allOf:
               - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/group'
+    groupsList_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
               - properties:
                   payload:
                     type: array
