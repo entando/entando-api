@@ -1,0 +1,9 @@
+title: Fragment reference
+type: object
+properties:
+  code:
+    type: string
+  customUi:
+    type: string
+  defaultUi:
+    type: string

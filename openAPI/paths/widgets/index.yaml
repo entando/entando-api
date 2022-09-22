@@ -1,2 +1,4 @@
 summary: Widgets operations
 description: API to access and manipulate widgets
+get:
+  $ref: ./getWidgets.yaml

@@ -168,8 +168,14 @@ versioningConfiguration:
   $ref: ./versioningConfiguration/versioningConfiguration.yaml
 view:
   $ref: ./authorizations/view.yaml
+widget:
+  $ref: ./widgets/widget.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml
+widgetFragmentRef:
+  $ref: ./widgets/fragmentRef.yaml
+widgetParameter:
+  $ref: ./widgets/widgetParameter.yaml
 widgetTypeRef:
   $ref: ./fragments/widgetTypeRef.yaml
 wildCardType:

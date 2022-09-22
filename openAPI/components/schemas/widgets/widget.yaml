@@ -1,0 +1,52 @@
+title: Widget
+type: object
+properties:
+  action:
+    type: string
+  bundleId:
+    type: string
+  code:
+    type: string
+  config:
+    type: object
+    additionalProperties:
+      type: object
+      properties: { }
+  configUi:
+    type: object
+    properties: { }
+  group:
+    type: string
+  guiFragments:
+    type: array
+    items:
+      $ref: ./fragmentRef.yaml
+  hasConfig:
+    type: boolean
+  icon:
+    type: string
+  locked:
+    type: boolean
+  parameters:
+    type: array
+    items:
+      $ref: ./widgetParameter.yaml
+  parentType:
+    type: string
+  pluginCode:
+    type: string
+  pluginDesc:
+    type: string
+  readonlyPageWidgetConfig:
+    type: boolean
+  titles:
+    type: object
+    additionalProperties:
+      type: string
+  typology:
+    type: string
+  used:
+    type: integer
+    format: int32
+  widgetCategory:
+    type: string
