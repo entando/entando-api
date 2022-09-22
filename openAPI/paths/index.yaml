@@ -270,6 +270,8 @@
   $ref: ./roles/roleId/index.yaml
 /roles/{roleId}/userreferences:
   $ref: ./roles/roleId/userreferences/index.yaml
+/system/report:
+  $ref: ./system/report/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:

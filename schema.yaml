@@ -5798,6 +5798,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /system/report:
+    summary: System report operations
+    description: API to access the system report
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
