@@ -114,6 +114,8 @@ page:
   $ref: ./ok/pages/page.yaml
 pageMapMetadata:
   $ref: ./ok/pages/pageMapMetadata.yaml
+pageMapMetadata_generic:
+  $ref: ./ok/pages/pageMapMetadata_generic.yaml
 pages:
   $ref: ./ok/pages/pages.yaml
 pagesList:
