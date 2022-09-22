@@ -92,6 +92,8 @@ group:
   $ref: ./ok/groups/group.yaml
 groups:
   $ref: ./ok/groups/groups.yaml
+groupPermissionsList_generic:
+  $ref: ./ok/users/groupPermissionsList_generic.yaml
 iEntityModelDictionary:
   $ref: ./ok/contentModels/iEntityModelDictionary.yaml
 label:

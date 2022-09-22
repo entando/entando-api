@@ -78,6 +78,8 @@ frameSketch:
   $ref: ./pageModels/frameSketch.yaml
 group:
   $ref: ./groups/group.yaml
+groupPermission:
+  $ref: ./users/groupPermission.yaml
 iEntityModelDictionary:
   $ref: ./contentModels/iEntityModelDictionary.yaml
 label:

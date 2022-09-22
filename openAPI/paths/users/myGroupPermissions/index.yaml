@@ -1,2 +1,4 @@
 summary: Users my group permissions operations
 description: API to access and manipulate users my group permissions
+get:
+  $ref: ./getUsersMyGroupPermissions.yaml

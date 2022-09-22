@@ -5926,6 +5926,24 @@ paths:
   /users/myGroupPermissions:
     summary: Users my group permissions operations
     description: API to access and manipulate users my group permissions
+    get:
+      tags:
+        - user-controller
+      summary: Retrieve the users my group permissions
+      description: Retrieve the users my group permissions
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getUsersMyGroupPermissions
+      responses:
+        '200':
+          $ref: '#/components/responses/groupPermissionsList_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -6875,6 +6893,16 @@ components:
           type: object
           additionalProperties:
             type: boolean
+    groupPermission:
+      title: Group permission
+      type: object
+      properties:
+        group:
+          type: string
+        permissions:
+          type: array
+          items:
+            type: string
     iEntityModelDictionary:
       title: IEntity model dictionary
       type: object
@@ -8177,6 +8205,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/group'
+    groupPermissionsList_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/groupPermission'
     iEntityModelDictionary:
       description: OK
       content:

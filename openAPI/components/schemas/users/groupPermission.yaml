@@ -1,0 +1,9 @@
+title: Group permission
+type: object
+properties:
+  group:
+    type: string
+  permissions:
+    type: array
+    items:
+      type: string
