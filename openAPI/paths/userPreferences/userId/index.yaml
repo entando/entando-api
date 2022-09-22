@@ -1,0 +1,4 @@
+summary: User preferences operations
+description: API to access and manipulate a user preferences
+parameters:
+  - $ref: ../../../components/parameters/path/users/userId.yaml

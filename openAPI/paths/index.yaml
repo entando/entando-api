@@ -286,6 +286,8 @@
   $ref: ./users/userId/authorities/index.yaml
 /users/{userId}/password:
   $ref: ./users/userId/password/index.yaml
+/userPreferences/{userId}:
+  $ref: ./userPreferences/userId/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
