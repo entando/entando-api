@@ -5965,6 +5965,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/users/{userId}':
+    summary: User operations
+    description: API to access and manipulate a user
+    parameters:
+      - $ref: '#/components/parameters/userId'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles

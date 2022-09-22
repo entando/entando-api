@@ -1,0 +1,4 @@
+summary: User operations
+description: API to access and manipulate a user
+parameters:
+  - $ref: ../../../components/parameters/path/users/userId.yaml

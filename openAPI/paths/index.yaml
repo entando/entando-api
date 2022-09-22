@@ -280,6 +280,8 @@
   $ref: ./users/myGroups/index.yaml
 /users/myGroupPermissions:
   $ref: ./users/myGroupPermissions/index.yaml
+/users/{userId}:
+  $ref: ./users/userId/index.yaml
 /userProfiles:
   $ref: ./userProfiles/index.yaml
 /userProfiles/{userId}:
