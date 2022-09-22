@@ -9816,6 +9816,8 @@ tags:
     description: SEO pages operations
   - name: smtp-server-configuration-controller
     description: SMTP server configuration operations
+  - name: system-controller
+    description: System operations
 externalDocs:
   description: ''
   url: 'https://'

@@ -35,3 +35,4 @@
 - $ref: ./role-controller.yaml
 - $ref: ./seo-page-controller.yaml
 - $ref: ./smtp-server-configuration-controller.yaml
+- $ref: ./system-controller.yaml
