@@ -216,6 +216,8 @@
   $ref: ./plugins/emailSettings/senders/senderId/index.yaml
 /plugins/emailSettings/SMTPServer:
   $ref: ./plugins/emailSettings/SMTPServer/index.yaml
+/plugins/emailSettings/SMTPServer/sendTestEmail:
+  $ref: ./plugins/emailSettings/SMTPServer/sendTestEmail/index.yaml
 /plugins/seo/pages:
   $ref: ./plugins/seo/pages/index.yaml
 /plugins/seo/pages/{seoPageId}:

@@ -4652,6 +4652,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /plugins/emailSettings/SMTPServer/sendTestEmail:
+    summary: SMTP server test email operation
+    description: Perform the SMTP server test email operation
   /plugins/seo/pages:
     summary: SEO pages operations
     description: API to access contents and manipulate SEO pages
