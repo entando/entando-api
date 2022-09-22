@@ -4935,6 +4935,32 @@ paths:
   /plugins/versioning/configuration:
     summary: Versioning configuration operations
     description: API to access and manipulate versioning configuration
+    get:
+      tags:
+        - versioning-configuration-controller
+      summary: Retrieve versioning configuration
+      description: Retrieve versioning configuration
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getVersioningConfiguration
+      responses:
+        '200':
+          $ref: '#/components/responses/versioningConfigurationObject_generic'
+        '201':
+          $ref: '#/components/responses/versioningConfigurationObject_generic-created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
@@ -8195,6 +8221,20 @@ components:
           type: boolean
         restrictionsActive:
           type: boolean
+    versioningConfiguration:
+      title: Versioning configuration
+      type: object
+      properties:
+        contentTypesToIgnore:
+          type: array
+          items:
+            type: string
+        contentsToIgnore:
+          type: array
+          items:
+            type: string
+        deleteMidVersions:
+          type: boolean
     view:
       title: View
       type: object
@@ -9190,6 +9230,12 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/userSettings'
+    versioningConfigurationObject_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/versioningConfiguration'
     widgetConfiguration:
       description: OK
       content:
@@ -9336,6 +9382,12 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/trashedResource'
+    versioningConfigurationObject_generic-created:
+      description: Created
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/versioningConfiguration'
     wildCardType_generic-created:
       description: Created
       content:

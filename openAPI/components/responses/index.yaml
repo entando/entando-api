@@ -190,6 +190,8 @@ userPreferences:
   $ref: ./ok/userPreferences/userPreferences.yaml
 userSettings:
   $ref: ./ok/userSettings/userSettings.yaml
+versioningConfigurationObject_generic:
+  $ref: ./ok/versioningConfiguration/versioningConfigurationObject_generic.yaml
 widgetConfiguration:
   $ref: ./ok/pages/widgetConfiguration.yaml
 widgetConfigurationList:
@@ -226,6 +228,8 @@ trashedResources_generic-created:
   $ref: ./created/resources/trashedResources_generic.yaml
 trashedResourceObject_generic-created:
   $ref: ./created/resources/trashedResourceObject_generic.yaml
+versioningConfigurationObject_generic-created:
+  $ref: ./created/versioningConfiguration/versioningConfigurationObject_generic.yaml
 wildCardType_generic-created:
   $ref: ./created/common/wildCardType_generic.yaml
 forbidden:

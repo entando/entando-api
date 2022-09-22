@@ -1,0 +1,13 @@
+title: Versioning configuration
+type: object
+properties:
+  contentTypesToIgnore:
+    type: array
+    items:
+      type: string
+  contentsToIgnore:
+    type: array
+    items:
+      type: string
+  deleteMidVersions:
+    type: boolean

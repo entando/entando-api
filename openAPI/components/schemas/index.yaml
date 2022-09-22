@@ -164,6 +164,8 @@ userProfileType:
   $ref: ./profileTypes/userProfileType.yaml
 userSettings:
   $ref: ./userSettings/userSettings.yaml
+versioningConfiguration:
+  $ref: ./versioningConfiguration/versioningConfiguration.yaml
 view:
   $ref: ./authorizations/view.yaml
 widgetConfiguration:
