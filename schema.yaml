@@ -4609,6 +4609,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '409':
           $ref: '#/components/responses/conflict'
+  /plugins/emailSettings/SMTPServer:
+    summary: SMTP server operations
+    description: API to access and manipulate the SMTP server
   /plugins/seo/pages:
     summary: SEO pages operations
     description: API to access contents and manipulate SEO pages
