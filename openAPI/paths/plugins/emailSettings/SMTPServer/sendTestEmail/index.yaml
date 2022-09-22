@@ -1,2 +1,4 @@
 summary: SMTP server test email operation
 description: Perform the SMTP server test email operation
+post:
+  $ref: ./sendTestEmail.yaml

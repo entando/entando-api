@@ -4655,6 +4655,50 @@ paths:
   /plugins/emailSettings/SMTPServer/sendTestEmail:
     summary: SMTP server test email operation
     description: Perform the SMTP server test email operation
+    post:
+      tags:
+        - smtp-server-configuration-controller
+      summary: Send a test email
+      description: Send a test email filtered by query parameter
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: sendTestEmail
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
   /plugins/seo/pages:
     summary: SEO pages operations
     description: API to access contents and manipulate SEO pages
