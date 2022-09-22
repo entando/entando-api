@@ -4932,6 +4932,9 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  /plugins/versioning/configuration:
+    summary: Versioning configuration operations
+    description: API to access and manipulate versioning configuration
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
