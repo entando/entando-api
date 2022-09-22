@@ -2,3 +2,5 @@ summary: User authorities operations
 description: API to access and manipulate a user authorities
 parameters:
   - $ref: ../../../../components/parameters/path/users/userId.yaml
+get:
+  $ref: ./getUserAuthorities.yaml

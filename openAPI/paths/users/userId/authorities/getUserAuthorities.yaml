@@ -1,0 +1,39 @@
+tags:
+  - user-controller
+summary: Retrieve a user authorities
+description: Retrieve the authorities for the user specified in the path filtered by query parameters
+externalDocs:
+  description: ''
+  url: https://
+operationId: getUserAuthorities
+parameters:
+  - $ref: ../../../../components/parameters/query/common/authorizations/authority.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/groupAuthority.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/groupDescr.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/groupDescription.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/groupEntandoGroup.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/groupJapsGroup.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/groupName.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/roleAuthority.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/roleDescription.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/roleName.yaml
+  - $ref: ../../../../components/parameters/query/common/authorizations/rolePermissions.yaml
+  - $ref: ../../../../components/parameters/query/common/accessToken.yaml
+  - $ref: ../../../../components/parameters/query/common/refreshToken.yaml
+  - $ref: ../../../../components/parameters/query/common/accountNotExpired.yaml
+  - $ref: ../../../../components/parameters/query/common/credentialsNotExpired.yaml
+  - $ref: ../../../../components/parameters/query/common/username.yaml
+  - $ref: ../../../../components/parameters/query/common/password.yaml
+  - $ref: ../../../../components/parameters/query/common/profile.yaml
+  - $ref: ../../../../components/parameters/query/common/entandoUser.yaml
+  - $ref: ../../../../components/parameters/query/common/japsUser.yaml
+  - $ref: ../../../../components/parameters/query/common/disabled.yaml
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/users/authoritiesList.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml

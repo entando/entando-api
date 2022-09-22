@@ -12,6 +12,8 @@ attributeType:
   $ref: ./ok/common/attributeType.yaml
 attributeType_generic:
   $ref: ./ok/common/attributeType_generic.yaml
+authoritiesList:
+  $ref: ./ok/users/authoritiesList.yaml
 basicFileAttributeViewList:
   $ref: ./ok/fileBrowser/basicFileAttributeViewList.yaml
 booleanMap:

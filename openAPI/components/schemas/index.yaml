@@ -10,6 +10,8 @@ attributeProperty:
   $ref: ./common/attributeProperty.yaml
 attributeType:
   $ref: ./common/attributeType.yaml
+authority:
+  $ref: ./users/authority.yaml
 basicFileAttributeView:
   $ref: ./fileBrowser/basicFileAttributeView.yaml
 category:

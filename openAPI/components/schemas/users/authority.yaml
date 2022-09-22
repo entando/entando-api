@@ -1,0 +1,7 @@
+title: Authority
+type: object
+properties:
+  group:
+    type: string
+  role:
+    type: string
