@@ -1895,6 +1895,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /oauth/confirm_access:
+    summary: Confirm access operations
+    description: API to handle access confirm
   /oauth/token:
     summary: Token operations
     description: API to handle tokens
