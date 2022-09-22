@@ -1,0 +1,23 @@
+tags:
+  - smtp-server-configuration-controller
+summary: Test the SMTP server configuration
+description: Test the SMTP server configuration described in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: testConfiguration
+requestBody:
+  $ref: ../../../../../components/requestBodies/smtpServer/smtpServer.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/restResponse/restResponseMapPayload.yaml
+  '201':
+    $ref: ../../../../../components/responses/ok/common/empty.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml
+  '409':
+    $ref: ../../../../../components/responses/conflict/common/empty.yaml

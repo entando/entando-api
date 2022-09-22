@@ -1,2 +1,4 @@
 summary: SMTP server test configuration operation
 description: Perform the SMTP server test configuration operation
+post:
+  $ref: ./testConfiguration.yaml

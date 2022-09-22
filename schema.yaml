@@ -4702,6 +4702,30 @@ paths:
   /plugins/emailSettings/SMTPServer/testConfiguration:
     summary: SMTP server test configuration operation
     description: Perform the SMTP server test configuration operation
+    post:
+      tags:
+        - smtp-server-configuration-controller
+      summary: Test the SMTP server configuration
+      description: Test the SMTP server configuration described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: testConfiguration
+      requestBody:
+        $ref: '#/components/requestBodies/smtpServer'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '201':
+          $ref: '#/components/responses/ok'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
   /plugins/seo/pages:
     summary: SEO pages operations
     description: API to access contents and manipulate SEO pages
