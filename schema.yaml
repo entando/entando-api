@@ -4699,6 +4699,9 @@ paths:
           $ref: '#/components/responses/notFound'
         '409':
           $ref: '#/components/responses/conflict'
+  /plugins/emailSettings/SMTPServer/testConfiguration:
+    summary: SMTP server test configuration operation
+    description: Perform the SMTP server test configuration operation
   /plugins/seo/pages:
     summary: SEO pages operations
     description: API to access contents and manipulate SEO pages
