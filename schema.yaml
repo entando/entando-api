@@ -5923,6 +5923,9 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /users/myGroups:
+    summary: Users my groups operations
+    description: API to access and manipulate users my groups
   /users/myGroupPermissions:
     summary: Users my group permissions operations
     description: API to access and manipulate users my group permissions
