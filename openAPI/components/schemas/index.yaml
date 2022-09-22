@@ -162,6 +162,8 @@ userPreferences:
   $ref: ./userPreferences/userPreferences.yaml
 userProfileType:
   $ref: ./profileTypes/userProfileType.yaml
+userSettings:
+  $ref: ./userSettings/userSettings.yaml
 view:
   $ref: ./authorizations/view.yaml
 widgetConfiguration:

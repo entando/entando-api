@@ -6434,6 +6434,24 @@ paths:
   /userSettings:
     summary: User settings operations
     description: API to access and manipulate user settings
+    get:
+      tags:
+        - user-settings-controller
+      summary: Retrieve user settings
+      description: Retrieve user settings
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getUserSettings
+      responses:
+        '200':
+          $ref: '#/components/responses/userSettings'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions
@@ -8136,6 +8154,22 @@ components:
           type: string
         status:
           type: string
+    userSettings:
+      title: User settings
+      type: object
+      properties:
+        enableGravatarIntegration:
+          type: boolean
+        lastAccessPasswordExpirationMonths:
+          type: integer
+          format: int32
+        maxMonthsPasswordValid:
+          type: integer
+          format: int32
+        passwordAlwaysActive:
+          type: boolean
+        restrictionsActive:
+          type: boolean
     view:
       title: View
       type: object
@@ -9121,6 +9155,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/userPreferences'
+    userSettings:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/userSettings'
     widgetConfiguration:
       description: OK
       content:

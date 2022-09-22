@@ -1,0 +1,15 @@
+title: User settings
+type: object
+properties:
+  enableGravatarIntegration:
+    type: boolean
+  lastAccessPasswordExpirationMonths:
+    type: integer
+    format: int32
+  maxMonthsPasswordValid:
+    type: integer
+    format: int32
+  passwordAlwaysActive:
+    type: boolean
+  restrictionsActive:
+    type: boolean
