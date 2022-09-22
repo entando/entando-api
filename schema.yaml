@@ -5801,6 +5801,24 @@ paths:
   /system/report:
     summary: System report operations
     description: API to access the system report
+    get:
+      tags:
+        - system-controller
+      summary: Retrieve the system report
+      description: Retrieve the system report
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getSystemReport
+      responses:
+        '200':
+          $ref: '#/components/responses/booleanMap'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles

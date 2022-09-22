@@ -1,2 +1,4 @@
 summary: System report operations
 description: API to access the system report
+get:
+  $ref: ./getSystemReport.yaml

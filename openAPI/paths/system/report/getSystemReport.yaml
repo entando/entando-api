@@ -1,0 +1,17 @@
+tags:
+  - system-controller
+summary: Retrieve the system report
+description: Retrieve the system report
+externalDocs:
+  description: ''
+  url: https://
+operationId: getSystemReport
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/common/booleanMap.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
