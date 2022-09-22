@@ -2052,6 +2052,27 @@ paths:
   /oauth/error:
     summary: Error operations
     description: API to handle error
+    get:
+      tags:
+        - whitelabel-error-endpoint
+      summary: Error
+      description: Error via GET
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: errorGET
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/model'
+      responses:
+        '200':
+          $ref: '#/components/responses/modelAndViewObject_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/token:
     summary: Token operations
     description: API to handle tokens
