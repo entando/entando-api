@@ -5970,6 +5970,24 @@ paths:
     description: API to access and manipulate a user
     parameters:
       - $ref: '#/components/parameters/userId'
+    get:
+      tags:
+        - user-controller
+      summary: Retrieve a user
+      description: Retrieve the user specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getUser
+      responses:
+        '200':
+          $ref: '#/components/responses/user'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
