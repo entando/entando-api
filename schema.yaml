@@ -10749,6 +10749,8 @@ tags:
     description: User settings operations
   - name: versioning-configuration-controller
     description: Versioning configuration operations
+  - name: whitelabel-approval-endpoint
+    description: Whitelabel approval operations
 externalDocs:
   description: ''
   url: 'https://'

@@ -41,3 +41,4 @@
 - $ref: ./user-preferences-controller.yaml
 - $ref: ./user-settings-controller.yaml
 - $ref: ./versioning-configuration-controller.yaml
+- $ref: ./whitelabel-approval-endpoint.yaml
