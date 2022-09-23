@@ -1,0 +1,17 @@
+tags:
+  - widget-controller
+summary: Retrieve the widget usage
+description: Retrieve the usage of the widget specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getWidgetUsage
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/common/componentUsage.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml
