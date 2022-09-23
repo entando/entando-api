@@ -104,6 +104,26 @@ paths:
     description: End-point to access and manipulate the activity stream record's likes collection
     parameters:
       - $ref: '#/components/parameters/activityStreamRecordId'
+    post:
+      tags:
+        - activity-stream-controller
+      summary: Add a like to an activity stream record
+      description: Add a like to the activity stream record specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addLike
+      responses:
+        '200':
+          $ref: '#/components/responses/activityStreamRecord'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
