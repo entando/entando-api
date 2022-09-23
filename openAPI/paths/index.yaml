@@ -308,3 +308,5 @@
   $ref: ./widgets/index.yaml
 /widgets/{widgetId}:
   $ref: ./widgets/widgetId/index.yaml
+/widgets/{widgetId}/info:
+  $ref: ./widgets/widgetId/info/index.yaml
