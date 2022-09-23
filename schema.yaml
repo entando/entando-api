@@ -7012,6 +7012,24 @@ paths:
     description: API to access a widget info
     parameters:
       - $ref: '#/components/parameters/widgetId'
+    get:
+      tags:
+        - widget-controller
+      summary: Retrieve a widget info
+      description: Retrieve the info of the widget specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getWidgetInfo
+      responses:
+        '200':
+          $ref: '#/components/responses/widgetInfo'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -8764,6 +8782,19 @@ components:
           additionalProperties:
             type: object
             properties: {}
+    widgetDetails:
+      title: Widget details
+      type: object
+      properties:
+        frame:
+          type: string
+        frameIndex:
+          type: integer
+          format: int32
+        pageCode:
+          type: string
+        pageFullPath:
+          type: string
     widgetFragmentRef:
       title: Fragment reference
       type: object
@@ -8774,6 +8805,25 @@ components:
           type: string
         defaultUi:
           type: string
+    widgetInfo:
+      title: Widget info
+      type: object
+      properties:
+        code:
+          type: string
+        draftUtilizers:
+          type: array
+          items:
+            $ref: '#/components/schemas/widgetDetails'
+        publishedUtilizers:
+          type: array
+          items:
+            $ref: '#/components/schemas/widgetDetails'
+        titles:
+          type: object
+          additionalProperties:
+            type: object
+            properties: {}
     widgetParameter:
       title: Widget parameter
       type: object
@@ -9776,6 +9826,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/widget'
+    widgetInfo:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/widgetInfo'
     widgets:
       description: OK
       content:

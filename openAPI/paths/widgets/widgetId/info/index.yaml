@@ -2,3 +2,5 @@ summary: Widget info operations
 description: API to access a widget info
 parameters:
   - $ref: ../../../../components/parameters/path/widgets/widgetId.yaml
+get:
+  $ref: ./getWidgetInfo.yaml

@@ -1,0 +1,12 @@
+title: Widget details
+type: object
+properties:
+  frame:
+    type: string
+  frameIndex:
+    type: integer
+    format: int32
+  pageCode:
+    type: string
+  pageFullPath:
+    type: string

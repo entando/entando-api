@@ -194,6 +194,8 @@ versioningConfigurationObject_generic:
   $ref: ./ok/versioningConfiguration/versioningConfigurationObject_generic.yaml
 widget:
   $ref: ./ok/widgets/widget.yaml
+widgetInfo:
+  $ref: ./ok/widgets/widgetInfo.yaml
 widgets:
   $ref: ./ok/widgets/widgets.yaml
 widgetConfiguration:

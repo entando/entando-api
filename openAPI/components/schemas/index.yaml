@@ -172,8 +172,12 @@ widget:
   $ref: ./widgets/widget.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml
+widgetDetails:
+  $ref: ./widgets/widgetDetails.yaml
 widgetFragmentRef:
   $ref: ./widgets/fragmentRef.yaml
+widgetInfo:
+  $ref: ./widgets/widgetInfo.yaml
 widgetParameter:
   $ref: ./widgets/widgetParameter.yaml
 widgetTypeRef:
