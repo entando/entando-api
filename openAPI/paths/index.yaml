@@ -306,3 +306,5 @@
   $ref: ./widget/navigator/navspec/index.yaml
 /widgets:
   $ref: ./widgets/index.yaml
+/widgets/{widgetId}:
+  $ref: ./widgets/widgetId/index.yaml

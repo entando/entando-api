@@ -6944,6 +6944,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/widgets/{widgetId}':
+    summary: Widget operations
+    description: API to access and manipulate a widget
+    parameters:
+      - $ref: '#/components/parameters/widgetId'
 components:
   schemas:
     activityStreamRecord:
@@ -10568,6 +10573,13 @@ components:
       schema:
         type: integer
         format: int64
+    widgetId:
+      name: widgetId
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: string
     withProfile:
       name: withProfile
       in: query

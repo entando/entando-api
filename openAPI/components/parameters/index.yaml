@@ -196,5 +196,7 @@ value:
   $ref: ./query/common/filters/value.yaml
 versionId:
   $ref: ./path/versioning/versionId.yaml
+widgetId:
+  $ref: ./path/widgets/widgetId.yaml
 withProfile:
   $ref: ./query/users/withProfile.yaml
