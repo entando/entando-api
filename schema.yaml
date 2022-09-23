@@ -6949,6 +6949,24 @@ paths:
     description: API to access and manipulate a widget
     parameters:
       - $ref: '#/components/parameters/widgetId'
+    get:
+      tags:
+        - widget-controller
+      summary: Retrieve a widget
+      description: Retrieve the widget specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getWidget
+      responses:
+        '200':
+          $ref: '#/components/responses/widget'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:

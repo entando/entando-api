@@ -2,3 +2,5 @@ summary: Widget operations
 description: API to access and manipulate a widget
 parameters:
   - $ref: ../../../components/parameters/path/widgets/widgetId.yaml
+get:
+  $ref: ./getWidget.yaml
