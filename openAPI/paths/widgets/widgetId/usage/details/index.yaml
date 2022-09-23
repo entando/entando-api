@@ -2,3 +2,5 @@ summary: Widget usage details operations
 description: API to access a widget usage details
 parameters:
   - $ref: ../../../../../components/parameters/path/widgets/widgetId.yaml
+get:
+  $ref: ./getWidgetUsageDetails.yaml
