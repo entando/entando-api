@@ -6,6 +6,8 @@ created:
   $ref: ./created/common/empty.yaml
 forbidden:
   $ref: ./forbidden/common/empty.yaml
+noContent:
+  $ref: ./noContent/common/empty.yaml
 notFound:
   $ref: ./notFound/common/empty.yaml
 unauthorized:

@@ -3,3 +3,5 @@ description: End-point to access and manipulate an activity stream record's comm
 parameters:
   - $ref: ../../../../../components/parameters/path/activityStream/recordId.yaml
   - $ref: ../../../../../components/parameters/path/activityStream/commentId.yaml
+delete:
+  $ref: ./removeComment.yaml

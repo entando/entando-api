@@ -81,6 +81,24 @@ paths:
     parameters:
       - $ref: '#/components/parameters/activityStreamRecordId'
       - $ref: '#/components/parameters/activityStreamRecordCommentId'
+    delete:
+      tags:
+        - activity-stream-controller
+      summary: Remove a comment from the activity stream record
+      description: Remove the comment from the activity stream record as specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: removeComment
+      responses:
+        '200':
+          $ref: '#/components/responses/activityStreamRecord'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
 components:
   schemas:
     activityStreamRecord:
@@ -277,6 +295,8 @@ components:
       description: Created
     forbidden:
       description: Forbidden
+    noContent:
+      description: No content
     notFound:
       description: Not found
     unauthorized:
