@@ -1,0 +1,4 @@
+summary: Widget usage operations
+description: API to access a widget usage
+parameters:
+  - $ref: ../../../../components/parameters/path/widgets/widgetId.yaml
