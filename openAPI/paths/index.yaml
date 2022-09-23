@@ -312,3 +312,5 @@
   $ref: ./widgets/widgetId/info/index.yaml
 /widgets/{widgetId}/usage:
   $ref: ./widgets/widgetId/usage/index.yaml
+/widgets/{widgetId}/usage/details:
+  $ref: ./widgets/widgetId/usage/details/index.yaml

@@ -7053,6 +7053,11 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/widgets/{widgetId}/usage/details':
+    summary: Widget usage details operations
+    description: API to access a widget usage details
+    parameters:
+      - $ref: '#/components/parameters/widgetId'
 components:
   schemas:
     activityStreamRecord:
