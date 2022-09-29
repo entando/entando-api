@@ -1,0 +1,6 @@
+description: Consumer
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/consumers/consumer.yaml

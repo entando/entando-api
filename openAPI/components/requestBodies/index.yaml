@@ -2,5 +2,7 @@ activityStreamRecordComment:
   $ref: ./activityStreams/activityStreamRecordComment.yaml
 category:
   $ref: ./categories/category.yaml
+consumer:
+  $ref: ./consumers/consumer.yaml
 idCodesByObjectType:
   $ref: ./analysis/idCodesByObjectType.yaml

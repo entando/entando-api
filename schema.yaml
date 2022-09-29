@@ -394,6 +394,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - consumers
+      summary: Add a consumer to the consumers collection
+      description: Create a new consumer as specified in the request body and add it to the consumers collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: createConsumer
+      requestBody:
+        $ref: '#/components/requestBodies/consumer'
+      responses:
+        '200':
+          $ref: '#/components/responses/consumerObject'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -1194,6 +1216,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/category'
+    consumer:
+      description: Consumer
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/consumer'
     idCodesByObjectType:
       description: ID codes by object type
       required: true
