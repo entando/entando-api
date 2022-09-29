@@ -12,3 +12,5 @@ options:
   $ref: ./authorizeOPTIONS.yaml
 head:
   $ref: ./authorizeHEAD.yaml
+patch:
+  $ref: ./authorizePATCH.yaml
