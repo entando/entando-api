@@ -10,3 +10,5 @@ delete:
   $ref: ./authorizeDELETE.yaml
 options:
   $ref: ./authorizeOPTIONS.yaml
+head:
+  $ref: ./authorizeHEAD.yaml
