@@ -124,6 +124,24 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - activity-stream-controller
+      summary: Remove a like from an activity stream record
+      description: Remove a like from the activity stream record specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: removeLike
+      responses:
+        '200':
+          $ref: '#/components/responses/activityStreamRecord'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
 components:
   schemas:
     activityStreamRecord:

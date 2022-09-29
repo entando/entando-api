@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../components/parameters/path/activityStream/recordId.yaml
 post:
   $ref: ./addLike.yaml
+delete:
+  $ref: ./removeLike.yaml
