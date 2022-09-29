@@ -1,0 +1,17 @@
+tags:
+  - consumers
+summary: Retrieve a consumer
+description: Retrieve the consumer specified in the path from the consumers collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: getConsumer
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/consumers/consumer.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

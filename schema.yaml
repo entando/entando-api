@@ -421,6 +421,24 @@ paths:
     description: API to access and manipulate a consumer
     parameters:
       - $ref: '#/components/parameters/consumerId'
+    get:
+      tags:
+        - consumers
+      summary: Retrieve a consumer
+      description: Retrieve the consumer specified in the path from the consumers collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getConsumer
+      responses:
+        '200':
+          $ref: '#/components/responses/consumer'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -1014,6 +1032,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/componentUsage'
+    consumer:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/consumer'
     consumerObject:
       description: OK
       content:
