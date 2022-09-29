@@ -4,3 +4,5 @@
   $ref: ./activityStream/recordId/comments/index.yaml
 /activityStream/{recordId}/comments/{commentId}:
   $ref: ./activityStream/recordId/comments/commentId/index.yaml
+/activityStream/{recordId}/like:
+  $ref: ./activityStream/recordId/like/index.yaml

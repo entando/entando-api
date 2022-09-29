@@ -99,6 +99,11 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+  '/activityStream/{recordId}/like':
+    summary: Activity stream record's likes collection operations
+    description: End-point to access and manipulate the activity stream record's likes collection
+    parameters:
+      - $ref: '#/components/parameters/activityStreamRecordId'
 components:
   schemas:
     activityStreamRecord:

@@ -1,0 +1,4 @@
+summary: Activity stream record's likes collection operations
+description: End-point to access and manipulate the activity stream record's likes collection
+parameters:
+  - $ref: ../../../../components/parameters/path/activityStream/recordId.yaml
