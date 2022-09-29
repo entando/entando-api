@@ -954,6 +954,28 @@ paths:
     description: API to access and manipulate a content status
     parameters:
       - $ref: '#/components/parameters/contentId'
+    put:
+      tags:
+        - content-controller
+      summary: Update content status
+      description: Update the content status as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateContentStatus
+      requestBody:
+        $ref: '#/components/requestBodies/contentStatus'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentMapMetadata'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -1473,6 +1495,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/content'
+    contentMapMetadata:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseMapMetadata'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/content'
     contents:
       description: OK
       content:
@@ -1854,6 +1886,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/content'
+    contentStatus:
+      description: Content status
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
     contentsCodes:
       description: Contents codes
       required: true

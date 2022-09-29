@@ -16,6 +16,8 @@ consumerObject:
   $ref: ./ok/consumers/consumerObject.yaml
 content:
   $ref: ./ok/contents/content.yaml
+contentMapMetadata:
+  $ref: ./ok/contents/contentMapMetadata.yaml
 contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:

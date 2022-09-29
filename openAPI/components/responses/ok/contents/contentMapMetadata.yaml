@@ -1,0 +1,9 @@
+description: OK
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/restResponseMapMetadata.yaml
+        - properties:
+            payload:
+              $ref: ../../../schemas/contents/content.yaml

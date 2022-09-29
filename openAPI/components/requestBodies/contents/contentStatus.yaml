@@ -1,0 +1,9 @@
+description: Content status
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        status:
+          type: string
