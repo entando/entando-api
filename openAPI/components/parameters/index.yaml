@@ -1,3 +1,5 @@
+activityStreamRecordId:
+  $ref: ./path/activityStream/recordId.yaml
 allowedValues:
   $ref: ./query/common/filters/allowedValues.yaml
 attribute:

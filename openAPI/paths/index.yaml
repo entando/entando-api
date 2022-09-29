@@ -1,2 +1,4 @@
 /activityStream:
   $ref: ./activityStream/index.yaml
+/activityStream/{recordId}/comments:
+  $ref: ./activityStream/recordId/comments/index.yaml
