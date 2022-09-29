@@ -1,0 +1,21 @@
+tags:
+  - category-controller
+summary: Add a category to the categories collection
+description: Create a new category as specified in the request body and add it to the categories collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: addCategory
+requestBody:
+  $ref: ../../components/requestBodies/categories/category.yaml
+responses:
+  '200':
+    $ref: ../../components/responses/ok/categories/category.yaml
+  '201':
+    $ref: ../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml

@@ -2,3 +2,5 @@ summary: Categories operations
 description: API to access and manipulate the collection of categories
 get:
   $ref: ./getCategories.yaml
+post:
+  $ref: ./addCategory.yaml

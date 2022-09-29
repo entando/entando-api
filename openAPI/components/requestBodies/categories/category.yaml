@@ -1,0 +1,6 @@
+description: Category
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/categories/category.yaml

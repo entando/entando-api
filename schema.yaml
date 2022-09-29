@@ -215,6 +215,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - category-controller
+      summary: Add a category to the categories collection
+      description: Create a new category as specified in the request body and add it to the categories collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addCategory
+      requestBody:
+        $ref: '#/components/requestBodies/category'
+      responses:
+        '200':
+          $ref: '#/components/responses/category'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -703,12 +725,6 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/activityStreamRecord'
-    modelAndViewObject_generic:
-      description: OK
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/modelAndView'
     categoriesListMapMetadata:
       description: OK
       content:
@@ -721,6 +737,22 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/category'
+    category:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/category'
+    modelAndViewObject_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/modelAndView'
     restResponse:
       description: OK
       content:
@@ -872,6 +904,13 @@ components:
               recordId:
                 type: integer
                 format: int32
+    category:
+      description: Category
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/category'
     idCodesByObjectType:
       description: ID codes by object type
       required: true
