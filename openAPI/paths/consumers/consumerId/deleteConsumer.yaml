@@ -1,0 +1,17 @@
+tags:
+  - consumers
+summary: Delete a consumer
+description: Delete the consumer specified in the path from the consumers collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: deleteConsumer
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/common/empty.yaml
+  '204':
+    $ref: ../../../components/responses/noContent/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml

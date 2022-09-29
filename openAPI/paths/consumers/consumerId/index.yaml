@@ -6,3 +6,5 @@ get:
   $ref: ./getConsumer.yaml
 put:
   $ref: ./updateConsumer.yaml
+delete:
+  $ref: ./deleteConsumer.yaml
