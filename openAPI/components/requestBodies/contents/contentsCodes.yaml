@@ -1,0 +1,8 @@
+description: Contents codes
+required: true
+content:
+  '*/*':
+    schema:
+      type: array
+      items:
+        type: string

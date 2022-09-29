@@ -767,6 +767,26 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - content-controller
+      summary: Delete contents
+      description: Delete elements of the contents collection as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteContents
+      requestBody:
+        $ref: '#/components/requestBodies/contentsCodes'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
 components:
   schemas:
     activityStreamRecord:
@@ -1578,6 +1598,15 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/content'
+    contentsCodes:
+      description: Contents codes
+      required: true
+      content:
+        '*/*':
+          schema:
+            type: array
+            items:
+              type: string
     contentsList:
       description: Contents list
       required: true

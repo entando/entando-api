@@ -6,3 +6,5 @@ put:
   $ref: ./updateContents.yaml
 post:
   $ref: ./addContent.yaml
+delete:
+  $ref: ./deleteContents.yaml
