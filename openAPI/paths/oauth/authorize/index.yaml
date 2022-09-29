@@ -8,3 +8,5 @@ post:
   $ref: ./authorizePOST.yaml
 delete:
   $ref: ./authorizeDELETE.yaml
+options:
+  $ref: ./authorizeOPTIONS.yaml
