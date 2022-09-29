@@ -1,0 +1,6 @@
+name: status
+in: query
+description: ''
+schema:
+  type: string
+  default: draft

@@ -835,6 +835,27 @@ paths:
     description: API to access and manipulate a content
     parameters:
       - $ref: '#/components/parameters/contentId'
+    get:
+      tags:
+        - content-controller
+      summary: Retrieve a content
+      description: Retrieve the content specified in the path from the contents collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContent
+      parameters:
+        - $ref: '#/components/parameters/contentLang'
+        - $ref: '#/components/parameters/status'
+      responses:
+        '200':
+          $ref: '#/components/responses/content'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -1344,6 +1365,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/consumer'
+    content:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/content'
     contents:
       description: OK
       content:
@@ -1629,6 +1660,13 @@ components:
       description: ''
       schema:
         type: string
+    status:
+      name: status
+      in: query
+      description: ''
+      schema:
+        type: string
+        default: draft
     text:
       name: text
       in: query

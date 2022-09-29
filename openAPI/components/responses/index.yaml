@@ -14,6 +14,8 @@ consumer:
   $ref: ./ok/consumers/consumer.yaml
 consumerObject:
   $ref: ./ok/consumers/consumerObject.yaml
+content:
+  $ref: ./ok/contents/content.yaml
 contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:
