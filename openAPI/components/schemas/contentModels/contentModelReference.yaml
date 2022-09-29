@@ -1,0 +1,10 @@
+title: Content model reference
+type: object
+properties:
+  online:
+    type: boolean
+  pageCode:
+    type: string
+  widgetPosition:
+    type: integer
+    format: int32

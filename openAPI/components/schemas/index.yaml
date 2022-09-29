@@ -14,6 +14,8 @@ content:
   $ref: ./contents/content.yaml
 contentModel:
   $ref: ./contentModels/contentModel.yaml
+contentModelReference:
+  $ref: ./contentModels/contentModelReference.yaml
 contentsStatus:
   $ref: ./contents/contentsStatus.yaml
 entityAttribute:

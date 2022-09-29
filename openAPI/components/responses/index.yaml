@@ -22,6 +22,8 @@ contentModel:
   $ref: ./ok/contentModels/contentModel.yaml
 contentModels:
   $ref: ./ok/contentModels/contentModels.yaml
+contentModelReferences:
+  $ref: ./ok/contentModels/contentModelReferences.yaml
 contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:

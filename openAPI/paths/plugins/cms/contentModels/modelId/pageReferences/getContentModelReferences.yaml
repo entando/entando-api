@@ -1,0 +1,35 @@
+tags:
+  - content-model-controller
+summary: Retrieve a content model references
+description: Retrieve the page (and widget) references for the content model specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getContentModelReferences
+parameters:
+  - $ref: ../../../../../../components/parameters/query/common/filters/allowedValues.yaml
+  - $ref: ../../../../../../components/parameters/query/common/filters/attribute.yaml
+  - $ref: ../../../../../../components/parameters/query/common/filters/entityAttr.yaml
+  - $ref: ../../../../../../components/parameters/query/common/filters/operator.yaml
+  - $ref: ../../../../../../components/parameters/query/common/filters/order.yaml
+  - $ref: ../../../../../../components/parameters/query/common/filters/type.yaml
+  - $ref: ../../../../../../components/parameters/query/common/filters/value.yaml
+  - $ref: ../../../../../../components/parameters/query/common/pagination/direction.yaml
+  - $ref: ../../../../../../components/parameters/query/common/pagination/page.yaml
+  - $ref: ../../../../../../components/parameters/query/common/pagination/pageSize.yaml
+  - $ref: ../../../../../../components/parameters/query/common/pagination/sort.yaml
+responses:
+  '200':
+    $ref: ../../../../../../components/responses/ok/contentModels/contentModelReferences.yaml
+  '400':
+    $ref: ../../../../../../components/responses/badRequest/common/empty.yaml
+  '401':
+    $ref: ../../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../../components/responses/notFound/common/empty.yaml
+  '409':
+    $ref: ../../../../../../components/responses/conflict/common/empty.yaml
+  '500':
+    $ref: ../../../../../../components/responses/serverError/common/empty.yaml
