@@ -4,3 +4,5 @@ get:
   $ref: ./getContents.yaml
 put:
   $ref: ./updateContents.yaml
+post:
+  $ref: ./addContent.yaml

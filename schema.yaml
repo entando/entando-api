@@ -745,6 +745,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - content-controller
+      summary: Add a content to the contents collection
+      description: Create a new content as specified in the request body and add it to the contents collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addContent
+      requestBody:
+        $ref: '#/components/requestBodies/content'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentsList'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -1549,6 +1571,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/consumer'
+    content:
+      description: Content
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/content'
     contentsList:
       description: Contents list
       required: true
