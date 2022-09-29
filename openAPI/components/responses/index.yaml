@@ -18,6 +18,8 @@ content:
   $ref: ./ok/contents/content.yaml
 contentMapMetadata:
   $ref: ./ok/contents/contentMapMetadata.yaml
+contentModels:
+  $ref: ./ok/contentModels/contentModels.yaml
 contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:
@@ -38,6 +40,8 @@ restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 badRequest:
   $ref: ./badRequest/common/empty.yaml
+conflict:
+  $ref: ./conflict/common/empty.yaml
 created:
   $ref: ./created/common/empty.yaml
 forbidden:
@@ -46,5 +50,7 @@ noContent:
   $ref: ./noContent/common/empty.yaml
 notFound:
   $ref: ./notFound/common/empty.yaml
+serverError:
+  $ref: ./serverError/common/empty.yaml
 unauthorized:
   $ref: ./unauthorized/common/empty.yaml

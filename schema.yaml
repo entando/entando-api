@@ -683,6 +683,42 @@ paths:
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
+    get:
+      tags:
+        - content-model-controller
+      summary: Retrieve the collection of content models
+      description: Retrieve the collection of content models filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentModels
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentModels'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1153,6 +1189,26 @@ components:
           type: string
         viewPage:
           type: string
+    contentModel:
+      title: Content model
+      required:
+        - id
+        - descr
+        - contentType
+      type: object
+      properties:
+        contentShape:
+          type: string
+        contentType:
+          type: string
+          pattern: '[A-Z]{3}'
+        descr:
+          type: string
+        id:
+          type: integer
+          format: int64
+        stylesheet:
+          type: string
     contentsStatus:
       title: Contents status
       type: object
@@ -1508,6 +1564,18 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/content'
+    contentModels:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/contentModel'
     contents:
       description: OK
       content:
@@ -1578,6 +1646,8 @@ components:
             $ref: '#/components/schemas/restResponse'
     badRequest:
       description: Bad request
+    conflict:
+      description: Conflict
     created:
       description: Created
     forbidden:
@@ -1586,6 +1656,8 @@ components:
       description: No content
     notFound:
       description: Not found
+    serverError:
+      description: Server error
     unauthorized:
       description: Unauthorized
   parameters:

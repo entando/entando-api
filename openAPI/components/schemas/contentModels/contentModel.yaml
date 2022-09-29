@@ -1,0 +1,19 @@
+title: Content model
+required:
+  - id
+  - descr
+  - contentType
+type: object
+properties:
+  contentShape:
+    type: string
+  contentType:
+    type: string
+    pattern: '[A-Z]{3}'
+  descr:
+    type: string
+  id:
+    type: integer
+    format: int64
+  stylesheet:
+    type: string

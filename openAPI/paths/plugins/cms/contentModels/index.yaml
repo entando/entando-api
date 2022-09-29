@@ -1,2 +1,4 @@
 summary: Content Models operations
 description: API to access and manipulate the collection of content models
+get:
+  $ref: ./getContentModels.yaml
