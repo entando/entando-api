@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/consumers/consumerId.yaml
 get:
   $ref: ./getConsumer.yaml
+put:
+  $ref: ./updateConsumer.yaml
