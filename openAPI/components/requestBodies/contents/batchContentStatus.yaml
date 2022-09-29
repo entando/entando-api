@@ -1,0 +1,13 @@
+description: Batch content status
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        codes:
+          type: array
+          items:
+            type: string
+        status:
+          type: string

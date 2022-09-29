@@ -18,6 +18,8 @@ contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:
   $ref: ./ok/contents/contentsList.yaml
+contentsListMapMetadata:
+  $ref: ./ok/contents/contentsListMapMetadata.yaml
 contentsStatus:
   $ref: ./ok/contents/contentsStatusObject.yaml
 modelAndViewObject_generic:

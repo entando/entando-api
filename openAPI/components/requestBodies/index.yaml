@@ -1,5 +1,7 @@
 activityStreamRecordComment:
   $ref: ./activityStreams/activityStreamRecordComment.yaml
+batchContentStatus:
+  $ref: ./contents/batchContentStatus.yaml
 category:
   $ref: ./categories/category.yaml
 consumer:

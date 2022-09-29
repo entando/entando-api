@@ -808,6 +808,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - content-controller
+      summary: Update contents status
+      description: Update the contents status collection as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateContentsStatus
+      requestBody:
+        $ref: '#/components/requestBodies/batchContentStatus'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentsListMapMetadata'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -1341,6 +1363,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/content'
+    contentsListMapMetadata:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayloadMapMetadata'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/content'
     contentsStatus:
       description: OK
       content:
@@ -1623,6 +1657,20 @@ components:
               recordId:
                 type: integer
                 format: int32
+    batchContentStatus:
+      description: Batch content status
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              codes:
+                type: array
+                items:
+                  type: string
+              status:
+                type: string
     category:
       description: Category
       required: true
