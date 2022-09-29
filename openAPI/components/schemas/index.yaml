@@ -8,6 +8,8 @@ category:
   $ref: ./categories/category.yaml
 componentUsage:
   $ref: ./common/componentUsage.yaml
+componentUsageEntity:
+  $ref: ./common/componentUsageEntity.yaml
 consumer:
   $ref: ./consumers/consumer.yaml
 content:

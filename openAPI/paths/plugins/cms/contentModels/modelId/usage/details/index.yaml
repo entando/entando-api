@@ -2,3 +2,5 @@ summary: Content model usage details operations
 description: API to access and manipulate a content model usage details
 parameters:
   - $ref: ../../../../../../../components/parameters/path/contentModels/modelId.yaml
+get:
+  $ref: ./getContentModelUsageDetails.yaml

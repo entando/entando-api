@@ -1,0 +1,9 @@
+title: Component usage entity
+type: object
+properties:
+  code:
+    type: string
+  status:
+    type: string
+  type:
+    type: string

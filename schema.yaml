@@ -932,6 +932,42 @@ paths:
     description: API to access and manipulate a content model usage details
     parameters:
       - $ref: '#/components/parameters/modelId'
+    get:
+      tags:
+        - content-model-controller
+      summary: Retrieve a content model usage details
+      description: Retrieve the usage details for the content model specified in the path filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentModelUsageDetails
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/componentUsageEntities'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1322,6 +1358,16 @@ components:
         usage:
           type: integer
           format: int32
+    componentUsageEntity:
+      title: Component usage entity
+      type: object
+      properties:
+        code:
+          type: string
+        status:
+          type: string
+        type:
+          type: string
     consumer:
       title: Consumer
       type: object
@@ -1758,6 +1804,18 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/componentUsage'
+    componentUsageEntities:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/componentUsageEntity'
     consumer:
       description: OK
       content:
