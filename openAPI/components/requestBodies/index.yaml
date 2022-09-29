@@ -8,6 +8,8 @@ consumer:
   $ref: ./consumers/consumer.yaml
 content:
   $ref: ./contents/content.yaml
+contentModel:
+  $ref: ./contentModels/contentModel.yaml
 contentStatus:
   $ref: ./contents/contentStatus.yaml
 contentsCodes:

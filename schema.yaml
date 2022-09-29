@@ -719,6 +719,34 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+    post:
+      tags:
+        - content-model-controller
+      summary: Add a content model to the content models collection
+      description: Create a new content model as specified in the request body and add it to the content models collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addContentModel
+      requestBody:
+        $ref: '#/components/requestBodies/contentModel'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentModel'
+        '201':
+          $ref: '#/components/responses/created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1564,6 +1592,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/content'
+    contentModel:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/contentModel'
     contentModels:
       description: OK
       content:
@@ -1961,6 +1999,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/content'
+    contentModel:
+      description: Content model
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/contentModel'
     contentStatus:
       description: Content status
       required: true

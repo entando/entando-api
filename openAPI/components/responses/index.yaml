@@ -18,6 +18,8 @@ content:
   $ref: ./ok/contents/content.yaml
 contentMapMetadata:
   $ref: ./ok/contents/contentMapMetadata.yaml
+contentModel:
+  $ref: ./ok/contentModels/contentModel.yaml
 contentModels:
   $ref: ./ok/contentModels/contentModels.yaml
 contents:

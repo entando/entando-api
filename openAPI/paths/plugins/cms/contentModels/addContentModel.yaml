@@ -1,0 +1,27 @@
+tags:
+  - content-model-controller
+summary: Add a content model to the content models collection
+description: Create a new content model as specified in the request body and add it to the content models collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: addContentModel
+requestBody:
+  $ref: ../../../../components/requestBodies/contentModels/contentModel.yaml
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/contentModels/contentModel.yaml
+  '201':
+    $ref: ../../../../components/responses/created/common/empty.yaml
+  '400':
+    $ref: ../../../../components/responses/badRequest/common/empty.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml
+  '409':
+    $ref: ../../../../components/responses/conflict/common/empty.yaml
+  '500':
+    $ref: ../../../../components/responses/serverError/common/empty.yaml

@@ -1,0 +1,6 @@
+description: Content model
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/contentModels/contentModel.yaml
