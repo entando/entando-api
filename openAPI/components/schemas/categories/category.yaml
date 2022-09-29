@@ -1,0 +1,23 @@
+title: Category
+type: object
+properties:
+  children:
+    type: array
+    items:
+      type: string
+  code:
+    type: string
+  fullTitles:
+    type: object
+    additionalProperties:
+      type: string
+  parentCode:
+    type: string
+  references:
+    type: object
+    additionalProperties:
+      type: boolean
+  titles:
+    type: object
+    additionalProperties:
+      type: string

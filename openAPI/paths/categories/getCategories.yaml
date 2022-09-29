@@ -1,0 +1,19 @@
+tags:
+  - category-controller
+summary: Retrieve the collection of categories
+description: Retrieve the collection of categories filtered by parent code
+externalDocs:
+  description: ''
+  url: https://
+operationId: getCategories
+parameters:
+  - $ref: ../../components/parameters/query/categories/parentCode.yaml
+responses:
+  '200':
+    $ref: ../../components/responses/ok/categories/categoriesListMapMetadata.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml

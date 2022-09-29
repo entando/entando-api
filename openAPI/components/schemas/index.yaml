@@ -4,6 +4,8 @@ activityStreamCommentInfo:
   $ref: ./activityStream/commentInfo.yaml
 activityStreamLikeInfo:
   $ref: ./activityStream/likeInfo.yaml
+category:
+  $ref: ./categories/category.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 modelAndView:

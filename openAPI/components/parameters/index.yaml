@@ -6,6 +6,8 @@ allowedValues:
   $ref: ./query/common/filters/allowedValues.yaml
 attribute:
   $ref: ./query/common/filters/attribute.yaml
+categoriesParentCode:
+  $ref: ./query/categories/parentCode.yaml
 complete:
   $ref: ./query/authorizations/complete.yaml
 direction:

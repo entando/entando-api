@@ -4,6 +4,8 @@ activityStreamRecord:
   $ref: ./ok/activityStream/activityStreamRecord.yaml
 modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
+categoriesListMapMetadata:
+  $ref: ./ok/categories/categoriesListMapMetadata.yaml
 restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 created:

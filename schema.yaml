@@ -195,6 +195,26 @@ paths:
   /categories:
     summary: Categories operations
     description: API to access and manipulate the collection of categories
+    get:
+      tags:
+        - category-controller
+      summary: Retrieve the collection of categories
+      description: Retrieve the collection of categories filtered by parent code
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getCategories
+      parameters:
+        - $ref: '#/components/parameters/categoriesParentCode'
+      responses:
+        '200':
+          $ref: '#/components/responses/categoriesListMapMetadata'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -427,6 +447,30 @@ components:
           type: string
         username:
           type: string
+    category:
+      title: Category
+      type: object
+      properties:
+        children:
+          type: array
+          items:
+            type: string
+        code:
+          type: string
+        fullTitles:
+          type: object
+          additionalProperties:
+            type: string
+        parentCode:
+          type: string
+        references:
+          type: object
+          additionalProperties:
+            type: boolean
+        titles:
+          type: object
+          additionalProperties:
+            type: string
     filter:
       title: Filter
       type: object
@@ -665,6 +709,18 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/modelAndView'
+    categoriesListMapMetadata:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayloadMapMetadata'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/category'
     restResponse:
       description: OK
       content:
@@ -714,6 +770,13 @@ components:
       description: ''
       schema:
         type: string
+    categoriesParentCode:
+      name: parentCode
+      in: query
+      description: ''
+      schema:
+        type: string
+        default: home
     complete:
       name: complete
       in: query
