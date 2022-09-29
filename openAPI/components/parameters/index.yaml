@@ -6,6 +6,8 @@ allowedValues:
   $ref: ./query/common/filters/allowedValues.yaml
 attribute:
   $ref: ./query/common/filters/attribute.yaml
+categories:
+  $ref: ./query/contents/categories.yaml
 categoriesParentCode:
   $ref: ./query/categories/parentCode.yaml
 categoryId:
@@ -16,16 +18,30 @@ complete:
   $ref: ./query/authorizations/complete.yaml
 consumerId:
   $ref: ./path/consumers/consumerId.yaml
+contentLang:
+  $ref: ./query/contents/lang.yaml
+contentModel:
+  $ref: ./query/contents/model.yaml
+contentStatus:
+  $ref: ./query/contents/status.yaml
 direction:
   $ref: ./query/common/pagination/direction.yaml
 entityAttr:
   $ref: ./query/common/filters/entityAttr.yaml
+forLinkingWithExtraGroups:
+  $ref: ./query/common/forLinkingWithExtraGroups.yaml
+forLinkingWithOwnerGroup:
+  $ref: ./query/common/forLinkingWithOwnerGroup.yaml
+mode:
+  $ref: ./query/contents/mode.yaml
 model:
   $ref: ./query/authorizations/model.yaml
 name:
   $ref: ./query/authorizations/name.yaml
 operator:
   $ref: ./query/common/filters/operator.yaml
+orClauseCategoryFilter:
+  $ref: ./query/contents/orClauseCategoryFilter.yaml
 order:
   $ref: ./query/common/filters/order.yaml
 page:
@@ -34,8 +50,12 @@ pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
 parameters:
   $ref: ./query/authorizations/parameters.yaml
+resolveLink:
+  $ref: ./query/contents/resolveLink.yaml
 sort:
   $ref: ./query/common/pagination/sort.yaml
+text:
+  $ref: ./query/contents/text.yaml
 token:
   $ref: ./query/checkToken/token.yaml
 type:

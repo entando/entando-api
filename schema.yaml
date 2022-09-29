@@ -683,6 +683,46 @@ paths:
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
+    get:
+      tags:
+        - content-controller
+      summary: Retrieve the collection of contents
+      description: Retrieve the collection of contents filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContents
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/forLinkingWithExtraGroups'
+        - $ref: '#/components/parameters/forLinkingWithOwnerGroup'
+        - $ref: '#/components/parameters/mode'
+        - $ref: '#/components/parameters/categories'
+        - $ref: '#/components/parameters/contentLang'
+        - $ref: '#/components/parameters/contentModel'
+        - $ref: '#/components/parameters/orClauseCategoryFilter'
+        - $ref: '#/components/parameters/resolveLink'
+        - $ref: '#/components/parameters/contentStatus'
+        - $ref: '#/components/parameters/text'
+      responses:
+        '200':
+          $ref: '#/components/responses/contents'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -801,6 +841,88 @@ components:
           type: string
         secret:
           type: string
+    content:
+      title: Content
+      type: object
+      properties:
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/entityAttribute'
+        categories:
+          type: array
+          items:
+            type: string
+        created:
+          type: string
+          format: date-time
+        defaultModel:
+          type: string
+        description:
+          type: string
+        firstEditor:
+          type: string
+        groups:
+          type: array
+          items:
+            type: string
+        html:
+          type: string
+        id:
+          type: string
+        lastEditor:
+          type: string
+        lastModified:
+          type: string
+          format: date-time
+        listModel:
+          type: string
+        mainGroup:
+          type: string
+        onLine:
+          type: boolean
+        references:
+          type: object
+          additionalProperties:
+            type: boolean
+        restriction:
+          type: string
+        status:
+          type: string
+        typeCode:
+          type: string
+        typeDescription:
+          type: string
+        version:
+          type: string
+        viewPage:
+          type: string
+    entityAttribute:
+      title: Entity attribute
+      type: object
+      properties:
+        code:
+          type: string
+        compositeelements:
+          type: array
+          items:
+            $ref: '#/components/schemas/entityAttribute'
+        elements:
+          type: array
+          items:
+            $ref: '#/components/schemas/entityAttribute'
+        listelements:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              $ref: '#/components/schemas/entityAttribute'
+        value:
+          type: object
+          properties: {}
+        values:
+          type: object
+          properties: {}
     filter:
       title: Filter
       type: object
@@ -1091,6 +1213,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/consumer'
+    contents:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/content'
     modelAndViewObject_generic:
       description: OK
       content:
@@ -1162,6 +1296,16 @@ components:
       description: ''
       schema:
         type: string
+    categories:
+      name: categories
+      in: query
+      description: ''
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
+          type: string
     categoriesParentCode:
       name: parentCode
       in: query
@@ -1196,6 +1340,24 @@ components:
       required: true
       schema:
         type: string
+    contentLang:
+      name: lang
+      in: query
+      description: ''
+      schema:
+        type: string
+    contentModel:
+      name: model
+      in: query
+      description: ''
+      schema:
+        type: string
+    contentStatus:
+      name: status
+      in: query
+      description: ''
+      schema:
+        type: string
     direction:
       name: direction
       in: query
@@ -1208,6 +1370,35 @@ components:
       description: ''
       schema:
         type: string
+    forLinkingWithExtraGroups:
+      name: forLinkingWithExtraGroups
+      in: query
+      description: ''
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
+          type: string
+    forLinkingWithOwnerGroup:
+      name: forLinkingWithOwnerGroup
+      in: query
+      description: ''
+      schema:
+        type: string
+    mode:
+      name: mode
+      in: query
+      description: |
+        Two value allowed:
+          * list: light version
+          * full: brings extra data in the content
+      schema:
+        type: string
+        default: full
+        enum:
+          - list
+          - full
     model:
       name: model
       in: query
@@ -1226,6 +1417,12 @@ components:
       description: ''
       schema:
         type: string
+    orClauseCategoryFilter:
+      name: orClauseCategoryFilter
+      in: query
+      description: ''
+      schema:
+        type: boolean
     order:
       name: 'filters[0].order'
       in: query
@@ -1252,8 +1449,20 @@ components:
       description: ''
       required: true
       schema: {}
+    resolveLink:
+      name: resolveLink
+      in: query
+      description: ''
+      schema:
+        type: boolean
     sort:
       name: sort
+      in: query
+      description: ''
+      schema:
+        type: string
+    text:
+      name: text
       in: query
       description: ''
       schema:

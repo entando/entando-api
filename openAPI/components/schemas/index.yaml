@@ -10,6 +10,10 @@ componentUsage:
   $ref: ./common/componentUsage.yaml
 consumer:
   $ref: ./consumers/consumer.yaml
+content:
+  $ref: ./contents/content.yaml
+entityAttribute:
+  $ref: ./common/entityAttribute.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 modelAndView:

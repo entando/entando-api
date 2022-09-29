@@ -1,0 +1,9 @@
+name: categories
+in: query
+description: ''
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: string

@@ -1,0 +1,5 @@
+name: lang
+in: query
+description: ''
+schema:
+  type: string

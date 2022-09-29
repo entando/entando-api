@@ -1,0 +1,5 @@
+name: orClauseCategoryFilter
+in: query
+description: ''
+schema:
+  type: boolean

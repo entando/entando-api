@@ -1,0 +1,5 @@
+name: forLinkingWithOwnerGroup
+in: query
+description: ''
+schema:
+  type: string

@@ -1,0 +1,25 @@
+title: Entity attribute
+type: object
+properties:
+  code:
+    type: string
+  compositeelements:
+    type: array
+    items:
+      $ref: ./entityAttribute.yaml
+  elements:
+    type: array
+    items:
+      $ref: ./entityAttribute.yaml
+  listelements:
+    type: object
+    additionalProperties:
+      type: array
+      items:
+        $ref: ./entityAttribute.yaml
+  value:
+    type: object
+    properties: { }
+  values:
+    type: object
+    properties: { }

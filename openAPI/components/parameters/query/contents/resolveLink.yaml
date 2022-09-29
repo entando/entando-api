@@ -1,0 +1,5 @@
+name: resolveLink
+in: query
+description: ''
+schema:
+  type: boolean

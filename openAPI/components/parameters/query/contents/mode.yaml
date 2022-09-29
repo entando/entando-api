@@ -1,0 +1,12 @@
+name: mode
+in: query
+description: |
+  Two value allowed:
+    * list: light version
+    * full: brings extra data in the content
+schema:
+    type: string
+    default: full
+    enum:
+      - list
+      - full

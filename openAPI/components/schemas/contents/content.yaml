@@ -1,0 +1,55 @@
+title: Content
+type: object
+properties:
+  attributes:
+    type: array
+    items:
+      $ref: ../common/entityAttribute.yaml
+  categories:
+    type: array
+    items:
+      type: string
+  created:
+    type: string
+    format: date-time
+  defaultModel:
+    type: string
+  description:
+    type: string
+  firstEditor:
+    type: string
+  groups:
+    type: array
+    items:
+      type: string
+  html:
+    type: string
+  id:
+    type: string
+  lastEditor:
+    type: string
+  lastModified:
+    type: string
+    format: date-time
+  listModel:
+    type: string
+  mainGroup:
+    type: string
+  onLine:
+    type: boolean
+  references:
+    type: object
+    additionalProperties:
+      type: boolean
+  restriction:
+    type: string
+  status:
+    type: string
+  typeCode:
+    type: string
+  typeDescription:
+    type: string
+  version:
+    type: string
+  viewPage:
+    type: string

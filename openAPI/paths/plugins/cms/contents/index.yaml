@@ -1,2 +1,4 @@
 summary: Contents operations
 description: API to access and manipulate the collection of contents
+get:
+  $ref: ./getContents.yaml
