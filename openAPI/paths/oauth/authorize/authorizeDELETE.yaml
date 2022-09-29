@@ -1,0 +1,23 @@
+tags:
+  - authorization-endpoint
+summary: Authorize
+description: Authorize via DELETE
+externalDocs:
+  description: ''
+  url: https://
+operationId: authorizeDELETE
+deprecated: true
+parameters:
+  - $ref: ../../../components/parameters/query/authorizations/complete.yaml
+  - $ref: ../../../components/parameters/query/authorizations/name.yaml
+  - $ref: ../../../components/parameters/query/authorizations/model.yaml
+  - $ref: ../../../components/parameters/query/authorizations/parameters.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/authorizations/modelAndViewObject_generic.yaml
+  '204':
+    $ref: ../../../components/responses/noContent/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml

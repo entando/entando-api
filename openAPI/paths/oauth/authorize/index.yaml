@@ -6,3 +6,5 @@ put:
   $ref: ./authorizePUT.yaml
 post:
   $ref: ./authorizePOST.yaml
+delete:
+  $ref: ./authorizeDELETE.yaml
