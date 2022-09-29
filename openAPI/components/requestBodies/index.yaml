@@ -1,1 +1,2 @@
-{ }
+activityStreamRecordComment:
+  $ref: ./activityStreams/activityStreamRecordComment.yaml

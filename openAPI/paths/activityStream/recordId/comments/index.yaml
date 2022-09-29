@@ -2,3 +2,5 @@ summary: Activity stream record's comments collection operations
 description: End-point to access and manipulate the activity stream record's comments collection
 parameters:
   - $ref: ../../../../components/parameters/path/activityStream/recordId.yaml
+post:
+  $ref: ./addComment.yaml

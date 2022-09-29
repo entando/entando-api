@@ -1,0 +1,21 @@
+tags:
+  - activity-stream-controller
+summary: Add a comment to an activity stream record
+description: Add the comment to the activity stream record specified in the path as described in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: addComment
+requestBody:
+  $ref: ../../../../components/requestBodies/activityStreams/activityStreamRecordComment.yaml
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/activityStream/activityStreamRecord.yaml
+  '201':
+    $ref: ../../../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml

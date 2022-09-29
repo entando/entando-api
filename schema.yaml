@@ -53,6 +53,28 @@ paths:
     description: End-point to access and manipulate the activity stream record's comments collection
     parameters:
       - $ref: '#/components/parameters/activityStreamRecordId'
+    post:
+      tags:
+        - activity-stream-controller
+      summary: Add a comment to an activity stream record
+      description: Add the comment to the activity stream record specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addComment
+      requestBody:
+        $ref: '#/components/requestBodies/activityStreamRecordComment'
+      responses:
+        '200':
+          $ref: '#/components/responses/activityStreamRecord'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -235,6 +257,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/activityStreamRecord'
+    activityStreamRecord:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/activityStreamRecord'
+    created:
+      description: Created
     forbidden:
       description: Forbidden
     notFound:
@@ -323,7 +357,20 @@ components:
       schema:
         type: string
   examples: {}
-  requestBodies: {}
+  requestBodies:
+    activityStreamRecordComment:
+      description: Activity stream record comment
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              comment:
+                type: string
+              recordId:
+                type: integer
+                format: int32
   headers: {}
   securitySchemes:
     entando:

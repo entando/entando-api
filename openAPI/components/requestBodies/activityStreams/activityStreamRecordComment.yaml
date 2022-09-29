@@ -1,0 +1,12 @@
+description: Activity stream record comment
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        comment:
+          type: string
+        recordId:
+          type: integer
+          format: int32
