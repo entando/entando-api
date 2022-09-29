@@ -12,6 +12,8 @@ modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
 ok:
   $ref: ./ok/common/empty.yaml
+pagedRestResponse:
+  $ref: ./ok/restResponse/pagedRestResponse.yaml
 restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 created:
