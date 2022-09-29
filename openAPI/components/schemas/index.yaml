@@ -12,6 +12,8 @@ consumer:
   $ref: ./consumers/consumer.yaml
 content:
   $ref: ./contents/content.yaml
+contentsStatus:
+  $ref: ./contents/contentsStatus.yaml
 entityAttribute:
   $ref: ./common/entityAttribute.yaml
 filter:

@@ -18,6 +18,8 @@ contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:
   $ref: ./ok/contents/contentsList.yaml
+contentsStatus:
+  $ref: ./ok/contents/contentsStatusObject.yaml
 modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
 objectObject_generic:

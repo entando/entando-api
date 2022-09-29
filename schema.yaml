@@ -790,6 +790,24 @@ paths:
   /plugins/cms/contents/status:
     summary: Contents status
     description: API to access and manipulate the collection of contents status
+    get:
+      tags:
+        - content-controller
+      summary: Retrieve the collection of contents status
+      description: Retrieve the collection of contents status
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentsStatus
+      responses:
+        '200':
+          $ref: '#/components/responses/contentsStatus'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -964,6 +982,25 @@ components:
           type: string
         viewPage:
           type: string
+    contentsStatus:
+      title: Contents status
+      type: object
+      properties:
+        latestModificationDate:
+          type: string
+          format: date-time
+        published:
+          type: integer
+          format: int32
+        ready:
+          type: integer
+          format: int32
+        total:
+          type: integer
+          format: int32
+        unpublished:
+          type: integer
+          format: int32
     entityAttribute:
       title: Entity attribute
       type: object
@@ -1304,6 +1341,12 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/content'
+    contentsStatus:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/contentsStatus'
     modelAndViewObject_generic:
       description: OK
       content:

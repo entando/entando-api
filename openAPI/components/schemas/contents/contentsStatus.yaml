@@ -1,0 +1,18 @@
+title: Contents status
+type: object
+properties:
+  latestModificationDate:
+    type: string
+    format: date-time
+  published:
+    type: integer
+    format: int32
+  ready:
+    type: integer
+    format: int32
+  total:
+    type: integer
+    format: int32
+  unpublished:
+    type: integer
+    format: int32
