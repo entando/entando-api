@@ -34,6 +34,8 @@ parameters:
   $ref: ./query/authorizations/parameters.yaml
 sort:
   $ref: ./query/common/pagination/sort.yaml
+token:
+  $ref: ./query/checkToken/token.yaml
 type:
   $ref: ./query/common/filters/type.yaml
 value:

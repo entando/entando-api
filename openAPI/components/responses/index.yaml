@@ -12,6 +12,8 @@ componentUsage:
   $ref: ./ok/common/componentUsage.yaml
 modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
+objectObject_generic:
+  $ref: ./ok/common/objectObject_generic.yaml
 ok:
   $ref: ./ok/common/empty.yaml
 pagedRestResponse:

@@ -1,2 +1,4 @@
 summary: Check token operations
 description: API to handle token checks
+post:
+  $ref: ./checkToken.yaml
