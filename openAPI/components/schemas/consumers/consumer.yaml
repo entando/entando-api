@@ -1,0 +1,23 @@
+title: Consumer
+type: object
+properties:
+  authorizedGrantTypes:
+    type: array
+    items:
+      type: string
+  callbackUrl:
+    type: string
+  description:
+    type: string
+  expirationDate:
+    type: string
+  issuedDate:
+    type: string
+  key:
+    type: string
+  name:
+    type: string
+  scope:
+    type: string
+  secret:
+    type: string
