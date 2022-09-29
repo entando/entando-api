@@ -878,6 +878,24 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - content-controller
+      summary: Delete a content
+      description: Delete the content specified in the path from the contents collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteContent
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
 components:
   schemas:
     activityStreamRecord:
