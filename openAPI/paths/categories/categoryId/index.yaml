@@ -6,3 +6,5 @@ get:
   $ref: ./getCategory.yaml
 put:
   $ref: ./updateCategory.yaml
+delete:
+  $ref: ./deleteCategory.yaml

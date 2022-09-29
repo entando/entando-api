@@ -282,6 +282,24 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - category-controller
+      summary: Delete a category
+      description: Delete the category specified in the path from the categories collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteCategory
+      responses:
+        '200':
+          $ref: '#/components/responses/ok'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -808,6 +826,8 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/modelAndView'
+    ok:
+      description: OK
     restResponse:
       description: OK
       content:
