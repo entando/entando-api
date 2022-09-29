@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../../components/parameters/path/contentModels/modelId.yaml
 get:
   $ref: ./getContentModel.yaml
+put:
+  $ref: ./updateContentModel.yaml
