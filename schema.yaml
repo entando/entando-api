@@ -723,6 +723,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - content-controller
+      summary: Update contents
+      description: Update the contents collection as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateContents
+      requestBody:
+        $ref: '#/components/requestBodies/contentsList'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentsList'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -1225,6 +1247,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/content'
+    contentsList:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/content'
     modelAndViewObject_generic:
       description: OK
       content:
@@ -1515,6 +1549,15 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/consumer'
+    contentsList:
+      description: Contents list
+      required: true
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/content'
     idCodesByObjectType:
       description: ID codes by object type
       required: true

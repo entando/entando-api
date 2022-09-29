@@ -4,5 +4,7 @@ category:
   $ref: ./categories/category.yaml
 consumer:
   $ref: ./consumers/consumer.yaml
+contentsList:
+  $ref: ./contents/contentsList.yaml
 idCodesByObjectType:
   $ref: ./analysis/idCodesByObjectType.yaml

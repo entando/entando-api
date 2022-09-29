@@ -16,6 +16,8 @@ consumerObject:
   $ref: ./ok/consumers/consumerObject.yaml
 contents:
   $ref: ./ok/contents/contents.yaml
+contentsList:
+  $ref: ./ok/contents/contentsList.yaml
 modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
 objectObject_generic:
