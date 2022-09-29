@@ -6,6 +6,8 @@ activityStreamLikeInfo:
   $ref: ./activityStream/likeInfo.yaml
 category:
   $ref: ./categories/category.yaml
+componentUsage:
+  $ref: ./common/componentUsage.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 modelAndView:

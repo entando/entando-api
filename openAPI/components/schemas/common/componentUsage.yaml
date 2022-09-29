@@ -1,0 +1,12 @@
+title: Component usage
+type: object
+properties:
+  code:
+    type: string
+  status:
+    type: string
+  type:
+    type: string
+  usage:
+    type: integer
+    format: int32

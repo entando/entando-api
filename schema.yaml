@@ -341,6 +341,26 @@ paths:
     description: API to access and manipulate a category usage
     parameters:
       - $ref: '#/components/parameters/categoryId'
+    get:
+      tags:
+        - category-controller
+      summary: Retrieve the category usage
+      description: Retrieve the usage of the category specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getCategoryUsage
+      responses:
+        '200':
+          $ref: '#/components/responses/componentUsage'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -597,6 +617,19 @@ components:
           type: object
           additionalProperties:
             type: string
+    componentUsage:
+      title: Component usage
+      type: object
+      properties:
+        code:
+          type: string
+        status:
+          type: string
+        type:
+          type: string
+        usage:
+          type: integer
+          format: int32
     filter:
       title: Filter
       type: object
@@ -861,6 +894,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/category'
+    componentUsage:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/componentUsage'
     modelAndViewObject_generic:
       description: OK
       content:
@@ -881,6 +924,8 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/restResponse'
+    badRequest:
+      description: Bad request
     created:
       description: Created
     forbidden:
