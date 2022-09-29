@@ -260,6 +260,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - category-controller
+      summary: Update a category
+      description: Update the category specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateCategory
+      requestBody:
+        $ref: '#/components/requestBodies/category'
+      responses:
+        '200':
+          $ref: '#/components/responses/categoryMapMetadata'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -767,6 +789,16 @@ components:
           schema:
             allOf:
               - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/category'
+    categoryMapMetadata:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseMapMetadata'
               - properties:
                   payload:
                     $ref: '#/components/schemas/category'

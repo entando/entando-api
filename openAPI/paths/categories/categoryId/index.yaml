@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/categories/categoryId.yaml
 get:
   $ref: ./getCategory.yaml
+put:
+  $ref: ./updateCategory.yaml
