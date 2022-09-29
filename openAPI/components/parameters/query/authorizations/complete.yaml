@@ -1,0 +1,5 @@
+name: complete
+in: query
+description: ''
+schema:
+  type: boolean

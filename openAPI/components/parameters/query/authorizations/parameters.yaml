@@ -1,0 +1,5 @@
+name: parameters
+in: query
+description: ''
+required: true
+schema: { }

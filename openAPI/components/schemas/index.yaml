@@ -6,6 +6,8 @@ activityStreamLikeInfo:
   $ref: ./activityStream/likeInfo.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
+modelAndView:
+  $ref: ./authorizations/modelAndView.yaml
 pagedRestResponse:
   $ref: ./restResponse/pagedRestResponse/pagedRestResponse.yaml
 paginationMetadata:
@@ -22,3 +24,5 @@ restResponseMapMetadata:
   $ref: ./restResponse/restResponseMapMetadata.yaml
 restResponseMapPayload:
   $ref: ./restResponse/restResponseMapPayload.yaml
+view:
+  $ref: ./authorizations/view.yaml

@@ -6,10 +6,16 @@ allowedValues:
   $ref: ./query/common/filters/allowedValues.yaml
 attribute:
   $ref: ./query/common/filters/attribute.yaml
+complete:
+  $ref: ./query/authorizations/complete.yaml
 direction:
   $ref: ./query/common/pagination/direction.yaml
 entityAttr:
   $ref: ./query/common/filters/entityAttr.yaml
+model:
+  $ref: ./query/authorizations/model.yaml
+name:
+  $ref: ./query/authorizations/name.yaml
 operator:
   $ref: ./query/common/filters/operator.yaml
 order:
@@ -18,6 +24,8 @@ page:
   $ref: ./query/common/pagination/page.yaml
 pageSize:
   $ref: ./query/common/pagination/pageSize.yaml
+parameters:
+  $ref: ./query/authorizations/parameters.yaml
 sort:
   $ref: ./query/common/pagination/sort.yaml
 type:

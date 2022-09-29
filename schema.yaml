@@ -195,6 +195,30 @@ paths:
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
+    get:
+      tags:
+        - authorization-endpoint
+      summary: Authorize
+      description: Authorize via GET
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: authorizeGET
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/complete'
+        - $ref: '#/components/parameters/name'
+        - $ref: '#/components/parameters/model'
+        - $ref: '#/components/parameters/parameters'
+      responses:
+        '200':
+          $ref: '#/components/responses/modelAndViewObject_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -272,6 +296,97 @@ components:
           type: array
           items:
             type: string
+    modelAndView:
+      title: Model and view
+      type: object
+      properties:
+        empty:
+          type: boolean
+        model:
+          type: object
+          properties: {}
+        modelMap:
+          type: object
+          additionalProperties:
+            type: object
+            properties: {}
+        reference:
+          type: boolean
+        status:
+          type: string
+          enum:
+            - CONTINUE
+            - SWITCHING_PROTOCOLS
+            - PROCESSING
+            - CHECKPOINT
+            - OK
+            - CREATED
+            - ACCEPTED
+            - NON_AUTHORITATIVE_INFORMATION
+            - NO_CONTENT
+            - RESET_CONTENT
+            - PARTIAL_CONTENT
+            - MULTI_STATUS
+            - ALREADY_REPORTED
+            - IM_USED
+            - MULTIPLE_CHOICES
+            - MOVED_PERMANENTLY
+            - FOUND
+            - MOVED_TEMPORARILY
+            - SEE_OTHER
+            - NOT_MODIFIED
+            - USE_PROXY
+            - TEMPORARY_REDIRECT
+            - PERMANENT_REDIRECT
+            - BAD_REQUEST
+            - UNAUTHORIZED
+            - PAYMENT_REQUIRED
+            - FORBIDDEN
+            - NOT_FOUND
+            - METHOD_NOT_ALLOWED
+            - NOT_ACCEPTABLE
+            - PROXY_AUTHENTICATION_REQUIRED
+            - REQUEST_TIMEOUT
+            - CONFLICT
+            - GONE
+            - LENGTH_REQUIRED
+            - PRECONDITION_FAILED
+            - PAYLOAD_TOO_LARGE
+            - REQUEST_ENTITY_TOO_LARGE
+            - URI_TOO_LONG
+            - REQUEST_URI_TOO_LONG
+            - UNSUPPORTED_MEDIA_TYPE
+            - REQUESTED_RANGE_NOT_SATISFIABLE
+            - EXPECTATION_FAILED
+            - I_AM_A_TEAPOT
+            - INSUFFICIENT_SPACE_ON_RESOURCE
+            - METHOD_FAILURE
+            - DESTINATION_LOCKED
+            - UNPROCESSABLE_ENTITY
+            - LOCKED
+            - FAILED_DEPENDENCY
+            - TOO_EARLY
+            - UPGRADE_REQUIRED
+            - PRECONDITION_REQUIRED
+            - TOO_MANY_REQUESTS
+            - REQUEST_HEADER_FIELDS_TOO_LARGE
+            - UNAVAILABLE_FOR_LEGAL_REASONS
+            - INTERNAL_SERVER_ERROR
+            - NOT_IMPLEMENTED
+            - BAD_GATEWAY
+            - SERVICE_UNAVAILABLE
+            - GATEWAY_TIMEOUT
+            - HTTP_VERSION_NOT_SUPPORTED
+            - VARIANT_ALSO_NEGOTIATES
+            - INSUFFICIENT_STORAGE
+            - LOOP_DETECTED
+            - BANDWIDTH_LIMIT_EXCEEDED
+            - NOT_EXTENDED
+            - NETWORK_AUTHENTICATION_REQUIRED
+        view:
+          $ref: '#/components/schemas/view'
+        viewName:
+          type: string
     pagedRestResponse:
       title: Paged REST response
       type: object
@@ -364,6 +479,12 @@ components:
               type: object
               additionalProperties:
                 type: string
+    view:
+      title: View
+      type: object
+      properties:
+        contentType:
+          type: string
   responses:
     activityStream:
       description: OK
@@ -387,6 +508,12 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/activityStreamRecord'
+    modelAndViewObject_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/modelAndView'
     restResponse:
       description: OK
       content:
@@ -436,6 +563,12 @@ components:
       description: ''
       schema:
         type: string
+    complete:
+      name: complete
+      in: query
+      description: ''
+      schema:
+        type: boolean
     direction:
       name: direction
       in: query
@@ -444,6 +577,18 @@ components:
         type: string
     entityAttr:
       name: 'filters[0].entityAttr'
+      in: query
+      description: ''
+      schema:
+        type: string
+    model:
+      name: model
+      in: query
+      description: ''
+      schema:
+        type: object
+    name:
+      name: name
       in: query
       description: ''
       schema:
@@ -474,6 +619,12 @@ components:
       schema:
         type: integer
         format: int32
+    parameters:
+      name: parameters
+      in: query
+      description: ''
+      required: true
+      schema: {}
     sort:
       name: sort
       in: query
