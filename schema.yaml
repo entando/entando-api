@@ -833,6 +833,30 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+    delete:
+      tags:
+        - content-model-controller
+      summary: Delete a content model
+      description: Delete the content model specified in the path from the content models collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteContentModel
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1784,6 +1808,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/restResponse'
+    restResponseMapPayload:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restResponseMapPayload'
     badRequest:
       description: Bad request
     conflict:

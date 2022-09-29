@@ -42,6 +42,8 @@ pagedRestResponse:
   $ref: ./ok/restResponse/pagedRestResponse.yaml
 restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
+restResponseMapPayload:
+  $ref: ./ok/restResponse/restResponseMapPayload.yaml
 badRequest:
   $ref: ./badRequest/common/empty.yaml
 conflict:

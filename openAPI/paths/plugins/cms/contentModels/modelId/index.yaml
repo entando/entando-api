@@ -6,3 +6,5 @@ get:
   $ref: ./getContentModel.yaml
 put:
   $ref: ./updateContentModel.yaml
+delete:
+  $ref: ./deleteContentModel.yaml
