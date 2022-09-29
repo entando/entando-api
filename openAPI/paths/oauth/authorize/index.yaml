@@ -2,3 +2,5 @@ summary: Authorization operations
 description: API to handle authorizations
 get:
   $ref: ./authorizeGET.yaml
+put:
+  $ref: ./authorizePUT.yaml

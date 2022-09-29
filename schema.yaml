@@ -219,6 +219,32 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - authorization-endpoint
+      summary: Authorize
+      description: Authorize via PUT
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: authorizePUT
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/complete'
+        - $ref: '#/components/parameters/name'
+        - $ref: '#/components/parameters/model'
+        - $ref: '#/components/parameters/parameters'
+      responses:
+        '200':
+          $ref: '#/components/responses/modelAndViewObject_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
