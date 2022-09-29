@@ -2,6 +2,8 @@ activityStream:
   $ref: ./ok/activityStream/activityStream.yaml
 activityStreamRecord:
   $ref: ./ok/activityStream/activityStreamRecord.yaml
+restResponse:
+  $ref: ./ok/restResponse/restResponse.yaml
 created:
   $ref: ./created/common/empty.yaml
 forbidden:

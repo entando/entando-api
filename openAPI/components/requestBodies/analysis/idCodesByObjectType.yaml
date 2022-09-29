@@ -1,0 +1,8 @@
+description: ID codes by object type
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      additionalProperties:
+        type: object

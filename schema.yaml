@@ -145,6 +145,28 @@ paths:
   /analysis/components/diff:
     summary: Components analysis operations
     description: API to perform analysis on components
+    post:
+      tags:
+        - analysis-controller
+      summary: Run the component existence analysis
+      description: Perform the analysis on the existnce of the components
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: runComponentExistenceAnalysis
+      requestBody:
+        $ref: '#/components/requestBodies/idCodesByObjectType'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -337,6 +359,12 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/activityStreamRecord'
+    restResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restResponse'
     created:
       description: Created
     forbidden:
@@ -451,6 +479,15 @@ components:
               recordId:
                 type: integer
                 format: int32
+    idCodesByObjectType:
+      description: ID codes by object type
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties:
+              type: object
   headers: {}
   securitySchemes:
     entando:

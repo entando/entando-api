@@ -1,2 +1,4 @@
 summary: Components analysis operations
 description: API to perform analysis on components
+post:
+  $ref: ./runComponentExistenceAnalysis.yaml
