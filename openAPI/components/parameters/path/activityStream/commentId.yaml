@@ -1,0 +1,7 @@
+name: commentId
+in: path
+description: ''
+required: true
+schema:
+  type: integer
+  format: int32

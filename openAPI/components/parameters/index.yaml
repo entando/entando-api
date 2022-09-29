@@ -1,5 +1,7 @@
 activityStreamRecordId:
   $ref: ./path/activityStream/recordId.yaml
+activityStreamRecordCommentId:
+  $ref: ./path/activityStream/commentId.yaml
 allowedValues:
   $ref: ./query/common/filters/allowedValues.yaml
 attribute:

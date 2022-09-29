@@ -75,6 +75,12 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  '/activityStream/{recordId}/comments/{commentId}':
+    summary: Activity stream record's comment operations
+    description: End-point to access and manipulate an activity stream record's comment
+    parameters:
+      - $ref: '#/components/parameters/activityStreamRecordId'
+      - $ref: '#/components/parameters/activityStreamRecordCommentId'
 components:
   schemas:
     activityStreamRecord:
@@ -278,6 +284,14 @@ components:
   parameters:
     activityStreamRecordId:
       name: recordId
+      in: path
+      description: ''
+      required: true
+      schema:
+        type: integer
+        format: int32
+    activityStreamRecordCommentId:
+      name: commentId
       in: path
       description: ''
       required: true
