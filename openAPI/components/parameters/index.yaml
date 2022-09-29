@@ -68,5 +68,7 @@ token:
   $ref: ./query/checkToken/token.yaml
 type:
   $ref: ./query/common/filters/type.yaml
+typeCode:
+  $ref: ./query/contentModels/typeCode.yaml
 value:
   $ref: ./query/common/filters/value.yaml

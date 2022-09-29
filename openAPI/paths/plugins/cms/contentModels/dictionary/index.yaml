@@ -1,2 +1,4 @@
 summary: Content models dictionary operations
 description: API to access and manipulate the dictionary of content models
+get:
+  $ref: ./getContentModelsDictionary.yaml

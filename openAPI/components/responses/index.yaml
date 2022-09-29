@@ -30,6 +30,8 @@ contentsListMapMetadata:
   $ref: ./ok/contents/contentsListMapMetadata.yaml
 contentsStatus:
   $ref: ./ok/contents/contentsStatusObject.yaml
+iEntityModelDictionary:
+  $ref: ./ok/contentModels/iEntityModelDictionary.yaml
 modelAndViewObject_generic:
   $ref: ./ok/authorizations/modelAndViewObject_generic.yaml
 objectObject_generic:

@@ -20,6 +20,8 @@ entityAttribute:
   $ref: ./common/entityAttribute.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
+iEntityModelDictionary:
+  $ref: ./contentModels/iEntityModelDictionary.yaml
 modelAndView:
   $ref: ./authorizations/modelAndView.yaml
 pagedRestResponse:

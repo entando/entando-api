@@ -1,0 +1,5 @@
+title: IEntity model dictionary
+type: object
+properties:
+  entityRootName:
+    type: string

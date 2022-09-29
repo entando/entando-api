@@ -750,6 +750,32 @@ paths:
   /plugins/cms/contentmodels/dictionary:
     summary: Content models dictionary operations
     description: API to access and manipulate the dictionary of content models
+    get:
+      tags:
+        - content-model-controller
+      summary: Retrieve the dictionary of content models
+      description: Retrieve the dictionary of content models containing *velocity* instructions for the editor
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentModelsDictionary
+      parameters:
+        - $ref: '#/components/parameters/typeCode'
+      responses:
+        '200':
+          $ref: '#/components/responses/iEntityModelDictionary'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1305,6 +1331,12 @@ components:
           type: array
           items:
             type: string
+    iEntityModelDictionary:
+      title: IEntity model dictionary
+      type: object
+      properties:
+        entityRootName:
+          type: string
     modelAndView:
       title: Model and view
       type: object
@@ -1659,6 +1691,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/contentsStatus'
+    iEntityModelDictionary:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/iEntityModelDictionary'
     modelAndViewObject_generic:
       description: OK
       content:
@@ -1942,6 +1984,12 @@ components:
         type: string
     type:
       name: 'filters[0].type'
+      in: query
+      description: ''
+      schema:
+        type: string
+    typeCode:
+      name: typeCode
       in: query
       description: ''
       schema:

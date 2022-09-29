@@ -1,0 +1,5 @@
+name: typeCode
+in: query
+description: ''
+schema:
+  type: string
