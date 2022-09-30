@@ -1,0 +1,7 @@
+description: OK
+content:
+  '*/*':
+    schema:
+      type: array
+      items:
+        $ref: ../../../schemas/contentTypes/contentType.yaml

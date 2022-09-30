@@ -24,10 +24,14 @@ contentModelReference:
   $ref: ./contentModels/contentModelReference.yaml
 contentSettings:
   $ref: ./contentSettings/contentSettings.yaml
+contentType:
+  $ref: ./contentTypes/contentType.yaml
 contentsStatus:
   $ref: ./contents/contentsStatus.yaml
 entityAttribute:
   $ref: ./common/entityAttribute.yaml
+entityTypeAttribute:
+  $ref: ./common/entityTypeAttribute.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 iEntityModelDictionary:

@@ -1,0 +1,25 @@
+title: Entity type attribute
+type: object
+properties:
+  code:
+    type: string
+  disablingCodes:
+    type: array
+    items:
+      type: string
+  listFilter:
+    type: boolean
+  mandatory:
+    type: boolean
+  name:
+    type: string
+  names:
+    type: object
+    additionalProperties:
+      type: string
+  roles:
+    type: array
+    items:
+      $ref: ./attributeProperty.yaml
+  type:
+    type: string

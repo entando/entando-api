@@ -30,6 +30,8 @@ contentModelReferences:
   $ref: ./ok/contentModels/contentModelReferences.yaml
 contentSetting_generic:
   $ref: ./ok/contentSettings/contentSetting_generic.yaml
+contentTypesObject_generic:
+  $ref: ./ok/contentTypes/contentTypesObject_generic.yaml
 contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:
