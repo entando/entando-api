@@ -88,6 +88,8 @@ forbidden:
   $ref: ./forbidden/common/empty.yaml
 noContent:
   $ref: ./noContent/common/empty.yaml
+restResponse-noContent:
+  $ref: ./noContent/restResponse/restResponse.yaml
 notFound:
   $ref: ./notFound/common/empty.yaml
 serverError:

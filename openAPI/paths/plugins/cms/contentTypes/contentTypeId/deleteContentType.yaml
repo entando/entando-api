@@ -1,0 +1,19 @@
+tags:
+  - content-type-resource-controller
+summary: Delete a content type
+description: Delete the content type specified in the path from the content types collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: deleteContentType
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/restResponse/restResponse.yaml
+  '204':
+    $ref: ../../../../../components/responses/noContent/restResponse/restResponse.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

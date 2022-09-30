@@ -1409,6 +1409,26 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - content-type-resource-controller
+      summary: Delete a content type
+      description: Delete the content type specified in the path from the content types collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteContentType
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '204':
+          $ref: '#/components/responses/restResponse-noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2807,6 +2827,12 @@ components:
       description: Forbidden
     noContent:
       description: No content
+    restResponse-noContent:
+      description: No content
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restResponse'
     notFound:
       description: Not found
     serverError:

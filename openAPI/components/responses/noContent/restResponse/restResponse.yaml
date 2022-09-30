@@ -1,0 +1,5 @@
+description: No content
+content:
+  application/json:
+    schema:
+      $ref: ../../../schemas/restResponse/restResponse.yaml
