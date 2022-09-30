@@ -12,6 +12,8 @@ contentModel:
   $ref: ./contentModels/contentModel.yaml
 contentSettingsCropRatio:
   $ref: ./contentSettings/contentSettingsCropRatio.yaml
+contentSettingsEditor:
+  $ref: ./contentSettings/contentSettingsEditor.yaml
 contentStatus:
   $ref: ./contents/contentStatus.yaml
 contentsCodes:

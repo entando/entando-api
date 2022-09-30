@@ -1,0 +1,12 @@
+description: Content settings editor
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        key:
+          type: string
+          enum:
+            - none
+            - fckeditor

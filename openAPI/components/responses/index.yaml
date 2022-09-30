@@ -50,6 +50,8 @@ restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
+string_generic:
+  $ref: ./ok/common/string_generic.yaml
 stringsList_generic:
   $ref: ./ok/common/stringsList_generic.yaml
 badRequest:
@@ -60,6 +62,8 @@ created:
   $ref: ./created/common/empty.yaml
 restResponse-created:
   $ref: ./created/restResponse/restResponse.yaml
+string_generic-created:
+  $ref: ./created/common/string_generic.yaml
 stringsList_generic-created:
   $ref: ./created/common/stringsList_generic.yaml
 forbidden:

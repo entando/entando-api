@@ -1064,6 +1064,28 @@ paths:
   /plugins/cms/contentSettings/editor:
     summary: Content settings editors operations
     description: API to access and manipulate the collection of content settings editors
+    put:
+      tags:
+        - content-settings-controller
+      summary: Set the content settings editor
+      description: Set the content settings editor as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: setEditor
+      requestBody:
+        $ref: '#/components/requestBodies/contentSettingsEditor'
+      responses:
+        '200':
+          $ref: '#/components/responses/string_generic'
+        '201':
+          $ref: '#/components/responses/string_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2131,6 +2153,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/restResponseMapPayload'
+    string_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    type: string
     stringsList_generic:
       description: OK
       content:
@@ -2155,6 +2187,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/restResponse'
+    string_generic-created:
+      description: Created
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    type: string
     stringsList_generic-created:
       description: Created
       content:
@@ -2516,6 +2558,19 @@ components:
             properties:
               ratio:
                 type: string
+    contentSettingsEditor:
+      description: Content settings editor
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              key:
+                type: string
+                enum:
+                  - none
+                  - fckeditor
     contentStatus:
       description: Content status
       required: true

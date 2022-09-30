@@ -1,2 +1,4 @@
 summary: Content settings editors operations
 description: API to access and manipulate the collection of content settings editors
+put:
+  $ref: ./setEditor.yaml

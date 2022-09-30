@@ -1,0 +1,9 @@
+description: Created
+content:
+  '*/*':
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/restResponse.yaml
+        - properties:
+            payload:
+              type: string
