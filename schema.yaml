@@ -1089,6 +1089,28 @@ paths:
   /plugins/cms/contentSettings/metadata:
     summary: Content settings metadata operations
     description: API to access and manipulate the collection of content settings metadata
+    post:
+      tags:
+        - content-settings-controller
+      summary: Add content settings metadata
+      description: Create new content settings metadata as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: createMetadata
+      requestBody:
+        $ref: '#/components/requestBodies/contentSettingsMetadata'
+      responses:
+        '200':
+          $ref: '#/components/responses/wildCardType_generic'
+        '201':
+          $ref: '#/components/responses/wildCardType_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2178,6 +2200,18 @@ components:
                     type: array
                     items:
                       type: string
+    wildCardType_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    type: object
+                    additionalProperties:
+                      $ref: '#/components/schemas/wildCardType'
     badRequest:
       description: Bad request
     conflict:
@@ -2212,6 +2246,18 @@ components:
                     type: array
                     items:
                       type: string
+    wildCardType_generic-created:
+      description: Created
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    type: object
+                    additionalProperties:
+                      $ref: '#/components/schemas/wildCardType'
     forbidden:
       description: Forbidden
     noContent:
@@ -2574,6 +2620,18 @@ components:
                 enum:
                   - none
                   - fckeditor
+    contentSettingsMetadata:
+      description: Content settings metadata
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              key:
+                type: string
+              mapping:
+                type: string
     contentStatus:
       description: Content status
       required: true

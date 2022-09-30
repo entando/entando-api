@@ -1,0 +1,21 @@
+tags:
+  - content-settings-controller
+summary: Add content settings metadata
+description: Create new content settings metadata as specified in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: createMetadata
+requestBody:
+  $ref: ../../../../../components/requestBodies/contentSettings/contentSettingsMetadata.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/common/wildCardType_generic.yaml
+  '201':
+    $ref: ../../../../../components/responses/created/common/wildCardType_generic.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

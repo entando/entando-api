@@ -14,6 +14,8 @@ contentSettingsCropRatio:
   $ref: ./contentSettings/contentSettingsCropRatio.yaml
 contentSettingsEditor:
   $ref: ./contentSettings/contentSettingsEditor.yaml
+contentSettingsMetadata:
+  $ref: ./contentSettings/contentSettingsMetadata.yaml
 contentStatus:
   $ref: ./contents/contentStatus.yaml
 contentsCodes:

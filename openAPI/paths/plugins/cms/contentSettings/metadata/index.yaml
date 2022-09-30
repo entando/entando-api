@@ -1,2 +1,4 @@
 summary: Content settings metadata operations
 description: API to access and manipulate the collection of content settings metadata
+post:
+  $ref: ./createMetadata.yaml

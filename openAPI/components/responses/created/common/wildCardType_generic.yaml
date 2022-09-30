@@ -1,0 +1,11 @@
+description: Created
+content:
+  '*/*':
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/restResponse.yaml
+        - properties:
+            payload:
+              type: object
+              additionalProperties:
+                $ref: ../../../schemas/common/wildCardType.yaml

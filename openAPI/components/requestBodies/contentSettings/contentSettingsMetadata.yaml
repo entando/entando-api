@@ -1,0 +1,11 @@
+description: Content settings metadata
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        key:
+          type: string
+        mapping:
+          type: string
