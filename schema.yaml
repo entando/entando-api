@@ -1242,6 +1242,24 @@ paths:
     description: API to access and manipulate a content type attribute
     parameters:
       - $ref: '#/components/parameters/attributeTypeId'
+    get:
+      tags:
+        - content-type-resource-controller
+      summary: Retrieve a content type attribute type
+      description: Retrieve a content type attribute type
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentTypeAttributeType
+      responses:
+        '200':
+          $ref: '#/components/responses/attributeType_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1595,6 +1613,62 @@ components:
           type: string
         username:
           type: string
+    attributeProperty:
+      title: Attribute property
+      type: object
+      properties:
+        code:
+          type: string
+        descr:
+          type: string
+    attributeType:
+      title: Attribute type
+      type: object
+      properties:
+        allowedDisablingCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/attributeProperty'
+        allowedRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/attributeProperty'
+        assignedRoles:
+          type: object
+          additionalProperties:
+            type: string
+        code:
+          type: string
+        dateFilterSupported:
+          type: boolean
+        enumeratorExtractorBeans:
+          type: array
+          items:
+            type: string
+        enumeratorMapExtractorBeans:
+          type: array
+          items:
+            type: string
+        enumeratorMapOptionsSupported:
+          type: boolean
+        enumeratorOptionsSupported:
+          type: boolean
+        indexableOptionSupported:
+          type: boolean
+        listAttribute:
+          type: boolean
+        multilingual:
+          type: boolean
+        numberFilterSupported:
+          type: boolean
+        searchableOptionSupported:
+          type: boolean
+        simple:
+          type: boolean
+        textAttribute:
+          type: boolean
+        textFilterSupported:
+          type: boolean
     category:
       title: Category
       type: object
@@ -2091,6 +2165,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/activityStreamRecord'
+    attributeType_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/attributeType'
     categoriesListMapMetadata:
       description: OK
       content:

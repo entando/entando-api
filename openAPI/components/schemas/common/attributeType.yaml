@@ -1,0 +1,47 @@
+title: Attribute type
+type: object
+properties:
+  allowedDisablingCodes:
+    type: array
+    items:
+      $ref: ./attributeProperty.yaml
+  allowedRoles:
+    type: array
+    items:
+      $ref: ./attributeProperty.yaml
+  assignedRoles:
+    type: object
+    additionalProperties:
+      type: string
+  code:
+    type: string
+  dateFilterSupported:
+    type: boolean
+  enumeratorExtractorBeans:
+    type: array
+    items:
+      type: string
+  enumeratorMapExtractorBeans:
+    type: array
+    items:
+      type: string
+  enumeratorMapOptionsSupported:
+    type: boolean
+  enumeratorOptionsSupported:
+    type: boolean
+  indexableOptionSupported:
+    type: boolean
+  listAttribute:
+    type: boolean
+  multilingual:
+    type: boolean
+  numberFilterSupported:
+    type: boolean
+  searchableOptionSupported:
+    type: boolean
+  simple:
+    type: boolean
+  textAttribute:
+    type: boolean
+  textFilterSupported:
+    type: boolean

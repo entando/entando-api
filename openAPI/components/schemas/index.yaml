@@ -4,6 +4,10 @@ activityStreamCommentInfo:
   $ref: ./activityStream/commentInfo.yaml
 activityStreamLikeInfo:
   $ref: ./activityStream/likeInfo.yaml
+attributeProperty:
+  $ref: ./common/attributeProperty.yaml
+attributeType:
+  $ref: ./common/attributeType.yaml
 category:
   $ref: ./categories/category.yaml
 componentUsage:

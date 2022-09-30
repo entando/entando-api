@@ -1,0 +1,7 @@
+title: Attribute property
+type: object
+properties:
+  code:
+    type: string
+  descr:
+    type: string

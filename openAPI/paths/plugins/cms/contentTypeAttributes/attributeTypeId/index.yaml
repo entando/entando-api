@@ -2,3 +2,5 @@ summary: Content type attribute operations
 description: API to access and manipulate a content type attribute
 parameters:
   - $ref: ../../../../../components/parameters/path/attributes/attributeTypeId.yaml
+get:
+  $ref: ./getContentTypeAttributeType.yaml
