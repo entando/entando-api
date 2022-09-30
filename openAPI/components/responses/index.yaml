@@ -12,6 +12,8 @@ categoryMapMetadata:
   $ref: ./ok/categories/categoryMapMetadata.yaml
 componentUsage:
   $ref: ./ok/common/componentUsage.yaml
+componentUsageObject_generic:
+  $ref: ./ok/common/componentUsageObject_generic.yaml
 componentUsageEntities:
   $ref: ./ok/common/componentUsageEntities.yaml
 consumer:

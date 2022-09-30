@@ -1,0 +1,17 @@
+tags:
+  - content-type-resource-controller
+summary: Retrieve a content type usage
+description: Retrieve the usage count for the content type specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getContentTypeUsage
+responses:
+  '200':
+    $ref: ../../../../../../components/responses/ok/common/componentUsageObject_generic.yaml
+  '401':
+    $ref: ../../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../../components/responses/notFound/common/empty.yaml

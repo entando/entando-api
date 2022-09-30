@@ -1434,6 +1434,24 @@ paths:
     description: API to access and manipulate a content type usage
     parameters:
       - $ref: '#/components/parameters/contentTypeId'
+    get:
+      tags:
+        - content-type-resource-controller
+      summary: Retrieve a content type usage
+      description: Retrieve the usage count for the content type specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentTypeUsage
+      responses:
+        '200':
+          $ref: '#/components/responses/componentUsageObject_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2528,6 +2546,12 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/componentUsage'
+    componentUsageObject_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/componentUsage'
     componentUsageEntities:
       description: OK
       content:
