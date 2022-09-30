@@ -18,6 +18,8 @@ contentModel:
   $ref: ./contentModels/contentModel.yaml
 contentModelReference:
   $ref: ./contentModels/contentModelReference.yaml
+contentSettings:
+  $ref: ./contentSettings/contentSettings.yaml
 contentsStatus:
   $ref: ./contents/contentsStatus.yaml
 entityAttribute:
@@ -26,6 +28,8 @@ filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 iEntityModelDictionary:
   $ref: ./contentModels/iEntityModelDictionary.yaml
+lastReloadInfo:
+  $ref: ./contentSettings/lastReloadInfo.yaml
 modelAndView:
   $ref: ./authorizations/modelAndView.yaml
 pagedRestResponse:
@@ -44,5 +48,9 @@ restResponseMapMetadata:
   $ref: ./restResponse/restResponseMapMetadata.yaml
 restResponseMapPayload:
   $ref: ./restResponse/restResponseMapPayload.yaml
+type:
+  $ref: ./common/type.yaml
 view:
   $ref: ./authorizations/view.yaml
+wildCardType:
+  $ref: ./common/wildCardType.yaml

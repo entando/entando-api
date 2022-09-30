@@ -1,0 +1,9 @@
+description: OK
+content:
+  '*/*':
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/restResponse.yaml
+        - properties:
+            payload:
+              $ref: ../../../schemas/contentSettings/contentSettings.yaml

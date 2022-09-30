@@ -1,0 +1,17 @@
+tags:
+  - content-settings-controller
+summary: Retrieve the collection of content settings
+description: Retrieve the collection of content settings
+externalDocs:
+  description: ''
+  url: https://
+operationId: getContentSettings
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/contentSettings/contentSetting_generic.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml

@@ -1,0 +1,9 @@
+title: Last reload info
+type: object
+properties:
+  date:
+    type: string
+    format: date-time
+  result:
+    type: integer
+    format: int32

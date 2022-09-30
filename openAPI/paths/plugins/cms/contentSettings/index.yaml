@@ -1,2 +1,4 @@
 summary: Content settings operations
 description: API to access and manipulate the collection of content settings
+get:
+  $ref: ./getContentSettings.yaml

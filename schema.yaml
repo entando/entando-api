@@ -971,6 +971,24 @@ paths:
   /plugins/cms/contentSettings:
     summary: Content settings operations
     description: API to access and manipulate the collection of content settings
+    get:
+      tags:
+        - content-settings-controller
+      summary: Retrieve the collection of content settings
+      description: Retrieve the collection of content settings
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentSettings
+      responses:
+        '200':
+          $ref: '#/components/responses/contentSetting_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -1482,6 +1500,31 @@ components:
         widgetPosition:
           type: integer
           format: int32
+    contentSettings:
+      title: Content settings
+      type: object
+      properties:
+        cropRatios:
+          type: array
+          items:
+            type: string
+        editor:
+          type: string
+          enum:
+            - '{label=None, key=none}'
+            - '{label=CKEditor, key=fckeditor}'
+        indexesLastReload:
+          $ref: '#/components/schemas/lastReloadInfo'
+        indexesStatus:
+          type: integer
+          format: int32
+        metadata:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/wildCardType'
+        referencesStatus:
+          type: integer
+          format: int32
     contentsStatus:
       title: Contents status
       type: object
@@ -1553,6 +1596,16 @@ components:
       properties:
         entityRootName:
           type: string
+    lastReloadInfo:
+      title: Last reload info
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+        result:
+          type: integer
+          format: int32
     modelAndView:
       title: Model and view
       type: object
@@ -1736,12 +1789,32 @@ components:
               type: object
               additionalProperties:
                 type: string
+    type:
+      title: Type
+      type: object
+      properties:
+        typeName:
+          type: string
     view:
       title: View
       type: object
       properties:
         contentType:
           type: string
+    wildCardType:
+      title: Wild card type
+      type: object
+      properties:
+        lowerBounds:
+          type: array
+          items:
+            $ref: '#/components/schemas/type'
+        typeName:
+          type: string
+        upperBounds:
+          type: array
+          items:
+            $ref: '#/components/schemas/type'
   responses:
     activityStream:
       description: OK
@@ -1889,6 +1962,16 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/contentModelReference'
+    contentSetting_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/contentSettings'
     contents:
       description: OK
       content:

@@ -1,0 +1,24 @@
+title: Content settings
+type: object
+properties:
+  cropRatios:
+    type: array
+    items:
+      type: string
+  editor:
+    type: string
+    enum:
+      - '{label=None, key=none}'
+      - '{label=CKEditor, key=fckeditor}'
+  indexesLastReload:
+    $ref: ./lastReloadInfo.yaml
+  indexesStatus:
+    type: integer
+    format: int32
+  metadata:
+    type: object
+    additionalProperties:
+      $ref: ../../schemas/common/wildCardType.yaml
+  referencesStatus:
+    type: integer
+    format: int32

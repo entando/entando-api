@@ -1,0 +1,13 @@
+title: Wild card type
+type: object
+properties:
+  lowerBounds:
+    type: array
+    items:
+      $ref: ./type.yaml
+  typeName:
+    type: string
+  upperBounds:
+    type: array
+    items:
+      $ref: ./type.yaml
