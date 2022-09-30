@@ -1,0 +1,9 @@
+description: Content settings crop ratio
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        ratio:
+          type: string

@@ -50,12 +50,16 @@ restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
+stringsList_generic:
+  $ref: ./ok/common/stringsList_generic.yaml
 badRequest:
   $ref: ./badRequest/common/empty.yaml
 conflict:
   $ref: ./conflict/common/empty.yaml
 created:
   $ref: ./created/common/empty.yaml
+stringsList_generic-created:
+  $ref: ./created/common/stringsList_generic.yaml
 forbidden:
   $ref: ./forbidden/common/empty.yaml
 noContent:
