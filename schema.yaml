@@ -968,6 +968,9 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+  /plugins/cms/contentSettings:
+    summary: Content settings operations
+    description: API to access and manipulate the collection of content settings
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
