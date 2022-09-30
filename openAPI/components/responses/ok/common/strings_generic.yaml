@@ -1,0 +1,11 @@
+description: OK
+content:
+  '*/*':
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/pagedRestResponse/pagedRestResponse.yaml
+        - properties:
+            payload:
+              type: array
+              items:
+                type: string

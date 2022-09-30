@@ -54,6 +54,8 @@ restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
 string_generic:
   $ref: ./ok/common/string_generic.yaml
+strings_generic:
+  $ref: ./ok/common/strings_generic.yaml
 stringsList_generic:
   $ref: ./ok/common/stringsList_generic.yaml
 wildCardType_generic:
