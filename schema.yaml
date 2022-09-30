@@ -1161,6 +1161,26 @@ paths:
   /plugins/cms/contentSettings/reloadIndexes:
     summary: Content settings reload indexes operations
     description: API to perform a reload of the content settings indexes
+    post:
+      tags:
+        - content-settings-controller
+      summary: Reload the content settings indexes
+      description: Reload the content settings indexes
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: reloadIndexes
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse_generic'
+        '201':
+          $ref: '#/components/responses/restResponse_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2222,6 +2242,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/restResponse'
+    restResponse_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/restResponse'
     restResponseMapPayload:
       description: OK
       content:
@@ -2272,6 +2298,12 @@ components:
       description: Created
       content:
         application/json:
+          schema:
+            $ref: '#/components/schemas/restResponse'
+    restResponse_generic-created:
+      description: Created
+      content:
+        '*/*':
           schema:
             $ref: '#/components/schemas/restResponse'
     string_generic-created:

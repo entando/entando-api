@@ -48,6 +48,8 @@ pagedRestResponse:
   $ref: ./ok/restResponse/pagedRestResponse.yaml
 restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
+restResponse_generic:
+  $ref: ./ok/restResponse/restResponse_generic.yaml
 restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
 string_generic:
@@ -64,6 +66,8 @@ created:
   $ref: ./created/common/empty.yaml
 restResponse-created:
   $ref: ./created/restResponse/restResponse.yaml
+restResponse_generic-created:
+  $ref: ./created/restResponse/restResponse_generic.yaml
 string_generic-created:
   $ref: ./created/common/string_generic.yaml
 stringsList_generic-created:

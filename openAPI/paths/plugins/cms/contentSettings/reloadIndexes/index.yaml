@@ -1,2 +1,4 @@
 summary: Content settings reload indexes operations
 description: API to perform a reload of the content settings indexes
+post:
+  $ref: ./reloadIndexes.yaml
