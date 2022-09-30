@@ -1,0 +1,52 @@
+title: Entity type attribute validation
+type: object
+properties:
+  equalDate:
+    type: string
+  equalDateAttribute:
+    type: string
+  equalNumber:
+    type: integer
+    format: int32
+  equalNumberAttribute:
+    type: string
+  equalString:
+    type: string
+  equalStringAttribute:
+    type: string
+  maxLength:
+    type: integer
+    format: int32
+  minLength:
+    type: integer
+    format: int32
+  ognlValidation:
+    $ref: ./entityTypeAttributeOGNLValidation.yaml
+  rangeEndDate:
+    type: string
+  rangeEndDateAttribute:
+    type: string
+  rangeEndNumber:
+    type: integer
+    format: int32
+  rangeEndNumberAttribute:
+    type: string
+  rangeEndString:
+    type: string
+  rangeEndStringAttribute:
+    type: string
+  rangeStartDate:
+    type: string
+  rangeStartDateAttribute:
+    type: string
+  rangeStartNumber:
+    type: integer
+    format: int32
+  rangeStartNumberAttribute:
+    type: string
+  rangeStartString:
+    type: string
+  rangeStartStringAttribute:
+    type: string
+  regex:
+    type: string

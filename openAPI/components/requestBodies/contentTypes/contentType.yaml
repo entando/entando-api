@@ -1,0 +1,12 @@
+description: Content type
+required: true
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: ../../schemas/contentTypes/contentType.yaml
+        - properties:
+            attributes:
+              type: array
+              items:
+                $ref: ../../schemas/common/entityTypeAttributeFull.yaml

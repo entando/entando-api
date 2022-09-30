@@ -30,6 +30,8 @@ contentModelReferences:
   $ref: ./ok/contentModels/contentModelReferences.yaml
 contentSetting_generic:
   $ref: ./ok/contentSettings/contentSetting_generic.yaml
+contentTypeObject_generic:
+  $ref: ./ok/contentTypes/contentTypeObject_generic.yaml
 contentTypesObject_generic:
   $ref: ./ok/contentTypes/contentTypesObject_generic.yaml
 contents:
@@ -68,6 +70,8 @@ badRequest:
   $ref: ./badRequest/common/empty.yaml
 conflict:
   $ref: ./conflict/common/empty.yaml
+contentTypeObject_generic-created:
+  $ref: ./created/contentTypes/contentTypeObject_generic.yaml
 created:
   $ref: ./created/common/empty.yaml
 restResponse-created:

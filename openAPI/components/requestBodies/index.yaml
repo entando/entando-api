@@ -20,6 +20,8 @@ contentSettingsMetadataForUpdate:
   $ref: ./contentSettings/contentSettingsMetadataForUpdate.yaml
 contentStatus:
   $ref: ./contents/contentStatus.yaml
+contentType:
+  $ref: ./contentTypes/contentType.yaml
 contentsCodes:
   $ref: ./contents/contentsCodes.yaml
 contentsList:

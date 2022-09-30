@@ -1,0 +1,5 @@
+description: Created
+content:
+  '*/*':
+    schema:
+      $ref: ../../../schemas/contentTypes/contentType.yaml

@@ -32,6 +32,12 @@ entityAttribute:
   $ref: ./common/entityAttribute.yaml
 entityTypeAttribute:
   $ref: ./common/entityTypeAttribute.yaml
+entityTypeAttributeFull:
+  $ref: ./common/entityTypeAttributeFull.yaml
+entityTypeAttributeOGNLValidation:
+  $ref: ./common/entityTypeAttributeOGNLValidation.yaml
+entityTypeAttributeValidation:
+  $ref: ./common/entityTypeAttributeValidation.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 iEntityModelDictionary:

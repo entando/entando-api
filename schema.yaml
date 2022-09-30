@@ -1317,6 +1317,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - content-type-resource-controller
+      summary: Update content type
+      description: Update a content type as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateContentType
+      requestBody:
+        $ref: '#/components/requestBodies/contentType'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentTypeObject_generic'
+        '201':
+          $ref: '#/components/responses/contentTypeObject_generic-created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2000,6 +2022,97 @@ components:
             $ref: '#/components/schemas/attributeProperty'
         type:
           type: string
+    entityTypeAttributeFull:
+      title: Entity type attribute full
+      allOf:
+        - $ref: '#/components/schemas/entityTypeAttribute'
+        - type: object
+          properties:
+            compositeAttributes:
+              type: array
+              items:
+                $ref: '#/components/schemas/entityTypeAttributeFull'
+            enumeratorExtractorBean:
+              type: string
+            enumeratorStaticItems:
+              type: string
+            enumeratorStaticItemsSeparator:
+              type: string
+            indexable:
+              type: boolean
+            nestedAttribute:
+              $ref: '#/components/schemas/entityTypeAttributeFull'
+            validationRules:
+              $ref: '#/components/schemas/entityTypeAttributeValidation'
+    entityTypeAttributeOGNLValidation:
+      title: Entity type attribute OGNL validation
+      type: object
+      properties:
+        applyOnlyToFilledAttr:
+          type: boolean
+        errorMessage:
+          type: string
+        helpMessage:
+          type: string
+        keyForErrorMessage:
+          type: string
+        keyForHelpMessage:
+          type: string
+        ognlExpression:
+          type: string
+    entityTypeAttributeValidation:
+      title: Entity type attribute validation
+      type: object
+      properties:
+        equalDate:
+          type: string
+        equalDateAttribute:
+          type: string
+        equalNumber:
+          type: integer
+          format: int32
+        equalNumberAttribute:
+          type: string
+        equalString:
+          type: string
+        equalStringAttribute:
+          type: string
+        maxLength:
+          type: integer
+          format: int32
+        minLength:
+          type: integer
+          format: int32
+        ognlValidation:
+          $ref: '#/components/schemas/entityTypeAttributeOGNLValidation'
+        rangeEndDate:
+          type: string
+        rangeEndDateAttribute:
+          type: string
+        rangeEndNumber:
+          type: integer
+          format: int32
+        rangeEndNumberAttribute:
+          type: string
+        rangeEndString:
+          type: string
+        rangeEndStringAttribute:
+          type: string
+        rangeStartDate:
+          type: string
+        rangeStartDateAttribute:
+          type: string
+        rangeStartNumber:
+          type: integer
+          format: int32
+        rangeStartNumberAttribute:
+          type: string
+        rangeStartString:
+          type: string
+        rangeStartStringAttribute:
+          type: string
+        regex:
+          type: string
     filter:
       title: Filter
       type: object
@@ -2412,6 +2525,12 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/contentSettings'
+    contentTypeObject_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/contentType'
     contentTypesObject_generic:
       description: OK
       content:
@@ -2560,6 +2679,12 @@ components:
       description: Bad request
     conflict:
       description: Conflict
+    contentTypeObject_generic-created:
+      description: Created
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/contentType'
     created:
       description: Created
     restResponse-created:
@@ -3023,6 +3148,19 @@ components:
             properties:
               status:
                 type: string
+    contentType:
+      description: Content type
+      required: true
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/contentType'
+              - properties:
+                  attributes:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/entityTypeAttributeFull'
     contentsCodes:
       description: Contents codes
       required: true

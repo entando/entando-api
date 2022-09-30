@@ -1,0 +1,21 @@
+tags:
+  - content-type-resource-controller
+summary: Update content type
+description: Update a content type as described in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: updateContentType
+requestBody:
+  $ref: ../../../../components/requestBodies/contentTypes/contentType.yaml
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/contentTypes/contentTypeObject_generic.yaml
+  '201':
+    $ref: ../../../../components/responses/created/contentTypes/contentTypeObject_generic.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml

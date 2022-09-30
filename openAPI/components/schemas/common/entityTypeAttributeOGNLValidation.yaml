@@ -1,0 +1,15 @@
+title: Entity type attribute OGNL validation
+type: object
+properties:
+  applyOnlyToFilledAttr:
+    type: boolean
+  errorMessage:
+    type: string
+  helpMessage:
+    type: string
+  keyForErrorMessage:
+    type: string
+  keyForHelpMessage:
+    type: string
+  ognlExpression:
+    type: string

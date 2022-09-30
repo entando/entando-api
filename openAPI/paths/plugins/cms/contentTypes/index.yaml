@@ -2,3 +2,5 @@ summary: Content types operations
 description: API to access and manipulate the collection of content types
 get:
   $ref: ./getContentTypes.yaml
+put:
+  $ref: ./updateContentType.yaml

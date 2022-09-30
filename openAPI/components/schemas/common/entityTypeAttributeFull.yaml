@@ -1,0 +1,21 @@
+title: Entity type attribute full
+allOf:
+  - $ref: ./entityTypeAttribute.yaml
+  - type: object
+    properties:
+      compositeAttributes:
+        type: array
+        items:
+          $ref: ./entityTypeAttributeFull.yaml
+      enumeratorExtractorBean:
+        type: string
+      enumeratorStaticItems:
+        type: string
+      enumeratorStaticItemsSeparator:
+        type: string
+      indexable:
+        type: boolean
+      nestedAttribute:
+        $ref: ./entityTypeAttributeFull.yaml
+      validationRules:
+        $ref: ./entityTypeAttributeValidation.yaml
