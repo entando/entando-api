@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../../../components/parameters/path/contentSettings/ratio.yaml
 put:
   $ref: ./editCropRatio.yaml
+delete:
+  $ref: ./deleteCropRatio.yaml

@@ -1041,6 +1041,26 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - content-settings-controller
+      summary: Delete a content settings crop ratio
+      description: Delete the content settings crop ratio specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteCropRatio
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/restResponse-created'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -2126,6 +2146,12 @@ components:
       description: Conflict
     created:
       description: Created
+    restResponse-created:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restResponse'
     stringsList_generic-created:
       description: Created
       content:

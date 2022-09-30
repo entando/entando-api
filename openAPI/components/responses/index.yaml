@@ -58,6 +58,8 @@ conflict:
   $ref: ./conflict/common/empty.yaml
 created:
   $ref: ./created/common/empty.yaml
+restResponse-created:
+  $ref: ./created/restResponse/restResponse.yaml
 stringsList_generic-created:
   $ref: ./created/common/stringsList_generic.yaml
 forbidden:
