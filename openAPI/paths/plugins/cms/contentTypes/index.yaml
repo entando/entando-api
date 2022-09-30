@@ -4,3 +4,5 @@ get:
   $ref: ./getContentTypes.yaml
 put:
   $ref: ./updateContentType.yaml
+post:
+  $ref: ./createContentType.yaml
