@@ -1434,6 +1434,24 @@ paths:
     description: API to access and manipulate a content type attributes
     parameters:
       - $ref: '#/components/parameters/contentTypeId'
+    get:
+      tags:
+        - content-type-resource-controller
+      summary: Retrieve a content type attributes
+      description: Retrieve the attributes of the content type specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentTypeAttributes
+      responses:
+        '200':
+          $ref: '#/components/responses/entityTypeAttributeFullList_generic'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/plugins/cms/contentTypes/{contentTypeId}/usage':
     summary: Content type usage operations
     description: API to access and manipulate a content type usage
@@ -2740,6 +2758,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/contentsStatus'
+    entityTypeAttributeFullList_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/entityTypeAttributeFull'
     iEntityModelDictionary:
       description: OK
       content:
