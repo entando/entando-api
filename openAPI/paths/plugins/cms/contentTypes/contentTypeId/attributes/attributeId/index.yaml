@@ -7,3 +7,5 @@ get:
   $ref: ./getContentTypeAttribute.yaml
 put:
   $ref: ./updateContentTypeAttribute.yaml
+delete:
+  $ref: ./deleteContentTypeAttribute.yaml
