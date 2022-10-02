@@ -26,6 +26,8 @@ contentSettings:
   $ref: ./contentSettings/contentSettings.yaml
 contentType:
   $ref: ./contentTypes/contentType.yaml
+contentVersion:
+  $ref: ./versioning/contentVersion.yaml
 contentsStatus:
   $ref: ./contents/contentsStatus.yaml
 entityAttribute:

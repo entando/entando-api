@@ -1,0 +1,26 @@
+title: Content version
+type: object
+properties:
+  approved:
+    type: boolean
+  contentId:
+    type: string
+  contentType:
+    type: string
+  description:
+    type: string
+  id:
+    type: integer
+    format: int64
+  onlineVersion:
+    type: integer
+    format: int32
+  status:
+    type: string
+  username:
+    type: string
+  version:
+    type: string
+  versionDate:
+    type: string
+    format: date-time

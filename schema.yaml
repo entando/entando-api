@@ -1990,6 +1990,44 @@ paths:
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
+    get:
+      tags:
+        - content-versioning-controller
+      summary: Retrieve the contents versioning
+      description: Retrieve the contents versioning filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getContentsVersioning
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/contentVersions'
+        '201':
+          $ref: '#/components/responses/contentVersions-created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
 components:
   schemas:
     activityStreamRecord:
@@ -2306,6 +2344,33 @@ components:
           type: string
         viewPage:
           type: string
+    contentVersion:
+      title: Content version
+      type: object
+      properties:
+        approved:
+          type: boolean
+        contentId:
+          type: string
+        contentType:
+          type: string
+        description:
+          type: string
+        id:
+          type: integer
+          format: int64
+        onlineVersion:
+          type: integer
+          format: int32
+        status:
+          type: string
+        username:
+          type: string
+        version:
+          type: string
+        versionDate:
+          type: string
+          format: date-time
     contentsStatus:
       title: Contents status
       type: object
@@ -2916,6 +2981,18 @@ components:
             type: array
             items:
               $ref: '#/components/schemas/contentType'
+    contentVersions:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/contentVersion'
     contents:
       description: OK
       content:
@@ -3096,6 +3173,18 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/contentType'
+    contentVersions-created:
+      description: Created
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/contentVersion'
     created:
       description: Created
     restResponse-created:

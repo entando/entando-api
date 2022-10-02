@@ -36,6 +36,8 @@ contentTypeObject_generic:
   $ref: ./ok/contentTypes/contentTypeObject_generic.yaml
 contentTypesObject_generic:
   $ref: ./ok/contentTypes/contentTypesObject_generic.yaml
+contentVersions:
+  $ref: ./ok/versioning/contentVersions.yaml
 contents:
   $ref: ./ok/contents/contents.yaml
 contentsList:
@@ -80,6 +82,8 @@ conflict:
   $ref: ./conflict/common/empty.yaml
 contentTypeObject_generic-created:
   $ref: ./created/contentTypes/contentTypeObject_generic.yaml
+contentVersions-created:
+  $ref: ./created/versioning/contentVersions.yaml
 created:
   $ref: ./created/common/empty.yaml
 restResponse-created:

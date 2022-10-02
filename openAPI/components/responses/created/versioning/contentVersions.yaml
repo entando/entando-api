@@ -1,0 +1,11 @@
+description: Created
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/pagedRestResponse/pagedRestResponse.yaml
+        - properties:
+            payload:
+              type: array
+              items:
+                $ref: ../../../schemas/versioning/contentVersion.yaml
