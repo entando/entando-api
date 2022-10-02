@@ -26,5 +26,7 @@ contentsCodes:
   $ref: ./contents/contentsCodes.yaml
 contentsList:
   $ref: ./contents/contentsList.yaml
+entityTypeAttribute:
+  $ref: ./common/entityTypeAttribute.yaml
 idCodesByObjectType:
   $ref: ./analysis/idCodesByObjectType.yaml

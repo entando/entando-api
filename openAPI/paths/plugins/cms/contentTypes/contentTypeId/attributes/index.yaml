@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../../../components/parameters/path/contentTypes/contentTypeId.yaml
 get:
   $ref: ./getContentTypeAttributes.yaml
+post:
+  $ref: ./addContentTypeAttribute.yaml

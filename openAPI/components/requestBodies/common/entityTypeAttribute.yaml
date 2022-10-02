@@ -1,0 +1,6 @@
+description: Entity type attribute
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/common/entityTypeAttributeFull.yaml
