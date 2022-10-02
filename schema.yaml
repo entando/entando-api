@@ -1498,6 +1498,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - content-type-resource-controller
+      summary: Update a content type attribute
+      description: Update the content type attribute specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateContentTypeAttribute
+      requestBody:
+        $ref: '#/components/requestBodies/entityTypeAttribute'
+      responses:
+        '200':
+          $ref: '#/components/responses/entityTypeAttributeFullList'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/plugins/cms/contentTypes/{contentTypeId}/usage':
     summary: Content type usage operations
     description: API to access and manipulate a content type usage

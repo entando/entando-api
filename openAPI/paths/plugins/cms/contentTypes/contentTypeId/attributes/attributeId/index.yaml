@@ -5,3 +5,5 @@ parameters:
   - $ref: ../../../../../../../components/parameters/path/attributes/attributeId.yaml
 get:
   $ref: ./getContentTypeAttribute.yaml
+put:
+  $ref: ./updateContentTypeAttribute.yaml
