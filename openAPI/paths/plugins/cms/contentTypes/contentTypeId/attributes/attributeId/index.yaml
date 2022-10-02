@@ -3,3 +3,5 @@ description: API to access and manipulate a content type attribute
 parameters:
   - $ref: ../../../../../../../components/parameters/path/contentTypes/contentTypeId.yaml
   - $ref: ../../../../../../../components/parameters/path/attributes/attributeId.yaml
+get:
+  $ref: ./getContentTypeAttribute.yaml

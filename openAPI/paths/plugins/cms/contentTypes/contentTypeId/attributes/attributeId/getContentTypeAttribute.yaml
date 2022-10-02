@@ -1,0 +1,17 @@
+tags:
+  - content-type-resource-controller
+summary: Retrieve a content type attribute
+description: Retrieve the content type attirbute specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: getContentTypeAttribute
+responses:
+  '200':
+    $ref: ../../../../../../../components/responses/ok/common/entityTypeAttributeFullList.yaml
+  '401':
+    $ref: ../../../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../../../components/responses/notFound/common/empty.yaml

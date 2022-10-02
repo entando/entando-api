@@ -44,6 +44,8 @@ contentsListMapMetadata:
   $ref: ./ok/contents/contentsListMapMetadata.yaml
 contentsStatus:
   $ref: ./ok/contents/contentsStatusObject.yaml
+entityTypeAttributeFullList:
+  $ref: ./ok/common/entityTypeAttributeFullList.yaml
 entityTypeAttributeFullList_generic:
   $ref: ./ok/common/entityTypeAttributeFullList_generic.yaml
 iEntityModelDictionary:
