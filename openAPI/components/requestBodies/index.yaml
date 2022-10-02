@@ -22,6 +22,8 @@ contentStatus:
   $ref: ./contents/contentStatus.yaml
 contentType:
   $ref: ./contentTypes/contentType.yaml
+contentTypeRefresh:
+  $ref: ./contentTypes/contentTypeRefresh.yaml
 contentsCodes:
   $ref: ./contents/contentsCodes.yaml
 contentsList:

@@ -1669,6 +1669,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - content-type-resource-controller
+      summary: Reload content types status references
+      description: Reload content types status references
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: refreshContentTypes
+      requestBody:
+        $ref: '#/components/requestBodies/contentTypeRefresh'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contents:
     summary: Contents operations
     description: API to access and manipulate the collection of contents
@@ -3560,6 +3582,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/entityTypeAttributeFull'
+    contentTypeRefresh:
+      description: Content type refresh
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              profileTypeCodes:
+                type: array
+                items:
+                  type: string
     contentsCodes:
       description: Contents codes
       required: true

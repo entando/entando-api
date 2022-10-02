@@ -1,0 +1,11 @@
+description: Content type refresh
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        profileTypeCodes:
+          type: array
+          items:
+            type: string
