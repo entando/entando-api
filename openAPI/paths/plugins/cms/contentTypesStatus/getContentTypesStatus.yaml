@@ -1,0 +1,17 @@
+tags:
+  - content-type-resource-controller
+summary: Retrieve the content types status
+description: Retrieve the content types status
+externalDocs:
+  description: ''
+  url: https://
+operationId: getContentTypesStatus
+responses:
+  '200':
+    $ref: ../../../../components/responses/ok/common/entityTypesStatus_generic.yaml
+  '401':
+    $ref: ../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../components/responses/notFound/common/empty.yaml

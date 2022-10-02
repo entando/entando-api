@@ -1,2 +1,4 @@
 summary: Content types status operations
 description: API to access and manipulate the collection of content types status
+get:
+  $ref: ./getContentTypesStatus.yaml

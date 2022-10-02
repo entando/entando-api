@@ -1,0 +1,15 @@
+title: Entity types status
+type: object
+properties:
+  ready:
+    type: array
+    items:
+      type: string
+  refreshing:
+    type: array
+    items:
+      type: string
+  toRefresh:
+    type: array
+    items:
+      type: string

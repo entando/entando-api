@@ -38,6 +38,8 @@ entityTypeAttributeOGNLValidation:
   $ref: ./common/entityTypeAttributeOGNLValidation.yaml
 entityTypeAttributeValidation:
   $ref: ./common/entityTypeAttributeValidation.yaml
+entityTypesStatus:
+  $ref: ./common/entityTypesStatus.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
 iEntityModelDictionary:
