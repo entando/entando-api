@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../../components/parameters/path/emailSenders/senderId.yaml
 get:
   $ref: ./getEmailSender.yaml
+put:
+  $ref: ./updateEmailSender.yaml

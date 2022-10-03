@@ -2296,6 +2296,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - email-sender-controller
+      summary: Update an e-mail sender
+      description: Update the e-mail sender specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateEmailSender
+      requestBody:
+        $ref: '#/components/requestBodies/emailSender'
+      responses:
+        '200':
+          $ref: '#/components/responses/emailSender'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
