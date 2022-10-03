@@ -7,3 +7,5 @@ get:
   $ref: ./getPageWidget.yaml
 put:
   $ref: ./updatePageWidget.yaml
+delete:
+  $ref: ./deletePageWidget.yaml

@@ -1915,6 +1915,24 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - page-configuration-controller
+      summary: Delete a page widget
+      description: Delete the page widget specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deletePageWidget
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
