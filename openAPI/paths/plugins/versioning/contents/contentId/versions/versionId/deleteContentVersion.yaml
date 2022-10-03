@@ -1,0 +1,25 @@
+tags:
+  - content-versioning-controller
+summary: Delete a content version
+description: Delete the content version specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: deleteContentVersion
+responses:
+  '200':
+    $ref: ../../../../../../../components/responses/ok/restResponse/restResponse.yaml
+  '201':
+    $ref: ../../../../../../../components/responses/created/restResponse/restResponse.yaml
+  '204':
+    $ref: ../../../../../../../components/responses/noContent/common/empty.yaml
+  '400':
+    $ref: ../../../../../../../components/responses/badRequest/common/empty.yaml
+  '401':
+    $ref: ../../../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../../../components/responses/forbidden/common/empty.yaml
+  '409':
+    $ref: ../../../../../../../components/responses/conflict/common/empty.yaml
+  '500':
+    $ref: ../../../../../../../components/responses/serverError/common/empty.yaml

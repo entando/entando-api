@@ -2103,6 +2103,32 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+    delete:
+      tags:
+        - content-versioning-controller
+      summary: Delete a content version
+      description: Delete the content version specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteContentVersion
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/restResponse-created'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
 components:
   schemas:
     activityStreamRecord:

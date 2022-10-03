@@ -5,3 +5,5 @@ parameters:
   - $ref: ../../../../../../../components/parameters/path/versioning/versionId.yaml
 get:
   $ref: ./getContentVersion.yaml
+delete:
+  $ref: ./deleteContentVersion.yaml
