@@ -6,3 +6,5 @@ get:
   $ref: ./getFragment.yaml
 put:
   $ref: ./updateFragment.yaml
+delete:
+  $ref: ./deleteFragment.yaml
