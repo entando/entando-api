@@ -48,3 +48,5 @@ idCodesByObjectType:
   $ref: ./analysis/idCodesByObjectType.yaml
 label:
   $ref: ./labels/label.yaml
+language:
+  $ref: ./languages/language.yaml

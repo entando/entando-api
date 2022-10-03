@@ -1,0 +1,8 @@
+description: Language
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        isActive:
+          type: boolean

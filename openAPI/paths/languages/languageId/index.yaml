@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/languages/languageId.yaml
 get:
   $ref: ./getLanguage.yaml
+put:
+  $ref: ./updateLanguage.yaml

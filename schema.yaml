@@ -1542,6 +1542,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - language-controller
+      summary: Update a language
+      description: Update the language specified in the path as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateLanguage
+      requestBody:
+        $ref: '#/components/requestBodies/label'
+      responses:
+        '200':
+          $ref: '#/components/responses/language'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -5692,6 +5714,15 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/label'
+    language:
+      description: Language
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              isActive:
+                type: boolean
   headers: {}
   securitySchemes:
     entando:
