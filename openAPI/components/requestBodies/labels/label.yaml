@@ -1,0 +1,6 @@
+description: Label
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/labels/label.yaml

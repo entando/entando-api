@@ -78,6 +78,8 @@ groups:
   $ref: ./ok/groups/groups.yaml
 iEntityModelDictionary:
   $ref: ./ok/contentModels/iEntityModelDictionary.yaml
+label:
+  $ref: ./ok/labels/label.yaml
 labels:
   $ref: ./ok/labels/labels.yaml
 modelAndViewObject_generic:

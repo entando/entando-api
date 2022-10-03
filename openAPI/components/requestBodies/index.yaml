@@ -46,3 +46,5 @@ group:
   $ref: ./groups/group.yaml
 idCodesByObjectType:
   $ref: ./analysis/idCodesByObjectType.yaml
+label:
+  $ref: ./labels/label.yaml

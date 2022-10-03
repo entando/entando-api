@@ -1401,6 +1401,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - label-controller
+      summary: Add a label to the labels collection
+      description: Create a new label as specified in the request body and add it to the labels collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addLabel
+      requestBody:
+        $ref: '#/components/requestBodies/label'
+      responses:
+        '200':
+          $ref: '#/components/responses/label'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -4605,6 +4627,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/iEntityModelDictionary'
+    label:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/label'
     labels:
       description: OK
       content:
@@ -5486,6 +5518,13 @@ components:
             type: object
             additionalProperties:
               type: object
+    label:
+      description: Label
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/label'
   headers: {}
   securitySchemes:
     entando:
