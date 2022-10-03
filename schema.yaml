@@ -882,6 +882,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - file-browser-controller
+      summary: Add a file
+      description: Create a new file as specified in the request body and add it to the file browser
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addFile
+      requestBody:
+        $ref: '#/components/requestBodies/file'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

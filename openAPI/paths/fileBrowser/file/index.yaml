@@ -4,3 +4,5 @@ get:
   $ref: ./getFile.yaml
 put:
   $ref: ./updateFile.yaml
+post:
+  $ref: ./addFile.yaml
