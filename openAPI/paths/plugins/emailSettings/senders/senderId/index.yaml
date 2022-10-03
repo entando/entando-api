@@ -6,3 +6,5 @@ get:
   $ref: ./getEmailSender.yaml
 put:
   $ref: ./updateEmailSender.yaml
+delete:
+  $ref: ./deleteEmailSender.yaml

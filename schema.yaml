@@ -2318,6 +2318,26 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - email-sender-controller
+      summary: Delete an e-mail sender
+      description: Delete the e-mail sender specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: delteEmailSender
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '409':
+          $ref: '#/components/responses/conflict'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
