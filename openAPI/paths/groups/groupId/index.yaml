@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/groups/groupId.yaml
 get:
   $ref: ./getGroup.yaml
+put:
+  $ref: ./updateGroup.yaml
