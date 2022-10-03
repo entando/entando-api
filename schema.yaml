@@ -503,6 +503,24 @@ paths:
   /dashboard/pageStatus:
     summary: Dashboard page status operations
     description: API to access the dashboard page status
+    get:
+      tags:
+        - dashboard-controller
+      summary: Retrieve the dashboard page status
+      description: Retrieve the dashboard page status
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getDashboardPageStatus
+      responses:
+        '200':
+          $ref: '#/components/responses/pageStatus'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -2833,6 +2851,21 @@ components:
           $ref: '#/components/schemas/view'
         viewName:
           type: string
+    pageStatus:
+      title: Page status
+      type: object
+      properties:
+        draft:
+          type: integer
+          format: int32
+        lastUpdate:
+          type: string
+        published:
+          type: integer
+          format: int32
+        unpublished:
+          type: integer
+          format: int32
     pagedRestResponse:
       title: Paged REST response
       type: object
@@ -3262,6 +3295,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/pagedRestResponse'
+    pageStatus:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/pageStatus'
     restResponse:
       description: OK
       content:

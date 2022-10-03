@@ -1,0 +1,17 @@
+tags:
+  - dashboard-controller
+summary: Retrieve the dashboard page status
+description: Retrieve the dashboard page status
+externalDocs:
+  description: ''
+  url: https://
+operationId: getDashboardPageStatus
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/dashboard/pageStatus.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml

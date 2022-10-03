@@ -1,0 +1,14 @@
+title: Page status
+type: object
+properties:
+  draft:
+    type: integer
+    format: int32
+  lastUpdate:
+    type: string
+  published:
+    type: integer
+    format: int32
+  unpublished:
+    type: integer
+    format: int32

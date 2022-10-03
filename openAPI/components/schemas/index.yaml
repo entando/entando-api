@@ -50,6 +50,8 @@ lastReloadInfo:
   $ref: ./contentSettings/lastReloadInfo.yaml
 modelAndView:
   $ref: ./authorizations/modelAndView.yaml
+pageStatus:
+  $ref: ./dashboard/pageStatus.yaml
 pagedRestResponse:
   $ref: ./restResponse/pagedRestResponse/pagedRestResponse.yaml
 paginationMetadata:
