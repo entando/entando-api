@@ -815,6 +815,27 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - file-browser-controller
+      summary: Delete a directory from the file browser
+      description: Delete the directory specified in the query parameters from the file browser
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteDirectory
+      parameters:
+        - $ref: '#/components/parameters/currentPath'
+        - $ref: '#/components/parameters/protectedFolder'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations

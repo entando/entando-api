@@ -2,3 +2,5 @@ summary: File browser directories operations
 description: API to access and manipulate the file browser directories
 post:
   $ref: ./addDirectory.yaml
+delete:
+  $ref: ./deleteDirectory.yaml
