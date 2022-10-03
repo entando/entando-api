@@ -6,3 +6,5 @@ get:
   $ref: ./getLabel.yaml
 put:
   $ref: ./updateLabel.yaml
+delete:
+  $ref: ./deleteLabel.yaml
