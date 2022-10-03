@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../components/parameters/path/database/reportId.yaml
 get:
   $ref: ./getDumpReport.yaml
+delete:
+  $ref: ./deleteDumpReport.yaml
