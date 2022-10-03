@@ -1145,6 +1145,26 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - gui-fragment-settings-controller
+      summary: Update the fragments settings
+      description: Update the fragments settings
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateFragmentsSettings
+      responses:
+        '200':
+          $ref: '#/components/responses/booleanMap'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
@@ -4154,6 +4174,17 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/basicFileAttributeView'
+    booleanMap:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseMapPayload'
+              - properties:
+                  payload:
+                    additionalProperties:
+                      type: boolean
     categoriesListMapMetadata:
       description: OK
       content:
@@ -5350,6 +5381,15 @@ components:
             properties:
               guiCode:
                 type: string
+    fragmentsSettings:
+      description: Fragments settings
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              enableEditingWhenEmptyDefaultGui:
+                type: boolean
     group:
       description: Group
       required: true

@@ -6,6 +6,8 @@ attributeType_generic:
   $ref: ./ok/common/attributeType_generic.yaml
 basicFileAttributeViewList:
   $ref: ./ok/fileBrowser/basicFileAttributeViewList.yaml
+booleanMap:
+  $ref: ./ok/common/booleanMap.yaml
 categoriesListMapMetadata:
   $ref: ./ok/categories/categoriesListMapMetadata.yaml
 category:

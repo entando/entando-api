@@ -1,0 +1,10 @@
+description: OK
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: ../../../schemas/restResponse/restResponseMapPayload.yaml
+        - properties:
+            payload:
+              additionalProperties:
+                type: boolean

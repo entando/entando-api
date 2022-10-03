@@ -40,6 +40,8 @@ fragment:
   $ref: ./fragments/fragment.yaml
 fragmentGUICode:
   $ref: ./fragments/fragmentGUICode.yaml
+fragmentsSettings:
+  $ref: ./fragmentsSettings/fragmentsSettings.yaml
 group:
   $ref: ./groups/group.yaml
 idCodesByObjectType:

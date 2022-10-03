@@ -2,3 +2,5 @@ summary: Fragments settings operations
 description: API to access and manipulate fragments settings
 get:
   $ref: ./getFragmentsSettings.yaml
+put:
+  $ref: ./updateFragmentsSettings.yaml

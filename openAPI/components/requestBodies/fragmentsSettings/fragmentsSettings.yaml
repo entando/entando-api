@@ -1,0 +1,8 @@
+description: Fragments settings
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        enableEditingWhenEmptyDefaultGui:
+          type: boolean
