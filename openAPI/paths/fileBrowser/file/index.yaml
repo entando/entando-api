@@ -2,3 +2,5 @@ summary: File browser files operations
 description: API to access and manipulate the file browser files
 get:
   $ref: ./getFile.yaml
+put:
+  $ref: ./updateFile.yaml
