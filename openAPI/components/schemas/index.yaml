@@ -36,6 +36,8 @@ dumpReport:
   $ref: ./database/dumpReport.yaml
 contentsStatus:
   $ref: ./contents/contentsStatus.yaml
+emailSender:
+  $ref: ./emailSenders/emailSender.yaml
 entityAttribute:
   $ref: ./common/entityAttribute.yaml
 entityTypeAttribute:

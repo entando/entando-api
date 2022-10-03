@@ -2221,6 +2221,36 @@ paths:
   /plugins/emailSettings/senders:
     summary: E-mail senders collection operations
     description: API to access and manipulate the collection of e-mail senders
+    get:
+      tags:
+        - email-sender-controller
+      summary: Retrieve the collection of e-mail senders
+      description: Retrieve the collection of e-mail senders filtered by query parameters
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getEmailSenders
+      parameters:
+        - $ref: '#/components/parameters/allowedValues'
+        - $ref: '#/components/parameters/attribute'
+        - $ref: '#/components/parameters/entityAttr'
+        - $ref: '#/components/parameters/operator'
+        - $ref: '#/components/parameters/order'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/value'
+        - $ref: '#/components/parameters/direction'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          $ref: '#/components/responses/emailSenders'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
@@ -2812,6 +2842,14 @@ components:
         unpublished:
           type: integer
           format: int32
+    emailSender:
+      title: E-mail sender
+      type: object
+      properties:
+        code:
+          type: string
+        email:
+          type: string
     entityAttribute:
       title: Entity attribute
       type: object
@@ -3523,6 +3561,18 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/dumpReport'
+    emailSenders:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/pagedRestResponse'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/emailSender'
     entityTypeAttributeFullList:
       description: OK
       content:

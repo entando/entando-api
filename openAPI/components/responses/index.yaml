@@ -52,6 +52,8 @@ contentsStatus:
   $ref: ./ok/contents/contentsStatusObject.yaml
 dumpReport:
   $ref: ./ok/database/dumpReport.yaml
+emailSenders:
+  $ref: ./ok/emailSenders/emailSenders.yaml
 entityTypeAttributeFullList:
   $ref: ./ok/common/entityTypeAttributeFullList.yaml
 entityTypeAttributeFullList_generic:
