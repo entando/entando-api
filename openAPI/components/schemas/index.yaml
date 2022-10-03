@@ -68,6 +68,8 @@ restResponseMapMetadata:
   $ref: ./restResponse/restResponseMapMetadata.yaml
 restResponseMapPayload:
   $ref: ./restResponse/restResponseMapPayload.yaml
+shortDumpReport:
+  $ref: ./database/shortDumpReport.yaml
 type:
   $ref: ./common/type.yaml
 view:

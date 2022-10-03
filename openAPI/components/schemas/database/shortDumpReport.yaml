@@ -1,0 +1,10 @@
+title: Short dump report
+type: object
+properties:
+  code:
+    type: string
+  date:
+    type: string
+  requiredTime:
+    type: integer
+    format: int64

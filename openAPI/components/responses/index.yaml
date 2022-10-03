@@ -72,6 +72,8 @@ restResponse_generic:
   $ref: ./ok/restResponse/restResponse_generic.yaml
 restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
+shortDumpReports:
+  $ref: ./ok/database/shortDumpReports.yaml
 string_generic:
   $ref: ./ok/common/string_generic.yaml
 strings_generic:
