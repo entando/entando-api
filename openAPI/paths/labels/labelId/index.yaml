@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/labels/labelId.yaml
 get:
   $ref: ./getLabel.yaml
+put:
+  $ref: ./updateLabel.yaml

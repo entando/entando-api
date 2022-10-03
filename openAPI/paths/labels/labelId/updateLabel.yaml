@@ -1,0 +1,21 @@
+tags:
+  - label-controller
+summary: Update a label
+description: Update the label specified in the path as specified in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: updateLabel
+requestBody:
+  $ref: ../../../components/requestBodies/labels/label.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/labels/label.yaml
+  '201':
+    $ref: ../../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
