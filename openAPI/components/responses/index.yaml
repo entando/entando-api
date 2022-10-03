@@ -22,6 +22,8 @@ consumerObject:
   $ref: ./ok/consumers/consumerObject.yaml
 content:
   $ref: ./ok/contents/content.yaml
+contentObject:
+  $ref: ./ok/contents/contentObject.yaml
 contentMapMetadata:
   $ref: ./ok/contents/contentMapMetadata.yaml
 contentModel:
@@ -80,6 +82,8 @@ badRequest:
   $ref: ./badRequest/common/empty.yaml
 conflict:
   $ref: ./conflict/common/empty.yaml
+contentObject-created:
+  $ref: ./created/contents/contentObject.yaml
 contentTypeObject_generic-created:
   $ref: ./created/contentTypes/contentTypeObject_generic.yaml
 contentVersions-created:
