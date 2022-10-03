@@ -1,0 +1,8 @@
+description: Fragment GUI code
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        guiCode:
+          type: string

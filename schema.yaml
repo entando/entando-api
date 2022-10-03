@@ -1024,6 +1024,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - gui-fragment-controller
+      summary: Update a GUI fragment
+      description: Update the fragment specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateFragment
+      requestBody:
+        $ref: '#/components/requestBodies/fragmentGUICode'
+      responses:
+        '200':
+          $ref: '#/components/responses/fragment'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
@@ -5206,6 +5228,15 @@ components:
             properties:
               code:
                 type: string
+              guiCode:
+                type: string
+    fragmentGUICode:
+      description: Fragment GUI code
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
               guiCode:
                 type: string
     group:

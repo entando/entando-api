@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/fragments/fragmentId.yaml
 get:
   $ref: ./getFragment.yaml
+put:
+  $ref: ./updateFragment.yaml
