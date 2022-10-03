@@ -1,0 +1,11 @@
+title: Table dump report
+type: object
+properties:
+  requiredTime:
+    type: integer
+    format: int64
+  rows:
+    type: integer
+    format: int32
+  tableName:
+    type: string

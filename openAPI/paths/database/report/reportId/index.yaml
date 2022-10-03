@@ -2,3 +2,5 @@ summary: Database report operations
 description: API to access and manipulate a database report
 parameters:
   - $ref: ../../../../components/parameters/path/database/reportId.yaml
+get:
+  $ref: ./getDumpReport.yaml

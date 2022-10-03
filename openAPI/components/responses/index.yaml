@@ -50,6 +50,8 @@ contentsListMapMetadata:
   $ref: ./ok/contents/contentsListMapMetadata.yaml
 contentsStatus:
   $ref: ./ok/contents/contentsStatusObject.yaml
+dumpReport:
+  $ref: ./ok/database/dumpReport.yaml
 entityTypeAttributeFullList:
   $ref: ./ok/common/entityTypeAttributeFullList.yaml
 entityTypeAttributeFullList_generic:

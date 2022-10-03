@@ -12,6 +12,8 @@ category:
   $ref: ./categories/category.yaml
 component:
   $ref: ./database/component.yaml
+componentInstallationReport:
+  $ref: ./database/componentInstallationReport.yaml
 componentUsage:
   $ref: ./common/componentUsage.yaml
 componentUsageEntity:
@@ -30,6 +32,8 @@ contentType:
   $ref: ./contentTypes/contentType.yaml
 contentVersion:
   $ref: ./versioning/contentVersion.yaml
+dumpReport:
+  $ref: ./database/dumpReport.yaml
 contentsStatus:
   $ref: ./contents/contentsStatus.yaml
 entityAttribute:
@@ -72,6 +76,8 @@ restResponseMapPayload:
   $ref: ./restResponse/restResponseMapPayload.yaml
 shortDumpReport:
   $ref: ./database/shortDumpReport.yaml
+tableDumpReport:
+  $ref: ./database/tableDumpReport.yaml
 type:
   $ref: ./common/type.yaml
 view:

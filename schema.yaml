@@ -580,6 +580,24 @@ paths:
     description: API to access and manipulate a database report
     parameters:
       - $ref: '#/components/parameters/reportId'
+    get:
+      tags:
+        - database-controller
+      summary: Retrieve a database dump report
+      description: Retrieve the database dump report specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getDumpReport
+      responses:
+        '200':
+          $ref: '#/components/responses/dumpReport'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -2417,6 +2435,22 @@ components:
           type: object
           additionalProperties:
             $ref: '#/components/schemas/wildCardType'
+    componentInstallationReport:
+      title: Component installation report
+      type: object
+      properties:
+        artifactGroupId:
+          type: string
+        artifactId:
+          type: string
+        artifactVersion:
+          type: string
+        code:
+          type: string
+        date:
+          type: string
+        description:
+          type: string
     componentUsage:
       title: Component usage
       type: object
@@ -2623,6 +2657,27 @@ components:
         versionDate:
           type: string
           format: date-time
+    dumpReport:
+      title: Dump report
+      type: object
+      properties:
+        code:
+          type: string
+        componentsHistory:
+          type: array
+          items:
+            $ref: '#/components/schemas/componentInstallationReport'
+        dataSourcesReports:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              $ref: '#/components/schemas/tableDumpReport'
+        date:
+          type: string
+        requiredTime:
+          type: integer
+          format: int64
     contentsStatus:
       title: Contents status
       type: object
@@ -3046,6 +3101,18 @@ components:
         requiredTime:
           type: integer
           format: int64
+    tableDumpReport:
+      title: Table dump report
+      type: object
+      properties:
+        requiredTime:
+          type: integer
+          format: int64
+        rows:
+          type: integer
+          format: int32
+        tableName:
+          type: string
     type:
       title: Type
       type: object
@@ -3331,6 +3398,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/contentsStatus'
+    dumpReport:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/dumpReport'
     entityTypeAttributeFullList:
       description: OK
       content:

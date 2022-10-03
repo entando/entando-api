@@ -1,0 +1,20 @@
+title: Dump report
+type: object
+properties:
+  code:
+    type: string
+  componentsHistory:
+    type: array
+    items:
+      $ref: ./componentInstallationReport.yaml
+  dataSourcesReports:
+    type: object
+    additionalProperties:
+      type: array
+      items:
+        $ref: ./tableDumpReport.yaml
+  date:
+    type: string
+  requiredTime:
+    type: integer
+    format: int64

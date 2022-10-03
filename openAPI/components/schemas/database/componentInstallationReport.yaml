@@ -1,0 +1,15 @@
+title: Component installation report
+type: object
+properties:
+  artifactGroupId:
+    type: string
+  artifactId:
+    type: string
+  artifactVersion:
+    type: string
+  code:
+    type: string
+  date:
+    type: string
+  description:
+    type: string
