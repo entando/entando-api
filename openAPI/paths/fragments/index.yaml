@@ -2,3 +2,5 @@ summary: Fragments operations
 description: API to access and manipulate fragments
 get:
   $ref: ./getFragments.yaml
+post:
+  $ref: ./addFragment.yaml

@@ -958,6 +958,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - gui-fragment-controller
+      summary: Add a fragment to the fragments collection
+      description: Create a new fragment as specified in the request body and add it to the fragments collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addFragment
+      requestBody:
+        $ref: '#/components/requestBodies/fragment'
+      responses:
+        '200':
+          $ref: '#/components/responses/fragment'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /groups:
     summary: Groups operations
     description: API to access and manipulate groups
@@ -3587,6 +3609,38 @@ components:
           type: array
           items:
             type: string
+    fragment:
+      title: Fragment
+      type: object
+      properties:
+        code:
+          type: string
+        defaultGuiCode:
+          type: string
+        fragments:
+          type: array
+          items:
+            $ref: '#/components/schemas/fragmentRef'
+        guiCode:
+          type: string
+        locked:
+          type: boolean
+        pageModels:
+          type: array
+          items:
+            $ref: '#/components/schemas/pageModelRef'
+        pluginCode:
+          type: string
+        widgetType:
+          $ref: '#/components/schemas/widgetTypeRef'
+        widgetTypeCode:
+          type: string
+    fragmentRef:
+      title: Fragment reference
+      type: object
+      properties:
+        code:
+          type: string
     fragmentSmall:
       title: Fragment small
       type: object
@@ -3719,6 +3773,14 @@ components:
         view:
           $ref: '#/components/schemas/view'
         viewName:
+          type: string
+    pageModelRef:
+      title: Page model reference
+      type: object
+      properties:
+        code:
+          type: string
+        name:
           type: string
     pageStatus:
       title: Page status
@@ -4229,6 +4291,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/entityTypesStatus'
+    fragment:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/fragment'
     fragmentsSmall:
       description: OK
       content:
@@ -5062,6 +5134,17 @@ components:
                 type: string
               protectedFolder:
                 type: boolean
+    fragment:
+      description: Fragment
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              code:
+                type: string
+              guiCode:
+                type: string
     group:
       description: Group
       required: true

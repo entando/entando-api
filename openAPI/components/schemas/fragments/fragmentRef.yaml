@@ -1,0 +1,5 @@
+title: Fragment reference
+type: object
+properties:
+  code:
+    type: string

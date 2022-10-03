@@ -1,0 +1,7 @@
+title: Page model reference
+type: object
+properties:
+  code:
+    type: string
+  name:
+    type: string

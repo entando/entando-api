@@ -1,0 +1,25 @@
+title: Fragment
+type: object
+properties:
+  code:
+    type: string
+  defaultGuiCode:
+    type: string
+  fragments:
+    type: array
+    items:
+      $ref: ./fragmentRef.yaml
+  guiCode:
+    type: string
+  locked:
+    type: boolean
+  pageModels:
+    type: array
+    items:
+      $ref: ../pageModels/pageModelRef.yaml
+  pluginCode:
+    type: string
+  widgetType:
+    $ref: ./widgetTypeRef.yaml
+  widgetTypeCode:
+    type: string

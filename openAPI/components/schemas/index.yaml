@@ -58,6 +58,10 @@ entityTypesStatus:
   $ref: ./common/entityTypesStatus.yaml
 filter:
   $ref: ./restResponse/pagedRestResponse/filter.yaml
+fragment:
+  $ref: ./fragments/fragment.yaml
+fragmentRef:
+  $ref: ./fragments/fragmentRef.yaml
 fragmentSmall:
   $ref: ./fragments/fragmentSmall.yaml
 group:
@@ -68,6 +72,8 @@ lastReloadInfo:
   $ref: ./contentSettings/lastReloadInfo.yaml
 modelAndView:
   $ref: ./authorizations/modelAndView.yaml
+pageModelRef:
+  $ref: ./pageModels/pageModelRef.yaml
 pageStatus:
   $ref: ./dashboard/pageStatus.yaml
 pagedRestResponse:

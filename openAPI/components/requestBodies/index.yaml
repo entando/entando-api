@@ -36,6 +36,8 @@ entityTypeAttribute:
   $ref: ./common/entityTypeAttribute.yaml
 file:
   $ref: ./fileBrowser/file.yaml
+fragment:
+  $ref: ./fragments/fragment.yaml
 group:
   $ref: ./groups/group.yaml
 idCodesByObjectType:

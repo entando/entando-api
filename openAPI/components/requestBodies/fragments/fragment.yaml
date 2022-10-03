@@ -1,0 +1,10 @@
+description: Fragment
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        code:
+          type: string
+        guiCode:
+          type: string
