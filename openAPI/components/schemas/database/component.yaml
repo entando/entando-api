@@ -1,0 +1,17 @@
+title: Component
+type: object
+properties:
+  artifactGroupId:
+    type: string
+  artifactId:
+    type: string
+  artifactVersion:
+    type: string
+  code:
+    type: string
+  description:
+    type: string
+  tableMapping:
+    type: object
+    additionalProperties:
+      $ref: ../common/wildCardType.yaml

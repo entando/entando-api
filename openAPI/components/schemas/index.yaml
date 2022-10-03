@@ -10,6 +10,8 @@ attributeType:
   $ref: ./common/attributeType.yaml
 category:
   $ref: ./categories/category.yaml
+component:
+  $ref: ./database/component.yaml
 componentUsage:
   $ref: ./common/componentUsage.yaml
 componentUsageEntity:

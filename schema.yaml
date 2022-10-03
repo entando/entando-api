@@ -557,6 +557,24 @@ paths:
   /database/initBackup:
     summary: Database backup operations
     description: API to access and manipulate the database backup
+    get:
+      tags:
+        - database-controller
+      summary: Initiate a backup
+      description: Initiate a backup
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: initBackup
+      responses:
+        '200':
+          $ref: '#/components/responses/componentsList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -2376,6 +2394,24 @@ components:
           type: object
           additionalProperties:
             type: string
+    component:
+      title: Component
+      type: object
+      properties:
+        artifactGroupId:
+          type: string
+        artifactId:
+          type: string
+        artifactVersion:
+          type: string
+        code:
+          type: string
+        description:
+          type: string
+        tableMapping:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/wildCardType'
     componentUsage:
       title: Component usage
       type: object
@@ -3124,6 +3160,18 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/componentUsageEntity'
+    componentsList:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponseListPayload'
+              - properties:
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/component'
     consumer:
       description: OK
       content:

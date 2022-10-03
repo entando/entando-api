@@ -16,6 +16,8 @@ componentUsageObject_generic:
   $ref: ./ok/common/componentUsageObject_generic.yaml
 componentUsageEntities:
   $ref: ./ok/common/componentUsageEntities.yaml
+componentsList:
+  $ref: ./ok/database/componentsList.yaml
 consumer:
   $ref: ./ok/consumers/consumer.yaml
 consumerObject:
