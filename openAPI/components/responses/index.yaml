@@ -74,6 +74,8 @@ restResponse:
   $ref: ./ok/restResponse/restResponse.yaml
 restResponse_generic:
   $ref: ./ok/restResponse/restResponse_generic.yaml
+restResponseMapMetadata:
+  $ref: ./ok/restResponse/restResponseMapMetadata.yaml
 restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
 shortDumpReports:

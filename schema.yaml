@@ -623,6 +623,24 @@ paths:
       - $ref: '#/components/parameters/reportId'
       - $ref: '#/components/parameters/dataSource'
       - $ref: '#/components/parameters/tableName'
+    get:
+      tags:
+        - database-controller
+      summary: Retrieve a database table dump
+      description: Retrieve the database table dump specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: getTableDump
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapMetadata'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -3519,6 +3537,12 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/restResponse'
+    restResponseMapMetadata:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restResponseMapMetadata'
     restResponseMapPayload:
       description: OK
       content:

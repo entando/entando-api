@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../../../../components/parameters/path/database/reportId.yaml
   - $ref: ../../../../../../../components/parameters/path/database/dataSource.yaml
   - $ref: ../../../../../../../components/parameters/path/database/tableName.yaml
+get:
+  $ref: ./getTableDump.yaml
