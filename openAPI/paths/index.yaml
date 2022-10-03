@@ -58,6 +58,8 @@
   $ref: ./fragments/fragmentId/index.yaml
 /fragments/{fragmentId}/usage:
   $ref: ./fragments/fragmentId/usage/index.yaml
+/fragments/{fragmentId}/usage/details:
+  $ref: ./fragments/fragmentId/usage/details/index.yaml
 /groups:
   $ref: ./groups/index.yaml
 /groups/{groupId}:
