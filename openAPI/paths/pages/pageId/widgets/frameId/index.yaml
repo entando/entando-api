@@ -5,3 +5,5 @@ parameters:
   - $ref: ../../../../../components/parameters/path/pages/frameId.yaml
 get:
   $ref: ./getPageWidget.yaml
+put:
+  $ref: ./updatePageWidget.yaml

@@ -1,0 +1,11 @@
+description: Widget config
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        code:
+          type: string
+        config:
+          type: object
+          properties: { }

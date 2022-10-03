@@ -1893,6 +1893,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - page-configuration-controller
+      summary: Update a page widget
+      description: Update the page widget specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updatePageWidget
+      requestBody:
+        $ref: '#/components/requestBodies/widgetConfiguration'
+      responses:
+        '200':
+          $ref: '#/components/responses/widgetConfiguration'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -6057,6 +6079,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/navigatorConfig'
+    widgetConfiguration:
+      description: Widget config
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              code:
+                type: string
+              config:
+                type: object
+                properties: {}
   headers: {}
   securitySchemes:
     entando:
