@@ -2,3 +2,5 @@ summary: Groups operations
 description: API to access and manipulate groups
 get:
   $ref: ./getGroups.yaml
+post:
+  $ref: ./addGroup.yaml

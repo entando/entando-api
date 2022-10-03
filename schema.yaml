@@ -958,6 +958,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - group-controller
+      summary: Add a group to the groups collection
+      description: Create a new group as specified in the request body and add it to the groups collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addGroup
+      requestBody:
+        $ref: '#/components/requestBodies/group'
+      responses:
+        '200':
+          $ref: '#/components/responses/group'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/authorize:
     summary: Authorization operations
     description: API to handle authorizations
@@ -4025,6 +4047,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/entityTypesStatus'
+    group:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/group'
     groups:
       description: OK
       content:
@@ -4815,6 +4847,17 @@ components:
                 type: string
               protectedFolder:
                 type: boolean
+    group:
+      description: Group
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              code:
+                type: string
+              name:
+                type: string
     idCodesByObjectType:
       description: ID codes by object type
       required: true

@@ -36,5 +36,7 @@ entityTypeAttribute:
   $ref: ./common/entityTypeAttribute.yaml
 file:
   $ref: ./fileBrowser/file.yaml
+group:
+  $ref: ./groups/group.yaml
 idCodesByObjectType:
   $ref: ./analysis/idCodesByObjectType.yaml

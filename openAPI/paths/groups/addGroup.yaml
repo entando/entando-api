@@ -1,0 +1,21 @@
+tags:
+  - group-controller
+summary: Add a group to the groups collection
+description: Create a new group as specified in the request body and add it to the groups collection
+externalDocs:
+  description: ''
+  url: https://
+operationId: addGroup
+requestBody:
+  $ref: ../../components/requestBodies/groups/group.yaml
+responses:
+  '200':
+    $ref: ../../components/responses/ok/groups/group.yaml
+  '201':
+    $ref: ../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml
