@@ -1,0 +1,32 @@
+description: Page
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        charset:
+          type: string
+        code:
+          type: string
+        contentType:
+          type: string
+        displayedInMenu:
+          type: boolean
+        joinGroups:
+          type: array
+          items:
+            type: string
+        ownerGroup:
+          type: string
+        pageModel:
+          type: string
+        parentCode:
+          type: string
+        seo:
+          type: boolean
+        status:
+          type: string
+        titles:
+          type: object
+          additionalProperties:
+            type: string

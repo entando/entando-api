@@ -1811,6 +1811,50 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - page-controller
+      summary: Add a page to the pages collection
+      description: Create a new page as specified in the request body and add it to the pages collection
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addPage
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      requestBody:
+        $ref: '#/components/requestBodies/page'
+      responses:
+        '200':
+          $ref: '#/components/responses/page'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   '/pages/{pageId}/configuration':
     summary: Page configuration operations
     description: API to access and manipulate page configuration
@@ -5261,6 +5305,16 @@ components:
             type: object
     ok:
       description: OK
+    page:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/page'
     pagesListMapMetadata:
       description: OK
       content:
@@ -6360,6 +6414,39 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/navigatorConfig'
+    page:
+      description: Page
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              charset:
+                type: string
+              code:
+                type: string
+              contentType:
+                type: string
+              displayedInMenu:
+                type: boolean
+              joinGroups:
+                type: array
+                items:
+                  type: string
+              ownerGroup:
+                type: string
+              pageModel:
+                type: string
+              parentCode:
+                type: string
+              seo:
+                type: boolean
+              status:
+                type: string
+              titles:
+                type: object
+                additionalProperties:
+                  type: string
     widgetConfiguration:
       description: Widget config
       required: true

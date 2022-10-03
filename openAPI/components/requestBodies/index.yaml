@@ -52,5 +52,7 @@ language:
   $ref: ./languages/language.yaml
 navigatorConfig:
   $ref: ./widgets/navigatorConfig.yaml
+page:
+  $ref: ./pages/page.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml
