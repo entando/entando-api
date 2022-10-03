@@ -2251,6 +2251,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - email-sender-controller
+      summary: Add an e-mail sender to the collection of e-mail senders
+      description: Add an e-mail sender to the collection of e-mail senders as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addEmailSender
+      requestBody:
+        $ref: '#/components/requestBodies/emailSender'
+      responses:
+        '200':
+          $ref: '#/components/responses/emailSender'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
@@ -3561,6 +3583,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/dumpReport'
+    emailSender:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/emailSender'
     emailSenders:
       description: OK
       content:
@@ -4305,6 +4337,13 @@ components:
             type: array
             items:
               $ref: '#/components/schemas/content'
+    emailSender:
+      description: E-mail sender
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/emailSender'
     entityTypeAttribute:
       description: Entity type attribute
       required: true

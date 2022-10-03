@@ -1,0 +1,6 @@
+description: E-mail sender
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/emailSenders/emailSender.yaml
