@@ -1,0 +1,6 @@
+description: JSON node
+required: true
+content:
+  application/json-patch+json:
+    schema:
+      type: object

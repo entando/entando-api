@@ -8,3 +8,5 @@ put:
   $ref: ./updatePage.yaml
 delete:
   $ref: ./deletePage.yaml
+patch:
+  $ref: ./patchPage.yaml

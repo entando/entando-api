@@ -46,6 +46,8 @@ group:
   $ref: ./groups/group.yaml
 idCodesByObjectType:
   $ref: ./analysis/idCodesByObjectType.yaml
+jsonNode:
+  $ref: ./common/jsonNode.yaml
 label:
   $ref: ./labels/label.yaml
 language:
