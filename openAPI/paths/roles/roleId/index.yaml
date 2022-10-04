@@ -8,3 +8,5 @@ put:
   $ref: ./updateRole.yaml
 delete:
   $ref: ./deleteRole.yaml
+patch:
+  $ref: ./patchRole.yaml

@@ -1,0 +1,19 @@
+tags:
+  - role-controller
+summary: Patch a role
+description: Patch the role specified in the path as described in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: patchRole
+requestBody:
+  $ref: ../../../components/requestBodies/common/jsonNode.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/roles/role.yaml
+  '204':
+    $ref: ../../../components/responses/noContent/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
