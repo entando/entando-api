@@ -140,6 +140,8 @@ restResponse_generic:
   $ref: ./ok/restResponse/restResponse_generic.yaml
 restResponseMapMetadata:
   $ref: ./ok/restResponse/restResponseMapMetadata.yaml
+restResponseMapPayload_generic:
+  $ref: ./ok/restResponse/restResponseMapPayload_generic.yaml
 restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
 shortDumpReports:

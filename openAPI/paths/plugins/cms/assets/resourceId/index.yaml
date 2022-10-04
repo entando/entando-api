@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../../components/parameters/path/resources/resourceId.yaml
 post:
   $ref: ./updateAsset.yaml
+delete:
+  $ref: ./deleteAsset.yaml

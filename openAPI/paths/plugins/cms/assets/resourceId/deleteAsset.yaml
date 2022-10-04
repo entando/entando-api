@@ -1,0 +1,19 @@
+tags:
+  - resources-controller
+summary: Delete an asset
+description: Delete the asset specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: deleteAsset
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/restResponse/restResponseMapPayload_generic.yaml
+  '204':
+    $ref: ../../../../../components/responses/noContent/common/empty.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

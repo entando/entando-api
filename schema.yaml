@@ -3137,6 +3137,26 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - resources-controller
+      summary: Delete an asset
+      description: Delete the asset specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteAsset
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload_generic'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -7569,6 +7589,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/restResponseMapMetadata'
+    restResponseMapPayload_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/restResponseMapPayload'
     restResponseMapPayload:
       description: OK
       content:
