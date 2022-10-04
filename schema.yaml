@@ -1942,6 +1942,29 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - whitelabel-approval-endpoint
+      summary: Confirm access
+      description: Confirm access via POST
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: confirmAccessPOST
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/model'
+      responses:
+        '200':
+          $ref: '#/components/responses/modelAndViewObject_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/token:
     summary: Token operations
     description: API to handle tokens

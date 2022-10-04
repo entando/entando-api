@@ -4,3 +4,5 @@ get:
   $ref: ./confirmAccessGET.yaml
 put:
   $ref: ./confirmAccessPUT.yaml
+post:
+  $ref: ./confirmAccessPOST.yaml
