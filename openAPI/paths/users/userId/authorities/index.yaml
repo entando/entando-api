@@ -8,3 +8,5 @@ put:
   $ref: ./updateUserAuthorities.yaml
 post:
   $ref: ./addUserAuthorities.yaml
+delete:
+  $ref: ./deleteUserAuthorities.yaml
