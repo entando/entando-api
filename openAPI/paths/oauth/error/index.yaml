@@ -10,3 +10,5 @@ delete:
   $ref: ./errorDELETE.yaml
 options:
   $ref: ./errorOPTIONS.yaml
+head:
+  $ref: ./errorHEAD.yaml

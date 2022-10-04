@@ -2161,6 +2161,27 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
+    head:
+      tags:
+        - whitelabel-error-endpoint
+      summary: Error
+      description: Error via HEAD
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: errorHEAD
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/model'
+      responses:
+        '200':
+          $ref: '#/components/responses/modelAndViewObject_generic'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /oauth/token:
     summary: Token operations
     description: API to handle tokens
