@@ -10,3 +10,5 @@ delete:
   $ref: ./confirmAccessDELETE.yaml
 options:
   $ref: ./confirmAccessOPTIONS.yaml
+head:
+  $ref: ./confirmAccessHEAD.yaml
