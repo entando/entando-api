@@ -8,3 +8,5 @@ post:
   $ref: ./errorPOST.yaml
 delete:
   $ref: ./errorDELETE.yaml
+options:
+  $ref: ./errorOPTIONS.yaml
