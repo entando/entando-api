@@ -6,3 +6,5 @@ get:
   $ref: ./getProfileType.yaml
 put:
   $ref: ./updateProfileType.yaml
+delete:
+  $ref: ./deleteProfileType.yaml

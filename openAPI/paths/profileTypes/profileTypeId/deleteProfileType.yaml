@@ -1,0 +1,17 @@
+tags:
+  - profile-type-controller
+summary: Delete a profile type
+description: Delete the profile type specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: deleteProfileType
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/restResponse/restResponse.yaml
+  '204':
+    $ref: ../../../components/responses/noContent/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
