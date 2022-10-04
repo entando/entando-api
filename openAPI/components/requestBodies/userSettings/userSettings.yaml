@@ -1,0 +1,6 @@
+description: User settings
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/userSettings/userSettings.yaml

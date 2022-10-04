@@ -6452,6 +6452,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - user-settings-controller
+      summary: Update user settings
+      description: Update user settings
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateUserSettings
+      requestBody:
+        $ref: '#/components/requestBodies/userSettings'
+      responses:
+        '200':
+          $ref: '#/components/responses/userSettings'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions
@@ -10518,6 +10540,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/userPreferences'
+    userSettings:
+      description: User settings
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/userSettings'
     widgetConfiguration:
       description: Widget config
       required: true

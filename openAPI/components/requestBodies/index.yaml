@@ -90,5 +90,7 @@ user:
   $ref: ./users/user.yaml
 userPreferences:
   $ref: ./userPreferences/userPreferences.yaml
+userSettings:
+  $ref: ./userSettings/userSettings.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml

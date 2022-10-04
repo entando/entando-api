@@ -2,3 +2,5 @@ summary: User settings operations
 description: API to access and manipulate user settings
 get:
   $ref: ./getUserSettings.yaml
+put:
+  $ref: ./updateUserSettings.yaml
