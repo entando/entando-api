@@ -5,3 +5,5 @@ parameters:
   - $ref: ../../../../../components/parameters/path/attributes/attributeId.yaml
 get:
   $ref: ./getProfileTypeAttribute.yaml
+put:
+  $ref: ./updateProfileTypeAttribute.yaml

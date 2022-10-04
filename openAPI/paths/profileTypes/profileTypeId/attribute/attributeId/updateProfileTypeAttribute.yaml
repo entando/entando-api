@@ -1,0 +1,21 @@
+tags:
+  - profile-type-controller
+summary: Update a profile type attribute
+description: Update the profile type attribute specified in the path as described in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: updateProfileTypeAttribute
+requestBody:
+  $ref: ../../../../../components/requestBodies/common/entityTypeAttribute.yaml
+responses:
+  '200':
+    $ref: ../../../../../components/responses/ok/common/entityTypeAttributeFull.yaml
+  '201':
+    $ref: ../../../../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../../../components/responses/notFound/common/empty.yaml

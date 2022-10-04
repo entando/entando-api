@@ -4898,6 +4898,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - profile-type-controller
+      summary: Update a profile type attribute
+      description: Update the profile type attribute specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateProfileTypeAttribute
+      requestBody:
+        $ref: '#/components/requestBodies/entityTypeAttribute'
+      responses:
+        '200':
+          $ref: '#/components/responses/entityTypeAttributeFull'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
