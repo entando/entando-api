@@ -6,3 +6,5 @@ get:
   $ref: ./getPageModel.yaml
 put:
   $ref: ./updatePageModel.yaml
+delete:
+  $ref: ./deletePageModel.yaml
