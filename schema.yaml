@@ -4961,6 +4961,34 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+    put:
+      tags:
+        - versioning-configuration-controller
+      summary: Update versioning configuration
+      description: Update versioning configuration
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateVersioningConfiguration
+      requestBody:
+        $ref: '#/components/requestBodies/versioningConfiguration'
+      responses:
+        '200':
+          $ref: '#/components/responses/versioningConfigurationObject_generic'
+        '201':
+          $ref: '#/components/responses/versioningConfigurationObject_generic-created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning
@@ -10602,6 +10630,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/userSettings'
+    versioningConfiguration:
+      description: Versioning configuration
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/versioningConfiguration'
     widgetConfiguration:
       description: Widget config
       required: true

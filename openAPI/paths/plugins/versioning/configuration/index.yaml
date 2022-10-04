@@ -2,3 +2,5 @@ summary: Versioning configuration operations
 description: API to access and manipulate versioning configuration
 get:
   $ref: ./getVersioningConfiguration.yaml
+put:
+  $ref: ./updateVersioningConfiguration.yaml

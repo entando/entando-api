@@ -1,0 +1,6 @@
+description: Versioning configuration
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/versioningConfiguration/versioningConfiguration.yaml

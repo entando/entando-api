@@ -92,5 +92,7 @@ userPreferences:
   $ref: ./userPreferences/userPreferences.yaml
 userSettings:
   $ref: ./userSettings/userSettings.yaml
+versioningConfiguration:
+  $ref: ./versioningConfiguration/versioningConfiguration.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml
