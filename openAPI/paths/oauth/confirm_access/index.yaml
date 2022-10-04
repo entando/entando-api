@@ -12,3 +12,5 @@ options:
   $ref: ./confirmAccessOPTIONS.yaml
 head:
   $ref: ./confirmAccessHEAD.yaml
+patch:
+  $ref: ./confirmAccessPATCH.yaml
