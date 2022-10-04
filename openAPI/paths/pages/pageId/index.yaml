@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/pages/pageId.yaml
 get:
   $ref: ./getPage.yaml
+put:
+  $ref: ./updatePage.yaml
