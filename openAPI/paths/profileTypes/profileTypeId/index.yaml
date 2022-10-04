@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/profileTypes/profileTypeId.yaml
 get:
   $ref: ./getProfileType.yaml
+put:
+  $ref: ./updateProfileType.yaml
