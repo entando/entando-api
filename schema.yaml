@@ -2838,6 +2838,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - page-settings-controller
+      summary: Update the page settings
+      description: Update the page settings as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updatePageSettings
+      requestBody:
+        $ref: '#/components/requestBodies/jsonMap'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponseMapPayload'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -7380,6 +7402,15 @@ components:
             type: object
             additionalProperties:
               type: object
+    jsonMap:
+      description: JSON map
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties:
+              type: string
     jsonNode:
       description: JSON node
       required: true

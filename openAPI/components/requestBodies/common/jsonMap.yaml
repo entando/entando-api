@@ -1,0 +1,8 @@
+description: JSON map
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      additionalProperties:
+        type: string
