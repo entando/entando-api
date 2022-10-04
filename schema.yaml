@@ -4737,6 +4737,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - profile-type-controller
+      summary: Add a profile type to the collection of profile types
+      description: Add a profile type to the collection of profile types as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addProfileType
+      requestBody:
+        $ref: '#/components/requestBodies/profileType'
+      responses:
+        '200':
+          $ref: '#/components/responses/userProfileType'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -8002,6 +8024,23 @@ components:
         application/json:
           schema:
             properties:
+              status:
+                type: string
+    profileType:
+      description: Profile type
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              attributes:
+                type: array
+                items:
+                  $ref: '#/components/schemas/entityTypeAttributeFull'
+              code:
+                type: string
+              name:
+                type: string
               status:
                 type: string
     widgetConfiguration:

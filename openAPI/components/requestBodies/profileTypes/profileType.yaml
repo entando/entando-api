@@ -1,0 +1,16 @@
+description: Profile type
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        attributes:
+          type: array
+          items:
+            $ref: ../../schemas/common/entityTypeAttributeFull.yaml
+        code:
+          type: string
+        name:
+          type: string
+        status:
+          type: string

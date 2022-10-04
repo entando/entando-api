@@ -2,3 +2,5 @@ summary: Profile types operations
 description: API to access and manipulate profile types
 get:
   $ref: ./getProfileTypes.yaml
+post:
+  $ref: ./addProfileType.yaml
