@@ -8,3 +8,5 @@ post:
   $ref: ./confirmAccessPOST.yaml
 delete:
   $ref: ./confirmAccessDELETE.yaml
+options:
+  $ref: ./confirmAccessOPTIONS.yaml
