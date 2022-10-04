@@ -2677,6 +2677,30 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - page-models
+      summary: Update a page model
+      description: Update the page model specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updatePageModel
+      requestBody:
+        $ref: '#/components/requestBodies/pageModel'
+      responses:
+        '200':
+          $ref: '#/components/responses/pageModel'
+        '201':
+          $ref: '#/components/responses/created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models

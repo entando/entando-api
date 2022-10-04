@@ -1,0 +1,23 @@
+tags:
+  - page-models
+summary: Update a page model
+description: Update the page model specified in the path as described in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: updatePageModel
+requestBody:
+  $ref: ../../../components/requestBodies/pageModels/pageModel.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/pageModels/pageModel.yaml
+  '201':
+    $ref: ../../../components/responses/created/common/empty.yaml
+  '400':
+    $ref: ../../../components/responses/badRequest/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
