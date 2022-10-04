@@ -6,3 +6,5 @@ put:
   $ref: ./errorPUT.yaml
 post:
   $ref: ./errorPOST.yaml
+delete:
+  $ref: ./errorDELETE.yaml
