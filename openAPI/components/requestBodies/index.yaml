@@ -88,5 +88,7 @@ smtpServer:
   $ref: ./smtpServer/smtpServer.yaml
 user:
   $ref: ./users/user.yaml
+userPreferences:
+  $ref: ./userPreferences/userPreferences.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml

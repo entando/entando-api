@@ -1,0 +1,6 @@
+description: User preferences
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/userPreferences/userPreferences.yaml

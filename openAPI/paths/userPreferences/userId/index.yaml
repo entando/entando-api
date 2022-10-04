@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/users/userId.yaml
 get:
   $ref: ./getUserPreferences.yaml
+put:
+  $ref: ./updateUserPreferences.yaml
