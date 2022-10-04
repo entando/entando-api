@@ -2,3 +2,5 @@ summary: Token operations
 description: API to handle tokens
 get:
   $ref: ./getToken.yaml
+post:
+  $ref: ./postToken.yaml
