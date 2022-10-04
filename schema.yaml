@@ -6967,6 +6967,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - widget-controller
+      summary: Update a widget
+      description: Update the widget specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateWidget
+      requestBody:
+        $ref: '#/components/requestBodies/widgetUpdate'
+      responses:
+        '200':
+          $ref: '#/components/responses/widget'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -11133,6 +11155,38 @@ components:
               bundleId:
                 type: string
               code:
+                type: string
+              config:
+                type: object
+                additionalProperties:
+                  type: string
+              configUi:
+                type: object
+                properties: {}
+              customUi:
+                type: string
+              group:
+                type: string
+              icon:
+                type: string
+              parentType:
+                type: string
+              readonlyPageWidgetConfig:
+                type: boolean
+              titles:
+                type: object
+                additionalProperties:
+                  type: string
+              widgetCategory:
+                type: string
+    widgetUpdate:
+      description: Widget update
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              bundleId:
                 type: string
               config:
                 type: object

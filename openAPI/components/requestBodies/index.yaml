@@ -96,5 +96,7 @@ versioningConfiguration:
   $ref: ./versioningConfiguration/versioningConfiguration.yaml
 widget:
   $ref: ./widgets/widget.yaml
+widgetUpdate:
+  $ref: ./widgets/widgetUpdate.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml
