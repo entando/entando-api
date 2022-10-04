@@ -1,0 +1,6 @@
+description: JSON string
+required: true
+content:
+  application/json:
+    schema:
+      type: string
