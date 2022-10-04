@@ -6,3 +6,5 @@ get:
   $ref: ./getRole.yaml
 put:
   $ref: ./updateRole.yaml
+delete:
+  $ref: ./deleteRole.yaml

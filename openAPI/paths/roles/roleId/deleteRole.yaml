@@ -1,0 +1,17 @@
+tags:
+  - role-controller
+summary: Delete a role
+description: Delete the role specified in the path
+externalDocs:
+  description: ''
+  url: https://
+operationId: deleteRole
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/restResponse/restResponseMapPayload.yaml
+  '204':
+    $ref: ../../../components/responses/noContent/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
