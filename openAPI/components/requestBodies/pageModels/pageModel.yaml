@@ -1,0 +1,16 @@
+description: Page model
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        code:
+          type: string
+        configuration:
+          $ref: ../../schemas/pageModels/pageModelConfiguration.yaml
+        descr:
+          type: string
+        pluginCode:
+          type: string
+        template:
+          type: string

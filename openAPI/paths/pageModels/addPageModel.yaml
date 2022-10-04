@@ -1,0 +1,25 @@
+tags:
+  - page-models
+summary: Add a page model
+description: Create a new page model as specified in the request body
+externalDocs:
+  description: ''
+  url: https://
+operationId: addPageModel
+requestBody:
+  $ref: ../../components/requestBodies/pageModels/pageModel.yaml
+responses:
+  '200':
+    $ref: ../../components/responses/ok/pageModels/pageModel.yaml
+  '201':
+    $ref: ../../components/responses/created/common/empty.yaml
+  '400':
+    $ref: ../../components/responses/badRequest/common/empty.yaml
+  '401':
+    $ref: ../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../components/responses/notFound/common/empty.yaml
+  '409':
+    $ref: ../../components/responses/conflict/common/empty.yaml

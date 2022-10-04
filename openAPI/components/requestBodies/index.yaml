@@ -58,6 +58,8 @@ page:
   $ref: ./pages/page.yaml
 pageClone:
   $ref: ./pages/clone.yaml
+pageModel:
+  $ref: ./pageModels/pageModel.yaml
 pagePosition:
   $ref: ./pages/position.yaml
 pageStatus:

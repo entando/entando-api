@@ -2628,6 +2628,32 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - page-models
+      summary: Add a page model
+      description: Create a new page model as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addPageModel
+      requestBody:
+        $ref: '#/components/requestBodies/pageModel'
+      responses:
+        '200':
+          $ref: '#/components/responses/pageModel'
+        '201':
+          $ref: '#/components/responses/created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -6073,6 +6099,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/pageConfiguration'
+    pageModel:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/pageModel'
     pageModels:
       description: OK
       content:
@@ -7224,6 +7260,23 @@ components:
                 type: object
                 additionalProperties:
                   type: string
+    pageModel:
+      description: Page model
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              code:
+                type: string
+              configuration:
+                $ref: '#/components/schemas/pageModelConfiguration'
+              descr:
+                type: string
+              pluginCode:
+                type: string
+              template:
+                type: string
     pagePosition:
       description: Page position
       required: true
