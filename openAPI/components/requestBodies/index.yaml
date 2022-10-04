@@ -32,6 +32,8 @@ directory:
   $ref: ./fileBrowser/directory.yaml
 emailSender:
   $ref: ./emailSenders/emailSender.yaml
+entity:
+  $ref: ./myUserProfile/entity.yaml
 entityTypeAttribute:
   $ref: ./common/entityTypeAttribute.yaml
 file:

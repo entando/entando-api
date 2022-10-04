@@ -1,0 +1,6 @@
+description: Entity
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/myUserProfile/entity.yaml

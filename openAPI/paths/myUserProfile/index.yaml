@@ -2,3 +2,5 @@ summary: My user profile operations
 description: API to access and manipulate my user profile
 get:
   $ref: ./getMyUserProfile.yaml
+put:
+  $ref: ./updateMyUserProfile.yaml
