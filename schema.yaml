@@ -4716,6 +4716,56 @@ paths:
           $ref: '#/components/responses/conflict'
         '500':
           $ref: '#/components/responses/serverError'
+    put:
+      tags:
+        - seo-page-controller
+      summary: Update a SEO page
+      description: Update the SEO page specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateSeoPage
+      parameters:
+        - $ref: '#/components/parameters/authorizationAuthority'
+        - $ref: '#/components/parameters/authorizationGroupAuthority'
+        - $ref: '#/components/parameters/authorizationGroupDescr'
+        - $ref: '#/components/parameters/authorizationGroupDescription'
+        - $ref: '#/components/parameters/authorizationGroupEntandoGroup'
+        - $ref: '#/components/parameters/authorizationGroupJapsGroup'
+        - $ref: '#/components/parameters/authorizationGroupName'
+        - $ref: '#/components/parameters/authorizationRoleAuthority'
+        - $ref: '#/components/parameters/authorizationRoleDescription'
+        - $ref: '#/components/parameters/authorizationRoleName'
+        - $ref: '#/components/parameters/authorizationRolePermissions'
+        - $ref: '#/components/parameters/accessToken'
+        - $ref: '#/components/parameters/refreshToken'
+        - $ref: '#/components/parameters/accountNotExpired'
+        - $ref: '#/components/parameters/credentialsNotExpired'
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/password'
+        - $ref: '#/components/parameters/profile'
+        - $ref: '#/components/parameters/entandoUser'
+        - $ref: '#/components/parameters/japsUser'
+        - $ref: '#/components/parameters/disabled'
+      requestBody:
+        $ref: '#/components/requestBodies/seoPage'
+      responses:
+        '200':
+          $ref: '#/components/responses/pageMapMetadata_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+        '500':
+          $ref: '#/components/responses/serverError'
   /plugins/versioning/contents:
     summary: Contents versioning operations
     description: API to access contents versioning

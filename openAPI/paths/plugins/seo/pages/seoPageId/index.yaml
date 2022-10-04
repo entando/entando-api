@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../../../components/parameters/path/seoPages/seoPageId.yaml
 get:
   $ref: ./getSeoPage.yaml
+put:
+  $ref: ./updateSeoPage.yaml
