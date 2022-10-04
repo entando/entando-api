@@ -6,3 +6,5 @@ get:
   $ref: ./getUserAuthorities.yaml
 put:
   $ref: ./updateUserAuthorities.yaml
+post:
+  $ref: ./addUserAuthorities.yaml
