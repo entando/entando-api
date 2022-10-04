@@ -2,6 +2,8 @@ activityStream:
   $ref: ./ok/activityStream/activityStream.yaml
 activityStreamRecord:
   $ref: ./ok/activityStream/activityStreamRecord.yaml
+asset_generic:
+  $ref: ./ok/assets/asset_generic.yaml
 assets_generic:
   $ref: ./ok/assets/assets_generic.yaml
 attributeType:

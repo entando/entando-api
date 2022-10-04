@@ -2,3 +2,5 @@ summary: Assets operations
 description: API to access and manipulate the collection of assets
 get:
   $ref: ./getAssets.yaml
+post:
+  $ref: ./addAsset.yaml

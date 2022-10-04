@@ -1,0 +1,12 @@
+description: Asset
+required: true
+content:
+  multipart/form-data:
+    schema:
+      required:
+        - file
+      properties:
+        file:
+          type: string
+          description: file
+          format: binary

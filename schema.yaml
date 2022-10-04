@@ -3061,6 +3061,30 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - resources-controller
+      summary: Add an asset
+      description: Create a new asset as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addAsset
+      parameters:
+        - $ref: '#/components/parameters/assetMetadata'
+      requestBody:
+        $ref: '#/components/requestBodies/asset'
+      responses:
+        '200':
+          $ref: '#/components/responses/asset_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/cms/contentmodels:
     summary: Content Models operations
     description: API to access and manipulate the collection of content models
@@ -6812,6 +6836,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/activityStreamRecord'
+    asset_generic:
+      description: OK
+      content:
+        '*/*':
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/asset'
     assets_generic:
       description: OK
       content:
@@ -7776,6 +7810,13 @@ components:
         type: array
         items:
           type: string
+    assetMetadata:
+      name: metadata
+      in: query
+      description: ''
+      required: true
+      schema:
+        type: string
     assetType:
       name: type
       in: query
@@ -8393,6 +8434,19 @@ components:
               recordId:
                 type: integer
                 format: int32
+    asset:
+      description: Asset
+      required: true
+      content:
+        multipart/form-data:
+          schema:
+            required:
+              - file
+            properties:
+              file:
+                type: string
+                description: file
+                format: binary
     batchContentStatus:
       description: Batch content status
       required: true
