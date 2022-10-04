@@ -2073,6 +2073,29 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - whitelabel-error-endpoint
+      summary: Error
+      description: Error via PUT
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: errorPUT
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/model'
+      responses:
+        '200':
+          $ref: '#/components/responses/modelAndViewObject_generic'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /oauth/token:
     summary: Token operations
     description: API to handle tokens

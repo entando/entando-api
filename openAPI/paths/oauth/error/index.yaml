@@ -2,3 +2,5 @@ summary: Error operations
 description: API to handle error
 get:
   $ref: ./errorGET.yaml
+put:
+  $ref: ./errorPUT.yaml

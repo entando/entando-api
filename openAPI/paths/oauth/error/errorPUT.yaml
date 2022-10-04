@@ -1,0 +1,22 @@
+tags:
+  - whitelabel-error-endpoint
+summary: Error
+description: Error via PUT
+externalDocs:
+  description: ''
+  url: https://
+operationId: errorPUT
+deprecated: true
+parameters:
+  - $ref: ../../../components/parameters/query/authorizations/model.yaml
+responses:
+  '200':
+    $ref: ../../../components/responses/ok/authorizations/modelAndViewObject_generic.yaml
+  '201':
+    $ref: ../../../components/responses/created/common/empty.yaml
+  '401':
+    $ref: ../../../components/responses/unauthorized/common/empty.yaml
+  '403':
+    $ref: ../../../components/responses/forbidden/common/empty.yaml
+  '404':
+    $ref: ../../../components/responses/notFound/common/empty.yaml
