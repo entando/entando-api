@@ -6,3 +6,5 @@ get:
   $ref: ./getWidget.yaml
 put:
   $ref: ./updateWidget.yaml
+delete:
+  $ref: ./deleteWidget.yaml
