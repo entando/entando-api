@@ -6,3 +6,5 @@ get:
   $ref: ./getPage.yaml
 put:
   $ref: ./updatePage.yaml
+delete:
+  $ref: ./deletePage.yaml
