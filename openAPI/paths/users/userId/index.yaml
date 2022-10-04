@@ -6,3 +6,5 @@ get:
   $ref: ./getUser.yaml
 put:
   $ref: ./updateUser.yaml
+delete:
+  $ref: ./deleteUser.yaml
