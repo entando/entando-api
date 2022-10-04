@@ -5011,6 +5011,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - profile-type-controller
+      summary: Refresh the profile types status
+      description: Refresh the profile types status described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: refreshProfileTypesStatus
+      requestBody:
+        $ref: '#/components/requestBodies/profileTypeRefreshStatus'
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -8315,6 +8337,17 @@ components:
                 type: string
               status:
                 type: string
+    profileTypeRefreshStatus:
+      description: Profile type refresh status
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              profileTypeCodes:
+                type: array
+                items:
+                  type: string
     widgetConfiguration:
       description: Widget config
       required: true

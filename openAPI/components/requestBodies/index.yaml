@@ -70,5 +70,7 @@ pageStatus:
   $ref: ./pages/status.yaml
 profileType:
   $ref: ./profileTypes/profileType.yaml
+profileTypeRefreshStatus:
+  $ref: ./profileTypes/refreshStatus.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml

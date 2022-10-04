@@ -1,0 +1,10 @@
+description: Profile type refresh status
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        profileTypeCodes:
+          type: array
+          items:
+            type: string
