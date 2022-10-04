@@ -4630,6 +4630,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - smtp-server-configuration-controller
+      summary: Update the SMTP server
+      description: Update the SMTP server as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateSMTPServer
+      requestBody:
+        $ref: '#/components/requestBodies/smtpServer'
+      responses:
+        '200':
+          $ref: '#/components/responses/smtpServer'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /plugins/seo/pages:
     summary: SEO pages operations
     description: API to access contents and manipulate SEO pages
@@ -9613,6 +9635,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/seoPage'
+    smtpServer:
+      description: SMTP server
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/smtpServer'
     widgetConfiguration:
       description: Widget config
       required: true

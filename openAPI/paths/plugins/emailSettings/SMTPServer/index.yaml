@@ -2,3 +2,5 @@ summary: SMTP server operations
 description: API to access and manipulate the SMTP server
 get:
   $ref: ./getSMTPServer.yaml
+put:
+  $ref: ./updateSMTPServer.yaml

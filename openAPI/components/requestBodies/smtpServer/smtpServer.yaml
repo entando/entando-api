@@ -1,0 +1,6 @@
+description: SMTP server
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/smtpServer/smtpServer.yaml

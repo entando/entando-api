@@ -80,5 +80,7 @@ role:
   $ref: ./roles/role.yaml
 seoPage:
   $ref: ./seoPages/seoPage.yaml
+smtpServer:
+  $ref: ./smtpServer/smtpServer.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml
