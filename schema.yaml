@@ -1965,6 +1965,27 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - whitelabel-approval-endpoint
+      summary: Confirm access
+      description: Confirm access via DELETE
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: confirmAccessDELETE
+      deprecated: true
+      parameters:
+        - $ref: '#/components/parameters/model'
+      responses:
+        '200':
+          $ref: '#/components/responses/modelAndViewObject_generic'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /oauth/token:
     summary: Token operations
     description: API to handle tokens
