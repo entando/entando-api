@@ -6922,6 +6922,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - widget-controller
+      summary: Add a widget
+      description: Create a new widget as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addWidget
+      requestBody:
+        $ref: '#/components/requestBodies/widget'
+      responses:
+        '200':
+          $ref: '#/components/responses/widget'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     activityStreamRecord:
@@ -9676,6 +9698,16 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/versioningConfiguration'
+    widget:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/widget'
     widgets:
       description: OK
       content:
@@ -11061,6 +11093,40 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/versioningConfiguration'
+    widget:
+      description: Widget
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              bundleId:
+                type: string
+              code:
+                type: string
+              config:
+                type: object
+                additionalProperties:
+                  type: string
+              configUi:
+                type: object
+                properties: {}
+              customUi:
+                type: string
+              group:
+                type: string
+              icon:
+                type: string
+              parentType:
+                type: string
+              readonlyPageWidgetConfig:
+                type: boolean
+              titles:
+                type: object
+                additionalProperties:
+                  type: string
+              widgetCategory:
+                type: string
     widgetConfiguration:
       description: Widget config
       required: true

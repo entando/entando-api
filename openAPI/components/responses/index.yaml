@@ -192,6 +192,8 @@ userSettings:
   $ref: ./ok/userSettings/userSettings.yaml
 versioningConfigurationObject_generic:
   $ref: ./ok/versioningConfiguration/versioningConfigurationObject_generic.yaml
+widget:
+  $ref: ./ok/widgets/widget.yaml
 widgets:
   $ref: ./ok/widgets/widgets.yaml
 widgetConfiguration:

@@ -1,0 +1,33 @@
+description: Widget
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        bundleId:
+          type: string
+        code:
+          type: string
+        config:
+          type: object
+          additionalProperties:
+            type: string
+        configUi:
+          type: object
+          properties: { }
+        customUi:
+          type: string
+        group:
+          type: string
+        icon:
+          type: string
+        parentType:
+          type: string
+        readonlyPageWidgetConfig:
+          type: boolean
+        titles:
+          type: object
+          additionalProperties:
+            type: string
+        widgetCategory:
+          type: string
