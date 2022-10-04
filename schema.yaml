@@ -4629,6 +4629,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - profile-controller
+      summary: Update a user profile
+      description: Update the user profile specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateUserProfile
+      requestBody:
+        $ref: '#/components/requestBodies/entity'
+      responses:
+        '200':
+          $ref: '#/components/responses/entity'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /widget/navigator/expressions:
     summary: Widget navigator expressions operations
     description: API to access and manipulate widget navigator expressions
