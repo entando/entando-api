@@ -4920,6 +4920,24 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    delete:
+      tags:
+        - profile-type-controller
+      summary: Delete a profile type attribute
+      description: Delete the profile type attribute specified in the path
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: deleteProfileTypeAttribute
+      responses:
+        '200':
+          $ref: '#/components/responses/restResponse'
+        '204':
+          $ref: '#/components/responses/noContent'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles

@@ -7,3 +7,5 @@ get:
   $ref: ./getProfileTypeAttribute.yaml
 put:
   $ref: ./updateProfileTypeAttribute.yaml
+delete:
+  $ref: ./deleteProfileTypeAttribute.yaml
