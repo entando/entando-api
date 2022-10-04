@@ -4,3 +4,5 @@ parameters:
   - $ref: ../../../components/parameters/path/roles/roleId.yaml
 get:
   $ref: ./getRole.yaml
+put:
+  $ref: ./updateRole.yaml

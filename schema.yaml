@@ -5429,6 +5429,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      tags:
+        - role-controller
+      summary: Update a role
+      description: Update the role specified in the path as described in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: updateRole
+      requestBody:
+        $ref: '#/components/requestBodies/role'
+      responses:
+        '200':
+          $ref: '#/components/responses/role'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
