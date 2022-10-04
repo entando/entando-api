@@ -2,3 +2,5 @@ summary: Roles operations
 description: API to access and manipulate roles
 get:
   $ref: ./getRoles.yaml
+post:
+  $ref: ./addRole.yaml

@@ -1,0 +1,6 @@
+description: Role
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/roles/role.yaml

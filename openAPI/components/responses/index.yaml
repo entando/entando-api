@@ -144,6 +144,8 @@ restResponseMapPayload_generic:
   $ref: ./ok/restResponse/restResponseMapPayload_generic.yaml
 restResponseMapPayload:
   $ref: ./ok/restResponse/restResponseMapPayload.yaml
+role:
+  $ref: ./ok/roles/role.yaml
 roles:
   $ref: ./ok/roles/roles.yaml
 shortDumpReports:

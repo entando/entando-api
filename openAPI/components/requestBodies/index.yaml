@@ -76,5 +76,7 @@ profileType:
   $ref: ./profileTypes/profileType.yaml
 profileTypeRefreshStatus:
   $ref: ./profileTypes/refreshStatus.yaml
+role:
+  $ref: ./roles/role.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml
