@@ -4,3 +4,5 @@ get:
   $ref: ./errorGET.yaml
 put:
   $ref: ./errorPUT.yaml
+post:
+  $ref: ./errorPOST.yaml
