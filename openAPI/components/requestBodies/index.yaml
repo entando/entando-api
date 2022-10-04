@@ -82,5 +82,7 @@ seoPage:
   $ref: ./seoPages/seoPage.yaml
 smtpServer:
   $ref: ./smtpServer/smtpServer.yaml
+user:
+  $ref: ./users/user.yaml
 widgetConfiguration:
   $ref: ./pages/widgetConfiguration.yaml

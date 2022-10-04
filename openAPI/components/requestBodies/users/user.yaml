@@ -1,0 +1,18 @@
+description: User
+required: true
+content:
+  application/json:
+    schema:
+      properties:
+        password:
+          type: string
+        passwordConfirm:
+          type: string
+        profileType:
+          type: string
+        reset:
+          type: boolean
+        status:
+          type: string
+        username:
+          type: string

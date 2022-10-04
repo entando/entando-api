@@ -5901,6 +5901,28 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    post:
+      tags:
+        - user-controller
+      summary: Add a user
+      description: Create a new user as specified in the request body
+      externalDocs:
+        description: ''
+        url: 'https://'
+      operationId: addUser
+      requestBody:
+        $ref: '#/components/requestBodies/user'
+      responses:
+        '200':
+          $ref: '#/components/responses/user'
+        '201':
+          $ref: '#/components/responses/created'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /userProfiles:
     summary: User profiles operations
     description: API to access and manipulate user profiles
@@ -8538,6 +8560,16 @@ components:
               - properties:
                   payload:
                     $ref: '#/components/schemas/userProfileType'
+    user:
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/restResponse'
+              - properties:
+                  payload:
+                    $ref: '#/components/schemas/user'
     users:
       description: OK
       content:
@@ -9857,6 +9889,25 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/smtpServer'
+    user:
+      description: User
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              password:
+                type: string
+              passwordConfirm:
+                type: string
+              profileType:
+                type: string
+              reset:
+                type: boolean
+              status:
+                type: string
+              username:
+                type: string
     widgetConfiguration:
       description: Widget config
       required: true
